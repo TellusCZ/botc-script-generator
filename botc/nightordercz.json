@@ -5,17 +5,17 @@
         "image": "./botc/Dusk.png",
         "edition": "",
         "team": "nightinfo",
-        "firstNightReminder": "Poöli hr·ce sp·t a aktualizuj ûeton noci ñ nekterÌ PocestnÌ mohou jednat.",
-        "otherNightReminder": "Poöli hr·ce sp·t a aktualizuj ûeton noci ñ nekterÌ PocestnÌ mohou jednat."
+        "firstNightReminder": "Po≈°li hr√°ce sp√°t a aktualizuj ≈æeton noci ‚Äì nekter√≠ Pocestn√≠ mohou jednat.",
+        "otherNightReminder": "Po≈°li hr√°ce sp√°t a aktualizuj ≈æeton noci ‚Äì nekter√≠ Pocestn√≠ mohou jednat."
     },
     {
         "id": "DAWN",
-        "name": "SvÌt·nÌ",
+        "name": "Sv√≠t√°n√≠",
         "image": "./botc/Dawn.png",
         "edition": "",
         "team": "nightinfo",
-        "firstNightReminder": "Probudte vöechny hr·ce.",
-        "otherNightReminder": "Probudte vöechny hr·ce a oznamte v˝sledek noci."
+        "firstNightReminder": "Probudte v≈°echny hr√°ce.",
+        "otherNightReminder": "Probudte v≈°echny hr√°ce a oznamte v√Ωsledek noci."
     },
     {
         "id": "DEMON",
@@ -23,7 +23,7 @@
         "image": "./botc/DemonInfo.png",
         "edition": "",
         "team": "nightinfo",
-        "firstNightReminder": "Ukaûte, kdo jsou Minioni, a odhalte 3 blufy (postavy co nejsou ve hre).",
+        "firstNightReminder": "Uka≈æte, kdo jsou Minioni, a odhalte 3 blufy (postavy co nejsou ve hre).",
         "otherNightReminder": ""
     },
     {
@@ -32,7 +32,7 @@
         "image": "./botc/MinionInfo.png",
         "edition": "",
         "team": "nightinfo",
-        "firstNightReminder": "Probudte Miniony spolecne a ukaûte, kdo je DÈmon.",
+        "firstNightReminder": "Probudte Miniony spolecne a uka≈æte, kdo je D√©mon.",
         "otherNightReminder": ""
     }
 ]
