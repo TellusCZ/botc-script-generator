@@ -540,7 +540,7 @@ document.getElementById('saveScriptPng').addEventListener('click', () => {
 
     // Posloucháme změnu souboru
     fileInput.addEventListener('change', (event) => {
-      const logo = document.querySelector('.sriptlogo');
+      const logo = document.querySelector(".sriptlogo");
       const file = event.target.files[0]; // vybraný soubor
           
       if (file) {
@@ -551,6 +551,7 @@ document.getElementById('saveScriptPng').addEventListener('click', () => {
         reader.readAsDataURL(file);
       }
     });
+
 
 
 
