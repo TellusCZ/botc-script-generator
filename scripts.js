@@ -1,3 +1,5 @@
+const fileInput = document.getElementById('fileInput');
+
 async function loadRoles() {
       try {
         const response = await fetch('botc/roles.json');
@@ -534,11 +536,11 @@ document.getElementById('saveScriptPng').addEventListener('click', () => {
   });
 
 
-const fileInput = document.getElementById('fileInput');
-    const logo = document.querySelector('.sriptlogo');
+
 
     // Posloucháme změnu souboru
     fileInput.addEventListener('change', (event) => {
+      logo = document.querySelector('.sriptlogo');
       const file = event.target.files[0]; // vybraný soubor
       if (file) {
         const reader = new FileReader();
@@ -548,6 +550,7 @@ const fileInput = document.getElementById('fileInput');
         reader.readAsDataURL(file);
       }
     });
+
 
 
 
