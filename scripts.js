@@ -361,7 +361,7 @@ demonsArrayTwo.forEach(function (val) {
 
 
     function testSetup(){
-      //document.getElementById("scriptJson").value = '[{"id":"_meta","author":"Petr","name":"No one is safe"},"clockmaker","investigator","bountyhunter","villageidiot","fortuneteller","lycanthrope","towncrier","amnesiac","poppygrower","alchemist","minstrel","virgin","banshee","mutant","drunk","lunatic","snitch","godfather","boffin","poisoner","fearmonger","imp","fanggu","nodashii","kazali"]';
+      document.getElementById("scriptJson").value = '[{"id":"_meta","author":"Petr","name":"No one is safe"},"clockmaker","investigator","bountyhunter","villageidiot","fortuneteller","lycanthrope","towncrier","amnesiac","poppygrower","alchemist","minstrel","virgin","banshee","mutant","drunk","lunatic","snitch","godfather","boffin","poisoner","fearmonger","imp","fanggu","nodashii","kazali"]';
       //document.getElementById("scriptJson")[0].innerHTML = "[{'id:'_meta','author':'Petr','name':'No one is safe"},"clockmaker","investigator","bountyhunter","villageidiot","fortuneteller","lycanthrope","towncrier","amnesiac","poppygrower","alchemist","minstrel","virgin","banshee","mutant","drunk","lunatic","snitch","godfather","boffin","poisoner","fearmonger","imp","fanggu","nodashii","kazali"]";
       loadRolesCZ();
       //TranslateScript();
@@ -505,6 +505,7 @@ document.getElementById('savePng').addEventListener('click', () => {
       link.click();
     });
   });
+
 
 
 
