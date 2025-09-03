@@ -80,7 +80,7 @@
     },
     {
         "id": "fortuneteller",
-        "image": "https://wiki.bloodontheclocktower.com/images/9/97/Icon_fortuneteller.png",
+        "image": "http://wiki.bloodontheclocktower.com/images/9/97/Icon_fortuneteller.png",
         "name": "Vedma",
         "edition": "tb",
         "team": "townsfolk",
@@ -2471,3 +2471,4 @@
         "otherNightReminder": ""
     }
 ]
+
