@@ -497,7 +497,7 @@ let html = '';
 document.getElementById('saveFirstPng').addEventListener('click', () => {
     const element = document.getElementById('captureThisFirstNight');
 
-    html2canvas(element, { scale: 2 }).then(canvas => {
+    html2canvas(element, { scale: 2, allowTaint: true }).then(canvas => {
       const link = document.createElement('a');
       link.download = 'firstNight.png';
       link.href = canvas.toDataURL('image/png');
@@ -508,7 +508,7 @@ document.getElementById('saveFirstPng').addEventListener('click', () => {
 document.getElementById('saveOtherPng').addEventListener('click', () => {
     const element = document.getElementById('captureThisOtherNight');
 
-    html2canvas(element, { scale: 2 }).then(canvas => {
+    html2canvas(element, { scale: 2, allowTaint: true }).then(canvas => {
       const link = document.createElement('a');
       link.download = 'otherNight.png';
       link.href = canvas.toDataURL('image/png');
@@ -519,13 +519,14 @@ document.getElementById('saveOtherPng').addEventListener('click', () => {
 document.getElementById('saveScriptPng').addEventListener('click', () => {
     const element = document.getElementById('captureScript');
 
-    html2canvas(element, { scale: 2 }).then(canvas => {
+    html2canvas(element, { scale: 2, allowTaint: true }).then(canvas => {
       const link = document.createElement('a');
       link.download = 'script.png';
       link.href = canvas.toDataURL('image/png');
       link.click();
     });
   });
+
 
 
 
