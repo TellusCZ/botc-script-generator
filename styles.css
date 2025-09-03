@@ -1,16 +1,5 @@
  Place your CSS styles in this file 
-@font-face { font-family Melted-Brain; src url('botcMelted-Brain.otf'); } 
 
-@import url(httpsdb.onlinewebfonts.comc46887ce1dc738fc2de8f66db681c14eefamily=LHF+Unlovable);
-@font-face {
-    font-family LHF Unlovable;
-    src url(httpsdb.onlinewebfonts.comt46887ce1dc738fc2de8f66db681c14ee.eot);
-    src url(httpsdb.onlinewebfonts.comt46887ce1dc738fc2de8f66db681c14ee.eot#iefix)format(embedded-opentype),
-    url(httpsdb.onlinewebfonts.comt46887ce1dc738fc2de8f66db681c14ee.woff2)format(woff2),
-    url(httpsdb.onlinewebfonts.comt46887ce1dc738fc2de8f66db681c14ee.woff)format(woff),
-    url(httpsdb.onlinewebfonts.comt46887ce1dc738fc2de8f66db681c14ee.ttf)format(truetype),
-    url(httpsdb.onlinewebfonts.comt46887ce1dc738fc2de8f66db681c14ee.svg#LHF Unlovable)format(svg);
-}
 
 
 h1 {
@@ -168,3 +157,4 @@ body {
   margin-top -5px;
   margin-left 110px;
 }
+
