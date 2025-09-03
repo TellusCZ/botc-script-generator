@@ -6,49 +6,49 @@
         "edition": "tb",
         "team": "townsfolk",
         "firstNight": 33,
-        "firstNightReminder": "Ukaû ûeton postavy Meötana ve hre. Ukaû na dva hr·ce, z nichû jeden je tato postava.",
+        "firstNightReminder": "Uka≈æ ≈æeton postavy Me≈°tana ve hre. Uka≈æ na dva hr√°ce, z nich≈æ jeden je tato postava.",
         "otherNight": 0,
         "otherNightReminder": "",
         "reminders": [
-            "Meötan",
-            "äpatn˝"
+            "Me≈°tan",
+            "≈†patn√Ω"
         ],
         "setup": false,
-        "ability": "ZacÌn·ö s informacÌ, ûe 1 ze 2 hr·cu je konkrÈtnÌ Meötan"
+        "ability": "Zac√≠n√°≈° s informac√≠, ≈æe 1 ze 2 hr√°cu je konkr√©tn√≠ Me≈°tan"
     },
     {
         "id": "librarian",
         "image": "https://wiki.bloodontheclocktower.com/images/e/e0/Icon_librarian.png",
-        "name": "KnihovnÌk",
+        "name": "Knihovn√≠k",
         "edition": "tb",
         "team": "townsfolk",
         "firstNight": 34,
-        "firstNightReminder": "Ukaû ûeton postavy PodivÌna ve hre. Ukaû na dva hr·ce, z nichû jeden je tato postava.",
+        "firstNightReminder": "Uka≈æ ≈æeton postavy Podiv√≠na ve hre. Uka≈æ na dva hr√°ce, z nich≈æ jeden je tato postava.",
         "otherNight": 0,
         "otherNightReminder": "",
         "reminders": [
-            "PodivÌn",
-            "äpatn˝"
+            "Podiv√≠n",
+            "≈†patn√Ω"
         ],
         "setup": false,
-        "ability": "ZacÌn·ö s informacÌ, ûe 1 ze 2 hr·cu je konkrÈtnÌ PodivÌn. (Nebo ûe ve hre nenÌ û·dn˝ PodivÌn)"
+        "ability": "Zac√≠n√°≈° s informac√≠, ≈æe 1 ze 2 hr√°cu je konkr√©tn√≠ Podiv√≠n. (Nebo ≈æe ve hre nen√≠ ≈æ√°dn√Ω Podiv√≠n)"
     },
     {
         "id": "investigator",
         "image": "https://wiki.bloodontheclocktower.com/images/a/ad/Icon_investigator.png",
-        "name": "Vyöetrovatel",
+        "name": "Vy≈°etrovatel",
         "edition": "tb",
         "team": "townsfolk",
         "firstNight": 35,
-        "firstNightReminder": "Ukaû ûeton postavy Prisluhovace ve hre. Ukaû na dva hr·ce, z nichû jeden je tato postava.",
+        "firstNightReminder": "Uka≈æ ≈æeton postavy Prisluhovace ve hre. Uka≈æ na dva hr√°ce, z nich≈æ jeden je tato postava.",
         "otherNight": 0,
         "otherNightReminder": "",
         "reminders": [
             "Prisluhovac",
-            "äpatn˝"
+            "≈†patn√Ω"
         ],
         "setup": false,
-        "ability": "ZacÌn·ö s informacÌ, ûe jeden ze dvou hr·cu je konkrÈtnÌ Prisluhovac."
+        "ability": "Zac√≠n√°≈° s informac√≠, ≈æe jeden ze dvou hr√°cu je konkr√©tn√≠ Prisluhovac."
     },
     {
         "id": "chef",
@@ -57,12 +57,12 @@
         "edition": "tb",
         "team": "townsfolk",
         "firstNight": 36,
-        "firstNightReminder": "Ukaû na prstech mnoûstvÌ (0, 1, 2, ...) za kaûd˝ p·r sousedÌcÌch zl˝ch hr·cu.",
+        "firstNightReminder": "Uka≈æ na prstech mno≈æstv√≠ (0, 1, 2, ...) za ka≈æd√Ω p√°r soused√≠c√≠ch zl√Ωch hr√°cu.",
         "otherNight": 0,
         "otherNightReminder": "",
         "reminders": [],
         "setup": false,
-        "ability": "ZacÌn·ö s informacÌ, kolik p·ru zl˝ch hr·cu je ve hre."
+        "ability": "Zac√≠n√°≈° s informac√≠, kolik p√°ru zl√Ωch hr√°cu je ve hre."
     },
     {
         "id": "empath",
@@ -71,12 +71,12 @@
         "edition": "tb",
         "team": "townsfolk",
         "firstNight": 37,
-        "firstNightReminder": "Ukaû na prstech mnoûstvÌ (0, 1, 2) za kaûdÈho zlÈho ûivÈho souseda Empata.",
+        "firstNightReminder": "Uka≈æ na prstech mno≈æstv√≠ (0, 1, 2) za ka≈æd√©ho zl√©ho ≈æiv√©ho souseda Empata.",
         "otherNight": 53,
-        "otherNightReminder": "Ukaû na prstech mnoûstvÌ (0, 1, 2) za kaûdÈho zlÈho ûivÈho souseda Empata.",
+        "otherNightReminder": "Uka≈æ na prstech mno≈æstv√≠ (0, 1, 2) za ka≈æd√©ho zl√©ho ≈æiv√©ho souseda Empata.",
         "reminders": [],
         "setup": false,
-        "ability": "Kaûdou noc se dozvÌö, kolik z tv˝ch 2 ûiv˝ch sousedu je zl˝ch."
+        "ability": "Ka≈ædou noc se dozv√≠≈°, kolik z tv√Ωch 2 ≈æiv√Ωch sousedu je zl√Ωch."
     },
     {
         "id": "fortuneteller",
@@ -85,30 +85,30 @@
         "edition": "tb",
         "team": "townsfolk",
         "firstNight": 38,
-        "firstNightReminder": "Vedma uk·ûe na dva hr·ce. Potvrd pok˝v·nÌm hlavy (ano/ne) pokud je jeden z techto hr·cu DÈmon.",
+        "firstNightReminder": "Vedma uk√°≈æe na dva hr√°ce. Potvrd pok√Ωv√°n√≠m hlavy (ano/ne) pokud je jeden z techto hr√°cu D√©mon.",
         "otherNight": 54,
-        "otherNightReminder": "Vedma uk·ûe na dva hr·ce. Potvrd pok˝v·nÌm hlavy (ano/ne) pokud je jeden z techto hr·cu DÈmon.",
+        "otherNightReminder": "Vedma uk√°≈æe na dva hr√°ce. Potvrd pok√Ωv√°n√≠m hlavy (ano/ne) pokud je jeden z techto hr√°cu D√©mon.",
         "reminders": [
-            "Faleön· stopa"
+            "Fale≈°n√° stopa"
         ],
         "setup": false,
-        "ability": "Kaûdou noc vyber 2 hr·ce: dozvÌö se, je-li mezi nimi DÈmon. Jeden dobr˝ hr·c se ti jevÌ jako DÈmon."
+        "ability": "Ka≈ædou noc vyber 2 hr√°ce: dozv√≠≈° se, je-li mezi nimi D√©mon. Jeden dobr√Ω hr√°c se ti jev√≠ jako D√©mon."
     },
     {
         "id": "undertaker",
         "image": "https://wiki.bloodontheclocktower.com/images/0/05/Icon_undertaker.png",
-        "name": "HrobnÌk",
+        "name": "Hrobn√≠k",
         "edition": "tb",
         "team": "townsfolk",
         "firstNight": 0,
         "firstNightReminder": "",
         "otherNight": 55,
-        "otherNightReminder": "Pokud byl popraven hr·c tuto noc: ukaû ûeton jeho postavy HrobnÌkovi.",
+        "otherNightReminder": "Pokud byl popraven hr√°c tuto noc: uka≈æ ≈æeton jeho postavy Hrobn√≠kovi.",
         "reminders": [
             "Popraven"
         ],
         "setup": false,
-        "ability": "Kaûdou noc* se dozvÌö, kter· postava byla ten den popravena."
+        "ability": "Ka≈ædou noc* se dozv√≠≈°, kter√° postava byla ten den popravena."
     },
     {
         "id": "monk",
@@ -119,26 +119,26 @@
         "firstNight": 0,
         "firstNightReminder": "",
         "otherNight": 12,
-        "otherNightReminder": "PredchozÌ chr·nen˝ hr·c prest·v· b˝t chr·nen˝. Mnich uk·ûe na hr·ce (ne na sebe). Oznac tohoto hr·ce, jako 'Chr·nenÈho'.",
+        "otherNightReminder": "Predchoz√≠ chr√°nen√Ω hr√°c prest√°v√° b√Ωt chr√°nen√Ω. Mnich uk√°≈æe na hr√°ce (ne na sebe). Oznac tohoto hr√°ce, jako 'Chr√°nen√©ho'.",
         "reminders": [
-            "Chr·nen˝"
+            "Chr√°nen√Ω"
         ],
         "setup": false,
-        "ability": "Kaûdou noc*, vybereö hr·ce (ne sebe): tu noc je v bezpecÌ pred DÈmonem."
+        "ability": "Ka≈ædou noc*, vybere≈° hr√°ce (ne sebe): tu noc je v bezpec√≠ pred D√©monem."
     },
     {
         "id": "ravenkeeper",
         "image": "https://wiki.bloodontheclocktower.com/images/e/ef/Icon_ravenkeeper.png",
-        "name": "Str·ûkyne krkavcu",
+        "name": "Str√°≈ækyne krkavcu",
         "edition": "tb",
         "team": "townsfolk",
         "firstNight": 0,
         "firstNightReminder": "",
         "otherNight": 52,
-        "otherNightReminder": "Pokud tuto noc zemrela Str·ûkyne krkavcu: uk·ûe na hr·ce. Ukaû ûeton postavy tohoto hr·ce.",
+        "otherNightReminder": "Pokud tuto noc zemrela Str√°≈ækyne krkavcu: uk√°≈æe na hr√°ce. Uka≈æ ≈æeton postavy tohoto hr√°ce.",
         "reminders": [],
         "setup": false,
-        "ability": "Pokud zemreö v noci, budeö hned probuzena a vybereö 1 hr·ce: dozvÌö se jeho postavu."
+        "ability": "Pokud zemre≈° v noci, bude≈° hned probuzena a vybere≈° 1 hr√°ce: dozv√≠≈° se jeho postavu."
     },
     {
         "id": "virgin",
@@ -154,12 +154,12 @@
             "Bez schopnosti"
         ],
         "setup": false,
-        "ability": "Kdyû te poprvÈ nekdo nominuje a nominujÌcÌm je Meötan, je ihned popraven."
+        "ability": "Kdy≈æ te poprv√© nekdo nominuje a nominuj√≠c√≠m je Me≈°tan, je ihned popraven."
     },
     {
         "id": "slayer",
         "image": "https://wiki.bloodontheclocktower.com/images/d/d3/Icon_slayer.png",
-        "name": "Zabij·k",
+        "name": "Zabij√°k",
         "edition": "tb",
         "team": "townsfolk",
         "firstNight": 0,
@@ -170,12 +170,12 @@
             "Bez schopnosti"
         ],
         "setup": false,
-        "ability": "Jednou za hru, behem dne, verejne oznacÌö 1 hr·ce: Je-li to DÈmon, zemre."
+        "ability": "Jednou za hru, behem dne, verejne oznac√≠≈° 1 hr√°ce: Je-li to D√©mon, zemre."
     },
     {
         "id": "soldier",
         "image": "https://wiki.bloodontheclocktower.com/images/c/c3/Icon_soldier.png",
-        "name": "Voj·k",
+        "name": "Voj√°k",
         "edition": "tb",
         "team": "townsfolk",
         "firstNight": 0,
@@ -184,7 +184,7 @@
         "otherNightReminder": "",
         "reminders": [],
         "setup": false,
-        "ability": "Jsi v bezpecÌ pred DÈmonem."
+        "ability": "Jsi v bezpec√≠ pred D√©monem."
     },
     {
         "id": "mayor",
@@ -198,7 +198,7 @@
         "otherNightReminder": "",
         "reminders": [],
         "setup": false,
-        "ability": "Jsou-li naûivu pouze 3 hr·ci a neprobehne û·dn· poprava, tvuj t˝m vyhr·v·. Pokud v noci zemreö, muûe namÌsto tebe zemrÌt jin˝ hr·c."
+        "ability": "Jsou-li na≈æivu pouze 3 hr√°ci a neprobehne ≈æ√°dn√° poprava, tvuj t√Ωm vyhr√°v√°. Pokud v noci zemre≈°, mu≈æe nam√≠sto tebe zemr√≠t jin√Ω hr√°c."
     },
     {
         "id": "butler",
@@ -211,10 +211,10 @@
         "otherNight": 67,
         "otherNightReminder": "The Butler points to a player. Mark that player as 'Master'.",
         "reminders": [
-            "P·n"
+            "P√°n"
         ],
         "setup": false,
-        "ability": "Kaûdou noc vybereö 1 hr·ce (ne sebe): n·sledujÌcÌ den muûeö hlasovat pouze tehdy, pokud hlasuje i tento hr·c."
+        "ability": "Ka≈ædou noc vybere≈° 1 hr√°ce (ne sebe): n√°sleduj√≠c√≠ den mu≈æe≈° hlasovat pouze tehdy, pokud hlasuje i tento hr√°c."
     },
     {
         "id": "drunk",
@@ -231,12 +231,12 @@
             "Opilec"
         ],
         "setup": true,
-        "ability": "NevÌö, ûe jsi Opilec. MyslÌö si, ûe jsi Meötan, ale nejsi."
+        "ability": "Nev√≠≈°, ≈æe jsi Opilec. Mysl√≠≈° si, ≈æe jsi Me≈°tan, ale nejsi."
     },
     {
         "id": "recluse",
         "image": "https://wiki.bloodontheclocktower.com/images/6/60/Icon_recluse.png",
-        "name": "Samot·r",
+        "name": "Samot√°r",
         "edition": "tb",
         "team": "outsider",
         "firstNight": 0,
@@ -245,7 +245,7 @@
         "otherNightReminder": "",
         "reminders": [],
         "setup": false,
-        "ability": "Muûeö se jevit jako zl˝, jako Prisluhovac nebo DÈmon, i kdyû jsi mrtv˝."
+        "ability": "Mu≈æe≈° se jevit jako zl√Ω, jako Prisluhovac nebo D√©mon, i kdy≈æ jsi mrtv√Ω."
     },
     {
         "id": "saint",
@@ -259,7 +259,7 @@
         "otherNightReminder": "",
         "reminders": [],
         "setup": false,
-        "ability": "Pokud zemreö popravou, tvuj t˝m prohr·v·."
+        "ability": "Pokud zemre≈° popravou, tvuj t√Ωm prohr√°v√°."
     },
     {
         "id": "poisoner",
@@ -268,44 +268,44 @@
         "edition": "tb",
         "team": "minion",
         "firstNight": 17,
-        "firstNightReminder": "Travic uk·ûe na hr·ce. Hr·c je otr·ven.",
+        "firstNightReminder": "Travic uk√°≈æe na hr√°ce. Hr√°c je otr√°ven.",
         "otherNight": 7,
-        "otherNightReminder": "PredchozÌ otr·ven˝ hr·c uû nenÌ otr·ven˝. Travic uk·ûe na hr·ce. Hr·c je otr·ven.",
+        "otherNightReminder": "Predchoz√≠ otr√°ven√Ω hr√°c u≈æ nen√≠ otr√°ven√Ω. Travic uk√°≈æe na hr√°ce. Hr√°c je otr√°ven.",
         "reminders": [
-            "Otr·ven˝"
+            "Otr√°ven√Ω"
         ],
         "setup": false,
-        "ability": "Kaûdou noc vybereö 1 hr·ce: je otr·ven˝ po celou tuto noc a n·sledujÌcÌ den."
+        "ability": "Ka≈ædou noc vybere≈° 1 hr√°ce: je otr√°ven√Ω po celou tuto noc a n√°sleduj√≠c√≠ den."
     },
     {
         "id": "spy",
         "image": "https://wiki.bloodontheclocktower.com/images/5/54/Icon_spy.png",
-        "name": "äpeh",
+        "name": "≈†peh",
         "edition": "tb",
         "team": "minion",
         "firstNight": 49,
-        "firstNightReminder": "Ukaû Grimo·r äpehovi na tak dlouho, jak bude potrebovat.",
+        "firstNightReminder": "Uka≈æ Grimo√°r ≈†pehovi na tak dlouho, jak bude potrebovat.",
         "otherNight": 68,
-        "otherNightReminder": "Ukaû Grimo·r äpehovi na tak dlouho, jak bude potrebovat.",
+        "otherNightReminder": "Uka≈æ Grimo√°r ≈†pehovi na tak dlouho, jak bude potrebovat.",
         "reminders": [],
         "setup": false,
-        "ability": "Kaûdou noc nahlÈdneö do grimo·ru. Muûeö se jevit jako dobr˝, Meötan, nebo PodivÌn, i kdyû jsi mrtv˝."
+        "ability": "Ka≈ædou noc nahl√©dne≈° do grimo√°ru. Mu≈æe≈° se jevit jako dobr√Ω, Me≈°tan, nebo Podiv√≠n, i kdy≈æ jsi mrtv√Ω."
     },
     {
         "id": "scarletwoman",
         "image": "https://wiki.bloodontheclocktower.com/images/1/13/Icon_scarletwoman.png",
-        "name": "äarlatov· ûena",
+        "name": "≈†arlatov√° ≈æena",
         "edition": "tb",
         "team": "minion",
         "firstNight": 0,
         "firstNightReminder": "",
         "otherNight": 19,
-        "otherNightReminder": "Pokud se z äarlatovÈ ûeny dnes stal DÈmon: Ukaû 'Ty jsi' kartu a ûeton dÈmona.",
+        "otherNightReminder": "Pokud se z ≈†arlatov√© ≈æeny dnes stal D√©mon: Uka≈æ 'Ty jsi' kartu a ≈æeton d√©mona.",
         "reminders": [
-            "DÈmon"
+            "D√©mon"
         ],
         "setup": false,
-        "ability": "Pokud je naûivu alespon 5 hr·cu a zemre DÈmon, st·v·ö se DÈmonem. (PocestnÌ se nepocÌtajÌ.)"
+        "ability": "Pokud je na≈æivu alespon 5 hr√°cu a zemre D√©mon, st√°v√°≈° se D√©monem. (Pocestn√≠ se nepoc√≠taj√≠.)"
     },
     {
         "id": "baron",
@@ -319,7 +319,7 @@
         "otherNightReminder": "",
         "reminders": [],
         "setup": true,
-        "ability": "Ve hre jsou dva PodivÌni navÌc. [+2 PodivÌni]"
+        "ability": "Ve hre jsou dva Podiv√≠ni nav√≠c. [+2 Podiv√≠ni]"
     },
     {
         "id": "imp",
@@ -330,12 +330,12 @@
         "firstNight": 0,
         "firstNightReminder": "",
         "otherNight": 24,
-        "otherNightReminder": "Cert uk·ûe na hr·ce. Tento hr·c zemre. Pokud Cert oznacÌ s·m sebe: Nahrad ûeton postavy 1 ûivÈho prisluhovace prebytecn˝m ûetonem Certa. Ukaû prisluhovaci 'Ty jsi' kartu a ûeton Certa.",
+        "otherNightReminder": "Cert uk√°≈æe na hr√°ce. Tento hr√°c zemre. Pokud Cert oznac√≠ s√°m sebe: Nahrad ≈æeton postavy 1 ≈æiv√©ho prisluhovace prebytecn√Ωm ≈æetonem Certa. Uka≈æ prisluhovaci 'Ty jsi' kartu a ≈æeton Certa.",
         "reminders": [
             "Dead"
         ],
         "setup": false,
-        "ability": "Kaûdou noc* vybereö 1 hr·ce: ten zemre. Pokud takto zabijeö sebe, Prisluhovac se stane Certem."
+        "ability": "Ka≈ædou noc* vybere≈° 1 hr√°ce: ten zemre. Pokud takto zabije≈° sebe, Prisluhovac se stane Certem."
     },
     {
         "id": "bureaucrat",
@@ -419,17 +419,17 @@
         "firstNight": 40,
         "firstNightReminder": "Show the marked character token. Point to the marked player.",
         "otherNight": 51,
-        "otherNightReminder": "If the Grandmotherís grandchild was killed by the Demon tonight: The Grandmother dies.",
+        "otherNightReminder": "If the Grandmother‚Äôs grandchild was killed by the Demon tonight: The Grandmother dies.",
         "reminders": [
             "Grandchild"
         ],
         "setup": false,
-        "ability": "ZacÌn·ö s informacÌ o jednom dobrÈm hr·ci a jeho postave. Pokud ho zabije DÈmon, zemreö takÈ.",
+        "ability": "Zac√≠n√°≈° s informac√≠ o jednom dobr√©m hr√°ci a jeho postave. Pokud ho zabije D√©mon, zemre≈° tak√©.",
         "image": "https://wiki.bloodontheclocktower.com/images/2/26/Icon_grandmother.png"
     },
     {
         "id": "sailor",
-        "name": "N·mornÌk",
+        "name": "N√°morn√≠k",
         "edition": "bmr",
         "team": "townsfolk",
         "firstNight": 11,
@@ -440,21 +440,21 @@
             "Drunk"
         ],
         "setup": false,
-        "ability": "Kaûdou noc vybereö 1 ûivÈho hr·ce: bud ty, nebo on jste aû do soumraku opilÌ. Nemuûeö zemrÌt.",
+        "ability": "Ka≈ædou noc vybere≈° 1 ≈æiv√©ho hr√°ce: bud ty, nebo on jste a≈æ do soumraku opil√≠. Nemu≈æe≈° zemr√≠t.",
         "image": "https://wiki.bloodontheclocktower.com/images/1/16/Icon_sailor.png"
     },
     {
         "id": "chambermaid",
-        "name": "Komorn·",
+        "name": "Komorn√°",
         "edition": "bmr",
         "team": "townsfolk",
         "firstNight": 51,
-        "firstNightReminder": "The Chambermaid points to two players. Show the number signal (0, 1, 2, Ö) for how many of those players wake tonight for their ability.",
+        "firstNightReminder": "The Chambermaid points to two players. Show the number signal (0, 1, 2, ‚Ä¶) for how many of those players wake tonight for their ability.",
         "otherNight": 70,
-        "otherNightReminder": "The Chambermaid points to two players. Show the number signal (0, 1, 2, Ö) for how many of those players wake tonight for their ability.",
+        "otherNightReminder": "The Chambermaid points to two players. Show the number signal (0, 1, 2, ‚Ä¶) for how many of those players wake tonight for their ability.",
         "reminders": [],
         "setup": false,
-        "ability": "Kaûdou noc vybereö 2 ûivÈ hr·ce (ne sebe): dozvÌö se, kolik z nich bylo tu noc probuzeno na z·klade jejich schopnosti.",
+        "ability": "Ka≈ædou noc vybere≈° 2 ≈æiv√© hr√°ce (ne sebe): dozv√≠≈° se, kolik z nich bylo tu noc probuzeno na z√°klade jejich schopnosti.",
         "image": "https://wiki.bloodontheclocktower.com/images/8/87/Icon_chambermaid.png"
     },
     {
@@ -470,12 +470,12 @@
             "Chosen"
         ],
         "setup": false,
-        "ability": "Kaûdou noc* vybereö 1 hr·ce (jinÈho neû tu minulou): pokud to bude DÈmon, dozvÌ se, kdo jsi, ale tu noc se neprobudÌ.",
+        "ability": "Ka≈ædou noc* vybere≈° 1 hr√°ce (jin√©ho ne≈æ tu minulou): pokud to bude D√©mon, dozv√≠ se, kdo jsi, ale tu noc se neprobud√≠.",
         "image": "https://wiki.bloodontheclocktower.com/images/c/c2/Icon_exorcist.png"
     },
     {
         "id": "innkeeper",
-        "name": "Hostinsk˝",
+        "name": "Hostinsk√Ω",
         "edition": "bmr",
         "team": "townsfolk",
         "firstNight": 0,
@@ -487,7 +487,7 @@
             "Drunk"
         ],
         "setup": false,
-        "ability": "Kaûdou noc* vybereö 2 hr·ce: tu noc nemuûou zemrÌt, ale 1 z nich je aû do soumraku opil˝.",
+        "ability": "Ka≈ædou noc* vybere≈° 2 hr√°ce: tu noc nemu≈æou zemr√≠t, ale 1 z nich je a≈æ do soumraku opil√Ω.",
         "image": "https://wiki.bloodontheclocktower.com/images/0/0c/Icon_innkeeper.png"
     },
     {
@@ -503,7 +503,7 @@
             "Dead"
         ],
         "setup": false,
-        "ability": "Kaûdou noc* vybereö 1 hr·ce a zkusÌö uhodnout jeho postavu: pokud bude tvuj tip öpatn˝, zemreö.",
+        "ability": "Ka≈ædou noc* vybere≈° 1 hr√°ce a zkus√≠≈° uhodnout jeho postavu: pokud bude tvuj tip ≈°patn√Ω, zemre≈°.",
         "image": "https://wiki.bloodontheclocktower.com/images/f/fd/Icon_gambler.png"
     },
     {
@@ -514,17 +514,17 @@
         "firstNight": 0,
         "firstNightReminder": "",
         "otherNight": 38,
-        "otherNightReminder": "If the Gossipís public statement was true: Choose a player not protected from dying tonight. That player dies.",
+        "otherNightReminder": "If the Gossip‚Äôs public statement was true: Choose a player not protected from dying tonight. That player dies.",
         "reminders": [
             "Dead"
         ],
         "setup": false,
-        "ability": "Kaûd˝ den muûeö ucinit verejnÈ prohl·öenÌ. Pokud bude pravdivÈ, tu noc nekdo zemre.",
+        "ability": "Ka≈æd√Ω den mu≈æe≈° ucinit verejn√© prohl√°≈°en√≠. Pokud bude pravdiv√©, tu noc nekdo zemre.",
         "image": "https://wiki.bloodontheclocktower.com/images/c/c7/Icon_gossip.png"
     },
     {
         "id": "courtier",
-        "name": "LichotnÌk",
+        "name": "Lichotn√≠k",
         "edition": "bmr",
         "team": "townsfolk",
         "firstNight": 19,
@@ -538,7 +538,7 @@
             "No ability"
         ],
         "setup": false,
-        "ability": "Jednou za hru, v noci, vybereö 1 postavu: bude opil· 3 noci a 3 dny.",
+        "ability": "Jednou za hru, v noci, vybere≈° 1 postavu: bude opil√° 3 noci a 3 dny.",
         "image": "https://wiki.bloodontheclocktower.com/images/e/e0/Icon_courtier.png"
     },
     {
@@ -555,7 +555,7 @@
             "No ability"
         ],
         "setup": false,
-        "ability": "Jednou za hru, v noci*, vybereö 1 mrtvÈho hr·ce: pokud je to Meötan, je oûiven.",
+        "ability": "Jednou za hru, v noci*, vybere≈° 1 mrtv√©ho hr√°ce: pokud je to Me≈°tan, je o≈æiven.",
         "image": "https://wiki.bloodontheclocktower.com/images/6/65/Icon_professor.png"
     },
     {
@@ -571,12 +571,12 @@
             "Everyone drunk"
         ],
         "setup": false,
-        "ability": "Kdyû Prisluhovac zemre popravou, vöichni hr·ci (aû na PocestnÈ) jsou aû do soumraku dalöÌho dne opilÌ.",
+        "ability": "Kdy≈æ Prisluhovac zemre popravou, v≈°ichni hr√°ci (a≈æ na Pocestn√©) jsou a≈æ do soumraku dal≈°√≠ho dne opil√≠.",
         "image": "https://wiki.bloodontheclocktower.com/images/2/24/Icon_minstrel.png"
     },
     {
         "id": "tealady",
-        "name": "Cajov· d·ma",
+        "name": "Cajov√° d√°ma",
         "edition": "bmr",
         "team": "townsfolk",
         "firstNight": 0,
@@ -587,7 +587,7 @@
             "Can not die"
         ],
         "setup": false,
-        "ability": "Pokud jsou oba tvÌ nejbliûöÌ ûivÌ sousedÈ (1 z kaûdÈ strany) na strane dobra, nemohou zemrÌt.",
+        "ability": "Pokud jsou oba tv√≠ nejbli≈æ≈°√≠ ≈æiv√≠ soused√© (1 z ka≈æd√© strany) na strane dobra, nemohou zemr√≠t.",
         "image": "https://wiki.bloodontheclocktower.com/images/1/16/Icon_tealady.png"
     },
     {
@@ -601,12 +601,12 @@
         "otherNightReminder": "",
         "reminders": [],
         "setup": false,
-        "ability": "PopravenÌ hr·ci dobra nemusÌ zemrÌt.",
+        "ability": "Popraven√≠ hr√°ci dobra nemus√≠ zemr√≠t.",
         "image": "https://wiki.bloodontheclocktower.com/images/5/5d/Icon_pacifist.png"
     },
     {
         "id": "fool",
-        "name": "äaöek",
+        "name": "≈†a≈°ek",
         "edition": "bmr",
         "team": "townsfolk",
         "firstNight": 0,
@@ -617,12 +617,12 @@
             "No ability"
         ],
         "setup": false,
-        "ability": "Kdyû m·ö zemrÌt poprvÈ, nezemreö.",
+        "ability": "Kdy≈æ m√°≈° zemr√≠t poprv√©, nezemre≈°.",
         "image": "https://wiki.bloodontheclocktower.com/images/d/d9/Icon_fool.png"
     },
     {
         "id": "tinker",
-        "name": "Dr·tenÌk",
+        "name": "Dr√°ten√≠k",
         "edition": "bmr",
         "team": "outsider",
         "firstNight": 0,
@@ -633,12 +633,12 @@
             "Dead"
         ],
         "setup": false,
-        "ability": "Muûeö kdykoli zemrÌt.",
+        "ability": "Mu≈æe≈° kdykoli zemr√≠t.",
         "image": "https://wiki.bloodontheclocktower.com/images/9/98/Icon_tinker.png"
     },
     {
         "id": "moonchild",
-        "name": "DÌte mesÌce",
+        "name": "D√≠te mes√≠ce",
         "edition": "bmr",
         "team": "outsider",
         "firstNight": 0,
@@ -649,7 +649,7 @@
             "Dead"
         ],
         "setup": false,
-        "ability": "Kdyû se dozvÌö o svÈ smrti, verejne vybereö 1 ûivÈho hr·ce. Pokud je na strane dobra, tu noc zemre.",
+        "ability": "Kdy≈æ se dozv√≠≈° o sv√© smrti, verejne vybere≈° 1 ≈æiv√©ho hr√°ce. Pokud je na strane dobra, tu noc zemre.",
         "image": "https://wiki.bloodontheclocktower.com/images/d/dc/Icon_moonchild.png"
     },
     {
@@ -665,16 +665,16 @@
             "Drunk"
         ],
         "setup": false,
-        "ability": "Kaûdou noc prvnÌ hr·c, kter˝ te oznacÌ na z·klade svÈ schopnosti, je aû do soumraku opil˝. ZÌsk·v·ö jeho prÌsluönost.",
+        "ability": "Ka≈ædou noc prvn√≠ hr√°c, kter√Ω te oznac√≠ na z√°klade sv√© schopnosti, je a≈æ do soumraku opil√Ω. Z√≠sk√°v√°≈° jeho pr√≠slu≈°nost.",
         "image": "https://wiki.bloodontheclocktower.com/images/6/6f/Icon_goon.png"
     },
     {
         "id": "lunatic",
-        "name": "Bl·zen",
+        "name": "Bl√°zen",
         "edition": "bmr",
         "team": "outsider",
         "firstNight": 8,
-        "firstNightReminder": "If 7 or more players: Show the Lunatic a number of arbitrary 'Minions', players equal to the number of Minions in play. Show 3 character tokens of arbitrary good characters. If the token received by the Lunatic is a Demon that would wake tonight: Allow the Lunatic to do the Demon actions. Place their 'attack' markers. Wake the Demon. Show the Demonís real character token. Show them the Lunatic player. If the Lunatic attacked players: Show the real demon each marked player. Remove any Lunatic 'attack' markers.",
+        "firstNightReminder": "If 7 or more players: Show the Lunatic a number of arbitrary 'Minions', players equal to the number of Minions in play. Show 3 character tokens of arbitrary good characters. If the token received by the Lunatic is a Demon that would wake tonight: Allow the Lunatic to do the Demon actions. Place their 'attack' markers. Wake the Demon. Show the Demon‚Äôs real character token. Show them the Lunatic player. If the Lunatic attacked players: Show the real demon each marked player. Remove any Lunatic 'attack' markers.",
         "otherNight": 20,
         "otherNightReminder": "Allow the Lunatic to do the actions of the Demon. Place their 'attack' markers. If the Lunatic selected players: Wake the Demon. Show the 'attack' marker, then point to each marked player. Remove any Lunatic 'attack' markers.",
         "reminders": [
@@ -683,7 +683,7 @@
             "Attack 3"
         ],
         "setup": false,
-        "ability": "MyslÌö si, ûe jsi DÈmon, ale nejsi. DÈmon vÌ, kdo jsi a koho v noci vybÌr·ö.",
+        "ability": "Mysl√≠≈° si, ≈æe jsi D√©mon, ale nejsi. D√©mon v√≠, kdo jsi a koho v noci vyb√≠r√°≈°.",
         "image": "https://wiki.bloodontheclocktower.com/images/6/64/Icon_lunatic.png"
     },
     {
@@ -700,28 +700,28 @@
             "Dead"
         ],
         "setup": true,
-        "ability": "ZacÌn·ö s informacÌ, kterÌ PodivÌni jsou ve hre. Pokud 1 z nich ve dne zemre, vybereö tu noc 1 hr·ce: ten zemre. [-1 nebo +1 PodivÌn]",
+        "ability": "Zac√≠n√°≈° s informac√≠, kter√≠ Podiv√≠ni jsou ve hre. Pokud 1 z nich ve dne zemre, vybere≈° tu noc 1 hr√°ce: ten zemre. [-1 nebo +1 Podiv√≠n]",
         "image": "https://wiki.bloodontheclocktower.com/images/d/d0/Icon_godfather.png"
     },
     {
         "id": "devilsadvocate",
-        "name": "D·bluv advok·t",
+        "name": "D√°bluv advok√°t",
         "edition": "bmr",
         "team": "minion",
         "firstNight": 22,
-        "firstNightReminder": "The Devilís Advocate points to a living player. That player survives execution tomorrow.",
+        "firstNightReminder": "The Devil‚Äôs Advocate points to a living player. That player survives execution tomorrow.",
         "otherNight": 13,
-        "otherNightReminder": "The Devilís Advocate points to a living player, different from the previous night. That player survives execution tomorrow.",
+        "otherNightReminder": "The Devil‚Äôs Advocate points to a living player, different from the previous night. That player survives execution tomorrow.",
         "reminders": [
             "Survives execution"
         ],
         "setup": false,
-        "ability": "Kaûdou noc vybereö 1 ûivÈho hr·ce (jinÈho neû tu minulou): pokud by mel b˝t n·sledujÌcÌ den popraven, nezemre.",
+        "ability": "Ka≈ædou noc vybere≈° 1 ≈æiv√©ho hr√°ce (jin√©ho ne≈æ tu minulou): pokud by mel b√Ωt n√°sleduj√≠c√≠ den popraven, nezemre.",
         "image": "https://wiki.bloodontheclocktower.com/images/0/09/Icon_devilsadvocate.png"
     },
     {
         "id": "assassin",
-        "name": "N·jemn˝ vrah",
+        "name": "N√°jemn√Ω vrah",
         "edition": "bmr",
         "team": "minion",
         "firstNight": 0,
@@ -733,7 +733,7 @@
             "No ability"
         ],
         "setup": false,
-        "ability": "Jednou za hru, v noci*, vybereö 1 hr·ce: ten zemre, i pokud by z jakÈhokoli duvodu nemohl.",
+        "ability": "Jednou za hru, v noci*, vybere≈° 1 hr√°ce: ten zemre, i pokud by z jak√©hokoli duvodu nemohl.",
         "image": "https://wiki.bloodontheclocktower.com/images/4/49/Icon_assassin.png"
     },
     {
@@ -747,7 +747,7 @@
         "otherNightReminder": "",
         "reminders": [],
         "setup": false,
-        "ability": "Pokud DÈmon zemre popravou (coû obvykle znamen· konec hry), hraje se jeöte 1 den. Je-li pak nekdo popraven, jeho t˝m prohr·v·.",
+        "ability": "Pokud D√©mon zemre popravou (co≈æ obvykle znamen√° konec hry), hraje se je≈°te 1 den. Je-li pak nekdo popraven, jeho t√Ωm prohr√°v√°.",
         "image": "https://wiki.bloodontheclocktower.com/images/d/d5/Icon_mastermind.png"
     },
     {
@@ -764,7 +764,7 @@
             "Dead"
         ],
         "setup": false,
-        "ability": "Kaûdou noc*, pokud ten den nikdo nezemrel, vybereö 1 hr·ce: ten zemre. Kdyû zemreö poprvÈ, ûijeö a jevÌö se jako mrtv˝.",
+        "ability": "Ka≈ædou noc*, pokud ten den nikdo nezemrel, vybere≈° 1 hr√°ce: ten zemre. Kdy≈æ zemre≈° poprv√©, ≈æije≈° a jev√≠≈° se jako mrtv√Ω.",
         "image": "https://wiki.bloodontheclocktower.com/images/1/15/Icon_zombuul.png"
     },
     {
@@ -781,7 +781,7 @@
             "Dead"
         ],
         "setup": false,
-        "ability": "Kaûdou noc vybereö 1 hr·ce: je otr·ven˝. Hr·c otr·ven˝ predchozÌ noc zemre a prestane b˝t otr·ven˝.",
+        "ability": "Ka≈ædou noc vybere≈° 1 hr√°ce: je otr√°ven√Ω. Hr√°c otr√°ven√Ω predchoz√≠ noc zemre a prestane b√Ωt otr√°ven√Ω.",
         "image": "https://wiki.bloodontheclocktower.com/images/f/f4/Icon_pukka.png"
     },
     {
@@ -798,12 +798,12 @@
             "Alive"
         ],
         "setup": false,
-        "ability": "Kaûdou noc* vybereö 2 hr·ce: ti zemrou. Hr·c zabit˝ predchozÌ noc muûe b˝t vyvrûen zpet (oûiven).",
+        "ability": "Ka≈ædou noc* vybere≈° 2 hr√°ce: ti zemrou. Hr√°c zabit√Ω predchoz√≠ noc mu≈æe b√Ωt vyvr≈æen zpet (o≈æiven).",
         "image": "https://wiki.bloodontheclocktower.com/images/1/1f/Icon_shabaloth.png"
     },
     {
         "id": "po",
-        "name": "PÛ",
+        "name": "P√≥",
         "edition": "bmr",
         "team": "demon",
         "firstNight": 0,
@@ -815,7 +815,7 @@
             "3 attacks"
         ],
         "setup": false,
-        "ability": "Kaûdou noc* muûeö vybrat 1 hr·ce: ten zemre. Pokud ses naposled rozhodl nikoho nevybrat, tuto noc vybereö 3 hr·ce.",
+        "ability": "Ka≈ædou noc* mu≈æe≈° vybrat 1 hr√°ce: ten zemre. Pokud ses naposled rozhodl nikoho nevybrat, tuto noc vybere≈° 3 hr√°ce.",
         "image": "https://wiki.bloodontheclocktower.com/images/b/b2/Icon_po.png"
     },
     {
@@ -897,7 +897,7 @@
     },
     {
         "id": "clockmaker",
-        "name": "Hodin·r",
+        "name": "Hodin√°r",
         "edition": "snv",
         "team": "townsfolk",
         "firstNight": 41,
@@ -906,12 +906,12 @@
         "otherNightReminder": "",
         "reminders": [],
         "setup": false,
-        "ability": "ZacÌn·ö s informacÌ, kolik kroku je DÈmon od svÈho nejbliûöÌho Prisluhovace.",
+        "ability": "Zac√≠n√°≈° s informac√≠, kolik kroku je D√©mon od sv√©ho nejbli≈æ≈°√≠ho Prisluhovace.",
         "image": "https://wiki.bloodontheclocktower.com/images/3/3d/Icon_clockmaker.png"
     },
     {
         "id": "dreamer",
-        "name": "SnÌlek",
+        "name": "Sn√≠lek",
         "edition": "snv",
         "team": "townsfolk",
         "firstNight": 42,
@@ -920,12 +920,12 @@
         "otherNightReminder": "The Dreamer points to a player. Show 1 good and 1 evil character token; one of these is correct.",
         "reminders": [],
         "setup": false,
-        "ability": "Kaûdou noc vybereö 1 hr·ce (ne sebe ani PocestnÈho): dozvÌö se 1 dobrou a 1 zlou postavu. Jednou z nich je vybran˝ hr·c.",
+        "ability": "Ka≈ædou noc vybere≈° 1 hr√°ce (ne sebe ani Pocestn√©ho): dozv√≠≈° se 1 dobrou a 1 zlou postavu. Jednou z nich je vybran√Ω hr√°c.",
         "image": "https://wiki.bloodontheclocktower.com/images/f/f2/Icon_dreamer.png"
     },
     {
         "id": "snakecharmer",
-        "name": "ZaklÌnac hadu",
+        "name": "Zakl√≠nac hadu",
         "edition": "snv",
         "team": "townsfolk",
         "firstNight": 20,
@@ -936,7 +936,7 @@
             "Poisoned"
         ],
         "setup": false,
-        "ability": "Kaûdou noc vybereö 1 ûivÈho hr·ce: pokud je to DÈmon, prohodÌte si postavu i prÌsluönost a on je otr·ven˝.",
+        "ability": "Ka≈ædou noc vybere≈° 1 ≈æiv√©ho hr√°ce: pokud je to D√©mon, prohod√≠te si postavu i pr√≠slu≈°nost a on je otr√°ven√Ω.",
         "image": "https://wiki.bloodontheclocktower.com/images/0/08/Icon_snakecharmer.png"
     },
     {
@@ -952,12 +952,12 @@
             "Abnormal"
         ],
         "setup": false,
-        "ability": "Kaûdou noc se dozvÌö, kolik schopnostÌ hr·cu fungovalo abnorm·lne (od ˙svitu) v dusledku schopnosti jinÈ postavy.",
+        "ability": "Ka≈ædou noc se dozv√≠≈°, kolik schopnost√≠ hr√°cu fungovalo abnorm√°lne (od √∫svitu) v dusledku schopnosti jin√© postavy.",
         "image": "https://wiki.bloodontheclocktower.com/images/f/f1/Icon_mathematician.png"
     },
     {
         "id": "flowergirl",
-        "name": "Kvetin·rka",
+        "name": "Kvetin√°rka",
         "edition": "snv",
         "team": "townsfolk",
         "firstNight": 0,
@@ -969,12 +969,12 @@
             "Demon not voted"
         ],
         "setup": false,
-        "ability": "Kaûdou noc* se dozvÌö, zda DÈmon ten den hlasoval.",
+        "ability": "Ka≈ædou noc* se dozv√≠≈°, zda D√©mon ten den hlasoval.",
         "image": "https://wiki.bloodontheclocktower.com/images/a/ac/Icon_flowergirl.png"
     },
     {
         "id": "towncrier",
-        "name": "Mestsk˝ vyvol·vac",
+        "name": "Mestsk√Ω vyvol√°vac",
         "edition": "snv",
         "team": "townsfolk",
         "firstNight": 0,
@@ -986,12 +986,12 @@
             "Minion nominated"
         ],
         "setup": false,
-        "ability": "Kaûdou noc* se dozvÌö, zda Prisluhovac ten den nominoval.",
+        "ability": "Ka≈ædou noc* se dozv√≠≈°, zda Prisluhovac ten den nominoval.",
         "image": "https://wiki.bloodontheclocktower.com/images/e/ef/Icon_towncrier.png"
     },
     {
         "id": "oracle",
-        "name": "Veötec",
+        "name": "Ve≈°tec",
         "edition": "snv",
         "team": "townsfolk",
         "firstNight": 0,
@@ -1000,7 +1000,7 @@
         "otherNightReminder": "Show the hand signal for the number (0, 1, 2, etc.) of dead evil players.",
         "reminders": [],
         "setup": false,
-        "ability": "Kaûdou noc* se dozvÌö, kolik zl˝ch hr·cu je mrtv˝ch.",
+        "ability": "Ka≈ædou noc* se dozv√≠≈°, kolik zl√Ωch hr√°cu je mrtv√Ωch.",
         "image": "https://wiki.bloodontheclocktower.com/images/b/bb/Icon_oracle.png"
     },
     {
@@ -1014,12 +1014,12 @@
         "otherNightReminder": "",
         "reminders": [],
         "setup": false,
-        "ability": "Kaûd˝ den muûeö prijÌt soukrome za vypravecem a dozvedet se od nej 2 informace. Jedna z nich je pravdiv·, jedna faleön·.",
+        "ability": "Ka≈æd√Ω den mu≈æe≈° prij√≠t soukrome za vypravecem a dozvedet se od nej 2 informace. Jedna z nich je pravdiv√°, jedna fale≈°n√°.",
         "image": "https://wiki.bloodontheclocktower.com/images/d/d5/Icon_savant.png"
     },
     {
         "id": "seamstress",
-        "name": "ävadlena",
+        "name": "≈†vadlena",
         "edition": "snv",
         "team": "townsfolk",
         "firstNight": 43,
@@ -1030,7 +1030,7 @@
             "No ability"
         ],
         "setup": false,
-        "ability": "Jednou za hru, v noci, vybereö 2 hr·ce (ne sebe): dozvÌö se, zda je jejich prÌsluönost stejn·.",
+        "ability": "Jednou za hru, v noci, vybere≈° 2 hr√°ce (ne sebe): dozv√≠≈° se, zda je jejich pr√≠slu≈°nost stejn√°.",
         "image": "https://wiki.bloodontheclocktower.com/images/5/53/Icon_seamstress.png"
     },
     {
@@ -1047,7 +1047,7 @@
             "Is the Philosopher"
         ],
         "setup": false,
-        "ability": "Jednou za hru, v noci, vybereö 1 dobrou postavu: zÌsk·ö jejÌ schopnost. Pokud je tato postava ve hre, st·v· se opilou.",
+        "ability": "Jednou za hru, v noci, vybere≈° 1 dobrou postavu: z√≠sk√°≈° jej√≠ schopnost. Pokud je tato postava ve hre, st√°v√° se opilou.",
         "image": "https://wiki.bloodontheclocktower.com/images/5/5d/Icon_philosopher.png"
     },
     {
@@ -1063,23 +1063,23 @@
             "No ability"
         ],
         "setup": false,
-        "ability": "Jednou za hru, behem dne, soukrome poloûÌö vypraveci jakoukoli ot·zku, na kterou muûe odpovedet Ñano/neì.",
+        "ability": "Jednou za hru, behem dne, soukrome polo≈æ√≠≈° vypraveci jakoukoli ot√°zku, na kterou mu≈æe odpovedet ‚Äûano/ne‚Äú.",
         "image": "https://wiki.bloodontheclocktower.com/images/1/1a/Icon_artist.png"
     },
     {
         "id": "juggler",
-        "name": "KejklÌr",
+        "name": "Kejkl√≠r",
         "edition": "snv",
         "team": "townsfolk",
         "firstNight": 0,
         "firstNightReminder": "",
         "otherNight": 61,
-        "otherNightReminder": "If today was the Jugglerís first day: Show the hand signal for the number (0, 1, 2, etc.) of 'Correct' markers. Remove markers.",
+        "otherNightReminder": "If today was the Juggler‚Äôs first day: Show the hand signal for the number (0, 1, 2, etc.) of 'Correct' markers. Remove markers.",
         "reminders": [
             "Correct"
         ],
         "setup": false,
-        "ability": "PrvnÌ den zkus verejne uh·dnout aû 5 postav hr·cu. Tu noc se dozvÌö, kolik jsi jich uhodl spr·vne.",
+        "ability": "Prvn√≠ den zkus verejne uh√°dnout a≈æ 5 postav hr√°cu. Tu noc se dozv√≠≈°, kolik jsi jich uhodl spr√°vne.",
         "image": "https://wiki.bloodontheclocktower.com/images/4/42/Icon_juggler.png"
     },
     {
@@ -1093,7 +1093,7 @@
         "otherNightReminder": "If the Sage was killed by a Demon: Point to two players, one of which is that Demon.",
         "reminders": [],
         "setup": false,
-        "ability": "Pokud te zabije DÈmon, dozvÌö se, ûe je to jeden ze dvou hr·cu.",
+        "ability": "Pokud te zabije D√©mon, dozv√≠≈° se, ≈æe je to jeden ze dvou hr√°cu.",
         "image": "https://wiki.bloodontheclocktower.com/images/a/a0/Icon_sage.png"
     },
     {
@@ -1107,12 +1107,12 @@
         "otherNightReminder": "",
         "reminders": [],
         "setup": false,
-        "ability": "Pokud jsi Ñposedl˝ì predstavou, ûe jsi PodivÌn, muûeö b˝t popraven.",
+        "ability": "Pokud jsi ‚Äûposedl√Ω‚Äú predstavou, ≈æe jsi Podiv√≠n, mu≈æe≈° b√Ωt popraven.",
         "image": "https://wiki.bloodontheclocktower.com/images/2/2e/Icon_mutant.png"
     },
     {
         "id": "sweetheart",
-        "name": "ZlatÌcko",
+        "name": "Zlat√≠cko",
         "edition": "snv",
         "team": "outsider",
         "firstNight": 0,
@@ -1123,7 +1123,7 @@
             "Drunk"
         ],
         "setup": false,
-        "ability": "Kdyû zemreö, 1 hr·c je odted trvale opil˝.",
+        "ability": "Kdy≈æ zemre≈°, 1 hr√°c je odted trvale opil√Ω.",
         "image": "https://wiki.bloodontheclocktower.com/images/6/6a/Icon_sweetheart.png"
     },
     {
@@ -1139,12 +1139,12 @@
             "Haircuts tonight"
         ],
         "setup": false,
-        "ability": "Pokud jsi tento den nebo tuto noc zemrel, DÈmon muûe vybrat 2 hr·ce (ne dalöÌho DÈmona), kterÌ si prohodÌ postavy.",
+        "ability": "Pokud jsi tento den nebo tuto noc zemrel, D√©mon mu≈æe vybrat 2 hr√°ce (ne dal≈°√≠ho D√©mona), kter√≠ si prohod√≠ postavy.",
         "image": "https://wiki.bloodontheclocktower.com/images/1/16/Icon_barber.png"
     },
     {
         "id": "klutz",
-        "name": "Neöika",
+        "name": "Ne≈°ika",
         "edition": "snv",
         "team": "outsider",
         "firstNight": 0,
@@ -1153,12 +1153,12 @@
         "otherNightReminder": "",
         "reminders": [],
         "setup": false,
-        "ability": "Kdyû se dozvÌö o svÈ smrti, verejne vybereö 1 ûivÈho hr·ce: pokud je zl˝, tvuj t˝m prohr·v·.",
+        "ability": "Kdy≈æ se dozv√≠≈° o sv√© smrti, verejne vybere≈° 1 ≈æiv√©ho hr√°ce: pokud je zl√Ω, tvuj t√Ωm prohr√°v√°.",
         "image": "https://wiki.bloodontheclocktower.com/images/b/bc/Icon_klutz.png"
     },
     {
         "id": "eviltwin",
-        "name": "ZlÈ dvojce",
+        "name": "Zl√© dvojce",
         "edition": "snv",
         "team": "minion",
         "firstNight": 23,
@@ -1169,7 +1169,7 @@
             "Twin"
         ],
         "setup": false,
-        "ability": "Ty a hr·c druhÈ strany o sobe vÌte. Pokud je ten dobr˝ z v·s popraven, zlo vyhr·v·. Dobro nemuûe vyhr·t, jste-li oba naûivu.",
+        "ability": "Ty a hr√°c druh√© strany o sobe v√≠te. Pokud je ten dobr√Ω z v√°s popraven, zlo vyhr√°v√°. Dobro nemu≈æe vyhr√°t, jste-li oba na≈æivu.",
         "image": "https://wiki.bloodontheclocktower.com/images/f/f4/Icon_eviltwin.png"
     },
     {
@@ -1185,7 +1185,7 @@
             "Cursed"
         ],
         "setup": false,
-        "ability": "Kaûdou noc vybereö 1 hr·ce: pokud bude n·sledujÌcÌ den nominovat, zemre. O tuto schopnost prich·zÌö, pokud jsou naûivu pouze 3 hr·ci.",
+        "ability": "Ka≈ædou noc vybere≈° 1 hr√°ce: pokud bude n√°sleduj√≠c√≠ den nominovat, zemre. O tuto schopnost prich√°z√≠≈°, pokud jsou na≈æivu pouze 3 hr√°ci.",
         "image": "https://wiki.bloodontheclocktower.com/images/7/7b/Icon_witch.png"
     },
     {
@@ -1201,12 +1201,12 @@
             "Mad"
         ],
         "setup": false,
-        "ability": "Kaûdou noc vybereö 1 hr·ce a 1 dobrou postavu: n·sledujÌcÌ den musÌ b˝t vybran˝ hr·c Ñposedl˝ì predstavou, ûe je tou postavou, jinak muûe b˝t popraven.",
+        "ability": "Ka≈ædou noc vybere≈° 1 hr√°ce a 1 dobrou postavu: n√°sleduj√≠c√≠ den mus√≠ b√Ωt vybran√Ω hr√°c ‚Äûposedl√Ω‚Äú predstavou, ≈æe je tou postavou, jinak mu≈æe b√Ωt popraven.",
         "image": "https://wiki.bloodontheclocktower.com/images/4/45/Icon_cerenovus.png"
     },
     {
         "id": "pithag",
-        "name": "Jeûibaba",
+        "name": "Je≈æibaba",
         "edition": "snv",
         "team": "minion",
         "firstNight": 0,
@@ -1215,7 +1215,7 @@
         "otherNightReminder": "The Pit-Hag points to a player and a character on the sheet. If this character is not in play, wake that player and show them the 'You are' card and the relevant character token. If the character is in play, nothing happens.",
         "reminders": [],
         "setup": false,
-        "ability": "Kaûdou noc* vybereö 1 hr·ce a 1 postavu, kterou se vybran˝ hr·c stane (pokud nenÌ ve hre). Pokud je takto stvoren DÈmon, tu noc muûe zemrÌt kdokoli.",
+        "ability": "Ka≈ædou noc* vybere≈° 1 hr√°ce a 1 postavu, kterou se vybran√Ω hr√°c stane (pokud nen√≠ ve hre). Pokud je takto stvoren D√©mon, tu noc mu≈æe zemr√≠t kdokoli.",
         "image": "https://wiki.bloodontheclocktower.com/images/6/6b/Icon_pithag.png"
     },
     {
@@ -1232,7 +1232,7 @@
             "Once"
         ],
         "setup": true,
-        "ability": "Kaûdou noc* vybereö 1 hr·ce: ten zemre. Kdyû takto poprvÈ zabijeö PodivÌna, stane se Fang Guem a ty zemreö namÌsto nej. [+1 PodivÌn]",
+        "ability": "Ka≈ædou noc* vybere≈° 1 hr√°ce: ten zemre. Kdy≈æ takto poprv√© zabije≈° Podiv√≠na, stane se Fang Guem a ty zemre≈° nam√≠sto nej. [+1 Podiv√≠n]",
         "image": "https://wiki.bloodontheclocktower.com/images/0/0e/Icon_fanggu.png"
     },
     {
@@ -1250,7 +1250,7 @@
             "Poisoned"
         ],
         "setup": true,
-        "ability": "Kaûdou noc* vybereö 1 hr·ce: ten zemre. Prisluhovaci, kterÈ zabijeö, si ponechajÌ svou schopnost a otr·vÌ 1 svÈho sousedÌcÌho Meötana. [-1 PodivÌn]",
+        "ability": "Ka≈ædou noc* vybere≈° 1 hr√°ce: ten zemre. Prisluhovaci, kter√© zabije≈°, si ponechaj√≠ svou schopnost a otr√°v√≠ 1 sv√©ho soused√≠c√≠ho Me≈°tana. [-1 Podiv√≠n]",
         "image": "https://wiki.bloodontheclocktower.com/images/1/1a/Icon_vigormortis.png"
     },
     {
@@ -1267,7 +1267,7 @@
             "Poisoned"
         ],
         "setup": false,
-        "ability": "Kaûdou noc* vybereö 1 hr·ce: ten zemre. Dva tvÌ sousedÌcÌ MeötanÈ (1 z kaûdÈ strany) jsou otr·veni.",
+        "ability": "Ka≈ædou noc* vybere≈° 1 hr√°ce: ten zemre. Dva tv√≠ soused√≠c√≠ Me≈°tan√© (1 z ka≈æd√© strany) jsou otr√°veni.",
         "image": "https://wiki.bloodontheclocktower.com/images/e/eb/Icon_nodashii.png"
     },
     {
@@ -1283,7 +1283,7 @@
             "Dead"
         ],
         "setup": false,
-        "ability": "Kaûdou noc* vybereö 1 hr·ce: ten zemre. Schopnosti Meötanu d·vajÌ faleönÈ informace. Pokud nenÌ nekdo kaûd˝ den popraven, zlo vyhr·v·.",
+        "ability": "Ka≈ædou noc* vybere≈° 1 hr√°ce: ten zemre. Schopnosti Me≈°tanu d√°vaj√≠ fale≈°n√© informace. Pokud nen√≠ nekdo ka≈æd√Ω den popraven, zlo vyhr√°v√°.",
         "image": "https://wiki.bloodontheclocktower.com/images/8/89/Icon_vortox.png"
     },
     {
@@ -1367,7 +1367,7 @@
     {
         "id": "noble",
         "image": "https://wiki.bloodontheclocktower.com/images/c/cc/Icon_noble.png",
-        "name": "älechtic",
+        "name": "≈†lechtic",
         "edition": "",
         "team": "townsfolk",
         "firstNight": 44,
@@ -1378,7 +1378,7 @@
             "Seen"
         ],
         "setup": false,
-        "ability": "ZacÌn·ö s informacÌ o 3 hr·cÌch, z kter˝ch presne 1 je zl˝."
+        "ability": "Zac√≠n√°≈° s informac√≠ o 3 hr√°c√≠ch, z kter√Ωch presne 1 je zl√Ω."
     },
     {
         "id": "bountyhunter",
@@ -1393,12 +1393,12 @@
             "Known"
         ],
         "setup": true,
-        "ability": "ZacÌn·ö s informacÌ o 1 zlÈm hr·ci. Pokud tento hr·c zemre, dozvÌö se dalöÌho zlÈho hr·ce. [1 Meötan je zl˝]",
+        "ability": "Zac√≠n√°≈° s informac√≠ o 1 zl√©m hr√°ci. Pokud tento hr√°c zemre, dozv√≠≈° se dal≈°√≠ho zl√©ho hr√°ce. [1 Me≈°tan je zl√Ω]",
         "image": "https://wiki.bloodontheclocktower.com/images/5/5b/Icon_bountyhunter.png"
     },
     {
         "id": "pixie",
-        "name": "SkrÌtek",
+        "name": "Skr√≠tek",
         "edition": "",
         "team": "townsfolk",
         "firstNight": 29,
@@ -1410,12 +1410,12 @@
             "Has ability"
         ],
         "setup": false,
-        "ability": "ZacÌn·ö s informacÌ o 1 Meötanovi, kter˝ je ve hre. Pokud jsi posedl˝, ûe jsi tato postava, zÌsk·ö jeho schopnost, kdyû umre.",
+        "ability": "Zac√≠n√°≈° s informac√≠ o 1 Me≈°tanovi, kter√Ω je ve hre. Pokud jsi posedl√Ω, ≈æe jsi tato postava, z√≠sk√°≈° jeho schopnost, kdy≈æ umre.",
         "image": "https://wiki.bloodontheclocktower.com/images/d/d5/Icon_pixie.png"
     },
     {
         "id": "general",
-        "name": "Gener·l",
+        "name": "Gener√°l",
         "edition": "",
         "team": "townsfolk",
         "firstNight": 50,
@@ -1424,7 +1424,7 @@
         "otherNightReminder": "Show the General thumbs up for good winning, thumbs down for evil winning or thumb to the side for neither.",
         "reminders": [],
         "setup": false,
-        "ability": "Kaûdou noc se dozvÌö, kter· strana m· podle vypravece navrch. Dobro, zlo, nebo nikdo.",
+        "ability": "Ka≈ædou noc se dozv√≠≈°, kter√° strana m√° podle vypravece navrch. Dobro, zlo, nebo nikdo.",
         "image": "https://wiki.bloodontheclocktower.com/images/9/99/Icon_general.png"
     },
     {
@@ -1440,7 +1440,7 @@
             "At a sermon"
         ],
         "setup": false,
-        "ability": "Kaûdou noc vybereö 1 hr·ce. Pokud to bude Prisluhovace, dozvÌ se o tom. Vöichni takto vybranÌ Prisluhovaci ztr·cejÌ svou schopnost.",
+        "ability": "Ka≈ædou noc vybere≈° 1 hr√°ce. Pokud to bude Prisluhovace, dozv√≠ se o tom. V≈°ichni takto vybran√≠ Prisluhovaci ztr√°cej√≠ svou schopnost.",
         "image": "https://wiki.bloodontheclocktower.com/images/8/82/Icon_preacher.png"
     },
     {
@@ -1459,7 +1459,7 @@
     },
     {
         "id": "king",
-        "name": "Kr·l",
+        "name": "Kr√°l",
         "edition": "",
         "team": "townsfolk",
         "firstNight": 10,
@@ -1468,12 +1468,12 @@
         "otherNightReminder": "If there are more dead than living, show the King a character token of a living player.",
         "reminders": [],
         "setup": false,
-        "ability": "Pokud je mrtv˝ch vÌce neû ûiv˝ch, kaûdou noc se dozvÌö jednu ûivou postavu. DÈmon vÌ, kdo jsi.",
+        "ability": "Pokud je mrtv√Ωch v√≠ce ne≈æ ≈æiv√Ωch, ka≈ædou noc se dozv√≠≈° jednu ≈æivou postavu. D√©mon v√≠, kdo jsi.",
         "image": "https://wiki.bloodontheclocktower.com/images/d/dc/Icon_king.png"
     },
     {
         "id": "balloonist",
-        "name": "Balon·r",
+        "name": "Balon√°r",
         "edition": "",
         "team": "townsfolk",
         "firstNight": 45,
@@ -1488,7 +1488,7 @@
             "Seen Traveller"
         ],
         "setup": true,
-        "ability": "Kaûdou noc se dozvÌö o 1 hr·ci z kaûdÈho typu postav. [+1 PodivÌn]",
+        "ability": "Ka≈ædou noc se dozv√≠≈° o 1 hr√°ci z ka≈æd√©ho typu postav. [+1 Podiv√≠n]",
         "image": "https://wiki.bloodontheclocktower.com/images/c/cb/Icon_balloonist.png"
     },
     {
@@ -1502,7 +1502,7 @@
         "otherNightReminder": "If the cult leader changed alignment, show them the thumbs up good signal of the thumbs down evil signal accordingly.",
         "reminders": [],
         "setup": false,
-        "ability": "Kaûdou noc zÌsk·v·ö prÌsluönost svÈho ûivÈho souseda. Pokud se do tvÈ sekty pridajÌ vöichni dobrÌ hr·ci, tvuj t˝m vyhr·v·.",
+        "ability": "Ka≈ædou noc z√≠sk√°v√°≈° pr√≠slu≈°nost sv√©ho ≈æiv√©ho souseda. Pokud se do tv√© sekty pridaj√≠ v≈°ichni dobr√≠ hr√°ci, tvuj t√Ωm vyhr√°v√°.",
         "image": "https://wiki.bloodontheclocktower.com/images/6/6c/Icon_cultleader.png"
     },
     {
@@ -1518,7 +1518,7 @@
             "Dead"
         ],
         "setup": false,
-        "ability": "Kaûdou noc* vybereö ûivÈho hr·ce: pokud je na strane dobra, zemre. Je vöak jedin˝, kdo tu noc muûe zemrÌt.",
+        "ability": "Ka≈ædou noc* vybere≈° ≈æiv√©ho hr√°ce: pokud je na strane dobra, zemre. Je v≈°ak jedin√Ω, kdo tu noc mu≈æe zemr√≠t.",
         "image": "https://wiki.bloodontheclocktower.com/images/9/92/Icon_lycanthrope.png"
     },
     {
@@ -1534,12 +1534,12 @@
             "?"
         ],
         "setup": false,
-        "ability": "NevÌö, jakou m·ö schopnost. Kaûd˝ den ji zkusÌö u vypravece v soukromÌ uhodnout. DozvÌö se, jak presn˝ to byl odhad.",
+        "ability": "Nev√≠≈°, jakou m√°≈° schopnost. Ka≈æd√Ω den ji zkus√≠≈° u vypravece v soukrom√≠ uhodnout. Dozv√≠≈° se, jak presn√Ω to byl odhad.",
         "image": "https://wiki.bloodontheclocktower.com/images/2/26/Icon_amnesiac.png"
     },
     {
         "id": "nightwatchman",
-        "name": "NocnÌ hlÌdka",
+        "name": "Nocn√≠ hl√≠dka",
         "edition": "",
         "team": "townsfolk",
         "firstNight": 47,
@@ -1550,7 +1550,7 @@
             "No ability"
         ],
         "setup": false,
-        "ability": "Jednou za hru vybereö hr·ce: dozvÌ se, kdo jsi.",
+        "ability": "Jednou za hru vybere≈° hr√°ce: dozv√≠ se, kdo jsi.",
         "image": "https://wiki.bloodontheclocktower.com/images/f/f0/Icon_nightwatchman.png"
     },
     {
@@ -1566,12 +1566,12 @@
             "No ability"
         ],
         "setup": false,
-        "ability": "Jednou za hru behem noci muûeö vybrat, kterÌ Prisluhovaci, nebo DÈmon bude ve hre.",
+        "ability": "Jednou za hru behem noci mu≈æe≈° vybrat, kter√≠ Prisluhovaci, nebo D√©mon bude ve hre.",
         "image": "https://wiki.bloodontheclocktower.com/images/b/b9/Icon_engineer.png"
     },
     {
         "id": "fisherman",
-        "name": "Ryb·r",
+        "name": "Ryb√°r",
         "edition": "",
         "team": "townsfolk",
         "firstNight": 0,
@@ -1582,7 +1582,7 @@
             "No ability"
         ],
         "setup": false,
-        "ability": "Jednou za hru muûeö soukrome zajÌt za Vypravecem a zÌskat radu, jak m· tvuj t˝m vyhr·t.",
+        "ability": "Jednou za hru mu≈æe≈° soukrome zaj√≠t za Vypravecem a z√≠skat radu, jak m√° tvuj t√Ωm vyhr√°t.",
         "image": "https://wiki.bloodontheclocktower.com/images/1/19/Icon_fisherman.png"
     },
     {
@@ -1598,7 +1598,7 @@
             "No ability"
         ],
         "setup": true,
-        "ability": "Jednou za hru v noci vybereö ûivÈho hr·ce: pokud je to D·micka, stane se Meötanem, kter˝ nenÌ ve hre. [+ D·micka]",
+        "ability": "Jednou za hru v noci vybere≈° ≈æiv√©ho hr√°ce: pokud je to D√°micka, stane se Me≈°tanem, kter√Ω nen√≠ ve hre. [+ D√°micka]",
         "image": "https://wiki.bloodontheclocktower.com/images/a/a1/Icon_huntsman.png"
     },
     {
@@ -1615,12 +1615,12 @@
             "Is the Alchemist"
         ],
         "setup": false,
-        "ability": "M·ö schopnost Prisluhovace, kter˝ nenÌ ve hre.",
+        "ability": "M√°≈° schopnost Prisluhovace, kter√Ω nen√≠ ve hre.",
         "image": "https://wiki.bloodontheclocktower.com/images/5/54/Icon_alchemist.png"
     },
     {
         "id": "farmer",
-        "name": "Farm·r",
+        "name": "Farm√°r",
         "edition": "",
         "team": "townsfolk",
         "firstNight": 0,
@@ -1629,12 +1629,12 @@
         "otherNightReminder": "If a Farmer died tonight, choose another good player and make them the Farmer. Wake this player, show them the 'You are' card and the Farmer character token.",
         "reminders": [],
         "setup": false,
-        "ability": "Pokud v noci zemreö, ûiv˝ dobr˝ hr·c se stane Farm·rem.",
+        "ability": "Pokud v noci zemre≈°, ≈æiv√Ω dobr√Ω hr√°c se stane Farm√°rem.",
         "image": "https://wiki.bloodontheclocktower.com/images/f/fe/Icon_farmer.png"
     },
     {
         "id": "magician",
-        "name": "KouzelnÌk",
+        "name": "Kouzeln√≠k",
         "edition": "",
         "team": "townsfolk",
         "firstNight": 5,
@@ -1643,12 +1643,12 @@
         "otherNightReminder": "",
         "reminders": [],
         "setup": false,
-        "ability": "DÈmon si myslÌ, ûe jsi Prisluhovac. Prisluhovaci si myslÌ, ûe jsi DÈmon.",
+        "ability": "D√©mon si mysl√≠, ≈æe jsi Prisluhovac. Prisluhovaci si mysl√≠, ≈æe jsi D√©mon.",
         "image": "https://wiki.bloodontheclocktower.com/images/9/93/Icon_magician.png"
     },
     {
         "id": "choirboy",
-        "name": "Zpev·cek",
+        "name": "Zpev√°cek",
         "edition": "",
         "team": "townsfolk",
         "firstNight": 0,
@@ -1657,12 +1657,12 @@
         "otherNightReminder": "If the King was killed by the Demon, wake the Choirboy and point to the Demon player.",
         "reminders": [],
         "setup": true,
-        "ability": "Pokud DÈmon zabije Kr·le, dozvÌö se, kter˝ hr·c je DÈmon. [+ Kr·l]",
+        "ability": "Pokud D√©mon zabije Kr√°le, dozv√≠≈° se, kter√Ω hr√°c je D√©mon. [+ Kr√°l]",
         "image": "https://wiki.bloodontheclocktower.com/images/d/d9/Icon_choirboy.png"
     },
     {
         "id": "poppygrower",
-        "name": "Makov· panenka",
+        "name": "Makov√° panenka",
         "edition": "",
         "team": "townsfolk",
         "firstNight": 4,
@@ -1673,7 +1673,7 @@
             "Evil wakes"
         ],
         "setup": false,
-        "ability": "Prisluhovaci a DÈmoni se navz·jem neznajÌ. Pokud zemreö, tÈ noci se o sobe dozvedÌ.",
+        "ability": "Prisluhovaci a D√©moni se navz√°jem neznaj√≠. Pokud zemre≈°, t√© noci se o sobe dozved√≠.",
         "image": "https://wiki.bloodontheclocktower.com/images/9/91/Icon_poppygrower.png"
     },
     {
@@ -1687,7 +1687,7 @@
         "otherNightReminder": "",
         "reminders": [],
         "setup": true,
-        "ability": "Vypravec muûe poruöovat pravidla hry a dobro vyhraje, je-li je popraven (i kdyû jsi mrtv˝). [é·dnÈ zlÈ postavy]",
+        "ability": "Vypravec mu≈æe poru≈°ovat pravidla hry a dobro vyhraje, je-li je popraven (i kdy≈æ jsi mrtv√Ω). [≈Ω√°dn√© zl√© postavy]",
         "image": "https://wiki.bloodontheclocktower.com/images/4/43/Icon_atheist.png"
     },
     {
@@ -1719,11 +1719,11 @@
             "Died today"
         ],
         "setup": false,
-        "ability": "M·ö schopnost naposledy popravenÈ postavy. Pokud byla na strane zla, jsi otr·ven˝, dokud nenÌ popraven dobr˝ hr·c."
+        "ability": "M√°≈° schopnost naposledy popraven√© postavy. Pokud byla na strane zla, jsi otr√°ven√Ω, dokud nen√≠ popraven dobr√Ω hr√°c."
     },
     {
         "id": "snitch",
-        "name": "Pr·skac",
+        "name": "Pr√°skac",
         "edition": "",
         "team": "outsider",
         "firstNight": 7,
@@ -1732,7 +1732,7 @@
         "otherNightReminder": "",
         "reminders": [],
         "setup": false,
-        "ability": "Prisluhovaci zacÌnajÌ s informacÌ o 3 postav·ch, kterÈ nejsou ve hre.",
+        "ability": "Prisluhovaci zac√≠naj√≠ s informac√≠ o 3 postav√°ch, kter√© nejsou ve hre.",
         "image": "https://wiki.bloodontheclocktower.com/images/c/c1/Icon_snitch.png"
     },
     {
@@ -1748,12 +1748,12 @@
             "Dead"
         ],
         "setup": false,
-        "ability": "Kaûdou noc* pokud je nekter˝ z tv˝ch sousedu dobr˝ a z·roven opil˝, nebo otr·ven˝, zemreö.",
+        "ability": "Ka≈ædou noc* pokud je nekter√Ω z tv√Ωch sousedu dobr√Ω a z√°roven opil√Ω, nebo otr√°ven√Ω, zemre≈°.",
         "image": "https://wiki.bloodontheclocktower.com/images/b/b5/Icon_acrobat.png"
     },
     {
         "id": "puzzlemaster",
-        "name": "H·dank·r",
+        "name": "H√°dank√°r",
         "edition": "",
         "team": "outsider",
         "firstNight": 0,
@@ -1765,7 +1765,7 @@
             "Guess used"
         ],
         "setup": false,
-        "ability": "1 hr·c je opil˝, i kdyû jsi mrtv˝. Jednou za hru muûeö h·dat, kter˝. DozvÌö se, kdo je DÈmon, pokud to uhodneö. V opacnÈm prÌpade dostaneö nespr·vnou informaci.",
+        "ability": "1 hr√°c je opil√Ω, i kdy≈æ jsi mrtv√Ω. Jednou za hru mu≈æe≈° h√°dat, kter√Ω. Dozv√≠≈° se, kdo je D√©mon, pokud to uhodne≈°. V opacn√©m pr√≠pade dostane≈° nespr√°vnou informaci.",
         "image": "https://wiki.bloodontheclocktower.com/images/7/7a/Icon_puzzlemaster.png"
     },
     {
@@ -1779,12 +1779,12 @@
         "otherNightReminder": "",
         "reminders": [],
         "setup": false,
-        "ability": "Kdokoliv vyhraje, prohr·v· a kdokoliv prohraje, vyhr·v· (i kdyû jsi mrtv˝).",
+        "ability": "Kdokoliv vyhraje, prohr√°v√° a kdokoliv prohraje, vyhr√°v√° (i kdy≈æ jsi mrtv√Ω).",
         "image": "https://wiki.bloodontheclocktower.com/images/4/4a/Icon_heretic.png"
     },
     {
         "id": "damsel",
-        "name": "D·micka",
+        "name": "D√°micka",
         "edition": "",
         "team": "outsider",
         "firstNight": 31,
@@ -1795,7 +1795,7 @@
             "Guess used"
         ],
         "setup": false,
-        "ability": "Vöichni Prisluhovaci vedÌ, ûe jsi ve hre. Pokud te Prisluhovac verejne uhodne (na jeden pokus), tvuj t˝m prohr·v·.",
+        "ability": "V≈°ichni Prisluhovaci ved√≠, ≈æe jsi ve hre. Pokud te Prisluhovac verejne uhodne (na jeden pokus), tvuj t√Ωm prohr√°v√°.",
         "image": "https://wiki.bloodontheclocktower.com/images/d/dc/Icon_damsel.png"
     },
     {
@@ -1823,7 +1823,7 @@
             "Can not nominate"
         ],
         "setup": false,
-        "ability": "Nominovat muûeö jen jednou za hru. Kdyû tak ucinÌö a nominovan˝ nenÌ DÈmon, zemre.",
+        "ability": "Nominovat mu≈æe≈° jen jednou za hru. Kdy≈æ tak ucin√≠≈° a nominovan√Ω nen√≠ D√©mon, zemre.",
         "image": "https://wiki.bloodontheclocktower.com/images/2/2b/Icon_golem.png"
     },
     {
@@ -1953,7 +1953,7 @@
             "Is the Marionette"
         ],
         "setup": true,
-        "ability": "MyslÌö si, ûe jsi dobr˝, ale nejsi. DÈmon vÌ, kdo jsi. [SousedÌö s dÈmonem]"
+        "ability": "Mysl√≠≈° si, ≈æe jsi dobr√Ω, ale nejsi. D√©mon v√≠, kdo jsi. [Soused√≠≈° s d√©monem]"
     },
     {
         "id": "summoner",
@@ -2312,7 +2312,7 @@
     },
     {
         "id": "hermit",
-        "name": "PoustevnÌk",
+        "name": "Poustevn√≠k",
         "edition": "",
         "team": "outsider",
         "firstNightReminder": "",
@@ -2323,7 +2323,7 @@
             "3"
         ],
         "setup": true,
-        "ability": "M·ö schopnost vöech PodivÌnu. [-0 nebo -1 PodivÌn]",
+        "ability": "M√°≈° schopnost v≈°ech Podiv√≠nu. [-0 nebo -1 Podiv√≠n]",
         "image": "https://wiki.bloodontheclocktower.com/images/b/b4/Icon_hermit.png"
     },
     {
@@ -2443,23 +2443,23 @@
         "name": "Soumrak",
         "edition": "",
         "team": "nightinfo",
-        "firstNightReminder": "Poöli hr·ce sp·t a aktualizuj ûeton noci ñ nekterÌ PocestnÌ mohou jednat.",
-        "otherNightReminder": "Poöli hr·ce sp·t a aktualizuj ûeton noci ñ nekterÌ PocestnÌ mohou jednat."
+        "firstNightReminder": "Po≈°li hr√°ce sp√°t a aktualizuj ≈æeton noci ‚Äì nekter√≠ Pocestn√≠ mohou jednat.",
+        "otherNightReminder": "Po≈°li hr√°ce sp√°t a aktualizuj ≈æeton noci ‚Äì nekter√≠ Pocestn√≠ mohou jednat."
     },
     {
         "id": "DAWN",
-        "name": "SvÌt·nÌ",
+        "name": "Sv√≠t√°n√≠",
         "edition": "",
         "team": "nightinfo",
-        "firstNightReminder": "Probudte vöechny hr·ce.",
-        "otherNightReminder": "Probudte vöechny hr·ce a oznamte v˝sledek noci."
+        "firstNightReminder": "Probudte v≈°echny hr√°ce.",
+        "otherNightReminder": "Probudte v≈°echny hr√°ce a oznamte v√Ωsledek noci."
     },
     {
         "id": "DEMON",
         "name": "Demon info",
         "edition": "",
         "team": "nightinfo",
-        "firstNightReminder": "Ukaûte, kdo jsou Minioni, a odhalte 3 blufy (postavy co nejsou ve hre).",
+        "firstNightReminder": "Uka≈æte, kdo jsou Minioni, a odhalte 3 blufy (postavy co nejsou ve hre).",
         "otherNightReminder": ""
     },
     {
@@ -2467,7 +2467,7 @@
         "name": "Minion info",
         "edition": "",
         "team": "nightinfo",
-        "firstNightReminder": "Probudte Miniony spolecne a ukaûte, kdo je DÈmon.",
+        "firstNightReminder": "Probudte Miniony spolecne a uka≈æte, kdo je D√©mon.",
         "otherNightReminder": ""
     }
 ]
