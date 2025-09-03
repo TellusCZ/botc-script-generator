@@ -1,5 +1,3 @@
-import html2canvas from 'html2canvas';
-
 async function loadRoles() {
       try {
         const response = await fetch('botc/roles.json');
@@ -506,6 +504,7 @@ document.getElementById('savePng').addEventListener('click', () => {
       link.click();
     });
   });
+
 
 
 
