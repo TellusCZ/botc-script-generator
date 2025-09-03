@@ -1,1 +1,65 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>Generátor scriptu</title>
+
+        <!-- Load external CSS styles -->
+        <link rel="stylesheet" href="styles.css">
+
+    </head>
+
+    <body onload="testSetup()">
+
+        <h1 class='scriptname'>Generátor scriptu</h1>
+        <p id="demo"></p>
+
+        <textarea id="scriptJson" placeholder='Takto vypadá např. Trouble Brewing: [{"id":"washerwoman"},{"id":"librarian"},{"id":"investigator"},{"id":"chef"},{"id":"empath"},{"id":"fortune_teller"},{"id":"undertaker"},{"id":"monk"},{"id":"ravenkeeper"},{"id":"virgin"},{"id":"slayer"},{"id":"soldier"},{"id":"mayor"},{"id":"butler"},{"id":"drunk"},{"id":"recluse"},{"id":"saint"},{"id":"poisoner"},{"id":"spy"},{"id":"scarlet_woman"},{"id":"baron"},{"id":"imp"}]'></textarea>
+
+        <label for="rolesJson">2) Roles JSON</label>
+  <button onclick="loadRoles()">Načíst defaultní anglické role</button>
+  <button onclick="loadRolesCZ()">Načíst defaultní české role</button>
+  <textarea id="rolesJson" placeholder="Sem vlož Roles JSON..."></textarea>
+
+  <button onclick="TranslateScript()">Přeložit Script</button>
+  <textarea hidden id="translatedScriptJson" placeholder="Výstup TranslateScript..." readonly></textarea>
+
+  <label for="translatedScriptCZ">Přeložený script</label>
+  <textarea id="translatedScriptCZ" placeholder="Výstup pro www.bloodstar.xyz a pocketgrimoire.co.uk..." readonly></textarea>
+  <textarea id="nightOrderSheet" placeholder="nightOrder" ></textarea>
+  <textarea id="nightOrderTmp" placeholder="nightOrderTmp" ></textarea>
+  <button hidden onclick="saveJsonFromElement('translatedScriptCZ', 'translated-script-cz.json')">Uložit jako JSON (CZ)</button>
+        
+        <!-- Load external JavaScript -->
+        <!--<script src="scripts.js"></script>-->
+
+<p>
+  <button onclick="generateScript()">Vygeneruj script</button>
+  <p class="message"><link href="https://db.onlinewebfonts.com/c/46887ce1dc738fc2de8f66db681c14ee?family=LHF+Unlovable" rel="stylesheet"></p>
+</p>
+
+<p>
+  <button onclick="generateNightOrder()">Vygeneruj night order</button>
+  <p class="FirstNightOrderImage"></p>
+
+  <p class="OtherNightOrderImage" id="captureThis"></p>
+
+  <button id="savePng">Uložit jako PNG</button>
+</p>
+<div class='creadit' >Fonts used from <a href="https://www.onlinewebfonts.com/fonts">fonts</a> is licensed by CC BY 4.0</div>
+<input type="button" id="btnSave" value="Save PNG"/>
+
+<div id="container"></div>
+
+<div id="img-out"></div>
+        
+    </body>
+
+    <script src="scripts.js"></script>
+
+
+
+</html>
 
