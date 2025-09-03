@@ -19,12 +19,12 @@ async function loadRoles() {
       try {
         const response = await fetch('botc/roles.json');
         if (!response.ok) {
-          throw new Error('Soubor roles.json nelze nacÌst. Zkontrolujte, ûe se nach·zÌ ve stejnÈ sloûce jako HTML.');
+          throw new Error('Soubor roles.json nelze nac√≠st. Zkontrolujte, ≈æe se nach√°z√≠ ve stejn√© slo≈æce jako HTML.');
         }
         const data = await response.json();
         document.getElementById("rolesJson").value = JSON.stringify(data, null, 2);
       } catch (e) {
-        alert("Chyba pri nacÌt·nÌ roles.json: " + e.message);
+        alert("Chyba pri nac√≠t√°n√≠ roles.json: " + e.message);
       }
     }
 
@@ -32,32 +32,32 @@ async function loadRolesCZ() {
       try {
         const response = await fetch('botc/rolescz.json');
         if (!response.ok) {
-          throw new Error('Soubor roles.json nelze nacÌst. Zkontrolujte, ûe se nach·zÌ ve stejnÈ sloûce jako HTML.');
+          throw new Error('Soubor roles.json nelze nac√≠st. Zkontrolujte, ≈æe se nach√°z√≠ ve stejn√© slo≈æce jako HTML.');
         }
         const data = await response.json();
         document.getElementById("rolesJson").value = JSON.stringify(data, null, 2);
       } catch (e) {
-        alert("Chyba pri nacÌt·nÌ roles.json: " + e.message);
+        alert("Chyba pri nac√≠t√°n√≠ roles.json: " + e.message);
       }
       try {
         const response = await fetch('botc/nightsheet.json');
         if (!response.ok) {
-          throw new Error('Soubor roles.json nelze nacÌst. Zkontrolujte, ûe se nach·zÌ ve stejnÈ sloûce jako HTML.');
+          throw new Error('Soubor roles.json nelze nac√≠st. Zkontrolujte, ≈æe se nach√°z√≠ ve stejn√© slo≈æce jako HTML.');
         }
         const data = await response.json();
         document.getElementById("nightOrderSheet").value = JSON.stringify(data, null, 2);
       } catch (e) {
-        alert("Chyba pri nacÌt·nÌ roles.json: " + e.message);
+        alert("Chyba pri nac√≠t√°n√≠ roles.json: " + e.message);
       }
       try {
         const response = await fetch('botc/nightordercz.json');
         if (!response.ok) {
-          throw new Error('Soubor roles.json nelze nacÌst. Zkontrolujte, ûe se nach·zÌ ve stejnÈ sloûce jako HTML.');
+          throw new Error('Soubor roles.json nelze nac√≠st. Zkontrolujte, ≈æe se nach√°z√≠ ve stejn√© slo≈æce jako HTML.');
         }
         const data = await response.json();
         document.getElementById("nightOrderTmp").value = JSON.stringify(data, null, 2);
       } catch (e) {
-        alert("Chyba pri nacÌt·nÌ roles.json: " + e.message);
+        alert("Chyba pri nac√≠t√°n√≠ roles.json: " + e.message);
       }
     }
 
@@ -94,12 +94,12 @@ function TranslateScript() {
       }
     });
 
-    // Norm·lnÌ preklad (translatedScriptJson)
+    // Norm√°ln√≠ preklad (translatedScriptJson)
     const translated = script.map(entry => {
   if (!entry.id) return entry;
   const roleData = rolesMap[entry.id];
   if (roleData) {
-    const { image, ...rest } = roleData; // odstranenÌ "image"
+    const { image, ...rest } = roleData; // odstranen√≠ "image"
     return { ...rest };
   } else {
     return entry;
@@ -119,19 +119,19 @@ function TranslateScript() {
       }
     });
 
-    // V˝stupy do textov˝ch polÌ
+    // V√Ωstupy do textov√Ωch pol√≠
     document.getElementById("translatedScriptJson").value = JSON.stringify(translated, null, 2);
     document.getElementById("translatedScriptCZ").value = JSON.stringify(translatedCZ, null, 2);
 
   } catch (e) {
-    alert("Chyba pri parsov·nÌ JSONu: " + e.message);
+    alert("Chyba pri parsov√°n√≠ JSONu: " + e.message);
   }
 }
 
 function saveJsonFromElement(elementId, defaultFilename = "download.json") {
   const dataStr = document.getElementById(elementId).value;
   if (!dataStr) {
-    alert("Nejprve vygeneruj data pro uloûenÌ.");
+    alert("Nejprve vygeneruj data pro ulo≈æen√≠.");
     return;
   }
 
@@ -366,10 +366,10 @@ demonsArrayTwo.forEach(function (val) {
         html += "</div>"; //end of script
         html = html.replaceAll("Each night", "<b>Each night</b>");
         html = html.replaceAll("Each night*", "<b>Each night-</b>");
-        html = html.replaceAll("Kaûdou noc", "<b>Kaûdou noc</b>");
-        html = html.replaceAll("Kaûdou noc*", "<b>Kaûdou noc*</b>");
+        html = html.replaceAll("Ka≈ædou noc", "<b>Ka≈ædou noc</b>");
+        html = html.replaceAll("Ka≈ædou noc*", "<b>Ka≈ædou noc*</b>");
         html = html.replaceAll("Jednou za hru, v noci", "<b>Jednou za hru, v noci</b>");
-        html = html.replaceAll("ZacÌn·ö s informacÌ", "<b>ZacÌn·ö s informacÌ</b>");
+        html = html.replaceAll("Zac√≠n√°≈° s informac√≠", "<b>Zac√≠n√°≈° s informac√≠</b>");
         document.getElementsByClassName('message')[0].innerHTML = html;
     }
 
@@ -408,18 +408,18 @@ const json = JSON.parse(nightOrder);
 /*try {
         const response = await fetch('botc/nightsheet.json');
         if (!response.ok) {
-          throw new Error('Soubor roles.json nelze nacÌst. Zkontrolujte, ûe se nach·zÌ ve stejnÈ sloûce jako HTML.');
+          throw new Error('Soubor roles.json nelze nac√≠st. Zkontrolujte, ≈æe se nach√°z√≠ ve stejn√© slo≈æce jako HTML.');
         }
         const data = await response.json();
         var nightOrderString = JSON.stringify(data, null, 2);
       } catch (e) {
-        alert("Chyba pri nacÌt·nÌ roles.json: " + e.message);
+        alert("Chyba pri nac√≠t√°n√≠ roles.json: " + e.message);
       }*/
 
 let html = '';
 //json.forEach(function (val) {
   html += "<div class='nightorder'>";
-  html += "<div class='scriptname'>" + "PrvnÌ noc" + "</div>";
+  html += "<div class='scriptname'>" + "Prvn√≠ noc" + "</div>";
   /*val.firstNight.forEach( function (role) {
     html += "<div>" + role + "</div>";
   });*/
@@ -465,7 +465,7 @@ let html = '';
   html = '';
 //json.forEach(function (val) {
   html += "<div class='nightorder'>";
-  html += "<div class='scriptname'>" + "DalöÌ noci" + "</div>";
+  html += "<div class='scriptname'>" + "Dal≈°√≠ noci" + "</div>";
   /*val.firstNight.forEach( function (role) {
     html += "<div>" + role + "</div>";
   });*/
