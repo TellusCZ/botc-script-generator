@@ -192,18 +192,18 @@ body {
         <textarea id="scriptJson" placeholder='Takto vypadá např. Trouble Brewing: [{"id":"washerwoman"},{"id":"librarian"},{"id":"investigator"},{"id":"chef"},{"id":"empath"},{"id":"fortune_teller"},{"id":"undertaker"},{"id":"monk"},{"id":"ravenkeeper"},{"id":"virgin"},{"id":"slayer"},{"id":"soldier"},{"id":"mayor"},{"id":"butler"},{"id":"drunk"},{"id":"recluse"},{"id":"saint"},{"id":"poisoner"},{"id":"spy"},{"id":"scarlet_woman"},{"id":"baron"},{"id":"imp"}]'></textarea>
 
         <label for="rolesJson">2) Roles JSON</label>
-  <button onclick="loadRoles()">Načíst defaultní anglické role</button>
-  <button onclick="loadRolesCZ()">Načíst defaultní české role</button>
+  <button onclick="loadRoles()" hidden>Načíst defaultní anglické role</button>
+  <button onclick="loadRolesCZ()" hidden>Načíst defaultní české role</button>
   <textarea id="rolesJson" placeholder="Sem vlož Roles JSON..."></textarea>
 
-  <button onclick="TranslateScript()">Přeložit Script</button>
-  <textarea hidden id="translatedScriptJson" placeholder="Výstup TranslateScript..." readonly></textarea>
+  <button onclick="TranslateScript()" hidden>Přeložit Script</button>
+  <textarea hidden id="translatedScriptJson" placeholder="Výstup TranslateScript..." readonly hidden></textarea>
 
-  <label for="translatedScriptCZ">Přeložený script</label>
-  <textarea id="translatedScriptCZ" placeholder="Výstup pro www.bloodstar.xyz a pocketgrimoire.co.uk..." readonly></textarea>
+  <label for="translatedScriptCZ" hidden>Přeložený script</label>
+  <textarea id="translatedScriptCZ" placeholder="Výstup pro www.bloodstar.xyz a pocketgrimoire.co.uk..." readonly hidden></textarea>
   <textarea id="nightOrderSheet" hidden ></textarea>
   <textarea id="nightOrderTmp" hidden ></textarea>
-  <button hidden onclick="saveJsonFromElement('translatedScriptCZ', 'translated-script-cz.json')">Uložit jako JSON (CZ)</button>
+  <button hidden onclick="saveJsonFromElement('translatedScriptCZ', 'translated-script-cz.json')" hidden>Uložit jako JSON (CZ)</button>
         
         <!-- Load external JavaScript -->
         <!--<script src="scripts.js"></script>-->
