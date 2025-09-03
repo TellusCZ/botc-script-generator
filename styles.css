@@ -80,7 +80,7 @@ body {
 .script { 
   height 1443px;
   width 1024px;
-  background-image url('botcbackgroundv3.png');
+  background-image url('/botc-script-generator/botcbackgroundv3.png');
   background-repeat no-repeat;
   background-size 100% 100%;
 }
@@ -88,7 +88,7 @@ body {
 .nightorder { 
   height 1443px;
   width 1024px;
-  background-image url('botcnightorder.png');
+  background-image url('/botc-script-generator/botcnightorder.png');
   background-repeat no-repeat;
   background-size 100% 100%;
 }
@@ -165,6 +165,7 @@ body {
   margin-top -5px;
   margin-left 110px;
 }
+
 
 
 
