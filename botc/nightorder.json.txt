@@ -1,0 +1,34 @@
+[
+    {
+        "id": "DUSK",
+        "name": "Dusk",
+        "edition": "",
+        "team": "nightinfo",
+        "firstNightReminder": "Send players to sleep & update Night token - some Travellers might act.",
+        "otherNightReminder": "Send players to sleep & update Night token - some Travellers might act."
+    },
+    {
+        "id": "DAWN",
+        "name": "Dawn",
+        "edition": "",
+        "team": "nightinfo",
+        "firstNightReminder": "Wake all players up.",
+        "otherNightReminder": "Wake all players up & announce the result of the night."
+    },
+    {
+        "id": "DEMON",
+        "name": "Demon info",
+        "edition": "",
+        "team": "nightinfo",
+        "firstNightReminder": "Indicate who the Minions are & reveal 3 bluffs.",
+        "otherNightReminder": ""
+    },
+    {
+        "id": "MINION",
+        "name": "Minion info",
+        "edition": "",
+        "team": "nightinfo",
+        "firstNightReminder": "Wake Minions together & indicate who the Demon is.",
+        "otherNightReminder": ""
+    }
+]

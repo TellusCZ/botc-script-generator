@@ -1,0 +1,170 @@
+ Place your CSS styles in this file 
+@font-face { font-family Melted-Brain; src url('botcMelted-Brain.otf'); } 
+
+@import url(httpsdb.onlinewebfonts.comc46887ce1dc738fc2de8f66db681c14eefamily=LHF+Unlovable);
+@font-face {
+    font-family LHF Unlovable;
+    src url(httpsdb.onlinewebfonts.comt46887ce1dc738fc2de8f66db681c14ee.eot);
+    src url(httpsdb.onlinewebfonts.comt46887ce1dc738fc2de8f66db681c14ee.eot#iefix)format(embedded-opentype),
+    url(httpsdb.onlinewebfonts.comt46887ce1dc738fc2de8f66db681c14ee.woff2)format(woff2),
+    url(httpsdb.onlinewebfonts.comt46887ce1dc738fc2de8f66db681c14ee.woff)format(woff),
+    url(httpsdb.onlinewebfonts.comt46887ce1dc738fc2de8f66db681c14ee.ttf)format(truetype),
+    url(httpsdb.onlinewebfonts.comt46887ce1dc738fc2de8f66db681c14ee.svg#LHF Unlovable)format(svg);
+}
+
+
+h1 {
+    text-align center;
+    font-family Source Sans Pro, sans-serif;
+    font-weight normal;
+}
+
+body {
+  padding 20px;
+  font-family sans-serif;
+  background-color #f9f9f9;
+}
+    label {
+      font-weight bold;
+      display block;
+      margin-top 20px;
+    }
+    textarea {
+      width 100%;
+      height 200px;
+      padding 10px;
+      font-family monospace;
+      font-size 14px;
+      border 1px solid #ccc;
+      border-radius 5px;
+      box-sizing border-box;
+      resize vertical;
+    }
+    button {
+      margin-top 20px;
+      padding 10px 20px;
+      font-size 16px;
+      border none;
+      background-color #007acc;
+      color white;
+      border-radius 5px;
+      cursor pointer;
+    }
+    buttonhover {
+      background-color #005f99;
+    }
+
+.role { 
+  display flex; 
+  width 420px;
+  height 75px;
+  margin-left 10px;
+}
+
+.roledescription { 
+  margin-left 5px; 
+  margin-top 0; 
+  width 350px;
+  font-weight bold;
+  font-size 16px;
+}
+
+.creadit { 
+  font-size 10;
+}
+
+.roleikon { height 71px; width 71px;}
+.roledetail { 
+  colorblack;
+  font-weight normal;
+  font-size 14px;
+}
+
+.script { 
+  height 1443px;
+  width 1024px;
+  background-image url('botcbackgroundv3.png');
+  background-repeat no-repeat;
+  background-size 100% 100%;
+}
+
+.nightorder { 
+  height 1443px;
+  width 1024px;
+  background-image url('botcnightorder.png');
+  background-repeat no-repeat;
+  background-size 100% 100%;
+}
+
+.nightikon { height 50px; width 50px;}
+.tmpikon { height 40px; width 40px; padding-right 10px;}
+.nightdetail { 
+  colorblack;
+  font-weight normal;
+  font-size 14px;
+}
+
+
+.orderrole {
+  display flex;
+  margin-left 110px;
+}
+
+.nightroledescription { 
+  margin-left 5px; 
+  margin-top 0; 
+  width 850px;
+  font-weight bold;
+  font-size 16px;
+}
+
+.scriptlogo{
+  height 74px;
+  padding-right 30px;
+  padding-left 30px;
+  padding-top 20px;
+  margin-bottom -20px;
+}
+
+.scriptname{
+  font-family LHF Unlovable;
+  text-align center;
+  font-size 70px;
+  padding-bottom 20px;
+  margin-left 60px;
+  color #ccb0a2;
+  height 67px;
+}
+
+
+.townsfolk {
+  display flex; 
+  height 640px;
+  margin-left 110px;
+}
+
+.outsider {
+  display flex; 
+  height 150px;
+  margin-left 110px;
+}
+
+.minion {
+  display flex; 
+  height 180px;
+  margin-left 110px;
+}
+
+.demon {
+  display flex; 
+  height 180px;
+  margin-left 110px;
+}
+
+.separator {
+  height 50px;
+  width 900px;
+  margin-bottom -15px;
+  margin-top -5px;
+  margin-left 110px;
+}
