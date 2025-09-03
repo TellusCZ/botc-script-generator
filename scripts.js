@@ -549,6 +549,22 @@ $("inputImage").change(function(e) {
     }
 });
 
+const fileInput = document.getElementById('fileInput');
+    const logo = document.querySelector('.sriptlogo');
+
+    // Posloucháme změnu souboru
+    fileInput.addEventListener('change', (event) => {
+      const file = event.target.files[0]; // vybraný soubor
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          logo.src = e.target.result; // změní src na vybraný obrázek
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+
+
 
 
 
