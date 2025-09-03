@@ -164,7 +164,7 @@ function generateScript() {
         });
         document.getElementsByClassName('message')[0].innerHTML = html;
       };*/
-      TranslateScript();
+      //TranslateScript();
 const scriptText = document.getElementById("translatedScriptCZ").value;
 const json = JSON.parse(scriptText);
 let html = '';
@@ -532,6 +532,7 @@ document.getElementById('saveScriptPng').addEventListener('click', () => {
       link.click();
     });
   });
+
 
 
 
