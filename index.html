@@ -104,6 +104,16 @@ body {
   width: 1024px;
 }
 
+.FirstNightOrderImage {
+  height: 1443px;
+  width: 1024px;
+}
+
+.message {
+  height: 1443px;
+  width: 1024px;
+}
+
 .nightorder { 
   height: 1443px;
   width: 1024px;
@@ -215,16 +225,18 @@ body {
 
 <p>
   <button onclick="generateScript()">Vygeneruj script</button>
-  <p class="message"><link href="https://db.onlinewebfonts.com/c/46887ce1dc738fc2de8f66db681c14ee?family=LHF+Unlovable" rel="stylesheet"></p>
+  <div class="message" id="captureScript"></div>
+  <button id="saveScriptPng">Uložit Script jako PNG</button>
 </p>
 
 <p>
   <button onclick="generateNightOrder()">Vygeneruj night order</button>
-  <p class="FirstNightOrderImage"></p>
+  <div class="FirstNightOrderImage" id="captureThisFirstNight"></div>
+  <button id="saveFirstPng">Uložit První noc jako PNG</button>
 
-  <div class="OtherNightOrderImage" id="captureThis"></div>
+  <div class="OtherNightOrderImage" id="captureThisOtherNight"></div>
 
-  <button id="savePng">Uložit jako PNG</button>
+  <button id="saveOtherPng">Uložit Další noc jako PNG</button>
 </p>
 <div class='creadit' >Fonts used from <a href="https://www.onlinewebfonts.com/fonts">fonts</a> is licensed by CC BY 4.0</div>
 <input type="button" id="btnSave" value="Save PNG" hidden/>
@@ -243,6 +255,7 @@ body {
 
 
 </html>
+
 
 
 
