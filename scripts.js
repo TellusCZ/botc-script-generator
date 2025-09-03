@@ -500,6 +500,7 @@ document.getElementById('saveFirstPng').addEventListener('click', () => {
     html2canvas(element, { scale: 2, allowTaint: true }).then(canvas => {
       const link = document.createElement('a');
       link.download = 'firstNight.png';
+      link.crossOrigin='anonymous';
       link.href = canvas.toDataURL('image/png');
       link.click();
     });
@@ -511,6 +512,7 @@ document.getElementById('saveOtherPng').addEventListener('click', () => {
     html2canvas(element, { scale: 2, allowTaint: true }).then(canvas => {
       const link = document.createElement('a');
       link.download = 'otherNight.png';
+      link.crossOrigin='anonymous';
       link.href = canvas.toDataURL('image/png');
       link.click();
     });
@@ -522,10 +524,12 @@ document.getElementById('saveScriptPng').addEventListener('click', () => {
     html2canvas(element, { scale: 2, allowTaint: true }).then(canvas => {
       const link = document.createElement('a');
       link.download = 'script.png';
+      link.crossOrigin='anonymous';
       link.href = canvas.toDataURL('image/png');
       link.click();
     });
   });
+
 
 
 
