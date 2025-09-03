@@ -517,7 +517,7 @@ document.getElementById('saveOtherPng').addEventListener('click', () => {
   });
 
 document.getElementById('saveScriptPng').addEventListener('click', () => {
-    const element = document.getElementById('message');
+    const element = document.getElementById('captureScript');
 
     html2canvas(element, { scale: 2 }).then(canvas => {
       const link = document.createElement('a');
@@ -526,6 +526,7 @@ document.getElementById('saveScriptPng').addEventListener('click', () => {
       link.click();
     });
   });
+
 
 
 
