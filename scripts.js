@@ -521,7 +521,7 @@ document.getElementById('saveOtherPng').addEventListener('click', () => {
 document.getElementById('saveScriptPng').addEventListener('click', () => {
     const element = document.getElementById('captureScript');
 
-    html2canvas(element, { scale: 2, allowTaint: true, useCORS:true, /*proxy:"lib/html2canvas_proxy/html2canvasproxy.php",*/
+    html2canvas(element, { scale: 2, allowTaint: false, useCORS:true, proxy:"lib/html2canvas_proxy/html2canvasproxy.php",
         onrendered: function(canvas) {
             var result = canvas.toDataURL();
         } }).then(canvas => {
@@ -532,6 +532,7 @@ document.getElementById('saveScriptPng').addEventListener('click', () => {
       link.click();
     });
   });
+
 
 
 
