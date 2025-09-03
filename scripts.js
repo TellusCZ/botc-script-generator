@@ -497,7 +497,7 @@ let html = '';
 document.getElementById('saveFirstPng').addEventListener('click', () => {
     const element = document.getElementById('captureThisFirstNight');
 
-    html2canvas(element, { scale: 2, allowTaint: true }).then(canvas => {
+    html2canvas(element, { scale: 2, allowTaint: true, useCORS:true }).then(canvas => {
       const link = document.createElement('a');
       link.download = 'firstNight.png';
       link.crossOrigin='anonymous';
@@ -509,7 +509,7 @@ document.getElementById('saveFirstPng').addEventListener('click', () => {
 document.getElementById('saveOtherPng').addEventListener('click', () => {
     const element = document.getElementById('captureThisOtherNight');
 
-    html2canvas(element, { scale: 2, allowTaint: true }).then(canvas => {
+    html2canvas(element, { scale: 2, allowTaint: true, useCORS:true }).then(canvas => {
       const link = document.createElement('a');
       link.download = 'otherNight.png';
       link.crossOrigin='anonymous';
@@ -521,7 +521,7 @@ document.getElementById('saveOtherPng').addEventListener('click', () => {
 document.getElementById('saveScriptPng').addEventListener('click', () => {
     const element = document.getElementById('captureScript');
 
-    html2canvas(element, { scale: 2, allowTaint: true }).then(canvas => {
+    html2canvas(element, { scale: 2, allowTaint: true, useCORS:true }).then(canvas => {
       const link = document.createElement('a');
       link.download = 'script.png';
       link.crossOrigin='anonymous';
@@ -529,6 +529,7 @@ document.getElementById('saveScriptPng').addEventListener('click', () => {
       link.click();
     });
   });
+
 
 
 
