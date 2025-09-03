@@ -5,8 +5,8 @@
         "image": "./botc/Dusk.png",
         "edition": "",
         "team": "nightinfo",
-        "firstNightReminder": "Pošli hráce spát a aktualizuj žeton noci – nekterí Pocestní mohou jednat.",
-        "otherNightReminder": "Pošli hráce spát a aktualizuj žeton noci – nekterí Pocestní mohou jednat."
+        "firstNightReminder": "Pošli hráče spát a aktualizuj žeton noci – někteří Pocestní mohou jednat.",
+        "otherNightReminder": "Pošli hráče spát a aktualizuj žeton noci – někteří Pocestní mohou jednat."
     },
     {
         "id": "DAWN",
@@ -14,8 +14,8 @@
         "image": "./botc/Dawn.png",
         "edition": "",
         "team": "nightinfo",
-        "firstNightReminder": "Probudte všechny hráce.",
-        "otherNightReminder": "Probudte všechny hráce a oznamte výsledek noci."
+        "firstNightReminder": "Probuďte všechny hráče.",
+        "otherNightReminder": "Probuďte všechny hráče a oznamte výsledek noci."
     },
     {
         "id": "DEMON",
@@ -23,7 +23,7 @@
         "image": "./botc/DemonInfo.png",
         "edition": "",
         "team": "nightinfo",
-        "firstNightReminder": "Ukažte, kdo jsou Minioni, a odhalte 3 blufy (postavy co nejsou ve hre).",
+        "firstNightReminder": "Ukažte, kdo jsou Minioni, a odhalte 3 blufy (postavy co nejsou ve hře).",
         "otherNightReminder": ""
     },
     {
@@ -32,7 +32,7 @@
         "image": "./botc/MinionInfo.png",
         "edition": "",
         "team": "nightinfo",
-        "firstNightReminder": "Probudte Miniony spolecne a ukažte, kdo je Démon.",
+        "firstNightReminder": "Probuďte Miniony společně a ukažte, kdo je Démon.",
         "otherNightReminder": ""
     }
 ]
