@@ -6,15 +6,15 @@
         "edition": "tb",
         "team": "townsfolk",
         "firstNight": 33,
-        "firstNightReminder": "Ukaž žeton postavy Meštana ve hre. Ukaž na dva hráce, z nichž jeden je tato postava.",
+        "firstNightReminder": "Ukaž žeton postavy Měšťana ve hře. Ukaž na dva hráče, z nichž jeden je tato postava.",
         "otherNight": 0,
         "otherNightReminder": "",
         "reminders": [
-            "Meštan",
+            "Měšťan",
             "Špatný"
         ],
         "setup": false,
-        "ability": "Zacínáš s informací, že 1 ze 2 hrácu je konkrétní Meštan"
+        "ability": "Začínáš s informací, že 1 ze 2 hráčů je konkrétní Měšťan"
     },
     {
         "id": "librarian",
@@ -23,7 +23,7 @@
         "edition": "tb",
         "team": "townsfolk",
         "firstNight": 34,
-        "firstNightReminder": "Ukaž žeton postavy Podivína ve hre. Ukaž na dva hráce, z nichž jeden je tato postava.",
+        "firstNightReminder": "Ukaž žeton postavy Podivína ve hře. Ukaž na dva hráče, z nichž jeden je tato postava.",
         "otherNight": 0,
         "otherNightReminder": "",
         "reminders": [
@@ -31,38 +31,38 @@
             "Špatný"
         ],
         "setup": false,
-        "ability": "Zacínáš s informací, že 1 ze 2 hrácu je konkrétní Podivín. (Nebo že ve hre není žádný Podivín)"
+        "ability": "Začínáš s informací, že 1 ze 2 hráčů je konkrétní Podivín. (Nebo že ve hře není žádný Podivín)"
     },
     {
         "id": "investigator",
         "image": "https://wiki.bloodontheclocktower.com/images/a/ad/Icon_investigator.png",
-        "name": "Vyšetrovatel",
+        "name": "Vyšetřovatel",
         "edition": "tb",
         "team": "townsfolk",
         "firstNight": 35,
-        "firstNightReminder": "Ukaž žeton postavy Prisluhovace ve hre. Ukaž na dva hráce, z nichž jeden je tato postava.",
+        "firstNightReminder": "Ukaž žeton postavy Přisluhovače ve hře. Ukaž na dva hráče, z nichž jeden je tato postava.",
         "otherNight": 0,
         "otherNightReminder": "",
         "reminders": [
-            "Prisluhovac",
+            "Přisluhovač",
             "Špatný"
         ],
         "setup": false,
-        "ability": "Zacínáš s informací, že jeden ze dvou hrácu je konkrétní Prisluhovac."
+        "ability": "Začínáš s informací, že jeden ze dvou hráčů je konkrétní Přisluhovač."
     },
     {
         "id": "chef",
         "image": "https://wiki.bloodontheclocktower.com/images/d/d5/Icon_chef.png",
-        "name": "Kuchar",
+        "name": "Kuchař",
         "edition": "tb",
         "team": "townsfolk",
         "firstNight": 36,
-        "firstNightReminder": "Ukaž na prstech množství (0, 1, 2, ...) za každý pár sousedících zlých hrácu.",
+        "firstNightReminder": "Ukaž na prstech množství (0, 1, 2, ...) za každý pár sousedících zlých hráčů.",
         "otherNight": 0,
         "otherNightReminder": "",
         "reminders": [],
         "setup": false,
-        "ability": "Zacínáš s informací, kolik páru zlých hrácu je ve hre."
+        "ability": "Začínáš s informací, kolik párů zlých hráčů je ve hře."
     },
     {
         "id": "empath",
@@ -76,23 +76,23 @@
         "otherNightReminder": "Ukaž na prstech množství (0, 1, 2) za každého zlého živého souseda Empata.",
         "reminders": [],
         "setup": false,
-        "ability": "Každou noc se dozvíš, kolik z tvých 2 živých sousedu je zlých."
+        "ability": "Každou noc se dozvíš, kolik z tvých 2 živých sousedů je zlých."
     },
     {
         "id": "fortuneteller",
         "image": "https://wiki.bloodontheclocktower.com/images/9/97/Icon_fortuneteller.png",
-        "name": "Vedma",
+        "name": "Vědma",
         "edition": "tb",
         "team": "townsfolk",
         "firstNight": 38,
-        "firstNightReminder": "Vedma ukáže na dva hráce. Potvrd pokýváním hlavy (ano/ne) pokud je jeden z techto hrácu Démon.",
+        "firstNightReminder": "Vědma ukáže na dva hráče. Potvrď pokýváním hlavy (ano/ne) pokud je jeden z těchto hráčů Démon.",
         "otherNight": 54,
-        "otherNightReminder": "Vedma ukáže na dva hráce. Potvrd pokýváním hlavy (ano/ne) pokud je jeden z techto hrácu Démon.",
+        "otherNightReminder": "Vědma ukáže na dva hráče. Potvrď pokýváním hlavy (ano/ne) pokud je jeden z těchto hráčů Démon.",
         "reminders": [
             "Falešná stopa"
         ],
         "setup": false,
-        "ability": "Každou noc vyber 2 hráce: dozvíš se, je-li mezi nimi Démon. Jeden dobrý hrác se ti jeví jako Démon."
+        "ability": "Každou noc vyber 2 hráče: dozvíš se, je-li mezi nimi Démon. Jeden dobrý hráč se ti jeví jako Démon."
     },
     {
         "id": "undertaker",
@@ -103,7 +103,7 @@
         "firstNight": 0,
         "firstNightReminder": "",
         "otherNight": 55,
-        "otherNightReminder": "Pokud byl popraven hrác tuto noc: ukaž žeton jeho postavy Hrobníkovi.",
+        "otherNightReminder": "Pokud byl popraven hráč tuto noc: ukaž žeton jeho postavy Hrobníkovi.",
         "reminders": [
             "Popraven"
         ],
@@ -119,26 +119,26 @@
         "firstNight": 0,
         "firstNightReminder": "",
         "otherNight": 12,
-        "otherNightReminder": "Predchozí chránený hrác prestává být chránený. Mnich ukáže na hráce (ne na sebe). Oznac tohoto hráce, jako 'Chráneného'.",
+        "otherNightReminder": "Předchozí chráněný hráč přestává být chráněný. Mnich ukáže na hráče (ne na sebe). Označ tohoto hráče, jako 'Chráněného'.",
         "reminders": [
-            "Chránený"
+            "Chráněný"
         ],
         "setup": false,
-        "ability": "Každou noc*, vybereš hráce (ne sebe): tu noc je v bezpecí pred Démonem."
+        "ability": "Každou noc*, vybereš hráče (ne sebe): tu noc je v bezpečí před Démonem."
     },
     {
         "id": "ravenkeeper",
         "image": "https://wiki.bloodontheclocktower.com/images/e/ef/Icon_ravenkeeper.png",
-        "name": "Strážkyne krkavcu",
+        "name": "Strážkyně krkavců",
         "edition": "tb",
         "team": "townsfolk",
         "firstNight": 0,
         "firstNightReminder": "",
         "otherNight": 52,
-        "otherNightReminder": "Pokud tuto noc zemrela Strážkyne krkavcu: ukáže na hráce. Ukaž žeton postavy tohoto hráce.",
+        "otherNightReminder": "Pokud tuto noc zemřela Strážkyně krkavců: ukáže na hráče. Ukaž žeton postavy tohoto hráče.",
         "reminders": [],
         "setup": false,
-        "ability": "Pokud zemreš v noci, budeš hned probuzena a vybereš 1 hráce: dozvíš se jeho postavu."
+        "ability": "Pokud zemřeš v noci, budeš hned probuzena a vybereš 1 hráče: dozvíš se jeho postavu."
     },
     {
         "id": "virgin",
@@ -154,7 +154,7 @@
             "Bez schopnosti"
         ],
         "setup": false,
-        "ability": "Když te poprvé nekdo nominuje a nominujícím je Meštan, je ihned popraven."
+        "ability": "Když tě poprvé někdo nominuje a nominujícím je Měšťan, je ihned popraven."
     },
     {
         "id": "slayer",
@@ -170,7 +170,7 @@
             "Bez schopnosti"
         ],
         "setup": false,
-        "ability": "Jednou za hru, behem dne, verejne oznacíš 1 hráce: Je-li to Démon, zemre."
+        "ability": "Jednou za hru, během dne, veřejně označíš 1 hráče: Je-li to Démon, zemře."
     },
     {
         "id": "soldier",
@@ -184,7 +184,7 @@
         "otherNightReminder": "",
         "reminders": [],
         "setup": false,
-        "ability": "Jsi v bezpecí pred Démonem."
+        "ability": "Jsi v bezpečí před Démonem."
     },
     {
         "id": "mayor",
@@ -198,7 +198,7 @@
         "otherNightReminder": "",
         "reminders": [],
         "setup": false,
-        "ability": "Jsou-li naživu pouze 3 hráci a neprobehne žádná poprava, tvuj tým vyhrává. Pokud v noci zemreš, muže namísto tebe zemrít jiný hrác."
+        "ability": "Jsou-li naživu pouze 3 hráči a neproběhne žádná poprava, tvůj tým vyhrává. Pokud v noci zemřeš, může namísto tebe zemřít jiný hráč."
     },
     {
         "id": "butler",
@@ -214,7 +214,7 @@
             "Pán"
         ],
         "setup": false,
-        "ability": "Každou noc vybereš 1 hráce (ne sebe): následující den mužeš hlasovat pouze tehdy, pokud hlasuje i tento hrác."
+        "ability": "Každou noc vybereš 1 hráče (ne sebe): následující den můžeš hlasovat pouze tehdy, pokud hlasuje i tento hráč."
     },
     {
         "id": "drunk",
@@ -231,12 +231,12 @@
             "Opilec"
         ],
         "setup": true,
-        "ability": "Nevíš, že jsi Opilec. Myslíš si, že jsi Meštan, ale nejsi."
+        "ability": "Nevíš, že jsi Opilec. Myslíš si, že jsi Měšťan, ale nejsi."
     },
     {
         "id": "recluse",
         "image": "https://wiki.bloodontheclocktower.com/images/6/60/Icon_recluse.png",
-        "name": "Samotár",
+        "name": "Samotář",
         "edition": "tb",
         "team": "outsider",
         "firstNight": 0,
@@ -245,12 +245,12 @@
         "otherNightReminder": "",
         "reminders": [],
         "setup": false,
-        "ability": "Mužeš se jevit jako zlý, jako Prisluhovac nebo Démon, i když jsi mrtvý."
+        "ability": "Můžeš se jevit jako zlý, jako Přisluhovač nebo Démon, i když jsi mrtvý."
     },
     {
         "id": "saint",
         "image": "https://wiki.bloodontheclocktower.com/images/c/c9/Icon_saint.png",
-        "name": "Svetec",
+        "name": "Světec",
         "edition": "tb",
         "team": "outsider",
         "firstNight": 0,
@@ -259,23 +259,23 @@
         "otherNightReminder": "",
         "reminders": [],
         "setup": false,
-        "ability": "Pokud zemreš popravou, tvuj tým prohrává."
+        "ability": "Pokud zemřeš popravou, tvůj tým prohrává."
     },
     {
         "id": "poisoner",
         "image": "https://wiki.bloodontheclocktower.com/images/b/b1/Icon_poisoner.png",
-        "name": "Travic",
+        "name": "Travič",
         "edition": "tb",
         "team": "minion",
         "firstNight": 17,
-        "firstNightReminder": "Travic ukáže na hráce. Hrác je otráven.",
+        "firstNightReminder": "Travič ukáže na hráče. Hráč je otráven.",
         "otherNight": 7,
-        "otherNightReminder": "Predchozí otrávený hrác už není otrávený. Travic ukáže na hráce. Hrác je otráven.",
+        "otherNightReminder": "Předchozí otrávený hráč už není otrávený. Travič ukáže na hráče. Hráč je otráven.",
         "reminders": [
             "Otrávený"
         ],
         "setup": false,
-        "ability": "Každou noc vybereš 1 hráce: je otrávený po celou tuto noc a následující den."
+        "ability": "Každou noc vybereš 1 hráče: je otrávený po celou tuto noc a následující den."
     },
     {
         "id": "spy",
@@ -284,12 +284,12 @@
         "edition": "tb",
         "team": "minion",
         "firstNight": 49,
-        "firstNightReminder": "Ukaž Grimoár Špehovi na tak dlouho, jak bude potrebovat.",
+        "firstNightReminder": "Ukaž Grimoár Špehovi na tak dlouho, jak bude potřebovat.",
         "otherNight": 68,
-        "otherNightReminder": "Ukaž Grimoár Špehovi na tak dlouho, jak bude potrebovat.",
+        "otherNightReminder": "Ukaž Grimoár Špehovi na tak dlouho, jak bude potřebovat.",
         "reminders": [],
         "setup": false,
-        "ability": "Každou noc nahlédneš do grimoáru. Mužeš se jevit jako dobrý, Meštan, nebo Podivín, i když jsi mrtvý."
+        "ability": "Každou noc nahlédneš do grimoáru. Můžeš se jevit jako dobrý, Měšťan, nebo Podivín, i když jsi mrtvý."
     },
     {
         "id": "scarletwoman",
@@ -305,7 +305,7 @@
             "Démon"
         ],
         "setup": false,
-        "ability": "Pokud je naživu alespon 5 hrácu a zemre Démon, stáváš se Démonem. (Pocestní se nepocítají.)"
+        "ability": "Pokud je naživu alespoň 5 hráčů a zemře Démon, stáváš se Démonem. (Pocestní se nepočítají.)"
     },
     {
         "id": "baron",
@@ -319,23 +319,23 @@
         "otherNightReminder": "",
         "reminders": [],
         "setup": true,
-        "ability": "Ve hre jsou dva Podivíni navíc. [+2 Podivíni]"
+        "ability": "Ve hře jsou dva Podivíni navíc. [+2 Podivíni]"
     },
     {
         "id": "imp",
         "image": "https://wiki.bloodontheclocktower.com/images/5/5c/Icon_imp.png",
-        "name": "Cert",
+        "name": "Čert",
         "edition": "tb",
         "team": "demon",
         "firstNight": 0,
         "firstNightReminder": "",
         "otherNight": 24,
-        "otherNightReminder": "Cert ukáže na hráce. Tento hrác zemre. Pokud Cert oznací sám sebe: Nahrad žeton postavy 1 živého prisluhovace prebytecným žetonem Certa. Ukaž prisluhovaci 'Ty jsi' kartu a žeton Certa.",
+        "otherNightReminder": "Čert ukáže na hráče. Tento hráč zemře. Pokud Čert označí sám sebe: Nahraď žeton postavy 1 živého přisluhovače přebytečným žetonem Čerta. Ukaž přisluhovači 'Ty jsi' kartu a žeton Čerta.",
         "reminders": [
             "Dead"
         ],
         "setup": false,
-        "ability": "Každou noc* vybereš 1 hráce: ten zemre. Pokud takto zabiješ sebe, Prisluhovac se stane Certem."
+        "ability": "Každou noc* vybereš 1 hráče: ten zemře. Pokud takto zabiješ sebe, Přisluhovač se stane Čertem."
     },
     {
         "id": "bureaucrat",
@@ -413,7 +413,7 @@
     },
     {
         "id": "grandmother",
-        "name": "Babicka",
+        "name": "Babička",
         "edition": "bmr",
         "team": "townsfolk",
         "firstNight": 40,
@@ -424,12 +424,12 @@
             "Grandchild"
         ],
         "setup": false,
-        "ability": "Zacínáš s informací o jednom dobrém hráci a jeho postave. Pokud ho zabije Démon, zemreš také.",
+        "ability": "Začínáš s informací o jednom dobrém hráči a jeho postavě. Pokud ho zabije Démon, zemřeš také.",
         "image": "https://wiki.bloodontheclocktower.com/images/2/26/Icon_grandmother.png"
     },
     {
         "id": "sailor",
-        "name": "Námorník",
+        "name": "Námořník",
         "edition": "bmr",
         "team": "townsfolk",
         "firstNight": 11,
@@ -440,7 +440,7 @@
             "Drunk"
         ],
         "setup": false,
-        "ability": "Každou noc vybereš 1 živého hráce: bud ty, nebo on jste až do soumraku opilí. Nemužeš zemrít.",
+        "ability": "Každou noc vybereš 1 živého hráče: buď ty, nebo on jste až do soumraku opilí. Nemůžeš zemřít.",
         "image": "https://wiki.bloodontheclocktower.com/images/1/16/Icon_sailor.png"
     },
     {
@@ -454,7 +454,7 @@
         "otherNightReminder": "The Chambermaid points to two players. Show the number signal (0, 1, 2, …) for how many of those players wake tonight for their ability.",
         "reminders": [],
         "setup": false,
-        "ability": "Každou noc vybereš 2 živé hráce (ne sebe): dozvíš se, kolik z nich bylo tu noc probuzeno na základe jejich schopnosti.",
+        "ability": "Každou noc vybereš 2 živé hráče (ne sebe): dozvíš se, kolik z nich bylo tu noc probuzeno na základě jejich schopnosti.",
         "image": "https://wiki.bloodontheclocktower.com/images/8/87/Icon_chambermaid.png"
     },
     {
@@ -470,7 +470,7 @@
             "Chosen"
         ],
         "setup": false,
-        "ability": "Každou noc* vybereš 1 hráce (jiného než tu minulou): pokud to bude Démon, dozví se, kdo jsi, ale tu noc se neprobudí.",
+        "ability": "Každou noc* vybereš 1 hráče (jiného než tu minulou): pokud to bude Démon, dozví se, kdo jsi, ale tu noc se neprobudí.",
         "image": "https://wiki.bloodontheclocktower.com/images/c/c2/Icon_exorcist.png"
     },
     {
@@ -487,7 +487,7 @@
             "Drunk"
         ],
         "setup": false,
-        "ability": "Každou noc* vybereš 2 hráce: tu noc nemužou zemrít, ale 1 z nich je až do soumraku opilý.",
+        "ability": "Každou noc* vybereš 2 hráče: tu noc nemůžou zemřít, ale 1 z nich je až do soumraku opilý.",
         "image": "https://wiki.bloodontheclocktower.com/images/0/0c/Icon_innkeeper.png"
     },
     {
@@ -503,7 +503,7 @@
             "Dead"
         ],
         "setup": false,
-        "ability": "Každou noc* vybereš 1 hráce a zkusíš uhodnout jeho postavu: pokud bude tvuj tip špatný, zemreš.",
+        "ability": "Každou noc* vybereš 1 hráče a zkusíš uhodnout jeho postavu: pokud bude tvůj tip špatný, zemřeš.",
         "image": "https://wiki.bloodontheclocktower.com/images/f/fd/Icon_gambler.png"
     },
     {
@@ -519,7 +519,7 @@
             "Dead"
         ],
         "setup": false,
-        "ability": "Každý den mužeš ucinit verejné prohlášení. Pokud bude pravdivé, tu noc nekdo zemre.",
+        "ability": "Každý den můžeš učinit veřejné prohlášení. Pokud bude pravdivé, tu noc někdo zemře.",
         "image": "https://wiki.bloodontheclocktower.com/images/c/c7/Icon_gossip.png"
     },
     {
@@ -555,12 +555,12 @@
             "No ability"
         ],
         "setup": false,
-        "ability": "Jednou za hru, v noci*, vybereš 1 mrtvého hráce: pokud je to Meštan, je oživen.",
+        "ability": "Jednou za hru, v noci*, vybereš 1 mrtvého hráče: pokud je to Měšťan, je oživen.",
         "image": "https://wiki.bloodontheclocktower.com/images/6/65/Icon_professor.png"
     },
     {
         "id": "minstrel",
-        "name": "Pevec",
+        "name": "Pěvec",
         "edition": "bmr",
         "team": "townsfolk",
         "firstNight": 0,
@@ -571,12 +571,12 @@
             "Everyone drunk"
         ],
         "setup": false,
-        "ability": "Když Prisluhovac zemre popravou, všichni hráci (až na Pocestné) jsou až do soumraku dalšího dne opilí.",
+        "ability": "Když Přisluhovač zemře popravou, všichni hráči (až na Pocestné) jsou až do soumraku dalšího dne opilí.",
         "image": "https://wiki.bloodontheclocktower.com/images/2/24/Icon_minstrel.png"
     },
     {
         "id": "tealady",
-        "name": "Cajová dáma",
+        "name": "Čajová dáma",
         "edition": "bmr",
         "team": "townsfolk",
         "firstNight": 0,
@@ -587,7 +587,7 @@
             "Can not die"
         ],
         "setup": false,
-        "ability": "Pokud jsou oba tví nejbližší živí sousedé (1 z každé strany) na strane dobra, nemohou zemrít.",
+        "ability": "Pokud jsou oba tví nejbližší živí sousedé (1 z každé strany) na straně dobra, nemohou zemřít.",
         "image": "https://wiki.bloodontheclocktower.com/images/1/16/Icon_tealady.png"
     },
     {
@@ -601,7 +601,7 @@
         "otherNightReminder": "",
         "reminders": [],
         "setup": false,
-        "ability": "Popravení hráci dobra nemusí zemrít.",
+        "ability": "Popravení hráči dobra nemusí zemřít.",
         "image": "https://wiki.bloodontheclocktower.com/images/5/5d/Icon_pacifist.png"
     },
     {
@@ -617,7 +617,7 @@
             "No ability"
         ],
         "setup": false,
-        "ability": "Když máš zemrít poprvé, nezemreš.",
+        "ability": "Když máš zemřít poprvé, nezemřeš.",
         "image": "https://wiki.bloodontheclocktower.com/images/d/d9/Icon_fool.png"
     },
     {
@@ -633,12 +633,12 @@
             "Dead"
         ],
         "setup": false,
-        "ability": "Mužeš kdykoli zemrít.",
+        "ability": "Můžeš kdykoli zemřít.",
         "image": "https://wiki.bloodontheclocktower.com/images/9/98/Icon_tinker.png"
     },
     {
         "id": "moonchild",
-        "name": "Díte mesíce",
+        "name": "Dítě měsíce",
         "edition": "bmr",
         "team": "outsider",
         "firstNight": 0,
@@ -649,12 +649,12 @@
             "Dead"
         ],
         "setup": false,
-        "ability": "Když se dozvíš o své smrti, verejne vybereš 1 živého hráce. Pokud je na strane dobra, tu noc zemre.",
+        "ability": "Když se dozvíš o své smrti, veřejně vybereš 1 živého hráče. Pokud je na straně dobra, tu noc zemře.",
         "image": "https://wiki.bloodontheclocktower.com/images/d/dc/Icon_moonchild.png"
     },
     {
         "id": "goon",
-        "name": "Hnup",
+        "name": "Hňup",
         "edition": "bmr",
         "team": "outsider",
         "firstNight": 0,
@@ -665,7 +665,7 @@
             "Drunk"
         ],
         "setup": false,
-        "ability": "Každou noc první hrác, který te oznací na základe své schopnosti, je až do soumraku opilý. Získáváš jeho príslušnost.",
+        "ability": "Každou noc první hráč, který tě označí na základě své schopnosti, je až do soumraku opilý. Získáváš jeho příslušnost.",
         "image": "https://wiki.bloodontheclocktower.com/images/6/6f/Icon_goon.png"
     },
     {
@@ -700,12 +700,12 @@
             "Dead"
         ],
         "setup": true,
-        "ability": "Zacínáš s informací, kterí Podivíni jsou ve hre. Pokud 1 z nich ve dne zemre, vybereš tu noc 1 hráce: ten zemre. [-1 nebo +1 Podivín]",
+        "ability": "Začínáš s informací, kteří Podivíni jsou ve hře. Pokud 1 z nich ve dne zemře, vybereš tu noc 1 hráče: ten zemře. [-1 nebo +1 Podivín]",
         "image": "https://wiki.bloodontheclocktower.com/images/d/d0/Icon_godfather.png"
     },
     {
         "id": "devilsadvocate",
-        "name": "Dábluv advokát",
+        "name": "Ďáblův advokát",
         "edition": "bmr",
         "team": "minion",
         "firstNight": 22,
@@ -716,7 +716,7 @@
             "Survives execution"
         ],
         "setup": false,
-        "ability": "Každou noc vybereš 1 živého hráce (jiného než tu minulou): pokud by mel být následující den popraven, nezemre.",
+        "ability": "Každou noc vybereš 1 živého hráče (jiného než tu minulou): pokud by měl být následující den popraven, nezemře.",
         "image": "https://wiki.bloodontheclocktower.com/images/0/09/Icon_devilsadvocate.png"
     },
     {
@@ -733,12 +733,12 @@
             "No ability"
         ],
         "setup": false,
-        "ability": "Jednou za hru, v noci*, vybereš 1 hráce: ten zemre, i pokud by z jakéhokoli duvodu nemohl.",
+        "ability": "Jednou za hru, v noci*, vybereš 1 hráče: ten zemře, i pokud by z jakéhokoli důvodu nemohl.",
         "image": "https://wiki.bloodontheclocktower.com/images/4/49/Icon_assassin.png"
     },
     {
         "id": "mastermind",
-        "name": "Strujce",
+        "name": "Strůjce",
         "edition": "bmr",
         "team": "minion",
         "firstNight": 0,
@@ -747,7 +747,7 @@
         "otherNightReminder": "",
         "reminders": [],
         "setup": false,
-        "ability": "Pokud Démon zemre popravou (což obvykle znamená konec hry), hraje se ješte 1 den. Je-li pak nekdo popraven, jeho tým prohrává.",
+        "ability": "Pokud Démon zemře popravou (což obvykle znamená konec hry), hraje se ještě 1 den. Je-li pak někdo popraven, jeho tým prohrává.",
         "image": "https://wiki.bloodontheclocktower.com/images/d/d5/Icon_mastermind.png"
     },
     {
@@ -764,7 +764,7 @@
             "Dead"
         ],
         "setup": false,
-        "ability": "Každou noc*, pokud ten den nikdo nezemrel, vybereš 1 hráce: ten zemre. Když zemreš poprvé, žiješ a jevíš se jako mrtvý.",
+        "ability": "Každou noc*, pokud ten den nikdo nezemřel, vybereš 1 hráče: ten zemře. Když zemřeš poprvé, žiješ a jevíš se jako mrtvý.",
         "image": "https://wiki.bloodontheclocktower.com/images/1/15/Icon_zombuul.png"
     },
     {
@@ -781,7 +781,7 @@
             "Dead"
         ],
         "setup": false,
-        "ability": "Každou noc vybereš 1 hráce: je otrávený. Hrác otrávený predchozí noc zemre a prestane být otrávený.",
+        "ability": "Každou noc vybereš 1 hráče: je otrávený. Hráč otrávený předchozí noc zemře a přestane být otrávený.",
         "image": "https://wiki.bloodontheclocktower.com/images/f/f4/Icon_pukka.png"
     },
     {
@@ -798,7 +798,7 @@
             "Alive"
         ],
         "setup": false,
-        "ability": "Každou noc* vybereš 2 hráce: ti zemrou. Hrác zabitý predchozí noc muže být vyvržen zpet (oživen).",
+        "ability": "Každou noc* vybereš 2 hráče: ti zemřou. Hráč zabitý předchozí noc může být vyvržen zpět (oživen).",
         "image": "https://wiki.bloodontheclocktower.com/images/1/1f/Icon_shabaloth.png"
     },
     {
@@ -815,7 +815,7 @@
             "3 attacks"
         ],
         "setup": false,
-        "ability": "Každou noc* mužeš vybrat 1 hráce: ten zemre. Pokud ses naposled rozhodl nikoho nevybrat, tuto noc vybereš 3 hráce.",
+        "ability": "Každou noc* můžeš vybrat 1 hráče: ten zemře. Pokud ses naposled rozhodl nikoho nevybrat, tuto noc vybereš 3 hráče.",
         "image": "https://wiki.bloodontheclocktower.com/images/b/b2/Icon_po.png"
     },
     {
@@ -897,7 +897,7 @@
     },
     {
         "id": "clockmaker",
-        "name": "Hodinár",
+        "name": "Hodinář",
         "edition": "snv",
         "team": "townsfolk",
         "firstNight": 41,
@@ -906,7 +906,7 @@
         "otherNightReminder": "",
         "reminders": [],
         "setup": false,
-        "ability": "Zacínáš s informací, kolik kroku je Démon od svého nejbližšího Prisluhovace.",
+        "ability": "Začínáš s informací, kolik kroků je Démon od svého nejbližšího Přisluhovače.",
         "image": "https://wiki.bloodontheclocktower.com/images/3/3d/Icon_clockmaker.png"
     },
     {
@@ -920,12 +920,12 @@
         "otherNightReminder": "The Dreamer points to a player. Show 1 good and 1 evil character token; one of these is correct.",
         "reminders": [],
         "setup": false,
-        "ability": "Každou noc vybereš 1 hráce (ne sebe ani Pocestného): dozvíš se 1 dobrou a 1 zlou postavu. Jednou z nich je vybraný hrác.",
+        "ability": "Každou noc vybereš 1 hráče (ne sebe ani Pocestného): dozvíš se 1 dobrou a 1 zlou postavu. Jednou z nich je vybraný hráč.",
         "image": "https://wiki.bloodontheclocktower.com/images/f/f2/Icon_dreamer.png"
     },
     {
         "id": "snakecharmer",
-        "name": "Zaklínac hadu",
+        "name": "Zaklínač hadů",
         "edition": "snv",
         "team": "townsfolk",
         "firstNight": 20,
@@ -936,7 +936,7 @@
             "Poisoned"
         ],
         "setup": false,
-        "ability": "Každou noc vybereš 1 živého hráce: pokud je to Démon, prohodíte si postavu i príslušnost a on je otrávený.",
+        "ability": "Každou noc vybereš 1 živého hráče: pokud je to Démon, prohodíte si postavu i příslušnost a on je otrávený.",
         "image": "https://wiki.bloodontheclocktower.com/images/0/08/Icon_snakecharmer.png"
     },
     {
@@ -952,12 +952,12 @@
             "Abnormal"
         ],
         "setup": false,
-        "ability": "Každou noc se dozvíš, kolik schopností hrácu fungovalo abnormálne (od úsvitu) v dusledku schopnosti jiné postavy.",
+        "ability": "Každou noc se dozvíš, kolik schopností hráčů fungovalo abnormálně (od úsvitu) v důsledku schopnosti jiné postavy.",
         "image": "https://wiki.bloodontheclocktower.com/images/f/f1/Icon_mathematician.png"
     },
     {
         "id": "flowergirl",
-        "name": "Kvetinárka",
+        "name": "Květinářka",
         "edition": "snv",
         "team": "townsfolk",
         "firstNight": 0,
@@ -974,7 +974,7 @@
     },
     {
         "id": "towncrier",
-        "name": "Mestský vyvolávac",
+        "name": "Městský vyvolávač",
         "edition": "snv",
         "team": "townsfolk",
         "firstNight": 0,
@@ -986,12 +986,12 @@
             "Minion nominated"
         ],
         "setup": false,
-        "ability": "Každou noc* se dozvíš, zda Prisluhovac ten den nominoval.",
+        "ability": "Každou noc* se dozvíš, zda Přisluhovač ten den nominoval.",
         "image": "https://wiki.bloodontheclocktower.com/images/e/ef/Icon_towncrier.png"
     },
     {
         "id": "oracle",
-        "name": "Veštec",
+        "name": "Věštec",
         "edition": "snv",
         "team": "townsfolk",
         "firstNight": 0,
@@ -1000,12 +1000,12 @@
         "otherNightReminder": "Show the hand signal for the number (0, 1, 2, etc.) of dead evil players.",
         "reminders": [],
         "setup": false,
-        "ability": "Každou noc* se dozvíš, kolik zlých hrácu je mrtvých.",
+        "ability": "Každou noc* se dozvíš, kolik zlých hráčů je mrtvých.",
         "image": "https://wiki.bloodontheclocktower.com/images/b/bb/Icon_oracle.png"
     },
     {
         "id": "savant",
-        "name": "Ucenec",
+        "name": "Učenec",
         "edition": "snv",
         "team": "townsfolk",
         "firstNight": 0,
@@ -1014,7 +1014,7 @@
         "otherNightReminder": "",
         "reminders": [],
         "setup": false,
-        "ability": "Každý den mužeš prijít soukrome za vypravecem a dozvedet se od nej 2 informace. Jedna z nich je pravdivá, jedna falešná.",
+        "ability": "Každý den můžeš přijít soukromě za vypravěčem a dozvědět se od něj 2 informace. Jedna z nich je pravdivá, jedna falešná.",
         "image": "https://wiki.bloodontheclocktower.com/images/d/d5/Icon_savant.png"
     },
     {
@@ -1030,7 +1030,7 @@
             "No ability"
         ],
         "setup": false,
-        "ability": "Jednou za hru, v noci, vybereš 2 hráce (ne sebe): dozvíš se, zda je jejich príslušnost stejná.",
+        "ability": "Jednou za hru, v noci, vybereš 2 hráče (ne sebe): dozvíš se, zda je jejich příslušnost stejná.",
         "image": "https://wiki.bloodontheclocktower.com/images/5/53/Icon_seamstress.png"
     },
     {
@@ -1047,12 +1047,12 @@
             "Is the Philosopher"
         ],
         "setup": false,
-        "ability": "Jednou za hru, v noci, vybereš 1 dobrou postavu: získáš její schopnost. Pokud je tato postava ve hre, stává se opilou.",
+        "ability": "Jednou za hru, v noci, vybereš 1 dobrou postavu: získáš její schopnost. Pokud je tato postava ve hře, stává se opilou.",
         "image": "https://wiki.bloodontheclocktower.com/images/5/5d/Icon_philosopher.png"
     },
     {
         "id": "artist",
-        "name": "Umelec",
+        "name": "Umělec",
         "edition": "snv",
         "team": "townsfolk",
         "firstNight": 0,
@@ -1063,12 +1063,12 @@
             "No ability"
         ],
         "setup": false,
-        "ability": "Jednou za hru, behem dne, soukrome položíš vypraveci jakoukoli otázku, na kterou muže odpovedet „ano/ne“.",
+        "ability": "Jednou za hru, během dne, soukromě položíš vypravěči jakoukoli otázku, na kterou může odpovědět „ano/ne“.",
         "image": "https://wiki.bloodontheclocktower.com/images/1/1a/Icon_artist.png"
     },
     {
         "id": "juggler",
-        "name": "Kejklír",
+        "name": "Kejklíř",
         "edition": "snv",
         "team": "townsfolk",
         "firstNight": 0,
@@ -1079,7 +1079,7 @@
             "Correct"
         ],
         "setup": false,
-        "ability": "První den zkus verejne uhádnout až 5 postav hrácu. Tu noc se dozvíš, kolik jsi jich uhodl správne.",
+        "ability": "První den zkus veřejně uhádnout až 5 postav hráčů. Tu noc se dozvíš, kolik jsi jich uhodl správně.",
         "image": "https://wiki.bloodontheclocktower.com/images/4/42/Icon_juggler.png"
     },
     {
@@ -1093,7 +1093,7 @@
         "otherNightReminder": "If the Sage was killed by a Demon: Point to two players, one of which is that Demon.",
         "reminders": [],
         "setup": false,
-        "ability": "Pokud te zabije Démon, dozvíš se, že je to jeden ze dvou hrácu.",
+        "ability": "Pokud tě zabije Démon, dozvíš se, že je to jeden ze dvou hráčů.",
         "image": "https://wiki.bloodontheclocktower.com/images/a/a0/Icon_sage.png"
     },
     {
@@ -1107,12 +1107,12 @@
         "otherNightReminder": "",
         "reminders": [],
         "setup": false,
-        "ability": "Pokud jsi „posedlý“ predstavou, že jsi Podivín, mužeš být popraven.",
+        "ability": "Pokud jsi „posedlý“ představou, že jsi Podivín, můžeš být popraven.",
         "image": "https://wiki.bloodontheclocktower.com/images/2/2e/Icon_mutant.png"
     },
     {
         "id": "sweetheart",
-        "name": "Zlatícko",
+        "name": "Zlatíčko",
         "edition": "snv",
         "team": "outsider",
         "firstNight": 0,
@@ -1123,12 +1123,12 @@
             "Drunk"
         ],
         "setup": false,
-        "ability": "Když zemreš, 1 hrác je odted trvale opilý.",
+        "ability": "Když zemřeš, 1 hráč je odteď trvale opilý.",
         "image": "https://wiki.bloodontheclocktower.com/images/6/6a/Icon_sweetheart.png"
     },
     {
         "id": "barber",
-        "name": "Holic",
+        "name": "Holič",
         "edition": "snv",
         "team": "outsider",
         "firstNight": 0,
@@ -1139,7 +1139,7 @@
             "Haircuts tonight"
         ],
         "setup": false,
-        "ability": "Pokud jsi tento den nebo tuto noc zemrel, Démon muže vybrat 2 hráce (ne dalšího Démona), kterí si prohodí postavy.",
+        "ability": "Pokud jsi tento den nebo tuto noc zemřel, Démon může vybrat 2 hráče (ne dalšího Démona), kteří si prohodí postavy.",
         "image": "https://wiki.bloodontheclocktower.com/images/1/16/Icon_barber.png"
     },
     {
@@ -1153,12 +1153,12 @@
         "otherNightReminder": "",
         "reminders": [],
         "setup": false,
-        "ability": "Když se dozvíš o své smrti, verejne vybereš 1 živého hráce: pokud je zlý, tvuj tým prohrává.",
+        "ability": "Když se dozvíš o své smrti, veřejně vybereš 1 živého hráče: pokud je zlý, tvůj tým prohrává.",
         "image": "https://wiki.bloodontheclocktower.com/images/b/bc/Icon_klutz.png"
     },
     {
         "id": "eviltwin",
-        "name": "Zlé dvojce",
+        "name": "Zlé dvojče",
         "edition": "snv",
         "team": "minion",
         "firstNight": 23,
@@ -1169,12 +1169,12 @@
             "Twin"
         ],
         "setup": false,
-        "ability": "Ty a hrác druhé strany o sobe víte. Pokud je ten dobrý z vás popraven, zlo vyhrává. Dobro nemuže vyhrát, jste-li oba naživu.",
+        "ability": "Ty a hráč druhé strany o sobě víte. Pokud je ten dobrý z vás popraven, zlo vyhrává. Dobro nemůže vyhrát, jste-li oba naživu.",
         "image": "https://wiki.bloodontheclocktower.com/images/f/f4/Icon_eviltwin.png"
     },
     {
         "id": "witch",
-        "name": "Carodejnice",
+        "name": "Čarodějnice",
         "edition": "snv",
         "team": "minion",
         "firstNight": 24,
@@ -1185,7 +1185,7 @@
             "Cursed"
         ],
         "setup": false,
-        "ability": "Každou noc vybereš 1 hráce: pokud bude následující den nominovat, zemre. O tuto schopnost pricházíš, pokud jsou naživu pouze 3 hráci.",
+        "ability": "Každou noc vybereš 1 hráče: pokud bude následující den nominovat, zemře. O tuto schopnost přicházíš, pokud jsou naživu pouze 3 hráči.",
         "image": "https://wiki.bloodontheclocktower.com/images/7/7b/Icon_witch.png"
     },
     {
@@ -1201,7 +1201,7 @@
             "Mad"
         ],
         "setup": false,
-        "ability": "Každou noc vybereš 1 hráce a 1 dobrou postavu: následující den musí být vybraný hrác „posedlý“ predstavou, že je tou postavou, jinak muže být popraven.",
+        "ability": "Každou noc vybereš 1 hráče a 1 dobrou postavu: následující den musí být vybraný hráč „posedlý“ představou, že je tou postavou, jinak může být popraven.",
         "image": "https://wiki.bloodontheclocktower.com/images/4/45/Icon_cerenovus.png"
     },
     {
@@ -1215,7 +1215,7 @@
         "otherNightReminder": "The Pit-Hag points to a player and a character on the sheet. If this character is not in play, wake that player and show them the 'You are' card and the relevant character token. If the character is in play, nothing happens.",
         "reminders": [],
         "setup": false,
-        "ability": "Každou noc* vybereš 1 hráce a 1 postavu, kterou se vybraný hrác stane (pokud není ve hre). Pokud je takto stvoren Démon, tu noc muže zemrít kdokoli.",
+        "ability": "Každou noc* vybereš 1 hráče a 1 postavu, kterou se vybraný hráč stane (pokud není ve hře). Pokud je takto stvořen Démon, tu noc může zemřít kdokoli.",
         "image": "https://wiki.bloodontheclocktower.com/images/6/6b/Icon_pithag.png"
     },
     {
@@ -1232,7 +1232,7 @@
             "Once"
         ],
         "setup": true,
-        "ability": "Každou noc* vybereš 1 hráce: ten zemre. Když takto poprvé zabiješ Podivína, stane se Fang Guem a ty zemreš namísto nej. [+1 Podivín]",
+        "ability": "Každou noc* vybereš 1 hráče: ten zemře. Když takto poprvé zabiješ Podivína, stane se Fang Guem a ty zemřeš namísto něj. [+1 Podivín]",
         "image": "https://wiki.bloodontheclocktower.com/images/0/0e/Icon_fanggu.png"
     },
     {
@@ -1250,7 +1250,7 @@
             "Poisoned"
         ],
         "setup": true,
-        "ability": "Každou noc* vybereš 1 hráce: ten zemre. Prisluhovaci, které zabiješ, si ponechají svou schopnost a otráví 1 svého sousedícího Meštana. [-1 Podivín]",
+        "ability": "Každou noc* vybereš 1 hráče: ten zemře. Přisluhovači, které zabiješ, si ponechají svou schopnost a otráví 1 svého sousedícího Měšťana. [-1 Podivín]",
         "image": "https://wiki.bloodontheclocktower.com/images/1/1a/Icon_vigormortis.png"
     },
     {
@@ -1267,7 +1267,7 @@
             "Poisoned"
         ],
         "setup": false,
-        "ability": "Každou noc* vybereš 1 hráce: ten zemre. Dva tví sousedící Meštané (1 z každé strany) jsou otráveni.",
+        "ability": "Každou noc* vybereš 1 hráče: ten zemře. Dva tví sousedící Měšťané (1 z každé strany) jsou otráveni.",
         "image": "https://wiki.bloodontheclocktower.com/images/e/eb/Icon_nodashii.png"
     },
     {
@@ -1283,7 +1283,7 @@
             "Dead"
         ],
         "setup": false,
-        "ability": "Každou noc* vybereš 1 hráce: ten zemre. Schopnosti Meštanu dávají falešné informace. Pokud není nekdo každý den popraven, zlo vyhrává.",
+        "ability": "Každou noc* vybereš 1 hráče: ten zemře. Schopnosti Měšťanů dávají falešné informace. Pokud není někdo každý den popraven, zlo vyhrává.",
         "image": "https://wiki.bloodontheclocktower.com/images/8/89/Icon_vortox.png"
     },
     {
@@ -1378,11 +1378,11 @@
             "Seen"
         ],
         "setup": false,
-        "ability": "Zacínáš s informací o 3 hrácích, z kterých presne 1 je zlý."
+        "ability": "Začínáš s informací o 3 hráčích, z kterých přesně 1 je zlý."
     },
     {
         "id": "bountyhunter",
-        "name": "Lovec odmen",
+        "name": "Lovec odměn",
         "edition": "",
         "team": "townsfolk",
         "firstNight": 46,
@@ -1393,12 +1393,12 @@
             "Known"
         ],
         "setup": true,
-        "ability": "Zacínáš s informací o 1 zlém hráci. Pokud tento hrác zemre, dozvíš se dalšího zlého hráce. [1 Meštan je zlý]",
+        "ability": "Začínáš s informací o 1 zlém hráči. Pokud tento hráč zemře, dozvíš se dalšího zlého hráče. [1 Měšťan je zlý]",
         "image": "https://wiki.bloodontheclocktower.com/images/5/5b/Icon_bountyhunter.png"
     },
     {
         "id": "pixie",
-        "name": "Skrítek",
+        "name": "Skřítek",
         "edition": "",
         "team": "townsfolk",
         "firstNight": 29,
@@ -1410,7 +1410,7 @@
             "Has ability"
         ],
         "setup": false,
-        "ability": "Zacínáš s informací o 1 Meštanovi, který je ve hre. Pokud jsi posedlý, že jsi tato postava, získáš jeho schopnost, když umre.",
+        "ability": "Začínáš s informací o 1 Měšťanovi, který je ve hře. Pokud jsi posedlý, že jsi tato postava, získáš jeho schopnost, když umře.",
         "image": "https://wiki.bloodontheclocktower.com/images/d/d5/Icon_pixie.png"
     },
     {
@@ -1424,7 +1424,7 @@
         "otherNightReminder": "Show the General thumbs up for good winning, thumbs down for evil winning or thumb to the side for neither.",
         "reminders": [],
         "setup": false,
-        "ability": "Každou noc se dozvíš, která strana má podle vypravece navrch. Dobro, zlo, nebo nikdo.",
+        "ability": "Každou noc se dozvíš, která strana má podle vypravěče navrch. Dobro, zlo, nebo nikdo.",
         "image": "https://wiki.bloodontheclocktower.com/images/9/99/Icon_general.png"
     },
     {
@@ -1440,7 +1440,7 @@
             "At a sermon"
         ],
         "setup": false,
-        "ability": "Každou noc vybereš 1 hráce. Pokud to bude Prisluhovace, dozví se o tom. Všichni takto vybraní Prisluhovaci ztrácejí svou schopnost.",
+        "ability": "Každou noc vybereš 1 hráče. Pokud to bude Přisluhovače, dozví se o tom. Všichni takto vybraní Přisluhovači ztrácejí svou schopnost.",
         "image": "https://wiki.bloodontheclocktower.com/images/8/82/Icon_preacher.png"
     },
     {
@@ -1473,7 +1473,7 @@
     },
     {
         "id": "balloonist",
-        "name": "Balonár",
+        "name": "Balonář",
         "edition": "",
         "team": "townsfolk",
         "firstNight": 45,
@@ -1488,12 +1488,12 @@
             "Seen Traveller"
         ],
         "setup": true,
-        "ability": "Každou noc se dozvíš o 1 hráci z každého typu postav. [+1 Podivín]",
+        "ability": "Každou noc se dozvíš o 1 hráči z každého typu postav. [+1 Podivín]",
         "image": "https://wiki.bloodontheclocktower.com/images/c/cb/Icon_balloonist.png"
     },
     {
         "id": "cultleader",
-        "name": "Vudce sekty",
+        "name": "Vůdce sekty",
         "edition": "",
         "team": "townsfolk",
         "firstNight": 48,
@@ -1502,7 +1502,7 @@
         "otherNightReminder": "If the cult leader changed alignment, show them the thumbs up good signal of the thumbs down evil signal accordingly.",
         "reminders": [],
         "setup": false,
-        "ability": "Každou noc získáváš príslušnost svého živého souseda. Pokud se do tvé sekty pridají všichni dobrí hráci, tvuj tým vyhrává.",
+        "ability": "Každou noc získáváš příslušnost svého živého souseda. Pokud se do tvé sekty přidají všichni dobří hráči, tvůj tým vyhrává.",
         "image": "https://wiki.bloodontheclocktower.com/images/6/6c/Icon_cultleader.png"
     },
     {
@@ -1518,7 +1518,7 @@
             "Dead"
         ],
         "setup": false,
-        "ability": "Každou noc* vybereš živého hráce: pokud je na strane dobra, zemre. Je však jediný, kdo tu noc muže zemrít.",
+        "ability": "Každou noc* vybereš živého hráče: pokud je na straně dobra, zemře. Je však jediný, kdo tu noc může zemřít.",
         "image": "https://wiki.bloodontheclocktower.com/images/9/92/Icon_lycanthrope.png"
     },
     {
@@ -1534,12 +1534,12 @@
             "?"
         ],
         "setup": false,
-        "ability": "Nevíš, jakou máš schopnost. Každý den ji zkusíš u vypravece v soukromí uhodnout. Dozvíš se, jak presný to byl odhad.",
+        "ability": "Nevíš, jakou máš schopnost. Každý den ji zkusíš u vypravěče v soukromí uhodnout. Dozvíš se, jak přesný to byl odhad.",
         "image": "https://wiki.bloodontheclocktower.com/images/2/26/Icon_amnesiac.png"
     },
     {
         "id": "nightwatchman",
-        "name": "Nocní hlídka",
+        "name": "Noční hlídka",
         "edition": "",
         "team": "townsfolk",
         "firstNight": 47,
@@ -1550,7 +1550,7 @@
             "No ability"
         ],
         "setup": false,
-        "ability": "Jednou za hru vybereš hráce: dozví se, kdo jsi.",
+        "ability": "Jednou za hru vybereš hráče: dozví se, kdo jsi.",
         "image": "https://wiki.bloodontheclocktower.com/images/f/f0/Icon_nightwatchman.png"
     },
     {
@@ -1566,12 +1566,12 @@
             "No ability"
         ],
         "setup": false,
-        "ability": "Jednou za hru behem noci mužeš vybrat, kterí Prisluhovaci, nebo Démon bude ve hre.",
+        "ability": "Jednou za hru během noci můžeš vybrat, kteří Přisluhovači, nebo Démon bude ve hře.",
         "image": "https://wiki.bloodontheclocktower.com/images/b/b9/Icon_engineer.png"
     },
     {
         "id": "fisherman",
-        "name": "Rybár",
+        "name": "Rybář",
         "edition": "",
         "team": "townsfolk",
         "firstNight": 0,
@@ -1582,7 +1582,7 @@
             "No ability"
         ],
         "setup": false,
-        "ability": "Jednou za hru mužeš soukrome zajít za Vypravecem a získat radu, jak má tvuj tým vyhrát.",
+        "ability": "Jednou za hru můžeš soukromě zajít za Vypravěčem a získat radu, jak má tvůj tým vyhrát.",
         "image": "https://wiki.bloodontheclocktower.com/images/1/19/Icon_fisherman.png"
     },
     {
@@ -1598,7 +1598,7 @@
             "No ability"
         ],
         "setup": true,
-        "ability": "Jednou za hru v noci vybereš živého hráce: pokud je to Dámicka, stane se Meštanem, který není ve hre. [+ Dámicka]",
+        "ability": "Jednou za hru v noci vybereš živého hráče: pokud je to Dámička, stane se Měšťanem, který není ve hře. [+ Dámička]",
         "image": "https://wiki.bloodontheclocktower.com/images/a/a1/Icon_huntsman.png"
     },
     {
@@ -1615,12 +1615,12 @@
             "Is the Alchemist"
         ],
         "setup": false,
-        "ability": "Máš schopnost Prisluhovace, který není ve hre.",
+        "ability": "Máš schopnost Přisluhovače, který není ve hře.",
         "image": "https://wiki.bloodontheclocktower.com/images/5/54/Icon_alchemist.png"
     },
     {
         "id": "farmer",
-        "name": "Farmár",
+        "name": "Farmář",
         "edition": "",
         "team": "townsfolk",
         "firstNight": 0,
@@ -1629,7 +1629,7 @@
         "otherNightReminder": "If a Farmer died tonight, choose another good player and make them the Farmer. Wake this player, show them the 'You are' card and the Farmer character token.",
         "reminders": [],
         "setup": false,
-        "ability": "Pokud v noci zemreš, živý dobrý hrác se stane Farmárem.",
+        "ability": "Pokud v noci zemřeš, živý dobrý hráč se stane Farmářem.",
         "image": "https://wiki.bloodontheclocktower.com/images/f/fe/Icon_farmer.png"
     },
     {
@@ -1643,12 +1643,12 @@
         "otherNightReminder": "",
         "reminders": [],
         "setup": false,
-        "ability": "Démon si myslí, že jsi Prisluhovac. Prisluhovaci si myslí, že jsi Démon.",
+        "ability": "Démon si myslí, že jsi Přisluhovač. Přisluhovači si myslí, že jsi Démon.",
         "image": "https://wiki.bloodontheclocktower.com/images/9/93/Icon_magician.png"
     },
     {
         "id": "choirboy",
-        "name": "Zpevácek",
+        "name": "Zpěváček",
         "edition": "",
         "team": "townsfolk",
         "firstNight": 0,
@@ -1657,7 +1657,7 @@
         "otherNightReminder": "If the King was killed by the Demon, wake the Choirboy and point to the Demon player.",
         "reminders": [],
         "setup": true,
-        "ability": "Pokud Démon zabije Krále, dozvíš se, který hrác je Démon. [+ Král]",
+        "ability": "Pokud Démon zabije Krále, dozvíš se, který hráč je Démon. [+ Král]",
         "image": "https://wiki.bloodontheclocktower.com/images/d/d9/Icon_choirboy.png"
     },
     {
@@ -1673,7 +1673,7 @@
             "Evil wakes"
         ],
         "setup": false,
-        "ability": "Prisluhovaci a Démoni se navzájem neznají. Pokud zemreš, té noci se o sobe dozvedí.",
+        "ability": "Přisluhovači a Démoni se navzájem neznají. Pokud zemřeš, té noci se o sobě dozvědí.",
         "image": "https://wiki.bloodontheclocktower.com/images/9/91/Icon_poppygrower.png"
     },
     {
@@ -1687,7 +1687,7 @@
         "otherNightReminder": "",
         "reminders": [],
         "setup": true,
-        "ability": "Vypravec muže porušovat pravidla hry a dobro vyhraje, je-li je popraven (i když jsi mrtvý). [Žádné zlé postavy]",
+        "ability": "Vypravěč může porušovat pravidla hry a dobro vyhraje, je-li je popraven (i když jsi mrtvý). [Žádné zlé postavy]",
         "image": "https://wiki.bloodontheclocktower.com/images/4/43/Icon_atheist.png"
     },
     {
@@ -1719,11 +1719,11 @@
             "Died today"
         ],
         "setup": false,
-        "ability": "Máš schopnost naposledy popravené postavy. Pokud byla na strane zla, jsi otrávený, dokud není popraven dobrý hrác."
+        "ability": "Máš schopnost naposledy popravené postavy. Pokud byla na straně zla, jsi otrávený, dokud není popraven dobrý hráč."
     },
     {
         "id": "snitch",
-        "name": "Práskac",
+        "name": "Práskač",
         "edition": "",
         "team": "outsider",
         "firstNight": 7,
@@ -1732,7 +1732,7 @@
         "otherNightReminder": "",
         "reminders": [],
         "setup": false,
-        "ability": "Prisluhovaci zacínají s informací o 3 postavách, které nejsou ve hre.",
+        "ability": "Přisluhovači začínají s informací o 3 postavách, které nejsou ve hře.",
         "image": "https://wiki.bloodontheclocktower.com/images/c/c1/Icon_snitch.png"
     },
     {
@@ -1748,12 +1748,12 @@
             "Dead"
         ],
         "setup": false,
-        "ability": "Každou noc* pokud je nekterý z tvých sousedu dobrý a zároven opilý, nebo otrávený, zemreš.",
+        "ability": "Každou noc* pokud je některý z tvých sousedů dobrý a zároveň opilý, nebo otrávený, zemřeš.",
         "image": "https://wiki.bloodontheclocktower.com/images/b/b5/Icon_acrobat.png"
     },
     {
         "id": "puzzlemaster",
-        "name": "Hádankár",
+        "name": "Hádankář",
         "edition": "",
         "team": "outsider",
         "firstNight": 0,
@@ -1765,7 +1765,7 @@
             "Guess used"
         ],
         "setup": false,
-        "ability": "1 hrác je opilý, i když jsi mrtvý. Jednou za hru mužeš hádat, který. Dozvíš se, kdo je Démon, pokud to uhodneš. V opacném prípade dostaneš nesprávnou informaci.",
+        "ability": "1 hráč je opilý, i když jsi mrtvý. Jednou za hru můžeš hádat, který. Dozvíš se, kdo je Démon, pokud to uhodneš. V opačném případě dostaneš nesprávnou informaci.",
         "image": "https://wiki.bloodontheclocktower.com/images/7/7a/Icon_puzzlemaster.png"
     },
     {
@@ -1784,7 +1784,7 @@
     },
     {
         "id": "damsel",
-        "name": "Dámicka",
+        "name": "Dámička",
         "edition": "",
         "team": "outsider",
         "firstNight": 31,
@@ -1795,7 +1795,7 @@
             "Guess used"
         ],
         "setup": false,
-        "ability": "Všichni Prisluhovaci vedí, že jsi ve hre. Pokud te Prisluhovac verejne uhodne (na jeden pokus), tvuj tým prohrává.",
+        "ability": "Všichni Přisluhovači vědí, že jsi ve hře. Pokud tě Přisluhovač veřejně uhodne (na jeden pokus), tvůj tým prohrává.",
         "image": "https://wiki.bloodontheclocktower.com/images/d/dc/Icon_damsel.png"
     },
     {
@@ -1823,7 +1823,7 @@
             "Can not nominate"
         ],
         "setup": false,
-        "ability": "Nominovat mužeš jen jednou za hru. Když tak uciníš a nominovaný není Démon, zemre.",
+        "ability": "Nominovat můžeš jen jednou za hru. Když tak učiníš a nominovaný není Démon, zemře.",
         "image": "https://wiki.bloodontheclocktower.com/images/2/2b/Icon_golem.png"
     },
     {
@@ -2323,7 +2323,7 @@
             "3"
         ],
         "setup": true,
-        "ability": "Máš schopnost všech Podivínu. [-0 nebo -1 Podivín]",
+        "ability": "Máš schopnost všech Podivínů. [-0 nebo -1 Podivín]",
         "image": "https://wiki.bloodontheclocktower.com/images/b/b4/Icon_hermit.png"
     },
     {
@@ -2443,23 +2443,23 @@
         "name": "Soumrak",
         "edition": "",
         "team": "nightinfo",
-        "firstNightReminder": "Pošli hráce spát a aktualizuj žeton noci – nekterí Pocestní mohou jednat.",
-        "otherNightReminder": "Pošli hráce spát a aktualizuj žeton noci – nekterí Pocestní mohou jednat."
+        "firstNightReminder": "Pošli hráče spát a aktualizuj žeton noci – někteří Pocestní mohou jednat.",
+        "otherNightReminder": "Pošli hráče spát a aktualizuj žeton noci – někteří Pocestní mohou jednat."
     },
     {
         "id": "DAWN",
         "name": "Svítání",
         "edition": "",
         "team": "nightinfo",
-        "firstNightReminder": "Probudte všechny hráce.",
-        "otherNightReminder": "Probudte všechny hráce a oznamte výsledek noci."
+        "firstNightReminder": "Probuďte všechny hráče.",
+        "otherNightReminder": "Probuďte všechny hráče a oznamte výsledek noci."
     },
     {
         "id": "DEMON",
         "name": "Demon info",
         "edition": "",
         "team": "nightinfo",
-        "firstNightReminder": "Ukažte, kdo jsou Minioni, a odhalte 3 blufy (postavy co nejsou ve hre).",
+        "firstNightReminder": "Ukažte, kdo jsou Minioni, a odhalte 3 blufy (postavy co nejsou ve hře).",
         "otherNightReminder": ""
     },
     {
@@ -2467,9 +2467,7 @@
         "name": "Minion info",
         "edition": "",
         "team": "nightinfo",
-        "firstNightReminder": "Probudte Miniony spolecne a ukažte, kdo je Démon.",
+        "firstNightReminder": "Probuďte Miniony společně a ukažte, kdo je Démon.",
         "otherNightReminder": ""
     }
 ]
-
-
