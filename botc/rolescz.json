@@ -1945,7 +1945,7 @@
         "edition": "",
         "team": "minion",
         "firstNight": 12,
-        "firstNightReminder": "Select one of the good players next to the Demon and place the Is the Marionette reminder token. Wake the Demon and show them the Marionette.",
+        "firstNightReminder": "Vyberte jednoho z dobrých hráčů vedle démona a umístěte na něj připomínkový žeton Marioneta. Probuďte démona a ukažte mu Marionetu.",
         "otherNight": 0,
         "otherNightReminder": "",
         "reminders": [],
@@ -2471,4 +2471,5 @@
         "otherNightReminder": ""
     }
 ]
+
 
