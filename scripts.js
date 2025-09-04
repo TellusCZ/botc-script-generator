@@ -537,7 +537,7 @@ document.getElementById('saveScriptPng').addEventListener('click', () => {
 
 
     // Posloucháme změnu souboru
-    fileInput.addEventListener('change', (event) => {
+    /*fileInput.addEventListener('change', (event) => {
       const file = event.target.files[0]; // vybraný soubor
           
       if (file) {
@@ -547,7 +547,21 @@ document.getElementById('saveScriptPng').addEventListener('click', () => {
         };
         reader.readAsDataURL(file);
       }
-    });
+    });*/
+const input_label = document.getElementById('image-label');
+
+const convert_to_base64 = file => new Promise((response) => {
+   const file_reader = new FileReader();
+   file_reader.readAsDataURL(file);
+   file_reader.onload = () => response(file_reader.result);
+});
+
+fileInput.addEventListener('change', async function(){
+   const file = document.querySelector('#image-file').files;
+   const my_image = await convert_to_base64(file[0]);
+   input_label.style.backgroundImage =`url(${my_image})`
+   });
+
 
 
 
