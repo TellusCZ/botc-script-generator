@@ -417,9 +417,9 @@
         "edition": "bmr",
         "team": "townsfolk",
         "firstNight": 40,
-        "firstNightReminder": "Show the marked character token. Point to the marked player.",
+        "firstNightReminder": "Zobrazit označený character. Ukázat na označeného hráče.",
         "otherNight": 51,
-        "otherNightReminder": "If the Grandmother’s grandchild was killed by the Demon tonight: The Grandmother dies.",
+        "otherNightReminder": "Pokud dnes v noci démon zabil vnučku babičky: Babička zemře.",
         "reminders": [
             "Grandchild"
         ],
@@ -514,7 +514,7 @@
         "firstNight": 0,
         "firstNightReminder": "",
         "otherNight": 38,
-        "otherNightReminder": "If the Gossip’s public statement was true: Choose a player not protected from dying tonight. That player dies.",
+        "otherNightReminder": "Pokud bylo veřejné prohlášení Drbny pravdivé: Vyberte hráče, který není chráněn před smrtí dnes večer. Ten hráč zemře.",
         "reminders": [
             "Dead"
         ],
@@ -692,9 +692,9 @@
         "edition": "bmr",
         "team": "minion",
         "firstNight": 21,
-        "firstNightReminder": "Show each of the Outsider tokens in play.",
+        "firstNightReminder": "Ukažte všechny žetony Podivínů ve hře.",
         "otherNight": 37,
-        "otherNightReminder": "If an Outsider died today: The Godfather points to a player. That player dies.",
+        "otherNightReminder": "Pokud dnes zemřel podivín: Kmotr ukáže na jednoho hráče. Ten hráč zemře.",
         "reminders": [
             "Died today",
             "Dead"
@@ -727,7 +727,7 @@
         "firstNight": 0,
         "firstNightReminder": "",
         "otherNight": 36,
-        "otherNightReminder": "If the Assassin has not yet used their ability: The Assassin either shows the 'no' head signal, or points to a player. That player dies.",
+        "otherNightReminder": "Pokud Nájemný vrah ještě nepoužil svou schopnost: Nájemný vrah buď ukáže znamení „ne“ hlavou, nebo ukáže na hráče. Ten hráč zemře.",
         "reminders": [
             "Dead",
             "No ability"
@@ -963,7 +963,7 @@
         "firstNight": 0,
         "firstNightReminder": "",
         "otherNight": 57,
-        "otherNightReminder": "Nod 'yes' or shake head 'no' for whether the Demon voted today. Place the 'Demon not voted' marker (remove 'Demon voted', if any).",
+        "otherNightReminder": "Přikývněte „ano“ nebo zavrtěte hlavou „ne“, podle toho, zda Démon dnes hlasoval. Umístěte značku „Démon nehlasoval“ (odstraňte značku „Démon hlasoval“, pokud tam je).",
         "reminders": [
             "Demon voted",
             "Demon not voted"
@@ -1039,9 +1039,9 @@
         "edition": "snv",
         "team": "townsfolk",
         "firstNight": 2,
-        "firstNightReminder": "The Philosopher either shows a 'no' head signal, or points to a good character on their sheet. If they chose a character: Swap the out-of-play character token with the Philosopher token and add the 'Is the Philosopher' reminder. If the character is in play, place the drunk marker by that player.",
+        "firstNightReminder": "Filozof buď ukáže znamení „ne“ hlavou, nebo ukáže na dobrou postavu na svém listu. Pokud si vybral postavu: Vyměňte žeton postavy mimo hru za žeton Filozofa a přidejte připomínku „Je to Filozof“. Pokud je postava ve hře, umístěte značku opilosti vedle tohoto hráče.",
         "otherNight": 2,
-        "otherNightReminder": "If the Philosopher has not used their ability: the Philosopher either shows a 'no' head signal, or points to a good character on their sheet. If they chose a character: Swap the out-of-play character token with the Philosopher token and add the 'Is the Philosopher' reminder. If the character is in play, place the drunk marker by that player.",
+        "otherNightReminder": "Pokud filozof svou schopnost nepoužil: filozof buď ukáže znamení „ne“ hlavou, nebo ukáže na dobrou postavu na svém listu. Pokud si vybral postavu: vyměňte žeton postavy mimo hru za žeton filozofa a přidejte připomínku „Je to filozof“. Pokud je postava ve hře, umístěte značku opilosti vedle tohoto hráče.",
         "reminders": [
             "Drunk",
             "Is the Philosopher"
@@ -1090,7 +1090,7 @@
         "firstNight": 0,
         "firstNightReminder": "",
         "otherNight": 42,
-        "otherNightReminder": "If the Sage was killed by a Demon: Point to two players, one of which is that Demon.",
+        "otherNightReminder": "Pokud byl Mudrc zabit démonem: Ukažte na dva hráče, z nichž jeden je tím démonem.",
         "reminders": [],
         "setup": false,
         "ability": "Pokud tě zabije Démon, dozvíš se, že je to jeden ze dvou hráčů.",
@@ -1118,7 +1118,7 @@
         "firstNight": 0,
         "firstNightReminder": "",
         "otherNight": 41,
-        "otherNightReminder": "Choose a player that is drunk.",
+        "otherNightReminder": "Vyberte hráče, který je opilý.",
         "reminders": [
             "Drunk"
         ],
@@ -1226,7 +1226,7 @@
         "firstNight": 0,
         "firstNightReminder": "",
         "otherNight": 29,
-        "otherNightReminder": "The Fang Gu points to a player. That player dies. Or, if that player was an Outsider and there are no other Fang Gu in play: The Fang Gu dies instead of the chosen player. The chosen player is now an evil Fang Gu. Wake the new Fang Gu. Show the 'You are' card, then the Fang Gu token. Show the 'You are' card, then the thumb-down 'evil' hand sign.",
+        "otherNightReminder": "Fang Gu ukáže na hráče. Ten hráč zemře. Nebo, pokud byl ten hráč Podivín a ve hře nejsou žádní další Fang Gu: Fang Gu zemře místo vybraného hráče. Vybraný hráč se nyní stává zlým Fang Gu. Probuďte nového Fang Gu. Ukažte kartu „Jsi“, pak žeton Fang Gu. Ukažte kartu „Jsi“, pak palcem dolů znamení „zlo“.",
         "reminders": [
             "Dead",
             "Once"
@@ -1261,7 +1261,7 @@
         "firstNight": 0,
         "firstNightReminder": "",
         "otherNight": 30,
-        "otherNightReminder": "The No Dashii points to a player. That player dies.",
+        "otherNightReminder": "No Dashii ukáže na hráče. Ten hráč zemře.",
         "reminders": [
             "Dead",
             "Poisoned"
@@ -1278,7 +1278,7 @@
         "firstNight": 0,
         "firstNightReminder": "",
         "otherNight": 31,
-        "otherNightReminder": "The Vortox points to a player. That player dies.",
+        "otherNightReminder": "Vortox ukáže na hráče. Ten hráč zemře.",
         "reminders": [
             "Dead"
         ],
@@ -2471,3 +2471,4 @@
         "otherNightReminder": ""
     }
 ]
+
