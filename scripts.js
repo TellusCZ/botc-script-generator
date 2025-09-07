@@ -1,5 +1,4 @@
-const fileInput = document.getElementById('fileInput');
-const logo = document.querySelector(".sriptlogo");
+
 
 async function loadRoles() {
       try {
@@ -561,6 +560,7 @@ const fileInput = document.getElementById("fileInput");
       reader.readAsDataURL(file);
     }
   });
+
 
 
 
