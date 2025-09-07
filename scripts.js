@@ -1,4 +1,4 @@
-const imageLogoGlobal = document.getElementById("div1");
+const imageLogoGlobal = document.getElementById("scriptlogo");
 
 async function loadRoles() {
       try {
@@ -560,6 +560,7 @@ const fileInput = document.getElementById("fileInput");
       reader.readAsDataURL(file);
     }
   });
+
 
 
 
