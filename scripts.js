@@ -207,7 +207,7 @@ var demonsArrayTwo = json.slice(countOfTownsfolk + countOfOutsiders + countOfMin
 
 
 html += "<div id='script' class='script'>";
-html += "<div class='scriptname'><img class='scriptlogo' src='imageLogoGlobal.getAttribute('src');'>" + json[0].name + "</div>";
+html += "<div class='scriptname'><img class='scriptlogo' src='" + imageLogoGlobal.getAttribute("src"); + "'>" + json[0].name + "</div>";
 //html += countOfTownsfolk + "(" + Math.round(countOfTownsfolk / 2) + ")" + "-" + countOfOutsiders + "-" + countOfMinions + "-" + countOfDemons;
 html += "<img class='separator' src='botc/separator-townsfolk.png'>"
 html += "<div class='townsfolk' height='" + 640 + "'>";
@@ -560,6 +560,7 @@ const fileInput = document.getElementById("fileInput");
       reader.readAsDataURL(file);
     }
   });
+
 
 
 
