@@ -548,7 +548,7 @@ document.getElementById('saveScriptPng').addEventListener('click', () => {
       }
     });*/
 const fileInput = document.getElementById("fileInput");
-  const img = document.querySelector(".scriptlogo");
+  const img = document.querySelector("#scriptlogo");
 
   fileInput.addEventListener("change", function () {
     const file = this.files[0];
@@ -560,6 +560,7 @@ const fileInput = document.getElementById("fileInput");
       reader.readAsDataURL(file);
     }
   });
+
 
 
 
