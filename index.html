@@ -223,8 +223,9 @@ input[type="file"]::file-selector-button:hover {
   <ul>
   <li><a href="https://script.bloodontheclocktower.com/" target="_blank">script.bloodontheclocktower.com</a> - nadefinuj si vlastní script a stáhni json </li>
   <li><a href="https://botc-scripts.azurewebsites.net/" target="_blank">botc-scripts.azurewebsites.net</a> - uživatelsky definované scripty</li>
+  <li>Položka "id":"_meta" s názvem scriptu je nutná pro správné vygenerování</li>
   </ul>
-  <textarea id="scriptJson" placeholder='Takto vypadá např. Trouble Brewing: [{"id":"washerwoman"},{"id":"librarian"},{"id":"investigator"},{"id":"chef"},{"id":"empath"},{"id":"fortune_teller"},{"id":"undertaker"},{"id":"monk"},{"id":"ravenkeeper"},{"id":"virgin"},{"id":"slayer"},{"id":"soldier"},{"id":"mayor"},{"id":"butler"},{"id":"drunk"},{"id":"recluse"},{"id":"saint"},{"id":"poisoner"},{"id":"spy"},{"id":"scarlet_woman"},{"id":"baron"},{"id":"imp"}]'></textarea>
+  <textarea id="scriptJson" placeholder='Takto vypadá např. Trouble Brewing: [{"id":"_meta","author":"Pandemonium Institute","name":"Trouble Brewing"}{"id":"washerwoman"},{"id":"librarian"},{"id":"investigator"},{"id":"chef"},{"id":"empath"},{"id":"fortune_teller"},{"id":"undertaker"},{"id":"monk"},{"id":"ravenkeeper"},{"id":"virgin"},{"id":"slayer"},{"id":"soldier"},{"id":"mayor"},{"id":"butler"},{"id":"drunk"},{"id":"recluse"},{"id":"saint"},{"id":"poisoner"},{"id":"spy"},{"id":"scarlet_woman"},{"id":"baron"},{"id":"imp"}]'></textarea>
         <!--<label for="rolesJson">2) Roles JSON</label>-->
   <button onclick="loadRoles()" hidden>Načíst defaultní anglické role</button>
   <button onclick="loadRolesCZ()" hidden>Načíst defaultní české role</button>
@@ -303,6 +304,7 @@ input[type="file"]::file-selector-button:hover {
 
 
 </html>
+
 
 
 
