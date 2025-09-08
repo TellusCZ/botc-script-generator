@@ -213,7 +213,7 @@ html += "<img class='separator' src='botc/separator-townsfolk.png'>"
 html += "<div class='townsfolk' height='" + 640 + "'>";
 html += "<div>";
 townsfolkArrayOne.forEach(function (val) {
-          html += "<div class = 'role' height='" + roleHeightslider.value + "px" + "'>";
+          html += "<div class = 'role' style=' height: " + roleHeightslider.value + "px;" + "'>";
           // Add your code below this line
           html += "<img class='roleikon' src = '" + val.image + "''>";
           html += "<p class='roledescription' ";
@@ -577,6 +577,7 @@ function updateHeight() {
 roleHeightslider.addEventListener("input", updateHeight);
 
 updateHeight();
+
 
 
 
