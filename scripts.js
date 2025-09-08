@@ -565,7 +565,7 @@ function updateHeight() {
       
       const valueText = document.getElementById("RoleHeightValue");
       const roles = document.querySelectorAll(".role");
-      const newHeight = slider.value + "px";
+      const newHeight = roleHeightslider.value + "px";
       valueText.textContent = newHeight;
       roles.forEach(role => {
         role.style.height = newHeight;
@@ -576,6 +576,7 @@ function updateHeight() {
 roleHeightslider.addEventListener("input", updateHeight);
 
 updateHeight();
+
 
 
 
