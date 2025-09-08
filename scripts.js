@@ -1,4 +1,5 @@
 const roleHeightslider = document.getElementById("RoleHeightSlider");
+const roleHeightsliderValueText = document.getElementById("RoleHeightValue");
 
 async function loadRoles() {
       try {
@@ -566,16 +567,22 @@ const fileInput = document.getElementById("fileInput");
 
 function updateHeight() {
       
-      const valueText = document.getElementById("RoleHeightValue");
-      const roles = document.querySelectorAll(".role");
+
+      /*const roles = document.querySelectorAll(".role");
       const newHeight = roleHeightslider.value + "px";
       valueText.textContent = newHeight;
       roles.forEach(role => {
         role.style.height = newHeight;
-      });
+      });*/
+      const newHeight = roleHeightslider.value + "px";
+      roleHeightsliderValueText.textContent = newHeight;
+
+      // nastavíme CSS proměnnou na rootu
+      document.documentElement.style.setProperty("--role-height", newHeight);
     }
 
 roleHeightslider.addEventListener("input", updateHeight);
+
 
 
 
