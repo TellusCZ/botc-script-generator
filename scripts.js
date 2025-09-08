@@ -559,10 +559,11 @@ const fileInput = document.getElementById("fileInput");
     }
   });
 
+const roleHeightslider = document.getElementById("RoleHeightSlider");
 
 function updateHeight() {
-      const slider = document.getElementById("heightSlider");
-      const valueText = document.getElementById("heightValue");
+      
+      const valueText = document.getElementById("RoleHeightValue");
       const roles = document.querySelectorAll(".role");
       const newHeight = slider.value + "px";
       valueText.textContent = newHeight;
@@ -572,9 +573,10 @@ function updateHeight() {
       });
     }
 
-slider.addEventListener("input", updateHeight);
+roleHeightslider.addEventListener("input", updateHeight);
 
 updateHeight();
+
 
 
 
