@@ -230,7 +230,7 @@ townsfolkArrayOne.forEach(function (val) {
         html += "</div>"; //end of column
         html += "<div>";
 townsfolkArrayTwo.forEach(function (val) {
-          html += "<div class = 'role' height='" + roleHeightslider.value + "px" + "'>";
+          html += "<div class = 'role' style=' height: " + roleHeightslider.value + "px;" + "'>";
           // Add your code below this line
           html += "<img class='roleikon' src = '" + val.image + "''>";
           html += "<p class='roledescription' ";
@@ -249,7 +249,7 @@ townsfolkArrayTwo.forEach(function (val) {
 html += "<div class='outsider' height='" + 160 + "'>";
 html += "<div>";
 outsidersArrayOne.forEach(function (val) {
-          html += "<div class = 'role' height='" + roleHeightslider.value + "px" + "'>";
+          html += "<div class = 'role' style=' height: " + roleHeightslider.value + "px;" + "'>";
           // Add your code below this line
           html += "<img class='roleikon' src = '" + val.image + "''>";
           html += "<p class='roledescription' ";
@@ -265,7 +265,7 @@ outsidersArrayOne.forEach(function (val) {
         html += "</div>"; //end of column
         html += "<div>";
 outsidersArrayTwo.forEach(function (val) {
-          html += "<div class = 'role' height='" + roleHeightslider.value + "px" + "'>";
+          html += "<div class = 'role' style=' height: " + roleHeightslider.value + "px;" + "'>";
           // Add your code below this line
           html += "<img class='roleikon' src = '" + val.image + "''>";
           html += "<p class='roledescription' ";
@@ -284,7 +284,7 @@ outsidersArrayTwo.forEach(function (val) {
 html += "<div class='minion' height='" + 160 + "'>";
 html += "<div>";
 minionsArrayOne.forEach(function (val) {
-          html += "<div class = 'role' height='" + roleHeightslider.value + "px" + "'>";
+          html += "<div class = 'role' style=' height: " + roleHeightslider.value + "px;" + "'>";
           // Add your code below this line
           html += "<img class='roleikon' src = '" + val.image + "''>";
           html += "<p class='roledescription' ";
@@ -300,7 +300,7 @@ minionsArrayOne.forEach(function (val) {
         html += "</div>"; //end of column
         html += "<div>";
 minionsArrayTwo.forEach(function (val) {
-          html += "<div class = 'role' height='" + roleHeightslider.value + "px" + "'>";
+          html += "<div class = 'role' style=' height: " + roleHeightslider.value + "px;" + "'>";
           // Add your code below this line
           html += "<img class='roleikon' src = '" + val.image + "''>";
           html += "<p class='roledescription' ";
@@ -319,7 +319,7 @@ minionsArrayTwo.forEach(function (val) {
 html += "<div class='minion' height='" + 160 + "'>";
 html += "<div>";
 demonsArrayOne.forEach(function (val) {
-          html += "<div class = 'role' height='" + roleHeightslider.value + "px" + "'>";
+          html += "<div class = 'role' style=' height: " + roleHeightslider.value + "px;" + "'>";
           // Add your code below this line
           html += "<img class='roleikon' src = '" + val.image + "''>";
           html += "<p class='roledescription' ";
@@ -335,7 +335,7 @@ demonsArrayOne.forEach(function (val) {
         html += "</div>"; //end of column
         html += "<div>";
 demonsArrayTwo.forEach(function (val) {
-          html += "<div class = 'role' height='" + roleHeightslider.value + "px" + "'>";
+          html += "<div class = 'role' style=' height: " + roleHeightslider.value + "px;" + "'>";
           // Add your code below this line
           html += "<img class='roleikon' src = '" + val.image + "''>";
           html += "<p class='roledescription' ";
@@ -582,6 +582,7 @@ function updateHeight() {
     }
 
 roleHeightslider.addEventListener("input", updateHeight);
+
 
 
 
