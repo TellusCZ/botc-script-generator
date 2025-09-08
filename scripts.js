@@ -4,6 +4,12 @@ const roleHeightsliderValueText = document.getElementById("RoleHeightValue");
 const TownsfolkOffsetSlider = document.getElementById("TownsfolkOffsetSlider");
 const TownsfolkOffsetValueText = document.getElementById("TownsfolkOffsetValue");
 
+const MinionOffsetSlider = document.getElementById("MinionOffsetSlider");
+const MinionOffsetValueText = document.getElementById("MinionOffsetValue");
+
+const DemonOffsetSlider = document.getElementById("DemonOffsetSlider");
+const DemonOffsetValueText = document.getElementById("DemonOffsetValue");
+
 let countOfTownsfolk = 0;
 let countOfOutsiders = 0;
 let countOfMinions = 0;
@@ -598,10 +604,21 @@ function updateTownsfolkSlider() {
       
       TownsfolkOffsetValueText.textContent = townsfolkOffset + "px";
 }
+function updateMinionSlider() {
+      MinionOffset = MinionOffsetSlider.value;
+      MinionOffsetValueText.textContent = MinionOffset + "px";
+}
+function updateDemonSlider() {
+      demonOffset = DemonOffsetSlider.value;
+      DemonOffsetValueText.textContent = demonOffset + "px";
+}
 
 roleHeightslider.addEventListener("input", updateHeight);
 
 TownsfolkOffsetSlider.addEventListener("input", updateTownsfolkSlider);
+MinionOffsetSlider.addEventListener("input", updateMinionSlider);
+DemonOffsetSlider.addEventListener("input", updateDemonSlider);
+
 
 
 
