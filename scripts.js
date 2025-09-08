@@ -560,6 +560,24 @@ const fileInput = document.getElementById("fileInput");
   });
 
 
+function updateHeight() {
+      const slider = document.getElementById("heightSlider");
+      const valueText = document.getElementById("heightValue");
+      const roles = document.querySelectorAll(".role");
+      const newHeight = slider.value + "px";
+      valueText.textContent = newHeight;
+      roles.forEach(role => {
+        role.style.height = newHeight;
+        role.style.lineHeight = newHeight; // aby text zůstal uprostřed
+      });
+    }
+
+slider.addEventListener("input", updateHeight);
+
+updateHeight();
+
+
+
 
 
 
