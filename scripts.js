@@ -1,5 +1,9 @@
 const roleHeightslider = document.getElementById("RoleHeightSlider");
 const roleHeightsliderValueText = document.getElementById("RoleHeightValue");
+
+const TownsfolkOffsetSlider = document.getElementById("TownsfolkOffsetSlider");
+const TownsfolkOffsetValueText = document.getElementById("TownsfolkOffsetValue");
+
 let countOfTownsfolk = 0;
 let countOfOutsiders = 0;
 let countOfMinions = 0;
@@ -587,6 +591,7 @@ function updateHeight() {
     }
 
 roleHeightslider.addEventListener("input", updateHeight);
+
 
 
 
