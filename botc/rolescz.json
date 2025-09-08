@@ -1583,7 +1583,7 @@
       "Dead"
     ],
     "setup": false,
-    "ability": "Každou noc* vybereš 1 hráče: pokud je nebo se stane opilým nebo otráveným tuto noc, zemřeš. Each night*, choose a player: if they are or become drunk or poisoned tonight, you die.",
+    "ability": "Každou noc* vybereš 1 hráče: pokud je nebo se stane opilým nebo otráveným tuto noc, zemřeš.",
     "image": "images/Icon_acrobat.png"
   },
   {
@@ -2423,3 +2423,4 @@
     "image": "images/Icon_gnome.png"
   }
 ]
+
