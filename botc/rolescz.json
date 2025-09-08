@@ -2065,7 +2065,7 @@
       "?"
     ],
     "setup": false,
-    "ability": "Jednou za hru si můžeš něco přát. Pokud se splní, může mít svou cenu a může zanechat stopu. Once per game, choose to make a wish. If granted, it might have a price & leave a clue as to its nature.",
+    "ability": "Jednou za hru si můžeš něco přát. Pokud se splní, může mít svou cenu a může zanechat stopu.",
     "image": "images/Icon_wizard.png"
   },
   {
@@ -2098,7 +2098,7 @@
       "Claimed"
     ],
     "setup": false,
-    "ability": "Pokud během své nominace veřejně prohlásíš, že jsi Skřet a jsi ten den popraven, tvůj tým vyhrává. If you publicly claim to be the Goblin when nominated & are executed that day, your team wins.",
+    "ability": "Pokud během své nominace veřejně prohlásíš, že jsi Skřet a jsi ten den popraven, tvůj tým vyhrává.",
     "image": "images/Icon_goblin.png"
   },
   {
@@ -2423,4 +2423,5 @@
     "image": "images/Icon_gnome.png"
   }
 ]
+
 
