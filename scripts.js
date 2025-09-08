@@ -1,5 +1,9 @@
 const roleHeightslider = document.getElementById("RoleHeightSlider");
 const roleHeightsliderValueText = document.getElementById("RoleHeightValue");
+let countOfTownsfolk = 0;
+let countOfOutsiders = 0;
+let countOfMinions = 0;
+let countOfDemons = 0;
 
 async function loadRoles() {
       try {
@@ -171,10 +175,11 @@ function generateScript() {
 const scriptText = document.getElementById("translatedScriptCZ").value;
 const json = JSON.parse(scriptText);
 let html = '';
-let countOfTownsfolk = 0;
-let countOfOutsiders = 0;
-let countOfMinions = 0;
-let countOfDemons = 0;
+countOfTownsfolk = 0;
+countOfOutsiders = 0;
+countOfMinions = 0;
+countOfDemons = 0;
+
 json.forEach(function (val) {
   if (val.team == "townsfolk")
     countOfTownsfolk +=1;
@@ -211,7 +216,7 @@ html += "<div id='script' class='script'>";
 html += "<div class='scriptname'><img class='scriptlogo' src='" + document.getElementById("scriptlogo").src + "'>" + json[0].name + "</div>";
 //html += countOfTownsfolk + "(" + Math.round(countOfTownsfolk / 2) + ")" + "-" + countOfOutsiders + "-" + countOfMinions + "-" + countOfDemons;
 html += "<img class='separator' src='botc/separator-townsfolk.png'>"
-html += "<div class='townsfolk' height='" + 640 + "'>";
+html += "<div class='townsfolk' style=' height: " + roleHeightslider.value * linesForTownsfolk + "px;" + "'>";
 html += "<div>";
 townsfolkArrayOne.forEach(function (val) {
           html += "<div class = 'role' style=' height: " + roleHeightslider.value + "px;" + "'>";
@@ -582,6 +587,7 @@ function updateHeight() {
     }
 
 roleHeightslider.addEventListener("input", updateHeight);
+
 
 
 
