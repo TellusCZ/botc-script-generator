@@ -264,7 +264,8 @@ townsfolkArrayTwo.forEach(function (val) {
         html += "</div>"; //end of column
         html += "</div>"; //end of townsfolk
         html += "<img class='separator' src='botc/separator-outsider.png'>"
-html += "<div class='outsider' height='" + 160 + "'>";
+var outsiderHeight = Number(roleHeightslider.value * linesForOutsiders) + Number(MinionOffsetSlider.value) + Number(10);
+html += "<div class='outsider' style=' height: " + outsiderHeight + "px;" + "'>";
 html += "<div>";
 outsidersArrayOne.forEach(function (val) {
           html += "<div class = 'role' style=' height: " + roleHeightslider.value + "px;" + "'>";
@@ -299,7 +300,8 @@ outsidersArrayTwo.forEach(function (val) {
         html += "</div>"; //end of column
         html += "</div>"; //end of outsider
         html += "<img class='separator' src='botc/separator-minions.png'>"
-html += "<div class='minion' height='" + 160 + "'>";
+var minionHeight = Number(roleHeightslider.value * linesForMinions) + Number(DemonOffsetSlider.value) + Number(10);
+html += "<div class='minion' style=' height: " + minionHeight + "px;" + "'>";
 html += "<div>";
 minionsArrayOne.forEach(function (val) {
           html += "<div class = 'role' style=' height: " + roleHeightslider.value + "px;" + "'>";
@@ -618,6 +620,7 @@ roleHeightslider.addEventListener("input", updateHeight);
 TownsfolkOffsetSlider.addEventListener("input", updateTownsfolkSlider);
 MinionOffsetSlider.addEventListener("input", updateMinionSlider);
 DemonOffsetSlider.addEventListener("input", updateDemonSlider);
+
 
 
 
