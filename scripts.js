@@ -594,11 +594,14 @@ function updateHeight() {
 
 function updateTownsfolkSlider() {
       townsfolkOffset = TownsfolkOffsetSlider.value;
+      
+      TownsfolkOffsetValueText.textContent = townsfolkOffset;
 }
 
 roleHeightslider.addEventListener("input", updateHeight);
 
 TownsfolkOffsetSlider.addEventListener("input", updateTownsfolkSlider);
+
 
 
 
