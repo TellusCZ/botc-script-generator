@@ -569,13 +569,13 @@ function updateHeight() {
       valueText.textContent = newHeight;
       roles.forEach(role => {
         role.style.height = newHeight;
-        role.style.lineHeight = newHeight; // aby text zůstal uprostřed
       });
     }
 
 roleHeightslider.addEventListener("input", updateHeight);
 
 updateHeight();
+
 
 
 
