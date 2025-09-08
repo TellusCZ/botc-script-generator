@@ -222,7 +222,8 @@ html += "<div id='script' class='script'>";
 html += "<div class='scriptname'><img class='scriptlogo' src='" + document.getElementById("scriptlogo").src + "'>" + json[0].name + "</div>";
 //html += countOfTownsfolk + "(" + Math.round(countOfTownsfolk / 2) + ")" + "-" + countOfOutsiders + "-" + countOfMinions + "-" + countOfDemons;
 html += "<img class='separator' src='botc/separator-townsfolk.png'>"
-html += "<div class='townsfolk' style=' height: " + ( roleHeightslider.value * linesForTownsfolk + TownsfolkOffsetSlider.value ) + "px;" + "'>";
+var townsfolkHeight = roleHeightslider.value * linesForTownsfolk + TownsfolkOffsetSlider.value;
+html += "<div class='townsfolk' style=' height: " + townsfolkHeight + "px;" + "'>";
 html += "<div>";
 townsfolkArrayOne.forEach(function (val) {
           html += "<div class = 'role' style=' height: " + roleHeightslider.value + "px;" + "'>";
@@ -601,6 +602,7 @@ function updateTownsfolkSlider() {
 roleHeightslider.addEventListener("input", updateHeight);
 
 TownsfolkOffsetSlider.addEventListener("input", updateTownsfolkSlider);
+
 
 
 
