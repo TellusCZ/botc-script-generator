@@ -9,6 +9,8 @@ let countOfOutsiders = 0;
 let countOfMinions = 0;
 let countOfDemons = 0;
 
+let townsfolkOffset = 0;
+
 async function loadRoles() {
       try {
         const response = await fetch('botc/roles.json');
@@ -220,7 +222,7 @@ html += "<div id='script' class='script'>";
 html += "<div class='scriptname'><img class='scriptlogo' src='" + document.getElementById("scriptlogo").src + "'>" + json[0].name + "</div>";
 //html += countOfTownsfolk + "(" + Math.round(countOfTownsfolk / 2) + ")" + "-" + countOfOutsiders + "-" + countOfMinions + "-" + countOfDemons;
 html += "<img class='separator' src='botc/separator-townsfolk.png'>"
-html += "<div class='townsfolk' style=' height: " + ( roleHeightslider.value * linesForTownsfolk + 117 ) + "px;" + "'>";
+html += "<div class='townsfolk' style=' height: " + ( roleHeightslider.value * linesForTownsfolk + townsfolkOffset ) + "px;" + "'>";
 html += "<div>";
 townsfolkArrayOne.forEach(function (val) {
           html += "<div class = 'role' style=' height: " + roleHeightslider.value + "px;" + "'>";
@@ -590,7 +592,14 @@ function updateHeight() {
       document.documentElement.style.setProperty("--role-height", newHeight);
     }
 
+function updateTownsfolkSlider() {
+      townsfolkOffset = TownsfolkOffsetSlider.value;
+}
+
 roleHeightslider.addEventListener("input", updateHeight);
+
+TownsfolkOffsetSlider.addEventListener("input", updateTownsfolkSlider);
+
 
 
 
