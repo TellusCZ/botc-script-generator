@@ -225,7 +225,12 @@ var demonsArrayTwo = json.slice(countOfTownsfolk + countOfOutsiders + countOfMin
 
 
 html += "<div id='script' class='script'>";
-html += "<div class='scriptname'><img class='scriptlogo' src='" + document.getElementById("scriptlogo").src + "'>" + json[0].name + "</div>";
+html += "<div class='scriptname'>";
+if( document.getElementById("scriptlogo").src.length > 0 )
+{
+   html += "<img class='scriptlogo' src='" + document.getElementById("scriptlogo").src + "'>"
+}
+html += json[0].name + "</div>";
 //html += countOfTownsfolk + "(" + Math.round(countOfTownsfolk / 2) + ")" + "-" + countOfOutsiders + "-" + countOfMinions + "-" + countOfDemons;
 html += "<img class='separator' src='botc/separator-townsfolk.png'>"
 var townsfolkHeight = Number(roleHeightslider.value * linesForTownsfolk) + Number(TownsfolkOffsetSlider.value) + Number(117);
@@ -620,6 +625,7 @@ roleHeightslider.addEventListener("input", updateHeight);
 TownsfolkOffsetSlider.addEventListener("input", updateTownsfolkSlider);
 MinionOffsetSlider.addEventListener("input", updateMinionSlider);
 DemonOffsetSlider.addEventListener("input", updateDemonSlider);
+
 
 
 
