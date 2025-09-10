@@ -226,7 +226,8 @@ var demonsArrayTwo = json.slice(countOfTownsfolk + countOfOutsiders + countOfMin
 
 html += "<div id='script' class='script'>";
 html += "<div class='scriptname'>";
-if( document.getElementById("scriptlogo").src.length > 0 )
+const srcLogo = document.getElementById("scriptlogo").getAttribute('src');
+if( srcLogo )
 {
    html += "<img class='scriptlogo' src='" + document.getElementById("scriptlogo").src + "'>"
 }
@@ -625,6 +626,7 @@ roleHeightslider.addEventListener("input", updateHeight);
 TownsfolkOffsetSlider.addEventListener("input", updateTownsfolkSlider);
 MinionOffsetSlider.addEventListener("input", updateMinionSlider);
 DemonOffsetSlider.addEventListener("input", updateDemonSlider);
+
 
 
 
