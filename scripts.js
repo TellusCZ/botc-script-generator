@@ -479,6 +479,7 @@ let html = '';
   html = '';
 //json.forEach(function (val) {
   html += "<div class='nightorder'>";
+  html += "<div class='nightordercolumns'><div class='nightorderlist'>";
   html += "<div class='scriptname'>" + "Další noci" + "</div>";
   /*val.firstNight.forEach( function (role) {
     html += "<div>" + role + "</div>";
@@ -519,6 +520,8 @@ let html = '';
     }
     //html += "<div>" + val + "</div>";
   });
+  html += "</div></div>";
+  html += "<div class='nightorderpanel'>" + "pokus" + </div>;
   html += "</div>";
   document.getElementsByClassName('OtherNightOrderImage')[0].innerHTML = html;
 //});
@@ -626,6 +629,7 @@ roleHeightslider.addEventListener("input", updateHeight);
 TownsfolkOffsetSlider.addEventListener("input", updateTownsfolkSlider);
 MinionOffsetSlider.addEventListener("input", updateMinionSlider);
 DemonOffsetSlider.addEventListener("input", updateDemonSlider);
+
 
 
 
