@@ -433,7 +433,8 @@ const json = JSON.parse(nightOrder);
 let html = '';
 //json.forEach(function (val) {
   html += "<div class='nightorder'>";
-  html += "<div class='scriptname'>" + "První noc" + "</div>";
+  html += "<div class='nightordercolumns'><div class='nightorderlist'>";
+  html += "<div class='scriptname'>" + scriptJson[0].name + "</div>";
   /*val.firstNight.forEach( function (role) {
     html += "<div>" + role + "</div>";
   });*/
@@ -473,6 +474,8 @@ let html = '';
     }
     //html += "<div>" + val + "</div>";
   });
+  html += "</div>";
+  html += "<div class='nightorderpanel'>" + "První.noc" + "</div></div>";
   html += "</div>";
   document.getElementsByClassName('FirstNightOrderImage')[0].innerHTML = html;
 
@@ -521,7 +524,7 @@ let html = '';
     //html += "<div>" + val + "</div>";
   });
   html += "</div>";
-  html += "<div class='nightorderpanel'>" + "Další noci" + "</div></div>";
+  html += "<div class='nightorderpanel'>" + "Další.noci" + "</div></div>";
   html += "</div>";
   document.getElementsByClassName('OtherNightOrderImage')[0].innerHTML = html;
 //});
@@ -629,6 +632,7 @@ roleHeightslider.addEventListener("input", updateHeight);
 TownsfolkOffsetSlider.addEventListener("input", updateTownsfolkSlider);
 MinionOffsetSlider.addEventListener("input", updateMinionSlider);
 DemonOffsetSlider.addEventListener("input", updateDemonSlider);
+
 
 
 
