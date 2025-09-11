@@ -521,7 +521,7 @@ let html = '';
     //html += "<div>" + val + "</div>";
   });
   html += "</div></div>";
-  html += "<div class='nightorderpanel'>" + "pokus" + </div>;
+  html += "<div class='nightorderpanel'>" + "pokus" + "</div>";
   html += "</div>";
   document.getElementsByClassName('OtherNightOrderImage')[0].innerHTML = html;
 //});
@@ -629,6 +629,7 @@ roleHeightslider.addEventListener("input", updateHeight);
 TownsfolkOffsetSlider.addEventListener("input", updateTownsfolkSlider);
 MinionOffsetSlider.addEventListener("input", updateMinionSlider);
 DemonOffsetSlider.addEventListener("input", updateDemonSlider);
+
 
 
 
