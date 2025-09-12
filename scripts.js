@@ -475,7 +475,7 @@ let html = '';
     //html += "<div>" + val + "</div>";
   });
   html += "</div>";
-  html += "<div class='nightorderpanel'>" + "První.noc" + "</div></div>";
+  html += "<div class='nightorderpanel'>" + "P<br>r<br>v<br>n<br>í<br><br>n<br>o<br>c" + "</div></div>";
   html += "</div>";
   document.getElementsByClassName('FirstNightOrderImage')[0].innerHTML = html;
 
@@ -524,7 +524,7 @@ let html = '';
     //html += "<div>" + val + "</div>";
   });
   html += "</div>";
-  html += "<div class='nightorderpanel'>" + "Další.noci" + "</div></div>";
+  html += "<div class='nightorderpanel'>" + "D<br>a<br>l<br>š<br>í<br><br>n<br>o<br>c<br>i" + "</div></div>";
   html += "</div>";
   document.getElementsByClassName('OtherNightOrderImage')[0].innerHTML = html;
 //});
@@ -632,6 +632,7 @@ roleHeightslider.addEventListener("input", updateHeight);
 TownsfolkOffsetSlider.addEventListener("input", updateTownsfolkSlider);
 MinionOffsetSlider.addEventListener("input", updateMinionSlider);
 DemonOffsetSlider.addEventListener("input", updateDemonSlider);
+
 
 
 
