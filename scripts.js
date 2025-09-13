@@ -221,7 +221,7 @@ var minionsArrayOne = json.slice(countOfTownsfolk + countOfOutsiders + 1, countO
 var minionsArrayTwo = json.slice(countOfTownsfolk + countOfOutsiders + Math.round(countOfMinions / 2) + 1, countOfTownsfolk + countOfOutsiders + countOfMinions + 1);
 var DemonsArray = json.slice(countOfTownsfolk + countOfOutsiders + countOfMinions + 1);
 var demonsArrayOne = json.slice(countOfTownsfolk + countOfOutsiders + countOfMinions + 1, countOfTownsfolk + countOfOutsiders + countOfMinions + Math.round(countOfDemons / 2) + 1);
-var demonsArrayTwo = json.slice(countOfTownsfolk + countOfOutsiders + countOfMinions + Math.round(countOfDemons / 2) + 1);
+var demonsArrayTwo = json.slice(countOfTownsfolk + countOfOutsiders + countOfMinions + Math.round(countOfDemons / 2) + 1, countOfTownsfolk + countOfOutsiders + countOfMinions + countOfDemons + 1);
 
 
 html += "<div id='script' class='script'>";
@@ -633,6 +633,7 @@ roleHeightslider.addEventListener("input", updateHeight);
 TownsfolkOffsetSlider.addEventListener("input", updateTownsfolkSlider);
 MinionOffsetSlider.addEventListener("input", updateMinionSlider);
 DemonOffsetSlider.addEventListener("input", updateDemonSlider);
+
 
 
 
