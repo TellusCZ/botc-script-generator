@@ -381,8 +381,9 @@ demonsArrayTwo.forEach(function (val) {
         html = html.replaceAll("Each night*", "<b>Each night-</b>");
         html = html.replaceAll("Každou noc", "<b>Každou noc</b>");
         html = html.replaceAll("Každou noc*", "<b>Každou noc*</b>");
+        html = html.replaceAll("Jednou za hru ", "<b>Jednou za hru </b>");
         html = html.replaceAll("Jednou za hru, v noci", "<b>Jednou za hru, v noci</b>");
-        html = html.replaceAll("Zacínáš s informací", "<b>Zacínáš s informací</b>");
+        html = html.replaceAll("Začínáš s informací", "<b>Začínáš s informací</b>");
         document.getElementsByClassName('message')[0].innerHTML = html;
     }
 
@@ -632,6 +633,7 @@ roleHeightslider.addEventListener("input", updateHeight);
 TownsfolkOffsetSlider.addEventListener("input", updateTownsfolkSlider);
 MinionOffsetSlider.addEventListener("input", updateMinionSlider);
 DemonOffsetSlider.addEventListener("input", updateDemonSlider);
+
 
 
 
