@@ -1431,7 +1431,7 @@
     "otherNightReminder": "",
     "reminders": [],
     "setup": false,
-    "ability": "Začínáš s informací o tom, jestli nejbližší zlý hráč k tobě sedí po nebo proti směru hodinových ručiček. V případě stejné vzdálenosti je informace libovolná. You start knowing if your closest evil player is clockwise or anti-clockwise. If equidistant, this info is arbitrary.",
+    "ability": "Začínáš s informací o tom, jestli nejbližší zlý hráč k tobě sedí po nebo proti směru hodinových ručiček. V případě stejné vzdálenosti je informace libovolná.",
     "image": "images/Icon_shugenja.png"
   },
   {
@@ -2423,5 +2423,6 @@
     "image": "images/Icon_gnome.png"
   }
 ]
+
 
 
