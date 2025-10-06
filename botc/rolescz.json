@@ -1554,7 +1554,7 @@
       "Seen Traveller"
     ],
     "setup": true,
-    "ability": "Každou noc se dozvíš o 1 hráči z každého typu postav. [+1 Podivín]",
+    "ability": "Každou noc se dozvíš o 1 hráči jiného typu postavy než předchozí noc. [+0 nebo +1 Podivín]",
     "image": "images/Icon_balloonist.png"
   },
   {
@@ -2423,6 +2423,7 @@
     "image": "images/Icon_gnome.png"
   }
 ]
+
 
 
 
