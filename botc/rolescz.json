@@ -2247,7 +2247,7 @@
       "Dead"
     ],
     "setup": true,
-    "ability": "Each night, Minions choose who babysits Lil' Monsta's token & \"is the Demon\". A player dies each night*. [+1 Minion]",
+    "ability": "Každou noc si Přisluhovači vybírají, kdo bude hlídat Lil' Monstu a & \"kdo je Démonem\".Každou noc* jeden z hráčů zemře. [+1 Přisluhovač]",
     "image": "images/Icon_lilmonsta.png"
   },
   {
@@ -2423,6 +2423,7 @@
     "image": "images/Icon_gnome.png"
   }
 ]
+
 
 
 
