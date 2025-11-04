@@ -2020,7 +2020,7 @@
       "2nd"
     ],
     "setup": false,
-    "ability": "Each night, choose 2 players: tomorrow, the 1st player is mad that the 2nd is evil, or one or both might die.",
+    "ability": "Každou noc, vyber 2 hráče: zítra je první hráč posedlý že druhý hráč je zlý, nebo může jeden nebo oba zemřít.",
     "image": "images/Icon_harpy.png"
   },
   {
@@ -2423,6 +2423,7 @@
     "image": "images/Icon_gnome.png"
   }
 ]
+
 
 
 
