@@ -2020,7 +2020,7 @@
       "2nd"
     ],
     "setup": false,
-    "ability": "Každou noc, vyber 2 hráče: zítra je první hráč posedlý že druhý hráč je zlý, nebo může jeden nebo oba zemřít.",
+    "ability": "Každou noc vybereš 2 hráče: zítra je první hráč „posedlý“ představou že druhý hráč je zlý, nebo může jeden nebo oba zemřít.",
     "image": "images/Icon_harpy.png"
   },
   {
@@ -2423,6 +2423,7 @@
     "image": "images/Icon_gnome.png"
   }
 ]
+
 
 
 
