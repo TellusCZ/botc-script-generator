@@ -2010,7 +2010,7 @@
   },
   {
     "id": "harpy",
-    "name": "Harpy",
+    "name": "Harpyje",
     "edition": "",
     "team": "minion",
     "firstNightReminder": "The Harpy points to two players. Wake the 1st player the Harpy pointed to, show them the 'This character has selected you' card, show them the Harpy token, then point at the 2nd player the Harpy pointed to.",
@@ -2317,7 +2317,7 @@
   },
   {
     "id": "legion",
-    "name": "Legion",
+    "name": "Legie",
     "edition": "",
     "team": "demon",
     "firstNight": 0,
@@ -2423,6 +2423,7 @@
     "image": "images/Icon_gnome.png"
   }
 ]
+
 
 
 
