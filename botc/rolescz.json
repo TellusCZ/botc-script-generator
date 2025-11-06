@@ -1722,7 +1722,7 @@
       "Is the Alchemist"
     ],
     "setup": false,
-    "ability": "Máte schopnost Přisluhovače. Při jejím použití vás Vypravěč může vyzvat k jiné volbě.",
+    "ability": "Máš schopnost Přisluhovače. Při jejím použití vás Vypravěč může vyzvat k jiné volbě.",
     "image": "images/Icon_alchemist.png"
   },
   {
@@ -2423,6 +2423,7 @@
     "image": "images/Icon_gnome.png"
   }
 ]
+
 
 
 
