@@ -1965,7 +1965,7 @@
   },
   {
     "id": "politician",
-    "name": "Politician",
+    "name": "Politik",
     "edition": "",
     "team": "outsider",
     "firstNight": 0,
@@ -1974,7 +1974,7 @@
     "otherNightReminder": "",
     "reminders": [],
     "setup": false,
-    "ability": "If you were the player most responsible for your team losing, you change alignment & win, even if dead.",
+    "ability": "Pokud jste byl hráčem, který je nejvíce zodpovědný za prohru svého týmu, změníte příslušnost a vyhrajete, i když jste mrtví.",
     "image": "images/Icon_politician.png"
   },
   {
@@ -2423,6 +2423,7 @@
     "image": "images/Icon_gnome.png"
   }
 ]
+
 
 
 
