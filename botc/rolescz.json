@@ -1974,7 +1974,7 @@
     "otherNightReminder": "",
     "reminders": [],
     "setup": false,
-    "ability": "Pokud jsi nejvíce zodpovědný za prohru svého týmu, změníš příslušnost a zvítězíš, i když jsi mrtví.",
+    "ability": "Pokud jsi nejvíce zodpovědný za prohru svého týmu, změníš příslušnost a zvítězíš, i pokud jsi mrtví.",
     "image": "images/Icon_politician.png"
   },
   {
@@ -2423,6 +2423,7 @@
     "image": "images/Icon_gnome.png"
   }
 ]
+
 
 
 
