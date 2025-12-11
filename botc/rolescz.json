@@ -2025,7 +2025,7 @@
   },
   {
     "id": "fearmonger",
-    "name": "Fearmonger",
+    "name": "Šířitel strachu",
     "edition": "",
     "team": "minion",
     "firstNight": 26,
@@ -2036,7 +2036,7 @@
       "Fear"
     ],
     "setup": false,
-    "ability": "Each night, choose a player. If you nominate & execute them, their team loses. All players know if you choose a new player.",
+    "ability": "Každou noc vyber hráče. Pokud ho nominuješ a je popraven, jeho tým prohraje. Všichni hráči ví, když si vybereš nového hráče.",
     "image": "images/Icon_fearmonger.png"
   },
   {
@@ -2423,6 +2423,7 @@
     "image": "images/Icon_gnome.png"
   }
 ]
+
 
 
 
