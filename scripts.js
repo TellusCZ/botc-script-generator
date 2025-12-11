@@ -397,6 +397,7 @@ demonsArrayTwo.forEach(function (val) {
       //document.getElementById("scriptJson")[0].innerHTML = "[{'id:'_meta','author':'Petr','name':'No one is safe"},"clockmaker","investigator","bountyhunter","villageidiot","fortuneteller","lycanthrope","towncrier","amnesiac","poppygrower","alchemist","minstrel","virgin","banshee","mutant","drunk","lunatic","snitch","godfather","boffin","poisoner","fearmonger","imp","fanggu","nodashii","kazali"]";
       loadRolesCZ();
       updateHeight();
+      updateTitleHeight();
       //TranslateScript();
       //generateScript();
     }
@@ -638,10 +639,12 @@ function updateDemonSlider() {
 }
 
 roleHeightslider.addEventListener("input", updateHeight);
+TitleHeightSlider.addEventListener("input", updateTitleHeight);
 
 TownsfolkOffsetSlider.addEventListener("input", updateTownsfolkSlider);
 MinionOffsetSlider.addEventListener("input", updateMinionSlider);
 DemonOffsetSlider.addEventListener("input", updateDemonSlider);
+
 
 
 
