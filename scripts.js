@@ -10,6 +10,9 @@ const MinionOffsetValueText = document.getElementById("MinionOffsetValue");
 const DemonOffsetSlider = document.getElementById("DemonOffsetSlider");
 const DemonOffsetValueText = document.getElementById("DemonOffsetValue");
 
+const TitleHeightSlider = document.getElementById("TownsfolkOffsetSlider");
+const TitleHeightValueText = document.getElementById("TownsfolkOffsetValue");
+
 let countOfTownsfolk = 0;
 let countOfOutsiders = 0;
 let countOfMinions = 0;
@@ -225,7 +228,7 @@ var demonsArrayTwo = json.slice(countOfTownsfolk + countOfOutsiders + countOfMin
 
 
 html += "<div id='script' class='script'>";
-html += "<div class='scriptname'>";
+html += "<div class='scriptname' style=' font-size: " + TitleHeightSlider.value + "px;" + "'>";
 const srcLogo = document.getElementById("scriptlogo").getAttribute('src');
 if( srcLogo )
 {
@@ -614,6 +617,12 @@ function updateHeight() {
       document.documentElement.style.setProperty("--role-height", newHeight);
     }
 
+
+function updateTitleHeight() {
+      heightSlider = TitleHeightSlider.value;
+      TitleHeightValueText.textContent = heightSlider + "px";
+}
+
 function updateTownsfolkSlider() {
       townsfolkOffset = TownsfolkOffsetSlider.value;
       
@@ -633,6 +642,7 @@ roleHeightslider.addEventListener("input", updateHeight);
 TownsfolkOffsetSlider.addEventListener("input", updateTownsfolkSlider);
 MinionOffsetSlider.addEventListener("input", updateMinionSlider);
 DemonOffsetSlider.addEventListener("input", updateDemonSlider);
+
 
 
 
