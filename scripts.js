@@ -10,8 +10,8 @@ const MinionOffsetValueText = document.getElementById("MinionOffsetValue");
 const DemonOffsetSlider = document.getElementById("DemonOffsetSlider");
 const DemonOffsetValueText = document.getElementById("DemonOffsetValue");
 
-const TitleHeightSlider = document.getElementById("TownsfolkOffsetSlider");
-const TitleHeightValueText = document.getElementById("TownsfolkOffsetValue");
+const TitleHeightSlider = document.getElementById("TitleHeightSlider");
+const TitleHeightValueText = document.getElementById("TitleHeightValue");
 
 let countOfTownsfolk = 0;
 let countOfOutsiders = 0;
@@ -644,6 +644,7 @@ TitleHeightSlider.addEventListener("input", updateTitleHeight);
 TownsfolkOffsetSlider.addEventListener("input", updateTownsfolkSlider);
 MinionOffsetSlider.addEventListener("input", updateMinionSlider);
 DemonOffsetSlider.addEventListener("input", updateDemonSlider);
+
 
 
 
