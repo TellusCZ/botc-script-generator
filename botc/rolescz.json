@@ -2036,7 +2036,7 @@
       "Fear"
     ],
     "setup": false,
-    "ability": "Každou noc vyber hráče. Pokud ho nominuješ a je popraven, jeho tým prohraje. Všichni hráči ví, když si vybereš nového hráče.",
+    "ability": "Každou noc vyber hráče. Pokud ho nominuješ a je popraven jeho tým prohraje. Všichni hráči ví, když si vybereš nového hráče.",
     "image": "images/Icon_fearmonger.png"
   },
   {
@@ -2423,6 +2423,7 @@
     "image": "images/Icon_gnome.png"
   }
 ]
+
 
 
 
