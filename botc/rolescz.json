@@ -1599,7 +1599,7 @@
       "Dead"
     ],
     "setup": false,
-    "ability": "Každou noc* vybereš 1 živého hráče: pokud je na straně dobra, zemře, ale Démon tu noc nezabíjí. Jeden dobrý hráč se ti jeví jako zlý.",
+    "ability": "Každou noc* vybereš 1 živého hráče: pokud je na straně dobra, zemře, ale Démon tu noc nezabíjí. Jeden dobrý hráč se jeví jako zlý.",
     "image": "images/Icon_lycanthrope.png"
   },
   {
@@ -2423,6 +2423,7 @@
     "image": "images/Icon_gnome.png"
   }
 ]
+
 
 
 
