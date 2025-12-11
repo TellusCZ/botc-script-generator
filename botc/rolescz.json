@@ -2144,7 +2144,7 @@
     "otherNightReminder": "Wake the Wraith tonight whenever other evil players wake.",
     "reminders": [],
     "setup": false,
-    "ability": "You may choose to open your eyes at night. You wake when other evil players do.",
+    "ability": "V noci můžeš otevírat oči. Budíš se s ostatními zlými hráči.",
     "image": "images/Icon_wraith.png"
   },
   {
@@ -2423,6 +2423,7 @@
     "image": "images/Icon_gnome.png"
   }
 ]
+
 
 
 
