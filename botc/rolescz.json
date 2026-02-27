@@ -1951,7 +1951,7 @@
   },
   {
     "id": "hatter",
-    "name": "Hatter",
+    "name": "Kloboučník",
     "edition": "",
     "team": "outsider",
     "firstNightReminder": "",
@@ -1960,7 +1960,7 @@
       "Tea Party Tonight"
     ],
     "setup": false,
-    "ability": "If you died today or tonight, the Minion & Demon players may choose new Minion & Demon characters to be.",
+    "ability": "Pokud jsi dnes nebo v noci zemřel, Přisluhovači a Démon si můžou zvolit nové postavy Prisluhovačů a Démona, kterými se stanou.",
     "image": "images/Icon_hatter.png"
   },
   {
@@ -2025,7 +2025,7 @@
   },
   {
     "id": "fearmonger",
-    "name": "Šířitel strachu",
+    "name": "Vládce strachu",
     "edition": "",
     "team": "minion",
     "firstNight": 26,
@@ -2036,7 +2036,7 @@
       "Fear"
     ],
     "setup": false,
-    "ability": "Každou noc vyber hráče. Pokud ho nominuješ a je popraven jeho tým prohraje. Všichni hráči ví, když si vybereš nového hráče.",
+    "ability": "Každou noc vybereš 1 hráče: pokud ho nominuješ a je popraven, jeho tým prohrává. Všichni hráči vědí, zda sis vybral nového hráče.",
     "image": "images/Icon_fearmonger.png"
   },
   {
@@ -2423,6 +2423,7 @@
     "image": "images/Icon_gnome.png"
   }
 ]
+
 
 
 
