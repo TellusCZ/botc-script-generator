@@ -1379,7 +1379,7 @@
   },
   {
     "id": "steward",
-    "name": "Steward",
+    "name": "Správce",
     "edition": "",
     "team": "townsfolk",
     "firstNightReminder": "Point to the marked player.",
@@ -1388,7 +1388,7 @@
       "Know"
     ],
     "setup": false,
-    "ability": "Začínáš s informací o 1 dobrém hráči.",
+    "ability": ""Začínáš s informací o 1 dobrém hráči.",
     "image": "images/Icon_steward.png"
   },
   {
@@ -2423,6 +2423,7 @@
     "image": "images/Icon_gnome.png"
   }
 ]
+
 
 
 
