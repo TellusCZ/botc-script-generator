@@ -1,0 +1,314 @@
+[
+  {
+    "present": [["#extranightdeaths"]],
+    "note": "Tento skript může mít více nočních úmrtí."
+  },
+  {
+    "present": [["#failedexecutions"]],
+    "note": "Tento skript může mít neúspěšné popravy."
+  },
+  {
+    "present": [["#winloss"]],
+    "note": "Tento skript má alternativní podmínky výhry/prohry."
+  },
+  {
+    "present": [["#experiencedst"]],
+    "note": "Tento scénář je určen pro zkušené/pokročilé hráče a vypravěče."
+  },
+  {
+    "count": {
+      "characters": [".townsfolk", ".outsider", ".minion", ".demon"],
+      "lt": 11
+    },
+    "error": "Méně než 11 charakterů. Skript je příliš krátký."
+  },
+  {
+    "count": {
+      "characters": [".townsfolk"],
+      "lt": 13,
+      "gt": 6
+    },
+    "error": "Méně než 13 Měšťanů."
+  },
+  {
+    "count": {
+      "characters": [".demon"],
+      "lt": 1
+    },
+    "error": "Žádný démon."
+  },
+  {
+	"count": {
+	  "characters": ["#firstnighttown"],
+	  "lt": 1
+	},
+	"error": "Žádní Měšťané co se budí první noc"
+  },
+  {
+	"count": {
+	  "characters": ["#eachnighttown"],
+	  "lt": 1
+	},
+	"error": "Žádní Měšťané co se budí každou noc."
+  },
+  {
+	"count": {
+	  "characters": ["#eachnightstartown", "#eachnighttown"],
+	  "lt": 1
+	},
+	"error": "Žádní Měšťané co se budí každou noc kromě první."
+  },
+  {
+	"count": {
+	  "characters": ["#oncepergametown"],
+	  "lt": 1
+	},
+	"error": "Žádní Měšťané se schopností jednou za hru."
+  },
+  {
+	"count": {
+	  "characters": ["#ontriggertown"],
+	  "lt": 1
+	},
+	"error": "Žádní Měšťané s pasivní schopností"
+  },
+  {
+    "missing": [["#droison"]],
+    "error": "Žádný zdroj opilosti nebo otravy"
+  },
+  {
+    "missing": [["#outsidercount"]],
+    "error": "Žádná postava neumožňuje úpravu počtu Podivínů."
+  },
+  {
+    "present": [["spy", "widow"], ["heretic", "choirboy"]],
+    "error": "Heretik(Heretic) a Zpěváček(Choirboy) nefungují s postavami, které vidí Grimoire."
+  },
+  {
+	"present": [["choirboy"]],
+	"missing": [["king"]],
+	"error": "Nemůžeš mít Zpěváčeka(Choirboy) bez Krále(King)."
+  },
+  {
+	"present": [["huntsman"]],
+	"missing": [["damsel"]],
+	"error": "Nemůžeš mít Lovce(Huntsman) bez Krásky(Damsel)."
+  },
+  {
+    "present": [["#startminion"]],
+    "count": {
+      "characters": [".minion"],
+      "lt": 5
+    },
+    "warning": "Skripty s Démoňátkem(Lil'Monsta) nebo Pánem bouře(Lord of Typhon) se doporučují mít s alespoň 5 Přisluhovači, pro základní hry se 3 Přisluhovači."
+  },
+  {
+	"count": {
+	  "characters": [".townsfolk", ".outsider", ".minion", ".demon"],
+	  "gt": 25
+	},
+	"warning": "Více než 25 charakterů. Pozor na čitelnost/velikost"
+  },
+  {
+    "count": {
+      "characters": [".townsfolk", ".outsider", ".minion", ".demon"],
+      "gt": 16
+    },
+    "count": {
+      "characters": [".outsider"],
+      "lt": 4
+    },
+    "warning": "Míň než 4 Podivíni."
+  },
+  {
+    "count": {
+      "characters": [".townsfolk", ".outsider", ".minion", ".demon"],
+      "gt": 16
+    },
+    "count": {
+      "characters": [".minion"],
+      "lt": 4
+    },
+    "warning": "Míň než 4 Přisluhovači."
+  },
+  {
+    "count": {
+      "characters": ["#extraevils"],
+      "gt": 1
+    },
+	  "missing": ["spirit_of_ivory", "spiritofivory"],
+    "warning": "Více než jedna postava, která může přinést/se stát navíc zlem."
+  },
+  {
+    "count": {
+      "characters": ["#extranightdeaths"],
+      "eq": 1
+    },
+    "missing": [["#coversextranightdeaths"]],
+    "warning": "Pouze jedna postava, která způsobuje další noční úmrtí."
+  },
+  {
+    "count": {
+      "characters": ["#failedexecutions"],
+      "eq": 1
+    },
+    "warning": "Pouze jedna postava, která umožnuje selhanou popravu."
+  },
+  {
+    "count": {
+      "characters": ["#resurrection"],
+      "eq": 1
+    },
+    "warning": "Pouze jedna postava, která umožnuje oživení."
+  },
+  {
+    "count": {
+      "characters": ["#protection", "#nonightdeaths"],
+      "eq": 1
+    },
+    "warning": "Pouze jedna postava, která vysvětluje, že v noci nikdo nezemřel (ochrana nebo absence zabíjení)."
+  },
+  {
+    "present": [["#extranightdeaths"]],
+    "missing": [["#protection"]],
+    "warning": "Extra noční úmrtí bez jakékoli ochranné role."
+  },
+  {
+    "present": [[".minion"]],
+    "missing": [["#quietminions"]],
+    "warning": "Žádní tichí přisluhovači. Tichí přisluhovači nemohou být potvrzeni, dokud hra neskončí."
+  },
+  {
+    "missing": [
+      [
+        "fang_gu",
+        "godfather",
+        "drunk",
+        "lunatic",
+        "damsel",
+        "heretic",
+        "mutant",
+        "sweetheart",
+        "barber",
+        "klutz",
+        "moonhchild",
+        "goon",
+        "politician",
+		"fanggu"
+      ]
+    ],
+    "warning": "Žádní skrytí Outsideri ani důvod, proč by se Outsideri měli skrývat."
+  },
+  {
+    "missing": [
+      [
+        "vigormortis",
+        "legion",
+        "imp",
+        "zombuul",
+        "poppy_grower",
+        "fang_gu",
+        "al-hadikhia",
+        "lil_monsta",
+		"poppygrower",
+		"fanggu",
+		"lilmonsta",
+		"alhadikhia",
+        "scarletwoman",
+        "scarlet_woman"
+      ]
+    ],
+    "warning": "Žádný důvod nedůvěřovat nočním úmrtím."
+  },
+  {
+    "missing": [["#poison"]],
+    "warning": "Žádný zlý charakter který způsobuje otravu nebo opilost."
+  },
+  {
+    "present": [["#surviveexecutions"]],
+    "missing": [["#preventexecutions"]],
+    "warning": "Žádná zlá postava neuožňuje přežít popravu."
+  },
+
+  {
+    "present": [["leviathan"], ["#alldrunker"]],
+    "warning": "Leviatan(Leviathan) se nehodí k dobrým postavám, které mohou otrávit zlé postavy."
+  },
+  {
+    "present": [
+      ["alchemist"],
+      [
+        "mastermind",
+        "mezepheles",
+        "scarlet_woman",
+		"marionette",
+		"scarletwoman"
+      ]
+    ],
+    "warning": "Zlé/silné schopnosti Přisluhovačů pro Alchymistu(Alchemist)."
+  },
+  {
+    "present": [["king"]],
+    "missing": [["choirboy"]],
+    "warning": "Král(King) bez Zpěváčka(Choirboy)."
+  },
+  {
+    "present": [["lleech"], ["golem", "lycanthrope", "moonchild"]],
+    "warning": "Role zaměřené na zabíjení jen dobrých postav jsou pro Pijavice(Lleech) nebezpečné."
+  },
+  {
+    "present": [["heretic"], ["mezepheles"]],
+    "warning": "Heretik může změnit svou příslušnost a zvítězit se zlem."
+  },
+  {
+    "present": [["leviathan", "pukka"], ["heretic"]],
+    "warning": "Leviathan a Pukka se nemohou sami zabít v případě hry s Heretikem."
+  },
+  {
+    "present": [["storm_catcher", "stormcatcher"], ["#musthide", "magician"]],
+    "warning": "Některé postavy nemohou být zachyceny bouří."
+  },
+  {
+    "present": [["saint"], ["godfather"]],
+    "warning": "Světec(Saint) se nehodí s Kmotr(Godfather)."
+  },
+  {
+    "present": [["#rolechange", "preacher"], ["#loudminions"]],
+	"missing": ["droison"],
+    "warning": "Hlasitá oznámení Přisluhovačů uprostřed hry mohou potvrdit postavu, která mění role ve hře, nebo Kazatele."
+  },
+  {
+    "present": [["mezepheles"], ["al-hadikhia", "shabaloth"]],
+    "missing": [["spirit_of_ivory", "spiritofivory"]],
+    "warning": "Mezepheles může být vzkříšen, což způsobí, že se další hráč může stát zlým."
+  },
+  {
+    "present": [["#musthide"], ["evil_twin", "eviltwin"]],
+    "warning": "Některé postavy nemohou být Dobrým dvojčetem(nehodí se)."
+  },
+  {
+    "present": [["psychopath", "vizier"], ["town_crier", "towncrier"]],
+    "warning": "Známí přisluhovači jako Psychopath a Vizier mohou znečišťovat informace Městského vyvolávače."
+  }, 
+  {
+    "present": [["vizier"], ["#convertextraevils"]],
+    "warning": "Dobrý hráč může hlasovat při každé popravě Vezíra a později ve hře se obrátit na jeho stranu."
+  },
+  {
+	"present": [["baron"], ["fang_gu", "godfather", "balloonist", "huntsman", "sentinel", "fanggu"]],
+	"count": {
+	  "characters": [".outsider"],
+	  "lt": 5
+	},
+	"warning": "Skript umožňuje až 3 další Podivíny, ale na skriptu je míň než 5 Podivínů."
+  },
+  {
+	"present": [["minstrel"], ["#ondeathminions"]],
+	"warning": "Pěvec(Minstrel) má špatné interakce s jedním nebo více Přisluhovači."
+  },
+  {
+	"present": [["legion"], ["al-hadikhia", "alhadikhia", "riot", "leviathan"]],
+	"missing": [["fang_gu", "imp", "lil_monsta", "lleech", "no_dashii", "po", "pukka", "shabaloth", "vigormortis", "vortox", "zombuul", "fanggu", "nodashii", "lilmonsta", "ojo", "kazali"]],
+	"warning": "Legie není vhodná s Démony kteří mají veřejné prohlášení."
+  }
+ ]
