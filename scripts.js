@@ -635,7 +635,7 @@ function renderJinxTableWithImages(idObjects, jinxData, rolesData, tableId) {
                 html += "<img class='nightikon' src = '" + img1 + "''>";
                 //html += "<img class='nightikon' src = '" + ${img2 ? `<img src="${img2}" alt="${second}" width="40">` : ""} + "''>";
                 html += "<img class='nightikon' src = '" + img2 + "''>";
-                html += "<span class='nightdetail'>" + ${row["Jinx"] ?? ""} + "</span></p>"
+                html += "<span class='nightdetail'>" + row["Jinx"] + "</span></p>"
                 html += "</div>";
             }
         });
