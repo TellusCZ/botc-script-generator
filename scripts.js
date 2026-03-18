@@ -361,8 +361,8 @@ function generateScript() {
         document.getElementsByClassName('message')[0].innerHTML = html;
       };*/
       TranslateScript();
-      const scriptText = document.getElementById("scriptJson").value;
-      let scriptRaw = JSON.parse(scriptText);
+      
+      let scriptRaw = JSON.parse(document.getElementById("scriptJson").value);
       try {
         checkScript(scriptRaw);
       }
