@@ -618,7 +618,7 @@ function renderJinxTableWithImages(idObjects, jinxData, rolesData, tableId) {
     if (srcLogo) {
         html += "<img class='scriptlogo' src='" + document.getElementById("scriptlogo").src + "'>"
     }
-    html += json[0].name + "</div>";
+    html += document.getElementById("scriptname").value + "</div>";
     html += "<div class='nightordercolumns'><div class='nightorderlist'>";
 
     const idList = idObjects.map(obj => obj.id);
@@ -701,7 +701,12 @@ function generateNightOrder() {
     //json.forEach(function (val) {
     html += "<div class='nightorder'>";
     html += "<div class='nightordercolumns'><div class='nightorderlist'>";
-    html += "<div class='scriptname'>" + document.getElementById("scriptname").value + "</div>";
+    html += "<div class='scriptname' style=' font-size: " + TitleHeightSlider.value + "px;" + "'>";
+    const srcLogo = document.getElementById("scriptlogo").getAttribute('src');
+    if (srcLogo) {
+        html += "<img class='scriptlogo' src='" + document.getElementById("scriptlogo").src + "'>"
+    }
+    html += document.getElementById("scriptname").value + "</div>";
     /*val.firstNight.forEach( function (role) {
       html += "<div>" + role + "</div>";
     });*/
@@ -748,7 +753,12 @@ function generateNightOrder() {
     //json.forEach(function (val) {
     html += "<div class='nightorder'>";
     html += "<div class='nightordercolumns'><div class='nightorderlist'>";
-    html += "<div class='scriptname'>" + scriptJson[0].name + "</div>";
+    html += "<div class='scriptname' style=' font-size: " + TitleHeightSlider.value + "px;" + "'>";
+    const srcLogo = document.getElementById("scriptlogo").getAttribute('src');
+    if (srcLogo) {
+        html += "<img class='scriptlogo' src='" + document.getElementById("scriptlogo").src + "'>"
+    }
+    html += document.getElementById("scriptname").value + "</div>";
     /*val.firstNight.forEach( function (role) {
       html += "<div>" + role + "</div>";
     });*/
