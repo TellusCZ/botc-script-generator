@@ -613,7 +613,6 @@ function renderJinxTableWithImages(idObjects, jinxData, rolesData, tableId) {
     //json.forEach(function (val) {
     html += "<div class='nightorder'>";
     html += "<div class='nightordercolumns'><div class='nightorderlist'>";
-    html += "<div class='scriptname'>" + scriptJson[0].name + "</div>";
 
     const idList = idObjects.map(obj => obj.id);
 
