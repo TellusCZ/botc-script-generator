@@ -24,573 +24,592 @@ let countOfDemons = 0;
 let townsfolkOffset = 0;
 
 function renderJinxTableWithImages(idObjects, jinxData, rolesData, tableId) {
-  const table = document.getElementById(tableId);
-  table.innerHTML = "";
+    const table = document.getElementById(tableId);
+    table.innerHTML = "";
 
-  // 🔹 převod [{id: "..."}] → ["..."]
-  const idList = idObjects.map(obj => obj.id);
+    // 🔹 převod [{id: "..."}] → ["..."]
+    const idList = idObjects.map(obj => obj.id);
 
-  // mapa rolí
-  const roleMap = {};
-  rolesData.forEach(role => {
-    roleMap[role.id] = role;
-  });
+    // mapa rolí
+    const roleMap = {};
+    rolesData.forEach(role => {
+        roleMap[role.id] = role;
+    });
 
-  // hlavička
-  const header = document.createElement("tr");
-  header.innerHTML = `
+    // hlavička
+    const header = document.createElement("tr");
+    header.innerHTML = `
     <th>Role 1</th>
     <th>Role 2</th>
     <th>Jinx</th>
   `;
-  table.appendChild(header);
+    table.appendChild(header);
 
-  // data
-  Object.values(jinxData).forEach(sheet => {
-    sheet.forEach(row => {
-      const first = row["JSON 1st"];
-      const second = row["JSON 2nd"];
+    // data
+    Object.values(jinxData).forEach(sheet => {
+        sheet.forEach(row => {
+            const first = row["JSON 1st"];
+            const second = row["JSON 2nd"];
 
-      if (idList.includes(first) && idList.includes(second)) {
-        const img1 = roleMap[first]?.image || "";
-        const img2 = roleMap[second]?.image || "";
+            if (idList.includes(first) && idList.includes(second)) {
+                const img1 = roleMap[first]?.image || "";
+                const img2 = roleMap[second]?.image || "";
 
-        const tr = document.createElement("tr");
+                const tr = document.createElement("tr");
 
-        tr.innerHTML = `
+                tr.innerHTML = `
           <td>${img1 ? `<img src="${img1}" alt="${first}" width="40">` : ""}</td>
           <td>${img2 ? `<img src="${img2}" alt="${second}" width="40">` : ""}</td>
           <td>${row["Jinx"] ?? ""}</td>
         `;
 
-        table.appendChild(tr);
-      }
+                table.appendChild(tr);
+            }
+        });
     });
-  });
 }
 
 
 function loadAndRender(scriptRaw) {
-  console.log(scriptRaw);
+    console.log(scriptRaw);
 
-  Promise.all([
-    fetch("botc/jinx_list.json").then(r => r.json()),
-    fetch("botc/rolescz.json").then(r => r.json())
-  ])
-  .then(([jinxData, rolesData]) => {
-    renderJinxTableWithImages(scriptRaw, jinxData, rolesData, "jinxTable");
-  });
+    Promise.all([
+            fetch("botc/jinx_list.json").then(r => r.json()),
+            fetch("botc/rolescz.json").then(r => r.json())
+        ])
+        .then(([jinxData, rolesData]) => {
+            renderJinxTableWithImages(scriptRaw, jinxData, rolesData, "jinxTable");
+        });
 }
 
 var rules = [];
-window.fetch("botc/script-check-rules.json").then(x => { console.log(x); return x.json() }).then(x => rules = x);
+window.fetch("botc/script-check-rules.json").then(x => {
+    console.log(x);
+    return x.json()
+}).then(x => rules = x);
 
 var groups = {};
 window.fetch("botc/character-groups.json").then(x => x.json()).then(x => groups = x);
 
-function parseRule(rule, script) {  
-  if (rule.missing) {
-    if (passesPresenceCheck(script, rule.missing)) return false;
-  }
-  
-  if (rule.present) {
-    if (!passesPresenceCheck(script, rule.present)) return false;
-  }
-  
-  if (rule.count) {
-    const count = countGroup(script, rule.count.characters);
-    
-    if (rule.count.gt && count <= rule.count.gt) return false;
-    if (rule.count.lt && count >= rule.count.lt) return false;
-    if (rule.count.eq && count != rule.count.eq) return false;
-  }
-  
-  return true;
+function parseRule(rule, script) {
+    if (rule.missing) {
+        if (passesPresenceCheck(script, rule.missing)) return false;
+    }
+
+    if (rule.present) {
+        if (!passesPresenceCheck(script, rule.present)) return false;
+    }
+
+    if (rule.count) {
+        const count = countGroup(script, rule.count.characters);
+
+        if (rule.count.gt && count <= rule.count.gt) return false;
+        if (rule.count.lt && count >= rule.count.lt) return false;
+        if (rule.count.eq && count != rule.count.eq) return false;
+    }
+
+    return true;
 }
 
 function passesPresenceCheck(script, presence) {
-  let result;
-    
-  for (let grp of presence) {
-    // AND all the groups
-    result = false;
+    let result;
 
-    for (let elt of grp) {
-      // OR all the elements of the group
-      if (recursivePresence(elt, script)) {
-        result = true;
-        break
-      }
+    for (let grp of presence) {
+        // AND all the groups
+        result = false;
+
+        for (let elt of grp) {
+            // OR all the elements of the group
+            if (recursivePresence(elt, script)) {
+                result = true;
+                break
+            }
+        }
+
+        if (!result) return false;
     }
 
-    if (!result) return false;
-  }
-  
-  return true;
+    return true;
 }
 
 function countGroup(script, group) {
-  let total = 0;
-  
-  for (let elt of group) {
-    // Count the presence of all the elements of the group in the script
-    total += recursivePresence(elt, script);
-  }
-  
-  return total;
+    let total = 0;
+
+    for (let elt of group) {
+        // Count the presence of all the elements of the group in the script
+        total += recursivePresence(elt, script);
+    }
+
+    return total;
 }
 
 function recursivePresence(char, script) {
-  let total = 0;
-  
-  if (groups[char]) {
-    for (var elt of groups[char]) {
-      total += recursivePresence(elt, script);
+    let total = 0;
+
+    if (groups[char]) {
+        for (var elt of groups[char]) {
+            total += recursivePresence(elt, script);
+        }
     }
-  }
-  
-  if (script.includes(char)) total++;
-  
-  return total;
+
+    if (script.includes(char)) total++;
+
+    return total;
 }
 
 function checkScript(scriptJson) {
-  // Transform filecontent according to your specifications
-  output.replaceChildren();
-  scriptJson = scriptJson.map((item) => {
-    if (item.id === '_meta') {
-      return {
-        author: item.author,
-        name: item.name,
-        isOfficial: false,
-        id: item.id,
-      }
-    } else {
-      if (item.id) {
-        return { id: item.id }
-      } else {
-        return { id: item }
-      }
+    // Transform filecontent according to your specifications
+    output.replaceChildren();
+    scriptJson = scriptJson.map((item) => {
+        if (item.id === '_meta') {
+            return {
+                author: item.author,
+                name: item.name,
+                isOfficial: false,
+                id: item.id,
+            }
+        } else {
+            if (item.id) {
+                return {
+                    id: item.id
+                }
+            } else {
+                return {
+                    id: item
+                }
+            }
+        }
+    })
+
+    console.log(scriptJson);
+    scriptJson = scriptJson.filter((e) => e.id).map((e) => e.id)
+
+    for (let elt of rules) {
+        if (parseRule(elt, scriptJson)) {
+            const msg = document.createElement('li')
+
+            if (elt.note) {
+                msg.innerHTML = elt.note
+            } else if (elt.warning) {
+                msg.style.color = 'yellow'
+                msg.innerHTML = elt.warning
+            } else if (elt.error) {
+                msg.style.color = 'red'
+                msg.innerHTML = elt.error
+            }
+
+            output.appendChild(msg)
+        }
     }
-  })
-
-  console.log(scriptJson);
-  scriptJson = scriptJson.filter((e) => e.id).map((e) => e.id)
-
-  for (let elt of rules) {
-    if (parseRule(elt, scriptJson)) {
-      const msg = document.createElement('li')
-
-      if (elt.note) {
-        msg.innerHTML = elt.note
-      } else if (elt.warning) {
-        msg.style.color = 'yellow'
-        msg.innerHTML = elt.warning
-      } else if (elt.error) {
-        msg.style.color = 'red'
-        msg.innerHTML = elt.error
-      }
-
-      output.appendChild(msg)
-    }
-  }
 }
 
 async function loadRoles() {
-      try {
+    try {
         const response = await fetch('botc/roles.json');
         if (!response.ok) {
-          throw new Error('Soubor roles.json nelze nacíst. Zkontrolujte, že se nachází ve stejné složce jako HTML.');
+            throw new Error('Soubor roles.json nelze nacíst. Zkontrolujte, že se nachází ve stejné složce jako HTML.');
         }
         const data = await response.json();
         document.getElementById("rolesJson").value = JSON.stringify(data, null, 2);
-      } catch (e) {
+    } catch (e) {
         alert("Chyba pri nacítání roles.json: " + e.message);
-      }
     }
+}
 
 async function loadRolesCZ() {
-      try {
+    try {
         const response = await fetch('botc/rolescz.json');
         if (!response.ok) {
-          throw new Error('Soubor roles.json nelze nacíst. Zkontrolujte, že se nachází ve stejné složce jako HTML.');
+            throw new Error('Soubor roles.json nelze nacíst. Zkontrolujte, že se nachází ve stejné složce jako HTML.');
         }
         const data = await response.json();
         document.getElementById("rolesJson").value = JSON.stringify(data, null, 2);
-      } catch (e) {
+    } catch (e) {
         alert("Chyba pri nacítání roles.json: " + e.message);
-      }
-      try {
+    }
+    try {
         const response = await fetch('botc/nightsheet.json');
         if (!response.ok) {
-          throw new Error('Soubor roles.json nelze nacíst. Zkontrolujte, že se nachází ve stejné složce jako HTML.');
+            throw new Error('Soubor roles.json nelze nacíst. Zkontrolujte, že se nachází ve stejné složce jako HTML.');
         }
         const data = await response.json();
         document.getElementById("nightOrderSheet").value = JSON.stringify(data, null, 2);
-      } catch (e) {
+    } catch (e) {
         alert("Chyba pri nacítání roles.json: " + e.message);
-      }
-      try {
+    }
+    try {
         const response = await fetch('botc/nightordercz.json');
         if (!response.ok) {
-          throw new Error('Soubor roles.json nelze nacíst. Zkontrolujte, že se nachází ve stejné složce jako HTML.');
+            throw new Error('Soubor roles.json nelze nacíst. Zkontrolujte, že se nachází ve stejné složce jako HTML.');
         }
         const data = await response.json();
         document.getElementById("nightOrderTmp").value = JSON.stringify(data, null, 2);
-      } catch (e) {
+    } catch (e) {
         alert("Chyba pri nacítání roles.json: " + e.message);
-      }
     }
+}
 
 function TranslateScript() {
-  try {
-    const scriptText = document.getElementById("scriptJson").value;
-    const rolesText = document.getElementById("rolesJson").value;
+    try {
+        const scriptText = document.getElementById("scriptJson").value;
+        const rolesText = document.getElementById("rolesJson").value;
 
-    let scriptRaw = JSON.parse(scriptText);
-    let rolesRaw = JSON.parse(rolesText);
+        let scriptRaw = JSON.parse(scriptText);
+        let rolesRaw = JSON.parse(rolesText);
 
-    // Normalizace vstupu rolesRaw na pole objektu s id
-    const roles = rolesRaw.map(item => {
-      if (typeof item === "string") {
-        return { id: item };
-      } else {
-        return item;
-      }
-    });
+        // Normalizace vstupu rolesRaw na pole objektu s id
+        const roles = rolesRaw.map(item => {
+            if (typeof item === "string") {
+                return {
+                    id: item
+                };
+            } else {
+                return item;
+            }
+        });
 
-    const rolesMap = {};
-    roles.forEach(role => {
-      if (role.id) {
-        rolesMap[role.id] = role;
-      }
-    });
+        const rolesMap = {};
+        roles.forEach(role => {
+            if (role.id) {
+                rolesMap[role.id] = role;
+            }
+        });
 
-    // Normalizace vstupu scriptRaw na pole objektu s id
-    const script = scriptRaw.map(item => {
-      if (typeof item === "string") {
-        return { id: item };
-      } else {
-        return item;
-      }
-    });
+        // Normalizace vstupu scriptRaw na pole objektu s id
+        const script = scriptRaw.map(item => {
+            if (typeof item === "string") {
+                return {
+                    id: item
+                };
+            } else {
+                return item;
+            }
+        });
 
-    // Normální preklad (translatedScriptJson)
-    const translated = script.map(entry => {
-  if (!entry.id) return entry;
-  const roleData = rolesMap[entry.id];
-  if (roleData) {
-    const { image, ...rest } = roleData; // odstranení "image"
-    return { ...rest };
-  } else {
-    return entry;
-  }
-});
+        // Normální preklad (translatedScriptJson)
+        const translated = script.map(entry => {
+            if (!entry.id) return entry;
+            const roleData = rolesMap[entry.id];
+            if (roleData) {
+                const {
+                    image,
+                    ...rest
+                } = roleData; // odstranení "image"
+                return {
+                    ...rest
+                };
+            } else {
+                return entry;
+            }
+        });
 
-    // CZ preklad (translatedScriptCZ)
-    const translatedCZ = script.map(entry => {
-      if (!entry.id) return entry;
-      const roleData = rolesMap[entry.id];
-      if (roleData) {
-        const newEntry = { ...roleData };
-        newEntry.id = entry.id + "cz";
-        return newEntry;
-      } else {
-        return entry;
-      }
-    });
+        // CZ preklad (translatedScriptCZ)
+        const translatedCZ = script.map(entry => {
+            if (!entry.id) return entry;
+            const roleData = rolesMap[entry.id];
+            if (roleData) {
+                const newEntry = {
+                    ...roleData
+                };
+                newEntry.id = entry.id + "cz";
+                return newEntry;
+            } else {
+                return entry;
+            }
+        });
 
-    // Výstupy do textových polí
-    document.getElementById("translatedScriptJson").value = JSON.stringify(translated, null, 2);
-    document.getElementById("translatedScriptCZ").value = JSON.stringify(translatedCZ, null, 2);
+        // Výstupy do textových polí
+        document.getElementById("translatedScriptJson").value = JSON.stringify(translated, null, 2);
+        document.getElementById("translatedScriptCZ").value = JSON.stringify(translatedCZ, null, 2);
 
-  } catch (e) {
-    alert("Chyba pri parsování JSONu: " + e.message);
-  }
+    } catch (e) {
+        alert("Chyba pri parsování JSONu: " + e.message);
+    }
 }
 
 function saveJsonFromElement(elementId, defaultFilename = "download.json") {
-  const dataStr = document.getElementById(elementId).value;
-  if (!dataStr) {
-    alert("Nejprve vygeneruj data pro uložení.");
-    return;
-  }
-
-  const blob = new Blob([dataStr], { type: "application/json" });
-  const url = URL.createObjectURL(blob);
-
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = defaultFilename;
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-  URL.revokeObjectURL(url);
-} 
-    function formatRoles( rolesArray )
-    {
-      let html = '';
-      rolesArray.forEach(function (val) {
-          html += "<div class = 'role'>";
-          // Add your code below this line
-          html += "<img height='30px' width='' class='roleikon' src = '" + val.image + "''>";
-          html += "<p class='roledescription' ";
-          if (val.team == "townsfolk" || val.team == "outsider")
-            html += "style='color:blue;'";
-          else
-            html += "style='color:red;'";
-          html += ">" + val.name + "<br>";
-          html += "<span class='roledetail'>" + val.ability + "</span></p>"
-          // Add your code above this line
-          html += '</div><br>';
-          return html;
-        });
+    const dataStr = document.getElementById(elementId).value;
+    if (!dataStr) {
+        alert("Nejprve vygeneruj data pro uložení.");
+        return;
     }
-function generateScript() {
-      /*const req = new XMLHttpRequest();
-      req.open('GET', '/json/cats.json', true);
-      req.send();
-      req.onload = function () {
-        const json = JSON.parse(req.responseText);
-        let html = '';
-        json.forEach(function (val) {
-          html += "<div class = 'cat'>";
-          // Add your code below this line
 
-          // Add your code above this line
-          html += '</div><br>';
-        });
-        document.getElementsByClassName('message')[0].innerHTML = html;
-      };*/
-      TranslateScript();
-      
-      let scriptRaw = JSON.parse(document.getElementById("scriptJson").value);
-      try {
-        checkScript(scriptRaw);
-      }
-      catch (e) {
-        if (e.name == 'SyntaxError') {
-          alert('Error while parsing file');
-        } else {
-          throw e;
-        }
-      }
-      loadAndRender(scriptRaw);
-const scriptText = document.getElementById("translatedScriptCZ").value;
-const json = JSON.parse(scriptText);
-let html = '';
-countOfTownsfolk = 0;
-countOfOutsiders = 0;
-countOfMinions = 0;
-countOfDemons = 0;
+    const blob = new Blob([dataStr], {
+        type: "application/json"
+    });
+    const url = URL.createObjectURL(blob);
 
-json.forEach(function (val) {
-  if (val.team == "townsfolk")
-    countOfTownsfolk +=1;
-  if (val.team == "outsider")
-    countOfOutsiders +=1;
-  if (val.team == "demon")
-    countOfDemons +=1;
-  if (val.team == "minion")
-    countOfMinions +=1;
-});
-
-var linesForTownsfolk = Math.round(countOfTownsfolk / 2);
-var linesForOutsiders = Math.round(countOfOutsiders / 2);
-var linesForMinions = Math.round(countOfMinions / 2);
-var linesForDemons = Math.round(countOfDemons / 2);
-
-var TotalLines = linesForTownsfolk + linesForOutsiders + linesForMinions + linesForDemons;
-
-var townsfolkArray = json.slice(1, countOfTownsfolk + 1);
-var townsfolkArrayOne = json.slice(1, Math.round(countOfTownsfolk / 2) + 1);
-var townsfolkArrayTwo = json.slice( Math.round(countOfTownsfolk / 2) + 1, countOfTownsfolk + 1);
-var OutsidersArray = json.slice(countOfTownsfolk + 1, countOfTownsfolk + countOfOutsiders + 1);
-var outsidersArrayOne = json.slice(countOfTownsfolk + 1, countOfTownsfolk + Math.round(countOfOutsiders / 2) + 1);
-var outsidersArrayTwo = json.slice(countOfTownsfolk + Math.round(countOfOutsiders / 2) + 1, countOfTownsfolk + countOfOutsiders + 1);
-var MinionsArray = json.slice(countOfTownsfolk + countOfOutsiders + 1, countOfTownsfolk + countOfOutsiders + countOfMinions + 1);
-var minionsArrayOne = json.slice(countOfTownsfolk + countOfOutsiders + 1, countOfTownsfolk + countOfOutsiders + Math.round(countOfMinions / 2) + 1);
-var minionsArrayTwo = json.slice(countOfTownsfolk + countOfOutsiders + Math.round(countOfMinions / 2) + 1, countOfTownsfolk + countOfOutsiders + countOfMinions + 1);
-var DemonsArray = json.slice(countOfTownsfolk + countOfOutsiders + countOfMinions + 1);
-var demonsArrayOne = json.slice(countOfTownsfolk + countOfOutsiders + countOfMinions + 1, countOfTownsfolk + countOfOutsiders + countOfMinions + Math.round(countOfDemons / 2) + 1);
-var demonsArrayTwo = json.slice(countOfTownsfolk + countOfOutsiders + countOfMinions + Math.round(countOfDemons / 2) + 1, countOfTownsfolk + countOfOutsiders + countOfMinions + countOfDemons + 1);
-
-
-html += "<div id='script' class='script'>";
-html += "<div class='scriptname' style=' font-size: " + TitleHeightSlider.value + "px;" + "'>";
-const srcLogo = document.getElementById("scriptlogo").getAttribute('src');
-if( srcLogo )
-{
-   html += "<img class='scriptlogo' src='" + document.getElementById("scriptlogo").src + "'>"
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = defaultFilename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
 }
-html += json[0].name + "</div>";
-//html += countOfTownsfolk + "(" + Math.round(countOfTownsfolk / 2) + ")" + "-" + countOfOutsiders + "-" + countOfMinions + "-" + countOfDemons;
-html += "<img class='separator' src='botc/separator-townsfolk.png'>"
-var townsfolkHeight = Number(roleHeightslider.value * linesForTownsfolk) + Number(TownsfolkOffsetSlider.value) + Number(117);
-html += "<div class='townsfolk' style=' height: " + townsfolkHeight + "px;" + "'>";
-html += "<div>";
-townsfolkArrayOne.forEach(function (val) {
-          html += "<div class = 'role' style=' height: " + roleHeightslider.value + "px;" + "'>";
-          // Add your code below this line
-          html += "<img class='roleikon' src = '" + val.image + "''>";
-          html += "<p class='roledescription' ";
-          if (val.team == "townsfolk" || val.team == "outsider")
+
+function formatRoles(rolesArray) {
+    let html = '';
+    rolesArray.forEach(function(val) {
+        html += "<div class = 'role'>";
+        // Add your code below this line
+        html += "<img height='30px' width='' class='roleikon' src = '" + val.image + "''>";
+        html += "<p class='roledescription' ";
+        if (val.team == "townsfolk" || val.team == "outsider")
             html += "style='color:blue;'";
-          else
+        else
             html += "style='color:red;'";
-          html += ">" + val.name + "<br>";
-          html += "<span class='roledetail'>" + val.ability + "</span></p>"
-          // Add your code above this line
-          html += '</div><br>';
-        });
-        html += "</div>"; //end of column
-        html += "<div>";
-townsfolkArrayTwo.forEach(function (val) {
-          html += "<div class = 'role' style=' height: " + roleHeightslider.value + "px;" + "'>";
-          // Add your code below this line
-          html += "<img class='roleikon' src = '" + val.image + "''>";
-          html += "<p class='roledescription' ";
-          if (val.team == "townsfolk" || val.team == "outsider")
-            html += "style='color:blue;'";
-          else
-            html += "style='color:red;'";
-          html += ">" + val.name + "<br>";
-          html += "<span class='roledetail'>" + val.ability + "</span></p>"
-          // Add your code above this line
-          html += '</div><br>';
-        });
-        html += "</div>"; //end of column
-        html += "</div>"; //end of townsfolk
-        html += "<img class='separator' src='botc/separator-outsider.png'>"
-var outsiderHeight = Number(roleHeightslider.value * linesForOutsiders) + Number(MinionOffsetSlider.value) + Number(10);
-html += "<div class='outsider' style=' height: " + outsiderHeight + "px;" + "'>";
-html += "<div>";
-outsidersArrayOne.forEach(function (val) {
-          html += "<div class = 'role' style=' height: " + roleHeightslider.value + "px;" + "'>";
-          // Add your code below this line
-          html += "<img class='roleikon' src = '" + val.image + "''>";
-          html += "<p class='roledescription' ";
-          if (val.team == "townsfolk" || val.team == "outsider")
-            html += "style='color:blue;'";
-          else
-            html += "style='color:red;'";
-          html += ">" + val.name + "<br>";
-          html += "<span class='roledetail'>" + val.ability + "</span></p>"
-          // Add your code above this line
-          html += '</div><br>';
-        });
-        html += "</div>"; //end of column
-        html += "<div>";
-outsidersArrayTwo.forEach(function (val) {
-          html += "<div class = 'role' style=' height: " + roleHeightslider.value + "px;" + "'>";
-          // Add your code below this line
-          html += "<img class='roleikon' src = '" + val.image + "''>";
-          html += "<p class='roledescription' ";
-          if (val.team == "townsfolk" || val.team == "outsider")
-            html += "style='color:blue;'";
-          else
-            html += "style='color:red;'";
-          html += ">" + val.name + "<br>";
-          html += "<span class='roledetail'>" + val.ability + "</span></p>"
-          // Add your code above this line
-          html += '</div><br>';
-        });
-        html += "</div>"; //end of column
-        html += "</div>"; //end of outsider
-        html += "<img class='separator' src='botc/separator-minions.png'>"
-var minionHeight = Number(roleHeightslider.value * linesForMinions) + Number(DemonOffsetSlider.value) + Number(10);
-html += "<div class='minion' style=' height: " + minionHeight + "px;" + "'>";
-html += "<div>";
-minionsArrayOne.forEach(function (val) {
-          html += "<div class = 'role' style=' height: " + roleHeightslider.value + "px;" + "'>";
-          // Add your code below this line
-          html += "<img class='roleikon' src = '" + val.image + "''>";
-          html += "<p class='roledescription' ";
-          if (val.team == "townsfolk" || val.team == "outsider")
-            html += "style='color:blue;'";
-          else
-            html += "style='color:red;'";
-          html += ">" + val.name + "<br>";
-          html += "<span class='roledetail'>" + val.ability + "</span></p>"
-          // Add your code above this line
-          html += '</div><br>';
-        });
-        html += "</div>"; //end of column
-        html += "<div>";
-minionsArrayTwo.forEach(function (val) {
-          html += "<div class = 'role' style=' height: " + roleHeightslider.value + "px;" + "'>";
-          // Add your code below this line
-          html += "<img class='roleikon' src = '" + val.image + "''>";
-          html += "<p class='roledescription' ";
-          if (val.team == "townsfolk" || val.team == "outsider")
-            html += "style='color:blue;'";
-          else
-            html += "style='color:red;'";
-          html += ">" + val.name + "<br>";
-          html += "<span class='roledetail'>" + val.ability + "</span></p>"
-          // Add your code above this line
-          html += '</div><br>';
-        });
-        html += "</div>"; //end of column
-        html += "</div>"; //end of minions
-        html += "<img class='separator' src='botc/separator-demons.png'>"
-html += "<div class='minion' height='" + 160 + "'>";
-html += "<div>";
-demonsArrayOne.forEach(function (val) {
-          html += "<div class = 'role' style=' height: " + roleHeightslider.value + "px;" + "'>";
-          // Add your code below this line
-          html += "<img class='roleikon' src = '" + val.image + "''>";
-          html += "<p class='roledescription' ";
-          if (val.team == "townsfolk" || val.team == "outsider")
-            html += "style='color:blue;'";
-          else
-            html += "style='color:red;'";
-          html += ">" + val.name + "<br>";
-          html += "<span class='roledetail'>" + val.ability + "</span></p>"
-          // Add your code above this line
-          html += '</div><br>';
-        });
-        html += "</div>"; //end of column
-        html += "<div>";
-demonsArrayTwo.forEach(function (val) {
-          html += "<div class = 'role' style=' height: " + roleHeightslider.value + "px;" + "'>";
-          // Add your code below this line
-          html += "<img class='roleikon' src = '" + val.image + "''>";
-          html += "<p class='roledescription' ";
-          if (val.team == "townsfolk" || val.team == "outsider")
-            html += "style='color:blue;'";
-          else
-            html += "style='color:red;'";
-          html += ">" + val.name + "<br>";
-          html += "<span class='roledetail'>" + val.ability + "</span></p>"
-          // Add your code above this line
-          html += '</div><br>';
-        });
-        html += "</div>"; //end of column
-        html += "</div>"; //end of demons
-        html += "</div>"; //end of script
-        html = html.replaceAll("Each night", "<b>Each night</b>");
-        html = html.replaceAll("Each night*", "<b>Each night-</b>");
-        html = html.replaceAll("Každou noc", "<b>Každou noc</b>");
-        html = html.replaceAll("Každou noc*", "<b>Každou noc*</b>");
-        html = html.replaceAll("Jednou za hru ", "<b>Jednou za hru </b>");
-        html = html.replaceAll("Jednou za hru, v noci", "<b>Jednou za hru, v noci</b>");
-        html = html.replaceAll("Začínáš s informací", "<b>Začínáš s informací</b>");
-        document.getElementsByClassName('message')[0].innerHTML = html;
+        html += ">" + val.name + "<br>";
+        html += "<span class='roledetail'>" + val.ability + "</span></p>"
+        // Add your code above this line
+        html += '</div><br>';
+        return html;
+    });
+}
+
+function generateScript() {
+    /*const req = new XMLHttpRequest();
+    req.open('GET', '/json/cats.json', true);
+    req.send();
+    req.onload = function () {
+      const json = JSON.parse(req.responseText);
+      let html = '';
+      json.forEach(function (val) {
+        html += "<div class = 'cat'>";
+        // Add your code below this line
+
+        // Add your code above this line
+        html += '</div><br>';
+      });
+      document.getElementsByClassName('message')[0].innerHTML = html;
+    };*/
+    TranslateScript();
+
+    let scriptRaw = JSON.parse(document.getElementById("scriptJson").value);
+    try {
+        checkScript(scriptRaw);
+    } catch (e) {
+        if (e.name == 'SyntaxError') {
+            alert('Error while parsing file');
+        } else {
+            throw e;
+        }
     }
+    loadAndRender(scriptRaw);
+    const scriptText = document.getElementById("translatedScriptCZ").value;
+    const json = JSON.parse(scriptText);
+    let html = '';
+    countOfTownsfolk = 0;
+    countOfOutsiders = 0;
+    countOfMinions = 0;
+    countOfDemons = 0;
+
+    json.forEach(function(val) {
+        if (val.team == "townsfolk")
+            countOfTownsfolk += 1;
+        if (val.team == "outsider")
+            countOfOutsiders += 1;
+        if (val.team == "demon")
+            countOfDemons += 1;
+        if (val.team == "minion")
+            countOfMinions += 1;
+    });
+
+    var linesForTownsfolk = Math.round(countOfTownsfolk / 2);
+    var linesForOutsiders = Math.round(countOfOutsiders / 2);
+    var linesForMinions = Math.round(countOfMinions / 2);
+    var linesForDemons = Math.round(countOfDemons / 2);
+
+    var TotalLines = linesForTownsfolk + linesForOutsiders + linesForMinions + linesForDemons;
+
+    var townsfolkArray = json.slice(1, countOfTownsfolk + 1);
+    var townsfolkArrayOne = json.slice(1, Math.round(countOfTownsfolk / 2) + 1);
+    var townsfolkArrayTwo = json.slice(Math.round(countOfTownsfolk / 2) + 1, countOfTownsfolk + 1);
+    var OutsidersArray = json.slice(countOfTownsfolk + 1, countOfTownsfolk + countOfOutsiders + 1);
+    var outsidersArrayOne = json.slice(countOfTownsfolk + 1, countOfTownsfolk + Math.round(countOfOutsiders / 2) + 1);
+    var outsidersArrayTwo = json.slice(countOfTownsfolk + Math.round(countOfOutsiders / 2) + 1, countOfTownsfolk + countOfOutsiders + 1);
+    var MinionsArray = json.slice(countOfTownsfolk + countOfOutsiders + 1, countOfTownsfolk + countOfOutsiders + countOfMinions + 1);
+    var minionsArrayOne = json.slice(countOfTownsfolk + countOfOutsiders + 1, countOfTownsfolk + countOfOutsiders + Math.round(countOfMinions / 2) + 1);
+    var minionsArrayTwo = json.slice(countOfTownsfolk + countOfOutsiders + Math.round(countOfMinions / 2) + 1, countOfTownsfolk + countOfOutsiders + countOfMinions + 1);
+    var DemonsArray = json.slice(countOfTownsfolk + countOfOutsiders + countOfMinions + 1);
+    var demonsArrayOne = json.slice(countOfTownsfolk + countOfOutsiders + countOfMinions + 1, countOfTownsfolk + countOfOutsiders + countOfMinions + Math.round(countOfDemons / 2) + 1);
+    var demonsArrayTwo = json.slice(countOfTownsfolk + countOfOutsiders + countOfMinions + Math.round(countOfDemons / 2) + 1, countOfTownsfolk + countOfOutsiders + countOfMinions + countOfDemons + 1);
 
 
-
-    function testSetup(){
-      //document.getElementById("scriptJson").value = '[{"id":"_meta","author":"Petr","name":"No one is safe"},"clockmaker","investigator","bountyhunter","villageidiot","fortuneteller","lycanthrope","towncrier","amnesiac","poppygrower","alchemist","minstrel","virgin","banshee","mutant","drunk","lunatic","snitch","godfather","boffin","poisoner","fearmonger","imp","fanggu","nodashii","kazali"]';
-      //document.getElementById("scriptJson")[0].innerHTML = "[{'id:'_meta','author':'Petr','name':'No one is safe"},"clockmaker","investigator","bountyhunter","villageidiot","fortuneteller","lycanthrope","towncrier","amnesiac","poppygrower","alchemist","minstrel","virgin","banshee","mutant","drunk","lunatic","snitch","godfather","boffin","poisoner","fearmonger","imp","fanggu","nodashii","kazali"]";
-      loadRolesCZ();
-      updateHeight();
-      updateTitleHeight();
-      //TranslateScript();
-      //generateScript();
+    html += "<div id='script' class='script'>";
+    html += "<div class='scriptname' style=' font-size: " + TitleHeightSlider.value + "px;" + "'>";
+    const srcLogo = document.getElementById("scriptlogo").getAttribute('src');
+    if (srcLogo) {
+        html += "<img class='scriptlogo' src='" + document.getElementById("scriptlogo").src + "'>"
     }
-  
+    html += json[0].name + "</div>";
+    //html += countOfTownsfolk + "(" + Math.round(countOfTownsfolk / 2) + ")" + "-" + countOfOutsiders + "-" + countOfMinions + "-" + countOfDemons;
+    html += "<img class='separator' src='botc/separator-townsfolk.png'>"
+    var townsfolkHeight = Number(roleHeightslider.value * linesForTownsfolk) + Number(TownsfolkOffsetSlider.value) + Number(117);
+    html += "<div class='townsfolk' style=' height: " + townsfolkHeight + "px;" + "'>";
+    html += "<div>";
+    townsfolkArrayOne.forEach(function(val) {
+        html += "<div class = 'role' style=' height: " + roleHeightslider.value + "px;" + "'>";
+        // Add your code below this line
+        html += "<img class='roleikon' src = '" + val.image + "''>";
+        html += "<p class='roledescription' ";
+        if (val.team == "townsfolk" || val.team == "outsider")
+            html += "style='color:blue;'";
+        else
+            html += "style='color:red;'";
+        html += ">" + val.name + "<br>";
+        html += "<span class='roledetail'>" + val.ability + "</span></p>"
+        // Add your code above this line
+        html += '</div><br>';
+    });
+    html += "</div>"; //end of column
+    html += "<div>";
+    townsfolkArrayTwo.forEach(function(val) {
+        html += "<div class = 'role' style=' height: " + roleHeightslider.value + "px;" + "'>";
+        // Add your code below this line
+        html += "<img class='roleikon' src = '" + val.image + "''>";
+        html += "<p class='roledescription' ";
+        if (val.team == "townsfolk" || val.team == "outsider")
+            html += "style='color:blue;'";
+        else
+            html += "style='color:red;'";
+        html += ">" + val.name + "<br>";
+        html += "<span class='roledetail'>" + val.ability + "</span></p>"
+        // Add your code above this line
+        html += '</div><br>';
+    });
+    html += "</div>"; //end of column
+    html += "</div>"; //end of townsfolk
+    html += "<img class='separator' src='botc/separator-outsider.png'>"
+    var outsiderHeight = Number(roleHeightslider.value * linesForOutsiders) + Number(MinionOffsetSlider.value) + Number(10);
+    html += "<div class='outsider' style=' height: " + outsiderHeight + "px;" + "'>";
+    html += "<div>";
+    outsidersArrayOne.forEach(function(val) {
+        html += "<div class = 'role' style=' height: " + roleHeightslider.value + "px;" + "'>";
+        // Add your code below this line
+        html += "<img class='roleikon' src = '" + val.image + "''>";
+        html += "<p class='roledescription' ";
+        if (val.team == "townsfolk" || val.team == "outsider")
+            html += "style='color:blue;'";
+        else
+            html += "style='color:red;'";
+        html += ">" + val.name + "<br>";
+        html += "<span class='roledetail'>" + val.ability + "</span></p>"
+        // Add your code above this line
+        html += '</div><br>';
+    });
+    html += "</div>"; //end of column
+    html += "<div>";
+    outsidersArrayTwo.forEach(function(val) {
+        html += "<div class = 'role' style=' height: " + roleHeightslider.value + "px;" + "'>";
+        // Add your code below this line
+        html += "<img class='roleikon' src = '" + val.image + "''>";
+        html += "<p class='roledescription' ";
+        if (val.team == "townsfolk" || val.team == "outsider")
+            html += "style='color:blue;'";
+        else
+            html += "style='color:red;'";
+        html += ">" + val.name + "<br>";
+        html += "<span class='roledetail'>" + val.ability + "</span></p>"
+        // Add your code above this line
+        html += '</div><br>';
+    });
+    html += "</div>"; //end of column
+    html += "</div>"; //end of outsider
+    html += "<img class='separator' src='botc/separator-minions.png'>"
+    var minionHeight = Number(roleHeightslider.value * linesForMinions) + Number(DemonOffsetSlider.value) + Number(10);
+    html += "<div class='minion' style=' height: " + minionHeight + "px;" + "'>";
+    html += "<div>";
+    minionsArrayOne.forEach(function(val) {
+        html += "<div class = 'role' style=' height: " + roleHeightslider.value + "px;" + "'>";
+        // Add your code below this line
+        html += "<img class='roleikon' src = '" + val.image + "''>";
+        html += "<p class='roledescription' ";
+        if (val.team == "townsfolk" || val.team == "outsider")
+            html += "style='color:blue;'";
+        else
+            html += "style='color:red;'";
+        html += ">" + val.name + "<br>";
+        html += "<span class='roledetail'>" + val.ability + "</span></p>"
+        // Add your code above this line
+        html += '</div><br>';
+    });
+    html += "</div>"; //end of column
+    html += "<div>";
+    minionsArrayTwo.forEach(function(val) {
+        html += "<div class = 'role' style=' height: " + roleHeightslider.value + "px;" + "'>";
+        // Add your code below this line
+        html += "<img class='roleikon' src = '" + val.image + "''>";
+        html += "<p class='roledescription' ";
+        if (val.team == "townsfolk" || val.team == "outsider")
+            html += "style='color:blue;'";
+        else
+            html += "style='color:red;'";
+        html += ">" + val.name + "<br>";
+        html += "<span class='roledetail'>" + val.ability + "</span></p>"
+        // Add your code above this line
+        html += '</div><br>';
+    });
+    html += "</div>"; //end of column
+    html += "</div>"; //end of minions
+    html += "<img class='separator' src='botc/separator-demons.png'>"
+    html += "<div class='minion' height='" + 160 + "'>";
+    html += "<div>";
+    demonsArrayOne.forEach(function(val) {
+        html += "<div class = 'role' style=' height: " + roleHeightslider.value + "px;" + "'>";
+        // Add your code below this line
+        html += "<img class='roleikon' src = '" + val.image + "''>";
+        html += "<p class='roledescription' ";
+        if (val.team == "townsfolk" || val.team == "outsider")
+            html += "style='color:blue;'";
+        else
+            html += "style='color:red;'";
+        html += ">" + val.name + "<br>";
+        html += "<span class='roledetail'>" + val.ability + "</span></p>"
+        // Add your code above this line
+        html += '</div><br>';
+    });
+    html += "</div>"; //end of column
+    html += "<div>";
+    demonsArrayTwo.forEach(function(val) {
+        html += "<div class = 'role' style=' height: " + roleHeightslider.value + "px;" + "'>";
+        // Add your code below this line
+        html += "<img class='roleikon' src = '" + val.image + "''>";
+        html += "<p class='roledescription' ";
+        if (val.team == "townsfolk" || val.team == "outsider")
+            html += "style='color:blue;'";
+        else
+            html += "style='color:red;'";
+        html += ">" + val.name + "<br>";
+        html += "<span class='roledetail'>" + val.ability + "</span></p>"
+        // Add your code above this line
+        html += '</div><br>';
+    });
+    html += "</div>"; //end of column
+    html += "</div>"; //end of demons
+    html += "</div>"; //end of script
+    html = html.replaceAll("Each night", "<b>Each night</b>");
+    html = html.replaceAll("Each night*", "<b>Each night-</b>");
+    html = html.replaceAll("Každou noc", "<b>Každou noc</b>");
+    html = html.replaceAll("Každou noc*", "<b>Každou noc*</b>");
+    html = html.replaceAll("Jednou za hru ", "<b>Jednou za hru </b>");
+    html = html.replaceAll("Jednou za hru, v noci", "<b>Jednou za hru, v noci</b>");
+    html = html.replaceAll("Začínáš s informací", "<b>Začínáš s informací</b>");
+    document.getElementsByClassName('message')[0].innerHTML = html;
+}
+
+
+
+function testSetup() {
+    //document.getElementById("scriptJson").value = '[{"id":"_meta","author":"Petr","name":"No one is safe"},"clockmaker","investigator","bountyhunter","villageidiot","fortuneteller","lycanthrope","towncrier","amnesiac","poppygrower","alchemist","minstrel","virgin","banshee","mutant","drunk","lunatic","snitch","godfather","boffin","poisoner","fearmonger","imp","fanggu","nodashii","kazali"]';
+    //document.getElementById("scriptJson")[0].innerHTML = "[{'id:'_meta','author':'Petr','name':'No one is safe"},"clockmaker","investigator","bountyhunter","villageidiot","fortuneteller","lycanthrope","towncrier","amnesiac","poppygrower","alchemist","minstrel","virgin","banshee","mutant","drunk","lunatic","snitch","godfather","boffin","poisoner","fearmonger","imp","fanggu","nodashii","kazali"]";
+    loadRolesCZ();
+    updateHeight();
+    updateTitleHeight();
+    //TranslateScript();
+    //generateScript();
+}
+
 /*function putImage()
 {
   var canvas1 = document.getElementById("canvasSignature");        
@@ -605,226 +624,234 @@ demonsArrayTwo.forEach(function (val) {
 
 function generateNightOrder() {
 
-const scriptText = document.getElementById("translatedScriptCZ").value;
-const scriptJson = JSON.parse(scriptText);
+    const scriptText = document.getElementById("translatedScriptCZ").value;
+    const scriptJson = JSON.parse(scriptText);
 
-const nightOrderTmp = document.getElementById("nightOrderTmp").value;
-const nightOrderJsonTmp = JSON.parse(nightOrderTmp);
-      
-const nightOrder = document.getElementById("nightOrderSheet").value;
-const json = JSON.parse(nightOrder);
-/*try {
-        const response = await fetch('botc/nightsheet.json');
-        if (!response.ok) {
-          throw new Error('Soubor roles.json nelze nacíst. Zkontrolujte, že se nachází ve stejné složce jako HTML.');
-        }
-        const data = await response.json();
-        var nightOrderString = JSON.stringify(data, null, 2);
-      } catch (e) {
-        alert("Chyba pri nacítání roles.json: " + e.message);
-      }*/
+    const nightOrderTmp = document.getElementById("nightOrderTmp").value;
+    const nightOrderJsonTmp = JSON.parse(nightOrderTmp);
 
-let html = '';
-//json.forEach(function (val) {
-  html += "<div class='nightorder'>";
-  html += "<div class='nightordercolumns'><div class='nightorderlist'>";
-  html += "<div class='scriptname'>" + scriptJson[0].name + "</div>";
-  /*val.firstNight.forEach( function (role) {
-    html += "<div>" + role + "</div>";
-  });*/
-  json.firstNight.forEach(function (val) {
-    
-    if(['DAWN','DUSK','DEMON','MINION'].includes(val)) {
-       nightOrderJsonTmp.forEach(function (tmp) {
-         if( val == tmp.id ){
-           html += "<div class='orderrole'>" ;
-           html += "<img class='tmpikon' src = '" + tmp.image + "''>";
-           html += "<p class='nightroledescription' ";
-           html += ">" + tmp.name + "<br>";
-           html += "<span class='nightdetail'>" + tmp.firstNightReminder + "</span></p>"
-           html += "</div>";
-         }
-       });
-    }
-    else
-    {
-      //html += "<div class='orderrole'>" + val + "</div>";
-      scriptJson.forEach(function (role) {
-        
-        //html += "<div class='orderrole'>" + role.id +"/" + val + "</div>";
-        if( role.id == ( val + "cz" ) ){
-          html += "<div class='orderrole'>" ;
-          html += "<img class='nightikon' src = '" + role.image + "''>";
-          html += "<p class='nightroledescription' ";
-          if (role.team == "townsfolk" || role.team == "outsider")
-            html += "style='color:blue;'";
-          else
-            html += "style='color:red;'";
-          html += ">" + role.name + "<br>";
-          html += "<span class='nightdetail'>" + role.firstNightReminder + "</span></p>"
-          html += "</div>";
-        }
-      });
-    }
-    //html += "<div>" + val + "</div>";
-  });
-  html += "</div>";
-  html += "<div class='nightorderpanel'>" + "P<br>r<br>v<br>n<br>í<br><br>n<br>o<br>c" + "</div></div>";
-  html += "</div>";
-  document.getElementsByClassName('FirstNightOrderImage')[0].innerHTML = html;
+    const nightOrder = document.getElementById("nightOrderSheet").value;
+    const json = JSON.parse(nightOrder);
+    /*try {
+            const response = await fetch('botc/nightsheet.json');
+            if (!response.ok) {
+              throw new Error('Soubor roles.json nelze nacíst. Zkontrolujte, že se nachází ve stejné složce jako HTML.');
+            }
+            const data = await response.json();
+            var nightOrderString = JSON.stringify(data, null, 2);
+          } catch (e) {
+            alert("Chyba pri nacítání roles.json: " + e.message);
+          }*/
 
-  html = '';
-//json.forEach(function (val) {
-  html += "<div class='nightorder'>";
-  html += "<div class='nightordercolumns'><div class='nightorderlist'>";
-  html += "<div class='scriptname'>" + scriptJson[0].name + "</div>";
-  /*val.firstNight.forEach( function (role) {
-    html += "<div>" + role + "</div>";
-  });*/
-  json.otherNight.forEach(function (val) {
-    
-    if(['DAWN','DUSK','DEMON','MINION'].includes(val)) {
-       nightOrderJsonTmp.forEach(function (tmp) {
-         if( val == tmp.id ){
-           html += "<div class='orderrole'>" ;
-           html += "<img class='tmpikon' src = '" + tmp.image + "''>";
-           html += "<p class='nightroledescription' ";
-           html += ">" + tmp.name + "<br>";
-           html += "<span class='nightdetail'>" + tmp.otherNightReminder + "</span></p>"
-           html += "</div>";
-         }
-       });
-    }
-    else
-    {
-      //html += "<div class='orderrole'>" + val + "</div>";
-      scriptJson.forEach(function (role) {
-        
-        //html += "<div class='orderrole'>" + role.id +"/" + val + "</div>";
-        if( role.id == ( val + "cz" ) ){
-          html += "<div class='orderrole'>" ;
-          html += "<img class='nightikon' src = '" + role.image + "''>";
-          html += "<p class='nightroledescription' ";
-          if (role.team == "townsfolk" || role.team == "outsider")
-            html += "style='color:blue;'";
-          else
-            html += "style='color:red;'";
-          html += ">" + role.name + "<br>";
-          html += "<span class='nightdetail'>" + role.otherNightReminder + "</span></p>"
-          html += "</div>";
+    let html = '';
+    //json.forEach(function (val) {
+    html += "<div class='nightorder'>";
+    html += "<div class='nightordercolumns'><div class='nightorderlist'>";
+    html += "<div class='scriptname'>" + scriptJson[0].name + "</div>";
+    /*val.firstNight.forEach( function (role) {
+      html += "<div>" + role + "</div>";
+    });*/
+    json.firstNight.forEach(function(val) {
+
+        if (['DAWN', 'DUSK', 'DEMON', 'MINION'].includes(val)) {
+            nightOrderJsonTmp.forEach(function(tmp) {
+                if (val == tmp.id) {
+                    html += "<div class='orderrole'>";
+                    html += "<img class='tmpikon' src = '" + tmp.image + "''>";
+                    html += "<p class='nightroledescription' ";
+                    html += ">" + tmp.name + "<br>";
+                    html += "<span class='nightdetail'>" + tmp.firstNightReminder + "</span></p>"
+                    html += "</div>";
+                }
+            });
+        } else {
+            //html += "<div class='orderrole'>" + val + "</div>";
+            scriptJson.forEach(function(role) {
+
+                //html += "<div class='orderrole'>" + role.id +"/" + val + "</div>";
+                if (role.id == (val + "cz")) {
+                    html += "<div class='orderrole'>";
+                    html += "<img class='nightikon' src = '" + role.image + "''>";
+                    html += "<p class='nightroledescription' ";
+                    if (role.team == "townsfolk" || role.team == "outsider")
+                        html += "style='color:blue;'";
+                    else
+                        html += "style='color:red;'";
+                    html += ">" + role.name + "<br>";
+                    html += "<span class='nightdetail'>" + role.firstNightReminder + "</span></p>"
+                    html += "</div>";
+                }
+            });
         }
-      });
-    }
-    //html += "<div>" + val + "</div>";
-  });
-  html += "</div>";
-  html += "<div class='nightorderpanel'>" + "D<br>a<br>l<br>š<br>í<br><br>n<br>o<br>c<br>i" + "</div></div>";
-  html += "</div>";
-  document.getElementsByClassName('OtherNightOrderImage')[0].innerHTML = html;
-//});
+        //html += "<div>" + val + "</div>";
+    });
+    html += "</div>";
+    html += "<div class='nightorderpanel'>" + "P<br>r<br>v<br>n<br>í<br><br>n<br>o<br>c" + "</div></div>";
+    html += "</div>";
+    document.getElementsByClassName('FirstNightOrderImage')[0].innerHTML = html;
+
+    html = '';
+    //json.forEach(function (val) {
+    html += "<div class='nightorder'>";
+    html += "<div class='nightordercolumns'><div class='nightorderlist'>";
+    html += "<div class='scriptname'>" + scriptJson[0].name + "</div>";
+    /*val.firstNight.forEach( function (role) {
+      html += "<div>" + role + "</div>";
+    });*/
+    json.otherNight.forEach(function(val) {
+
+        if (['DAWN', 'DUSK', 'DEMON', 'MINION'].includes(val)) {
+            nightOrderJsonTmp.forEach(function(tmp) {
+                if (val == tmp.id) {
+                    html += "<div class='orderrole'>";
+                    html += "<img class='tmpikon' src = '" + tmp.image + "''>";
+                    html += "<p class='nightroledescription' ";
+                    html += ">" + tmp.name + "<br>";
+                    html += "<span class='nightdetail'>" + tmp.otherNightReminder + "</span></p>"
+                    html += "</div>";
+                }
+            });
+        } else {
+            //html += "<div class='orderrole'>" + val + "</div>";
+            scriptJson.forEach(function(role) {
+
+                //html += "<div class='orderrole'>" + role.id +"/" + val + "</div>";
+                if (role.id == (val + "cz")) {
+                    html += "<div class='orderrole'>";
+                    html += "<img class='nightikon' src = '" + role.image + "''>";
+                    html += "<p class='nightroledescription' ";
+                    if (role.team == "townsfolk" || role.team == "outsider")
+                        html += "style='color:blue;'";
+                    else
+                        html += "style='color:red;'";
+                    html += ">" + role.name + "<br>";
+                    html += "<span class='nightdetail'>" + role.otherNightReminder + "</span></p>"
+                    html += "</div>";
+                }
+            });
+        }
+        //html += "<div>" + val + "</div>";
+    });
+    html += "</div>";
+    html += "<div class='nightorderpanel'>" + "D<br>a<br>l<br>š<br>í<br><br>n<br>o<br>c<br>i" + "</div></div>";
+    html += "</div>";
+    document.getElementsByClassName('OtherNightOrderImage')[0].innerHTML = html;
+    //});
 }
 
 document.getElementById('saveFirstPng').addEventListener('click', () => {
     const element = document.getElementById('captureThisFirstNight');
 
-    html2canvas(element, { scale: 2, allowTaint: true, useCORS:true }).then(canvas => {
-      const link = document.createElement('a');
-      link.download = 'firstNight.png';
-      link.crossOrigin='anonymous';
-      link.href = canvas.toDataURL('image/png');
-      link.click();
+    html2canvas(element, {
+        scale: 2,
+        allowTaint: true,
+        useCORS: true
+    }).then(canvas => {
+        const link = document.createElement('a');
+        link.download = 'firstNight.png';
+        link.crossOrigin = 'anonymous';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
     });
-  });
+});
 
 document.getElementById('saveOtherPng').addEventListener('click', () => {
     const element = document.getElementById('captureThisOtherNight');
 
-    html2canvas(element, { scale: 2, allowTaint: true, useCORS:true }).then(canvas => {
-      const link = document.createElement('a');
-      link.download = 'otherNight.png';
-      link.crossOrigin='anonymous';
-      link.href = canvas.toDataURL('image/png');
-      link.click();
+    html2canvas(element, {
+        scale: 2,
+        allowTaint: true,
+        useCORS: true
+    }).then(canvas => {
+        const link = document.createElement('a');
+        link.download = 'otherNight.png';
+        link.crossOrigin = 'anonymous';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
     });
-  });
+});
 
 document.getElementById('saveScriptPng').addEventListener('click', () => {
     const element = document.getElementById('captureScript');
 
-    html2canvas(element, { scale: 2 } ).then(canvas => {
-      const link = document.createElement('a');
-      link.download = 'script.png';
-      link.crossOrigin='anonymous';
-      link.href = canvas.toDataURL('image/png');
-      link.click();
+    html2canvas(element, {
+        scale: 2
+    }).then(canvas => {
+        const link = document.createElement('a');
+        link.download = 'script.png';
+        link.crossOrigin = 'anonymous';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
     });
-  });
+});
 
 
 
 
-    // Posloucháme změnu souboru
-    /*fileInput.addEventListener('change', (event) => {
-      const file = event.target.files[0]; // vybraný soubor
-          
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = (e) => {
-          logo.src = e.target.result; // změní src na vybraný obrázek
-        };
-        reader.readAsDataURL(file);
-      }
-    });*/
+// Posloucháme změnu souboru
+/*fileInput.addEventListener('change', (event) => {
+  const file = event.target.files[0]; // vybraný soubor
+      
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      logo.src = e.target.result; // změní src na vybraný obrázek
+    };
+    reader.readAsDataURL(file);
+  }
+});*/
 const fileInput = document.getElementById("fileInput");
-  const img = document.querySelector("#scriptlogo");
+const img = document.querySelector("#scriptlogo");
 
-  fileInput.addEventListener("change", function () {
+fileInput.addEventListener("change", function() {
     const file = this.files[0];
     if (file) {
-      const reader = new FileReader();
-      reader.onload = function (e) {
-        img.src = e.target.result; // nastavíme src na obsah vybraného souboru
-      };
-      reader.readAsDataURL(file);
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            img.src = e.target.result; // nastavíme src na obsah vybraného souboru
+        };
+        reader.readAsDataURL(file);
     }
-  });
+});
 
 
 
 function updateHeight() {
-      
 
-      /*const roles = document.querySelectorAll(".role");
-      const newHeight = roleHeightslider.value + "px";
-      valueText.textContent = newHeight;
-      roles.forEach(role => {
-        role.style.height = newHeight;
-      });*/
-      const newHeight = roleHeightslider.value + "px";
-      roleHeightsliderValueText.textContent = newHeight;
 
-      // nastavíme CSS proměnnou na rootu
-      document.documentElement.style.setProperty("--role-height", newHeight);
-    }
+    /*const roles = document.querySelectorAll(".role");
+    const newHeight = roleHeightslider.value + "px";
+    valueText.textContent = newHeight;
+    roles.forEach(role => {
+      role.style.height = newHeight;
+    });*/
+    const newHeight = roleHeightslider.value + "px";
+    roleHeightsliderValueText.textContent = newHeight;
+
+    // nastavíme CSS proměnnou na rootu
+    document.documentElement.style.setProperty("--role-height", newHeight);
+}
 
 
 function updateTitleHeight() {
-      heightSlider = TitleHeightSlider.value;
-      TitleHeightValueText.textContent = heightSlider + "px";
+    heightSlider = TitleHeightSlider.value;
+    TitleHeightValueText.textContent = heightSlider + "px";
 }
 
 function updateTownsfolkSlider() {
-      townsfolkOffset = TownsfolkOffsetSlider.value;
-      
-      TownsfolkOffsetValueText.textContent = townsfolkOffset + "px";
+    townsfolkOffset = TownsfolkOffsetSlider.value;
+
+    TownsfolkOffsetValueText.textContent = townsfolkOffset + "px";
 }
+
 function updateMinionSlider() {
-      MinionOffset = MinionOffsetSlider.value;
-      MinionOffsetValueText.textContent = MinionOffset + "px";
+    MinionOffset = MinionOffsetSlider.value;
+    MinionOffsetValueText.textContent = MinionOffset + "px";
 }
+
 function updateDemonSlider() {
-      demonOffset = DemonOffsetSlider.value;
-      DemonOffsetValueText.textContent = demonOffset + "px";
+    demonOffset = DemonOffsetSlider.value;
+    DemonOffsetValueText.textContent = demonOffset + "px";
 }
 
 roleHeightslider.addEventListener("input", updateHeight);
@@ -833,86 +860,3 @@ TitleHeightSlider.addEventListener("input", updateTitleHeight);
 TownsfolkOffsetSlider.addEventListener("input", updateTownsfolkSlider);
 MinionOffsetSlider.addEventListener("input", updateMinionSlider);
 DemonOffsetSlider.addEventListener("input", updateDemonSlider);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
