@@ -23,64 +23,7 @@ let countOfDemons = 0;
 
 let townsfolkOffset = 0;
 
-function renderJinxTableWithImages(idObjects, jinxData, rolesData, tableId) {
-    const table = document.getElementById(tableId);
-    table.innerHTML = "";
 
-    // 🔹 převod [{id: "..."}] → ["..."]
-    const idList = idObjects.map(obj => obj.id);
-
-    // mapa rolí
-    const roleMap = {};
-    rolesData.forEach(role => {
-        roleMap[role.id] = role;
-    });
-
-    // hlavička
-    const header = document.createElement("tr");
-    header.innerHTML = `
-    <th>Role 1</th>
-    <th>Role 2</th>
-    <th>Jinx</th>
-  `;
-    table.appendChild(header);
-
-    // data
-    Object.values(jinxData).forEach(sheet => {
-        sheet.forEach(row => {
-            const first = row["JSON 1st"];
-            const second = row["JSON 2nd"];
-
-            if (idList.includes(first) && idList.includes(second)) {
-                const img1 = roleMap[first]?.image || "";
-                const img2 = roleMap[second]?.image || "";
-
-                const tr = document.createElement("tr");
-
-                tr.innerHTML = `
-          <td>${img1 ? `<img src="${img1}" alt="${first}" width="40">` : ""}</td>
-          <td>${img2 ? `<img src="${img2}" alt="${second}" width="40">` : ""}</td>
-          <td>${row["Jinx"] ?? ""}</td>
-        `;
-
-                table.appendChild(tr);
-            }
-        });
-    });
-}
-
-
-function loadAndRender(scriptRaw) {
-    console.log(scriptRaw);
-
-    Promise.all([
-            fetch("botc/jinx_list.json").then(r => r.json()),
-            fetch("botc/rolescz.json").then(r => r.json())
-        ])
-        .then(([jinxData, rolesData]) => {
-            renderJinxTableWithImages(scriptRaw, jinxData, rolesData, "jinxTable");
-        });
-}
 
 var rules = [];
 window.fetch("botc/script-check-rules.json").then(x => {
@@ -621,6 +564,97 @@ function testSetup() {
   imageElement.src = myImage;                           
 
 }  */
+
+function renderJinxTableWithImages(idObjects, jinxData, rolesData, tableId) {
+    /*const table = document.getElementById(tableId);
+    table.innerHTML = "";
+
+    // 🔹 převod [{id: "..."}] → ["..."]
+    const idList = idObjects.map(obj => obj.id);
+
+    // mapa rolí
+    const roleMap = {};
+    rolesData.forEach(role => {
+        roleMap[role.id] = role;
+    });
+
+    // hlavička
+    const header = document.createElement("tr");
+    header.innerHTML = `
+    <th>Role 1</th>
+    <th>Role 2</th>
+    <th>Jinx</th>
+  `;
+    table.appendChild(header);
+
+    // data
+    Object.values(jinxData).forEach(sheet => {
+        sheet.forEach(row => {
+            const first = row["JSON 1st"];
+            const second = row["JSON 2nd"];
+
+            if (idList.includes(first) && idList.includes(second)) {
+                const img1 = roleMap[first]?.image || "";
+                const img2 = roleMap[second]?.image || "";
+
+                const tr = document.createElement("tr");
+
+                tr.innerHTML = `
+          <td>${img1 ? `<img src="${img1}" alt="${first}" width="40">` : ""}</td>
+          <td>${img2 ? `<img src="${img2}" alt="${second}" width="40">` : ""}</td>
+          <td>${row["Jinx"] ?? ""}</td>
+        `;
+
+                table.appendChild(tr);
+            }
+        });
+    });*/
+    let html = '';
+    //json.forEach(function (val) {
+    html += "<div class='nightorder'>";
+    html += "<div class='nightordercolumns'><div class='nightorderlist'>";
+    html += "<div class='scriptname'>" + scriptJson[0].name + "</div>";
+
+    const idList = idObjects.map(obj => obj.id);
+
+    // mapa rolí
+    const roleMap = {};
+    rolesData.forEach(role => {
+        roleMap[role.id] = role;
+    });
+    Object.values(jinxData).forEach(sheet => {
+        sheet.forEach(row => {
+            const first = row["JSON 1st"];
+            const second = row["JSON 2nd"];
+
+            if (idList.includes(first) && idList.includes(second)) {
+                const img1 = roleMap[first]?.image || "";
+                const img2 = roleMap[second]?.image || "";
+
+                html += "<div class='orderrole'>";
+                html += "<img class='nightikon' src = '" + ${img1 ? `<img src="${img1}" alt="${first}" width="40">` : ""} + "''>";
+                html += "<img class='nightikon' src = '" + ${img2 ? `<img src="${img2}" alt="${second}" width="40">` : ""} + "''>";
+                html += "<span class='nightdetail'>" + ${row["Jinx"] ?? ""} + "</span></p>"
+                html += "</div>";
+            }
+        });
+    });
+
+    document.getElementsByClassName('jinxImage')[0].innerHTML = html;
+}
+
+
+function loadAndRender(scriptRaw) {
+    console.log(scriptRaw);
+
+    Promise.all([
+            fetch("botc/jinx_list.json").then(r => r.json()),
+            fetch("botc/rolescz.json").then(r => r.json())
+        ])
+        .then(([jinxData, rolesData]) => {
+            renderJinxTableWithImages(scriptRaw, jinxData, rolesData, "jinxTable");
+        });
+}
 
 function generateNightOrder() {
 
