@@ -611,7 +611,7 @@ function renderJinxTableWithImages(idObjects, jinxData, rolesData, tableId) {
     });*/
     let html = '';
     //json.forEach(function (val) {
-    html += "<div class='nightorder'>";
+    html += "<div class='jinxlist'>";
     html += "<div class='nightordercolumns'><div class='nightorderlist'>";
 
     const idList = idObjects.map(obj => obj.id);
@@ -638,7 +638,14 @@ function renderJinxTableWithImages(idObjects, jinxData, rolesData, tableId) {
                         html += "style='color:blue;'";
                     else
                         html += "style='color:red;'";
-                    html += ">" + roleMap[first]?.name + "<br>";
+                    html += ">" + roleMap[first]?.name;// + "<br>";
+                html += " & "
+                html += "<p class='nightroledescription' ";
+                    if (roleMap[second]?.team == "townsfolk" || roleMap[second]?.team == "outsider")
+                        html += "style='color:blue;'";
+                    else
+                        html += "style='color:red;'";
+                    html += ">" + roleMap[second]?.name + "<br>";
                 html += "<span class='nightdetail'>" + row["Jinx"] + "</span></p>"
                 html += "</div>";
             }
