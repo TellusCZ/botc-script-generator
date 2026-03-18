@@ -23,6 +23,62 @@ let countOfDemons = 0;
 
 let townsfolkOffset = 0;
 
+function renderJinxTableWithImages(idList, jinxData, rolesData, tableId) {
+  const table = document.getElementById(tableId);
+  table.innerHTML = "";
+
+  const roleMap = {};
+  rolesData.forEach(role => {
+    roleMap[role.id] = role;
+  });
+
+  const header = document.createElement("tr");
+  header.innerHTML = `
+    <th>Role 1</th>
+    <th>Role 2</th>
+    <th>Jinx</th>
+  `;
+  table.appendChild(header);
+
+  Object.values(jinxData).forEach(sheet => {
+    sheet.forEach(row => {
+      const first = row["JSON 1st"];
+      const second = row["JSON 2nd"];
+
+      if (idList.includes(first) && idList.includes(second)) {
+        const img1 = roleMap[first]?.image || "";
+        const img2 = roleMap[second]?.image || "";
+
+        const tr = document.createElement("tr");
+
+        tr.innerHTML = `
+          <td>${img1 ? `<img src="${img1}" alt="${first}" width="40" loading="lazy">` : ""}</td>
+          <td>${img2 ? `<img src="${img2}" alt="${second}" width="40" loading="lazy">` : ""}</td>
+          <td>${row["Jinx"] ?? ""}</td>
+        `;
+
+        table.appendChild(tr);
+      }
+    });
+  });
+}
+
+// funkce volaná tlačítkem
+function loadAndRender() {
+  const ids = ["washerwoman", "librarian", "imp"]; // vstupní seznam ID
+
+  Promise.all([
+    fetch("jinxes_updated.json").then(r => r.json()),
+    fetch("rolescz.json").then(r => r.json())
+  ])
+  .then(([jinxData, rolesData]) => {
+    renderJinxTableWithImages(ids, jinxData, rolesData, "jinxTable");
+  })
+  .catch(err => {
+    console.error("Chyba při načítání dat:", err);
+  });
+}
+
 var rules = [];
 window.fetch("botc/script-check-rules.json").then(x => { console.log(x); return x.json() }).then(x => rules = x);
 
