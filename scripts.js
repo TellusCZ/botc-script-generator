@@ -13,12 +13,128 @@ const DemonOffsetValueText = document.getElementById("DemonOffsetValue");
 const TitleHeightSlider = document.getElementById("TitleHeightSlider");
 const TitleHeightValueText = document.getElementById("TitleHeightValue");
 
+const output = document.getElementById("returnList");
+
+
 let countOfTownsfolk = 0;
 let countOfOutsiders = 0;
 let countOfMinions = 0;
 let countOfDemons = 0;
 
 let townsfolkOffset = 0;
+
+var rules = [];
+window.fetch("botc/script-check-rules.json").then(x => { console.log(x); return x.json() }).then(x => rules = x);
+
+var groups = {};
+window.fetch("botc/character-groups.json").then(x => x.json()).then(x => groups = x);
+
+function parseRule(rule, script) {  
+  if (rule.missing) {
+    if (passesPresenceCheck(script, rule.missing)) return false;
+  }
+  
+  if (rule.present) {
+    if (!passesPresenceCheck(script, rule.present)) return false;
+  }
+  
+  if (rule.count) {
+    const count = countGroup(script, rule.count.characters);
+    
+    if (rule.count.gt && count <= rule.count.gt) return false;
+    if (rule.count.lt && count >= rule.count.lt) return false;
+    if (rule.count.eq && count != rule.count.eq) return false;
+  }
+  
+  return true;
+}
+
+function passesPresenceCheck(script, presence) {
+  let result;
+    
+  for (let grp of presence) {
+    // AND all the groups
+    result = false;
+
+    for (let elt of grp) {
+      // OR all the elements of the group
+      if (recursivePresence(elt, script)) {
+        result = true;
+        break
+      }
+    }
+
+    if (!result) return false;
+  }
+  
+  return true;
+}
+
+function countGroup(script, group) {
+  let total = 0;
+  
+  for (let elt of group) {
+    // Count the presence of all the elements of the group in the script
+    total += recursivePresence(elt, script);
+  }
+  
+  return total;
+}
+
+function recursivePresence(char, script) {
+  let total = 0;
+  
+  if (groups[char]) {
+    for (var elt of groups[char]) {
+      total += recursivePresence(elt, script);
+    }
+  }
+  
+  if (script.includes(char)) total++;
+  
+  return total;
+}
+
+function checkScript(scriptJson) {
+  // Transform filecontent according to your specifications
+  scriptJson = scriptJson.map((item) => {
+    if (item.id === '_meta') {
+      return {
+        author: item.author,
+        name: item.name,
+        isOfficial: false,
+        id: item.id,
+      }
+    } else {
+      if (item.id) {
+        return { id: item.id }
+      } else {
+        return { id: item }
+      }
+    }
+  })
+
+  console.log(scriptJson)
+  scriptJson = scriptJson.filter((e) => e.id).map((e) => e.id)
+
+  for (let elt of rules) {
+    if (parseRule(elt, scriptJson)) {
+      const msg = document.createElement('li')
+
+      if (elt.note) {
+        msg.innerHTML = elt.note
+      } else if (elt.warning) {
+        msg.style.color = 'yellow'
+        msg.innerHTML = elt.warning
+      } else if (elt.error) {
+        msg.style.color = 'red'
+        msg.innerHTML = elt.error
+      }
+
+      output.appendChild(msg)
+    }
+  }
+}
 
 async function loadRoles() {
       try {
