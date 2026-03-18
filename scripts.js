@@ -65,10 +65,11 @@ function renderJinxTableWithImages(idList, jinxData, rolesData, tableId) {
 
 // funkce volaná tlačítkem
 function loadAndRender() {
-  const ids = ["washerwoman", "librarian", "imp"]; // vstupní seznam ID
+  const ids = scriptRaw; // vstupní seznam ID
+  console.log(ids);
 
   Promise.all([
-    fetch("jinxes_updated.json").then(r => r.json()),
+    fetch("jinxlist.json").then(r => r.json()),
     fetch("rolescz.json").then(r => r.json())
   ])
   .then(([jinxData, rolesData]) => {
@@ -171,7 +172,7 @@ function checkScript(scriptJson) {
     }
   })
 
-  console.log(scriptJson)
+  console.log(scriptJson);
   scriptJson = scriptJson.filter((e) => e.id).map((e) => e.id)
 
   for (let elt of rules) {
@@ -360,11 +361,9 @@ function generateScript() {
         document.getElementsByClassName('message')[0].innerHTML = html;
       };*/
       TranslateScript();
+      const scriptText = document.getElementById("scriptJson").value;
+      let scriptRaw = JSON.parse(scriptText);
       try {
-        const scriptText = document.getElementById("scriptJson").value;
-
-    let scriptRaw = JSON.parse(scriptText);
-        console.log(scriptRaw);
         checkScript(scriptRaw);
       }
       catch (e) {
@@ -374,6 +373,7 @@ function generateScript() {
           throw e;
         }
       }
+      loadAndRender(scriptRaw);
 const scriptText = document.getElementById("translatedScriptCZ").value;
 const json = JSON.parse(scriptText);
 let html = '';
