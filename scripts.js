@@ -634,7 +634,7 @@ function renderJinxTableWithImages(idObjects, jinxData, rolesData, tableId) {
                 html += "<img class='nightikon' src = '" + img1 + "''>";
                 html += "<img class='nightikon' src = '" + img2 + "''>";
                 html += "<p class='nightroledescription' ";
-                    if (roleMap[first]?.team == "townsfolk" || role.team == "outsider")
+                    if (roleMap[first]?.team == "townsfolk" || roleMap[first]?.team == "outsider")
                         html += "style='color:blue;'";
                     else
                         html += "style='color:red;'";
