@@ -754,7 +754,6 @@ function generateNightOrder() {
     html += "<div class='nightorder'>";
     html += "<div class='nightordercolumns'><div class='nightorderlist'>";
     html += "<div class='scriptname' style=' font-size: " + TitleHeightSlider.value + "px;" + "'>";
-    const srcLogo = document.getElementById("scriptlogo").getAttribute('src');
     if (srcLogo) {
         html += "<img class='scriptlogo' src='" + document.getElementById("scriptlogo").src + "'>"
     }
