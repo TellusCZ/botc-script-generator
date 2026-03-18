@@ -632,8 +632,9 @@ function renderJinxTableWithImages(idObjects, jinxData, rolesData, tableId) {
                 const img2 = roleMap[second]?.image || "";
 
                 html += "<div class='orderrole'>";
-                html += "<img class='nightikon' src = '" + ${img1 ? `<img src="${img1}" alt="${first}" width="40">` : ""} + "''>";
-                html += "<img class='nightikon' src = '" + ${img2 ? `<img src="${img2}" alt="${second}" width="40">` : ""} + "''>";
+                html += "<img class='nightikon' src = '" + img1 + "''>";
+                //html += "<img class='nightikon' src = '" + ${img2 ? `<img src="${img2}" alt="${second}" width="40">` : ""} + "''>";
+                html += "<img class='nightikon' src = '" + img2 + "''>";
                 html += "<span class='nightdetail'>" + ${row["Jinx"] ?? ""} + "</span></p>"
                 html += "</div>";
             }
