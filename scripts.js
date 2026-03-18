@@ -633,20 +633,20 @@ function renderJinxTableWithImages(idObjects, jinxData, rolesData, tableId) {
                 html += "<div class='orderrole'>";
                 html += "<img class='nightikon' src = '" + img1 + "''>";
                 html += "<img class='nightikon' src = '" + img2 + "''>";
-                html += "<p ";
+                html += "<p class='nightroledescription'" ;
                     if (roleMap[first]?.team == "townsfolk" || roleMap[first]?.team == "outsider")
                         html += "style='color:blue;'";
                     else
                         html += "style='color:red;'";
                     html += ">" + roleMap[first]?.name;// + "<br>";
-                html += "</p> & ";
-                html += "<p ";
+                html += "</span> & ";
+                html += "<span ";
                     if (roleMap[second]?.team == "townsfolk" || roleMap[second]?.team == "outsider")
                         html += "style='color:blue;'";
                     else
                         html += "style='color:red;'";
-                    html += ">" + roleMap[second]?.name + "</p><br>";
-                html += "<span class='nightdetail'>" + row["Jinx"] + "</span>"
+                    html += ">" + roleMap[second]?.name + "</span><br>";
+                html += "<span class='nightdetail'>" + row["Jinx"] + "</p>"
                 html += "</div>";
             }
         });
