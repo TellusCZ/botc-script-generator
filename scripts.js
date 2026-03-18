@@ -660,6 +660,63 @@ function renderJinxTableWithImages(idObjects, jinxData, rolesData, tableId) {
     });
     html += "</div>";
     console.log(html);
+
+    const scriptText = document.getElementById("translatedScriptCZ").value;
+    const scriptJson = JSON.parse(scriptText);
+
+    const nightOrderTmp = document.getElementById("nightOrderTmp").value;
+    const nightOrderJsonTmp = JSON.parse(nightOrderTmp);
+
+    const nightOrder = document.getElementById("nightOrderSheet").value;
+    const json = JSON.parse(nightOrder);
+    /*try {
+            const response = await fetch('botc/nightsheet.json');
+            if (!response.ok) {
+              throw new Error('Soubor roles.json nelze nacíst. Zkontrolujte, že se nachází ve stejné složce jako HTML.');
+            }
+            const data = await response.json();
+            var nightOrderString = JSON.stringify(data, null, 2);
+          } catch (e) {
+            alert("Chyba pri nacítání roles.json: " + e.message);
+          }*/
+    html += "<div class='scriptname' style=' font-size: " + TitleHeightSlider.value + "px;" + "'>";
+    html += "První noc pořadí" + "</div><br>";
+    json.firstNight.forEach(function(val) {
+
+        if (['DAWN', 'DUSK', 'DEMON', 'MINION'].includes(val)) {
+            nightOrderJsonTmp.forEach(function(tmp) {
+                if (val == tmp.id) {
+                    html += "<img class='tmpikon' src = '" + tmp.image + "''>";
+                }
+            });
+        } else {
+            scriptJson.forEach(function(role) {
+                if (role.id == (val + "cz")) {
+                    html += "<img class='nightikon' src = '" + role.image + "''>";
+                }
+            });
+        }
+    });
+
+    html += "<div class='scriptname' style=' font-size: " + TitleHeightSlider.value + "px;" + "'>";
+    html += "další noci pořadí" + "</div><br>";
+    json.otherNight.forEach(function(val) {
+
+        if (['DAWN', 'DUSK', 'DEMON', 'MINION'].includes(val)) {
+            nightOrderJsonTmp.forEach(function(tmp) {
+                if (val == tmp.id) {
+                    html += "<img class='tmpikon' src = '" + tmp.image + "''>";
+                }
+            });
+        } else {
+            scriptJson.forEach(function(role) {
+                if (role.id == (val + "cz")) {
+                    html += "<img class='nightikon' src = '" + role.image + "''>";
+                }
+            });
+        }
+    });
+    
     document.getElementsByClassName('jinxImage')[0].innerHTML = html;
 }
 
