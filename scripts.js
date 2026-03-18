@@ -618,7 +618,7 @@ function renderJinxTableWithImages(idObjects, jinxData, rolesData, tableId) {
     if (srcLogo) {
         html += "<img class='scriptlogo' src='" + document.getElementById("scriptlogo").src + "'>"
     }
-    html += document.getElementById("scriptname").value + "</div>";
+    html += document.getElementById("scriptname").value + "</div><br><br>";
     html += "<div class='nightordercolumns'><div class='nightorderlist'>";
 
     const idList = idObjects.map(obj => obj.id);
@@ -654,7 +654,7 @@ function renderJinxTableWithImages(idObjects, jinxData, rolesData, tableId) {
                         html += "style='color:red;'";
                     html += ">" + roleMap[second]?.name + "</span><br>";
                 html += "<span class='nightdetail'>" + row["Jinx"] + "</p>"
-                html += "</div><br><br>";
+                html += "</div>";
             }
         });
     });
