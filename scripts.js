@@ -74,8 +74,8 @@ function loadAndRender(scriptRaw) {
   console.log(scriptRaw);
 
   Promise.all([
-    fetch("jinxes_updated.json").then(r => r.json()),
-    fetch("rolescz.json").then(r => r.json())
+    fetch("botc/jinx_list.json").then(r => r.json()),
+    fetch("botc/rolescz.json").then(r => r.json())
   ])
   .then(([jinxData, rolesData]) => {
     renderJinxTableWithImages(scriptRaw, jinxData, rolesData, "jinxTable");
