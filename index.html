@@ -1,435 +1,351 @@
 <!doctype html>
 
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv=“X-UA-Compatible” content=“ie=edge”>
-        <link rel="shortcut icon" type="image/png" href="grimoire.png">
 
-        <title>Generátor scriptu</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv=“X-UA-Compatible” content=“ie=edge”>
+    <link rel="shortcut icon" type="image/png" href="grimoire.png">
 
-        <!-- Load external CSS styles -->
-        <style>
-@font-face { font-family: "LHF Unlovable v2"; src: url('LHFUnlovableBotc.ttf'); } 
+    <title>Generátor scriptu</title>
 
-@import url(https://db.onlinewebfonts.com/c/46887ce1dc738fc2de8f66db681c14ee?family=LHF+Unlovable);
-@font-face {
-    font-family: "LHF Unlovable";
-    src: url("https://db.onlinewebfonts.com/t/46887ce1dc738fc2de8f66db681c14ee.eot");
-    src: url("https://db.onlinewebfonts.com/t/46887ce1dc738fc2de8f66db681c14ee.eot?#iefix")format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/46887ce1dc738fc2de8f66db681c14ee.woff2")format("woff2"),
-    url("https://db.onlinewebfonts.com/t/46887ce1dc738fc2de8f66db681c14ee.woff")format("woff"),
-    url("https://db.onlinewebfonts.com/t/46887ce1dc738fc2de8f66db681c14ee.ttf")format("truetype"),
-    url("https://db.onlinewebfonts.com/t/46887ce1dc738fc2de8f66db681c14ee.svg#LHF Unlovable")format("svg");
-}
+    <!-- Load external CSS styles -->
+    <style>
+        @font-face {
+            font-family: "LHF Unlovable v2";
+            src: url('LHFUnlovableBotc.ttf');
+        }
 
+        @import url(https://db.onlinewebfonts.com/c/46887ce1dc738fc2de8f66db681c14ee?family=LHF+Unlovable);
 
-h1 {
-    text-align: center;
-    font-family: "Source Sans Pro", sans-serif;
-    font-weight: normal;
-}
-
-body {
-  padding: 20px;
-  font-family: sans-serif;
-  background-color: #f9f9f9;
-}
-    label {
-      font-weight: bold;
-      display: block;
-      margin-top: 20px;
-    }
-    textarea {
-      width: 100%;
-      height: 200px;
-      padding: 10px;
-      font-family: monospace;
-      font-size: 14px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      box-sizing: border-box;
-      resize: vertical;
-    }
-    button {
-      margin-top: 20px;
-      padding: 10px 20px;
-      font-size: 16px;
-      border: none;
-      background-color: #007acc;
-      color: white;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: 1s;
-    }
-    button:hover {
-      background-color: #ff4d4d;
-    }
-
-    input[type="file"]::file-selector-button {
-  border: 2px solid #6c5ce7;
-  border-radius: 5px;
-        color: white;
-        margin-top: 20px;
-      padding: 10px 20px;
-      font-size: 16px;
-  background-color: #007acc;
-  transition: 1s;
-}
-
-input[type="file"]::file-selector-button:hover {
-  background-color: #ff4d4d;
-  border: 2px solid #00cec9;
-}   
-
-.role { 
-  display: flex; 
-  width: 420px;
-  height: var(--role-height);
-  margin-left: 10px;
-}
-
-.roledescription { 
-  margin-left: 5px; 
-  margin-top: 0; 
-  width: 350px;
-  font-weight: bold;
-  font-size: 16px;
-}
-
-.creadit { 
-  font-size: 10;
-}
-
-.roleikon { height: 71px; width: 71px;}
-.roledetail { 
-  color:black;
-  font-weight: normal;
-  font-size: 14px;
-}
-
-.script { 
-  width: 1024px;
-  height: 1443px;
-  background-image: url('botc/backgroundv6.png');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-
-.OtherNightOrderImage {
-  width: 1024px;
-}
-
-.FirstNightOrderImage {
-  width: 1024px;
-}
-
-.message {
-  width: 1024px;
-  height: 1443px;
-}
-
-.nightorder { 
-  height: 1443px;
-  width: 1024px;
-  background-image: url('botc/nightorderv2.png');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-
-.nightordercolumns {
-    display: flex;
- }
-
-.nightorderlist {
-    width: 924px;
- }
-.nightorderpanel {
-    width: 100px;
-    font-family: "LHF Unlovable v2";
-    text-align: center;
-    font-size: 70px;
-    padding-top: 20px;
-    margin-left: 4px;
-    color: #ccb0a2;
-    height: 74px;
- }
-
-.nightikon { height: 50px; width: 50px;}
-.tmpikon { height: 40px; width: 40px; padding-right: 10px;}
-.nightdetail { 
-  color:black;
-  font-weight: normal;
-  font-size: 14px;
-}
+        @font-face {
+            font-family: "LHF Unlovable";
+            src: url("https://db.onlinewebfonts.com/t/46887ce1dc738fc2de8f66db681c14ee.eot");
+            src: url("https://db.onlinewebfonts.com/t/46887ce1dc738fc2de8f66db681c14ee.eot?#iefix")format("embedded-opentype"),
+                url("https://db.onlinewebfonts.com/t/46887ce1dc738fc2de8f66db681c14ee.woff2")format("woff2"),
+                url("https://db.onlinewebfonts.com/t/46887ce1dc738fc2de8f66db681c14ee.woff")format("woff"),
+                url("https://db.onlinewebfonts.com/t/46887ce1dc738fc2de8f66db681c14ee.ttf")format("truetype"),
+                url("https://db.onlinewebfonts.com/t/46887ce1dc738fc2de8f66db681c14ee.svg#LHF Unlovable")format("svg");
+        }
 
 
-.orderrole {
-  display: flex;
-  margin-left: 20px;
-}
+        h1 {
+            text-align: center;
+            font-family: "Source Sans Pro", sans-serif;
+            font-weight: normal;
+        }
 
-.nightroledescription { 
-  margin-left: 5px; 
-  margin-top: 0; 
-  width: 850px;
-  font-weight: bold;
-  font-size: 16px;
-}
+        body {
+            padding: 20px;
+            font-family: sans-serif;
+            background-color: #f9f9f9;
+        }
 
-.scriptlogo{
-  height: 74px;
-  padding-right: 30px;
-  padding-left: 30px;
-  padding-top: 20px;
-  margin-bottom: -20px;
-}
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 20px;
+        }
 
-.scriptname{
-  font-family: "LHF Unlovable v2";
-  text-align: center;
-  padding-top: 20px;
-  margin-left: 60px;
-  color: #ccb0a2;
-  height: 74px;
-}
+        textarea {
+            width: 100%;
+            height: 200px;
+            padding: 10px;
+            font-family: monospace;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            resize: vertical;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            background-color: #007acc;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 1s;
+        }
+
+        button:hover {
+            background-color: #ff4d4d;
+        }
+
+        input[type="file"]::file-selector-button {
+            border: 2px solid #6c5ce7;
+            border-radius: 5px;
+            color: white;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007acc;
+            transition: 1s;
+        }
+
+        input[type="file"]::file-selector-button:hover {
+            background-color: #ff4d4d;
+            border: 2px solid #00cec9;
+        }
+
+        .role {
+            display: flex;
+            width: 420px;
+            height: var(--role-height);
+            margin-left: 10px;
+        }
+
+        .roledescription {
+            margin-left: 5px;
+            margin-top: 0;
+            width: 350px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .creadit {
+            font-size: 10;
+        }
+
+        .roleikon {
+            height: 71px;
+            width: 71px;
+        }
+
+        .roledetail {
+            color: black;
+            font-weight: normal;
+            font-size: 14px;
+        }
+
+        .script {
+            width: 1024px;
+            height: 1443px;
+            background-image: url('botc/backgroundv6.png');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .OtherNightOrderImage {
+            width: 1024px;
+        }
+
+        .FirstNightOrderImage {
+            width: 1024px;
+        }
+
+        .message {
+            width: 1024px;
+            height: 1443px;
+        }
+
+        .nightorder {
+            height: 1443px;
+            width: 1024px;
+            background-image: url('botc/nightorderv2.png');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .nightordercolumns {
+            display: flex;
+        }
+
+        .nightorderlist {
+            width: 924px;
+        }
+
+        .nightorderpanel {
+            width: 100px;
+            font-family: "LHF Unlovable v2";
+            text-align: center;
+            font-size: 70px;
+            padding-top: 20px;
+            margin-left: 4px;
+            color: #ccb0a2;
+            height: 74px;
+        }
+
+        .nightikon {
+            height: 50px;
+            width: 50px;
+        }
+
+        .tmpikon {
+            height: 40px;
+            width: 40px;
+            padding-right: 10px;
+        }
+
+        .nightdetail {
+            color: black;
+            font-weight: normal;
+            font-size: 14px;
+        }
 
 
-.townsfolk {
-  display: flex; 
-  height: 640px;
-  margin-left: 110px;
-}
+        .orderrole {
+            display: flex;
+            margin-left: 20px;
+        }
 
-.outsider {
-  display: flex; 
-  height: 150px;
-  margin-left: 110px;
-}
+        .nightroledescription {
+            margin-left: 5px;
+            margin-top: 0;
+            width: 850px;
+            font-weight: bold;
+            font-size: 16px;
+        }
 
-.minion {
-  display: flex; 
-  height: 180px;
-  margin-left: 110px;
-}
+        .scriptlogo {
+            height: 74px;
+            padding-right: 30px;
+            padding-left: 30px;
+            padding-top: 20px;
+            margin-bottom: -20px;
+        }
 
-.demon {
-  display: flex; 
-  height: 180px;
-  margin-left: 110px;
-}
+        .scriptname {
+            font-family: "LHF Unlovable v2";
+            text-align: center;
+            padding-top: 20px;
+            margin-left: 60px;
+            color: #ccb0a2;
+            height: 74px;
+        }
 
-.separator {
-  height: 50px;
-  width: 900px;
-  margin-bottom: -15px;
-  margin-top: -5px;
-  margin-left: 110px;
-}
 
-</style><script src="/botc-script-generator/scripts.js" defer></script>
+        .townsfolk {
+            display: flex;
+            height: 640px;
+            margin-left: 110px;
+        }
 
-    </head>
+        .outsider {
+            display: flex;
+            height: 150px;
+            margin-left: 110px;
+        }
 
-    <body onload="testSetup()"/>
+        .minion {
+            display: flex;
+            height: 180px;
+            margin-left: 110px;
+        }
 
-        <h1 class='scriptname' style=' font-size: "70px;" + "'>Generátor scriptu</h1>
-        <p id="demo"></p>
+        .demon {
+            display: flex;
+            height: 180px;
+            margin-left: 110px;
+        }
 
-        <label for="scriptJson">1) Stáhni si script</label>
-  <ul>
-  <li><a href="https://script.bloodontheclocktower.com/" target="_blank">script.bloodontheclocktower.com</a> - nadefinuj si vlastní script a stáhni json </li>
-  <li><a href="https://botc-scripts.azurewebsites.net/" target="_blank">botc-scripts.azurewebsites.net</a> - uživatelsky definované scripty</li>
-  <li>Položka "id":"_meta" s názvem scriptu je nutná pro správné vygenerování</li>
-  </ul>
-  <textarea id="scriptJson" placeholder='Takto vypadá např. Trouble Brewing: [{"id":"_meta","author":"Pandemonium Institute","name":"Trouble Brewing"}{"id":"washerwoman"},{"id":"librarian"},{"id":"investigator"},{"id":"chef"},{"id":"empath"},{"id":"fortune_teller"},{"id":"undertaker"},{"id":"monk"},{"id":"ravenkeeper"},{"id":"virgin"},{"id":"slayer"},{"id":"soldier"},{"id":"mayor"},{"id":"butler"},{"id":"drunk"},{"id":"recluse"},{"id":"saint"},{"id":"poisoner"},{"id":"spy"},{"id":"scarlet_woman"},{"id":"baron"},{"id":"imp"}]'></textarea>
-        <!--<label for="rolesJson">2) Roles JSON</label>-->
-  <button onclick="loadRoles()" hidden>Načíst defaultní anglické role</button>
-  <button onclick="loadRolesCZ()" hidden>Načíst defaultní české role</button>
-  <textarea id="rolesJson" placeholder="Sem vlož Roles JSON..." hidden></textarea>
+        .separator {
+            height: 50px;
+            width: 900px;
+            margin-bottom: -15px;
+            margin-top: -5px;
+            margin-left: 110px;
+        }
+    </style>
+    <script src="/botc-script-generator/scripts.js" defer></script>
 
-  <label for="scriptJson">2) Stáhní si vlastní logo ke scriptu</label>
-  <ul>
-  <li><a href="https://www.pngwing.com/" target="_blank">https://www.pngwing.com/</a> - dobrá stránka na png obrázky </li>
-  </ul>
+</head>
 
-  <label for="fileInput">Vyber logo</label>
-  <input type="file" id="fileInput" accept="image/*" disply>
-  Náhled loga:
-  <img id="scriptlogo" alt="Logo" height="80" width="80">
+<body onload="testSetup()" />
 
-  <button onclick="TranslateScript()" hidden>Přeložit Script</button>
-  <textarea hidden id="translatedScriptJson" placeholder="Výstup TranslateScript..." readonly></textarea>
+<h1 class='scriptname' style=' font-size: "70px;" + "'>Generátor scriptu</h1>
+<p id="demo"></p>
 
-  <!--<label for="translatedScriptCZ" hidden>Přeložený script</label>-->
-  <textarea id="translatedScriptCZ" placeholder="Výstup pro www.bloodstar.xyz a pocketgrimoire.co.uk..." readonly hidden></textarea>
-  <textarea id="nightOrderSheet" hidden ></textarea>
-  <textarea id="nightOrderTmp" hidden ></textarea>
-  <button hidden onclick="saveJsonFromElement('translatedScriptCZ', 'translated-script-cz.json')" hidden>Uložit JSON (CZ)</button>
-        
-        <!-- Load external JavaScript -->
-        <!--<script src="scripts.js"></script>-->
+<label for="scriptJson">1) Stáhni si script</label>
+<ul>
+    <li><a href="https://script.bloodontheclocktower.com/" target="_blank">script.bloodontheclocktower.com</a> - nadefinuj si vlastní script a stáhni json </li>
+    <li><a href="https://botc-scripts.azurewebsites.net/" target="_blank">botc-scripts.azurewebsites.net</a> - uživatelsky definované scripty</li>
+    <li>Položka "id":"_meta" s názvem scriptu je nutná pro správné vygenerování</li>
+</ul>
+<textarea id="scriptJson" placeholder='Takto vypadá např. Trouble Brewing: [{"id":"_meta","author":"Pandemonium Institute","name":"Trouble Brewing"}{"id":"washerwoman"},{"id":"librarian"},{"id":"investigator"},{"id":"chef"},{"id":"empath"},{"id":"fortune_teller"},{"id":"undertaker"},{"id":"monk"},{"id":"ravenkeeper"},{"id":"virgin"},{"id":"slayer"},{"id":"soldier"},{"id":"mayor"},{"id":"butler"},{"id":"drunk"},{"id":"recluse"},{"id":"saint"},{"id":"poisoner"},{"id":"spy"},{"id":"scarlet_woman"},{"id":"baron"},{"id":"imp"}]'></textarea>
+<!--<label for="rolesJson">2) Roles JSON</label>-->
+<button onclick="loadRoles()" hidden>Načíst defaultní anglické role</button>
+<button onclick="loadRolesCZ()" hidden>Načíst defaultní české role</button>
+<textarea id="rolesJson" placeholder="Sem vlož Roles JSON..." hidden></textarea>
+
+<label for="scriptJson">2) Stáhní si vlastní logo ke scriptu</label>
+<ul>
+    <li><a href="https://www.pngwing.com/" target="_blank">https://www.pngwing.com/</a> - dobrá stránka na png obrázky </li>
+</ul>
+
+<label for="fileInput">Vyber logo</label>
+<input type="file" id="fileInput" accept="image/*" disply>
+Náhled loga:
+<img id="scriptlogo" alt="Logo" height="80" width="80">
+
+<button onclick="TranslateScript()" hidden>Přeložit Script</button>
+<textarea hidden id="translatedScriptJson" placeholder="Výstup TranslateScript..." readonly></textarea>
+
+<!--<label for="translatedScriptCZ" hidden>Přeložený script</label>-->
+<textarea id="translatedScriptCZ" placeholder="Výstup pro www.bloodstar.xyz a pocketgrimoire.co.uk..." readonly hidden></textarea>
+<textarea id="nightOrderSheet" hidden></textarea>
+<textarea id="nightOrderTmp" hidden></textarea>
+<button hidden onclick="saveJsonFromElement('translatedScriptCZ', 'translated-script-cz.json')" hidden>Uložit JSON (CZ)</button>
+
+<!-- Load external JavaScript -->
+<!--<script src="scripts.js"></script>-->
 <label for="scriptJson">3) Doladění výsledného scriptu:</label>
 <ul>
-  <li>Po úpravě je třeba znovu vygenerovat script</li>
+    <li>Po úpravě je třeba znovu vygenerovat script</li>
 </ul>
 <label for="TitleHeightSlider">Velikost nadpisu: </label>
-  <input type="range" id="TitleHeightSlider" min="40" max="100" value="70">
-  <span id="TitleHeightValue">70px</span>
+<input type="range" id="TitleHeightSlider" min="40" max="100" value="70">
+<span id="TitleHeightValue">70px</span>
 <label for="RoleHeightSlider">Výška jedné role: </label>
-  <input type="range" id="RoleHeightSlider" min="50" max="80" value="75">
-  <span id="RoleHeightValue">75px</span>
+<input type="range" id="RoleHeightSlider" min="50" max="80" value="75">
+<span id="RoleHeightValue">75px</span>
 
 <label for="TownsfolkOffsetSlider">Podivíní oddělovač offset: </label>
-  <input type="range" id="TownsfolkOffsetSlider" min="-40" max="40" value="0">
-  <span id="TownsfolkOffsetValue">0px</span>
+<input type="range" id="TownsfolkOffsetSlider" min="-40" max="40" value="0">
+<span id="TownsfolkOffsetValue">0px</span>
 
 <label for="MinionOffsetSlider">Přisluhovači oddělovač offset: </label>
-  <input type="range" id="MinionOffsetSlider" min="-40" max="40" value="0">
-  <span id="MinionOffsetValue">0px</span>
+<input type="range" id="MinionOffsetSlider" min="-40" max="40" value="0">
+<span id="MinionOffsetValue">0px</span>
 <label for="DemonOffsetSlider">Démoni oddělovač offset: </label>
-  <input type="range" id="DemonOffsetSlider" min="-40" max="40" value="0">
-  <span id="DemonOffsetValue">0px</span>
+<input type="range" id="DemonOffsetSlider" min="-40" max="40" value="0">
+<span id="DemonOffsetValue">0px</span>
 <ul id="returnList"></ul>
 <table id="jinxTable" border="1" style="margin-top:10px;">
 </table>
 <p>
-  <button onclick="generateScript()">Vygeneruj script</button>
-  <div class="message" id="captureScript"></div>
-  <button id="saveScriptPng">Uložit Script jako PNG</button>
+    <button onclick="generateScript()">Vygeneruj script</button>
+<div class="message" id="captureScript"></div>
+<button id="saveScriptPng">Uložit Script jako PNG</button>
 </p>
-
+<div class="jinxImage" id="captureJinxImage"></div>
 <p>
-  <button onclick="generateNightOrder()">Vygeneruj night order</button>
-  <div class="FirstNightOrderImage" id="captureThisFirstNight"></div>
-  <button id="saveFirstPng">Uložit První noc jako PNG</button>
+    <button onclick="generateNightOrder()">Vygeneruj night order</button>
+<div class="FirstNightOrderImage" id="captureThisFirstNight"></div>
+<button id="saveFirstPng">Uložit První noc jako PNG</button>
 
-  <div class="OtherNightOrderImage" id="captureThisOtherNight"></div>
+<div class="OtherNightOrderImage" id="captureThisOtherNight"></div>
 
-  <button id="saveOtherPng">Uložit Další noc jako PNG</button>
+<button id="saveOtherPng">Uložit Další noc jako PNG</button>
 </p>
-<div class='creadit' >Fonts used from <a href="https://www.onlinewebfonts.com/fonts">fonts</a> is licensed by CC BY 4.0</div>
+<div class='creadit'>Fonts used from <a href="https://www.onlinewebfonts.com/fonts">fonts</a> is licensed by CC BY 4.0</div>
 
 <div id="container"></div>
 
 <div id="img-out"></div>
-        
-    </body>
 
-    <!--<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>-->
-    <script src="https://cdn.jsdelivr.net/npm/html2canvas-pro@1.5.0/dist/html2canvas-pro.min.js"></script>
-    
-    <script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</body>
+
+<!--<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>-->
+<script src="https://cdn.jsdelivr.net/npm/html2canvas-pro@1.5.0/dist/html2canvas-pro.min.js"></script>
+
+<script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <!--<script language="JavaScript" type="text/javascript" src="/js/jquery-ui-personalized-1.5.2.packed.js"></script>
 <script language="JavaScript" type="text/javascript" src="/js/sprinkle.js"></script>-->
 
 
-
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
