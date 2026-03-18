@@ -341,7 +341,7 @@ function generateScript() {
     loadAndRender(scriptRaw);
     const scriptText = document.getElementById("translatedScriptCZ").value;
     const json = JSON.parse(scriptText);
-    document.getElementById("scriptname").innerHTML = json[0].name;
+    document.getElementById("scriptname").value = json[0].name;
     let html = '';
     countOfTownsfolk = 0;
     countOfOutsiders = 0;
@@ -701,7 +701,7 @@ function generateNightOrder() {
     //json.forEach(function (val) {
     html += "<div class='nightorder'>";
     html += "<div class='nightordercolumns'><div class='nightorderlist'>";
-    html += "<div class='scriptname'>" + scriptJson[0].name + "</div>";
+    html += "<div class='scriptname'>" + document.getElementById("scriptname").value + "</div>";
     /*val.firstNight.forEach( function (role) {
       html += "<div>" + role + "</div>";
     });*/
