@@ -64,16 +64,15 @@ function renderJinxTableWithImages(idList, jinxData, rolesData, tableId) {
 }
 
 // funkce volaná tlačítkem
-function loadAndRender() {
-  const ids = scriptRaw; // vstupní seznam ID
-  console.log(ids);
+function loadAndRender(scriptRaw) {
+  console.log(scriptRaw);
 
   Promise.all([
     fetch("jinxlist.json").then(r => r.json()),
     fetch("rolescz.json").then(r => r.json())
   ])
   .then(([jinxData, rolesData]) => {
-    renderJinxTableWithImages(ids, jinxData, rolesData, "jinxTable");
+    renderJinxTableWithImages(scriptRaw, jinxData, rolesData, "jinxTable");
   })
   .catch(err => {
     console.error("Chyba při načítání dat:", err);
