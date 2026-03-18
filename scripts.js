@@ -97,8 +97,7 @@ function recursivePresence(char, script) {
 
 function checkScript(scriptJson) {
   // Transform filecontent according to your specifications
-  
-        console.log(scriptJson);
+  output.replaceChildren();
   scriptJson = scriptJson.map((item) => {
     if (item.id === '_meta') {
       return {
@@ -776,6 +775,7 @@ TitleHeightSlider.addEventListener("input", updateTitleHeight);
 TownsfolkOffsetSlider.addEventListener("input", updateTownsfolkSlider);
 MinionOffsetSlider.addEventListener("input", updateMinionSlider);
 DemonOffsetSlider.addEventListener("input", updateDemonSlider);
+
 
 
 
