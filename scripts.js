@@ -23,15 +23,20 @@ let countOfDemons = 0;
 
 let townsfolkOffset = 0;
 
-function renderJinxTableWithImages(idList, jinxData, rolesData, tableId) {
+function renderJinxTableWithImages(idObjects, jinxData, rolesData, tableId) {
   const table = document.getElementById(tableId);
   table.innerHTML = "";
 
+  // 🔹 převod [{id: "..."}] → ["..."]
+  const idList = idObjects.map(obj => obj.id);
+
+  // mapa rolí
   const roleMap = {};
   rolesData.forEach(role => {
     roleMap[role.id] = role;
   });
 
+  // hlavička
   const header = document.createElement("tr");
   header.innerHTML = `
     <th>Role 1</th>
@@ -40,6 +45,7 @@ function renderJinxTableWithImages(idList, jinxData, rolesData, tableId) {
   `;
   table.appendChild(header);
 
+  // data
   Object.values(jinxData).forEach(sheet => {
     sheet.forEach(row => {
       const first = row["JSON 1st"];
@@ -52,8 +58,8 @@ function renderJinxTableWithImages(idList, jinxData, rolesData, tableId) {
         const tr = document.createElement("tr");
 
         tr.innerHTML = `
-          <td>${img1 ? `<img src="${img1}" alt="${first}" width="40" loading="lazy">` : ""}</td>
-          <td>${img2 ? `<img src="${img2}" alt="${second}" width="40" loading="lazy">` : ""}</td>
+          <td>${img1 ? `<img src="${img1}" alt="${first}" width="40">` : ""}</td>
+          <td>${img2 ? `<img src="${img2}" alt="${second}" width="40">` : ""}</td>
           <td>${row["Jinx"] ?? ""}</td>
         `;
 
@@ -63,19 +69,16 @@ function renderJinxTableWithImages(idList, jinxData, rolesData, tableId) {
   });
 }
 
-// funkce volaná tlačítkem
+
 function loadAndRender(scriptRaw) {
   console.log(scriptRaw);
 
   Promise.all([
-    fetch("jinxlist.json").then(r => r.json()),
+    fetch("jinxes_updated.json").then(r => r.json()),
     fetch("rolescz.json").then(r => r.json())
   ])
   .then(([jinxData, rolesData]) => {
     renderJinxTableWithImages(scriptRaw, jinxData, rolesData, "jinxTable");
-  })
-  .catch(err => {
-    console.error("Chyba při načítání dat:", err);
   });
 }
 
