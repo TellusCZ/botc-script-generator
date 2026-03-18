@@ -303,6 +303,19 @@ function generateScript() {
         document.getElementsByClassName('message')[0].innerHTML = html;
       };*/
       TranslateScript();
+      try {
+        const scriptText = document.getElementById("scriptJson").value;
+
+    let scriptRaw = JSON.parse(scriptText);
+        checkScript(scriptRaw);
+      }
+      catch (e) {
+        if (e.name == 'SyntaxError') {
+          alert('Error while parsing file');
+        } else {
+          throw e;
+        }
+      }
 const scriptText = document.getElementById("translatedScriptCZ").value;
 const json = JSON.parse(scriptText);
 let html = '';
