@@ -391,7 +391,7 @@ function generateScript() {
         html += "<img class='scriptlogo' src='" + document.getElementById("scriptlogo").src + "'>"
     }
     html += document.getElementById("scriptname").value + "</div>";
-    html += "<div class='scriptauthor' ">" + &copy; + " ";
+    html += "<div class='scriptauthor' ">" + &copy;;
     html += document.getElementById("scriptauthor").value + "</div>";
     //html += countOfTownsfolk + "(" + Math.round(countOfTownsfolk / 2) + ")" + "-" + countOfOutsiders + "-" + countOfMinions + "-" + countOfDemons;
     html += "<img class='separator' src='botc/separator-townsfolk.png'>"
