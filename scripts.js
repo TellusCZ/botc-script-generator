@@ -834,6 +834,22 @@ function generateNightOrder() {
     //});
 }
 
+document.getElementById('saveJinxPng').addEventListener('click', () => {
+    const element = document.getElementById('captureJinxImage');
+
+    html2canvas(element, {
+        scale: 2,
+        allowTaint: true,
+        useCORS: true
+    }).then(canvas => {
+        const link = document.createElement('a');
+        link.download = 'jinx.png';
+        link.crossOrigin = 'anonymous';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+    });
+});
+
 document.getElementById('saveFirstPng').addEventListener('click', () => {
     const element = document.getElementById('captureThisFirstNight');
 
