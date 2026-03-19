@@ -692,13 +692,13 @@ function renderJinxTableWithImages(idObjects, jinxData, rolesData, tableId) {
         if (['DAWN', 'DUSK', 'DEMON', 'MINION'].includes(val)) {
             nightOrderJsonTmp.forEach(function(tmp) {
                 if (val == tmp.id) {
-                    html += "<img class='tmpikon' src = '" + tmp.image + "''>";
+                    html += "html += "<img class='arrowimg' src = 'botc/arrow.png'><img class='tmpikon' src = '" + tmp.image + "''>";
                 }
             });
         } else {
             scriptJson.forEach(function(role) {
                 if (role.id == (val + "cz")) {
-                    html += "<img class='nightikon' src = '" + role.image + "''>";
+                    html += "<img class='arrowimg' src = 'botc/arrow.png'><img class='nightikon' src = '" + role.image + "''>";
                 }
             });
         }
@@ -712,13 +712,13 @@ function renderJinxTableWithImages(idObjects, jinxData, rolesData, tableId) {
         if (['DAWN', 'DUSK', 'DEMON', 'MINION'].includes(val)) {
             nightOrderJsonTmp.forEach(function(tmp) {
                 if (val == tmp.id) {
-                    html += "<img class='tmpikon' src = '" + tmp.image + "''>";
+                    html += "<img class='arrowimg' src = 'botc/arrow.png'><img class='tmpikon' src = '" + tmp.image + "''>";
                 }
             });
         } else {
             scriptJson.forEach(function(role) {
                 if (role.id == (val + "cz")) {
-                    html += "<img class='nightikon' src = '" + role.image + "''>";
+                    html += "<img class='arrowimg' src = 'botc/arrow.png'><img class='nightikon' src = '" + role.image + "''>";
                 }
             });
         }
