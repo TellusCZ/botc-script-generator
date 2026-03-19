@@ -344,6 +344,7 @@ function generateScript() {
     if ( json[0].id == "_meta" )
     {
         document.getElementById("scriptname").value = json[0].name;
+        document.getElementById("scriptauthor").value = json[0].author;
     }
     let html = '';
     countOfTownsfolk = 0;
@@ -390,6 +391,8 @@ function generateScript() {
         html += "<img class='scriptlogo' src='" + document.getElementById("scriptlogo").src + "'>"
     }
     html += document.getElementById("scriptname").value + "</div>";
+    html += "<div class='scriptauthor' "> © ";
+    html += document.getElementById("scriptauthor").value + "</div>";
     //html += countOfTownsfolk + "(" + Math.round(countOfTownsfolk / 2) + ")" + "-" + countOfOutsiders + "-" + countOfMinions + "-" + countOfDemons;
     html += "<img class='separator' src='botc/separator-townsfolk.png'>"
     var townsfolkHeight = Number(roleHeightslider.value * linesForTownsfolk) + Number(TownsfolkOffsetSlider.value) + Number(117);
@@ -719,6 +722,7 @@ function renderJinxTableWithImages(idObjects, jinxData, rolesData, tableId) {
             });
         }
     });
+    console.log(html);
     
     document.getElementsByClassName('jinxImage')[0].innerHTML = html;
 }
