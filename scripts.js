@@ -729,7 +729,16 @@ function loadAndRender(scriptRaw) {
             fetch("botc/rolescz.json").then(r => r.json())
         ])
         .then(([jinxData, rolesData]) => {
-            renderJinxTableWithImages(scriptRaw, jinxData, rolesData, "jinxTable");
+            const script = scriptRaw.map(item => {
+            if (typeof item === "string") {
+                return {
+                    id: item
+                };
+            } else {
+                return item;
+            }
+            });
+            renderJinxTableWithImages(script, jinxData, rolesData, "jinxTable");
         });
 }
 
