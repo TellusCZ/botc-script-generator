@@ -341,7 +341,10 @@ function generateScript() {
     loadAndRender(scriptRaw);
     const scriptText = document.getElementById("translatedScriptCZ").value;
     const json = JSON.parse(scriptText);
-    document.getElementById("scriptname").value = json[0].name;
+    if ( json[0].id == "_meta" )
+    {
+        document.getElementById("scriptname").value = json[0].name;
+    }
     let html = '';
     countOfTownsfolk = 0;
     countOfOutsiders = 0;
@@ -386,7 +389,7 @@ function generateScript() {
     if (srcLogo) {
         html += "<img class='scriptlogo' src='" + document.getElementById("scriptlogo").src + "'>"
     }
-    html += json[0].name + "</div>";
+    html += document.getElementById("scriptname").value + "</div>";
     //html += countOfTownsfolk + "(" + Math.round(countOfTownsfolk / 2) + ")" + "-" + countOfOutsiders + "-" + countOfMinions + "-" + countOfDemons;
     html += "<img class='separator' src='botc/separator-townsfolk.png'>"
     var townsfolkHeight = Number(roleHeightslider.value * linesForTownsfolk) + Number(TownsfolkOffsetSlider.value) + Number(117);
