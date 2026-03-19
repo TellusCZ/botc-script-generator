@@ -660,7 +660,7 @@ function renderJinxTableWithImages(idObjects, jinxData, rolesData, tableId) {
                         html += "style='color:red;'";
                     html += ">" + roleMap[second]?.name + "</span><br>";
                 html += "<span class='nightdetail'>" + row["Jinx"] + "</span></p>"
-                html += "</div>";
+                html += "</div></div>";
             }
         });
     });
