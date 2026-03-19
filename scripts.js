@@ -388,7 +388,7 @@ function generateScript() {
     html += "<div class='scriptname' style=' font-size: " + TitleHeightSlider.value + "px;" + "'>";
     const srcLogo = document.getElementById("scriptlogo").getAttribute('src');
     if (srcLogo) {
-        html += "<img class='scriptlogo' src='" + document.getElementById("scriptlogo").src + "' height:" + TitleHeightSlider.value + "px;" + ">";
+        html += "<img class='scriptlogo' src='" + document.getElementById("scriptlogo").src + "'>";
     }
     html += document.getElementById("scriptname").value + "</div>";
     html += "<div class='scriptauthor' > &copy; ";
@@ -579,7 +579,7 @@ function renderJinxTableWithImages(idObjects, jinxData, rolesData, tableId) {
     html += "<div class='scriptname' style=' font-size: " + TitleHeightSlider.value + "px;" + "'>";
     const srcLogo = document.getElementById("scriptlogo").getAttribute('src');
     if (srcLogo) {
-        html += "<img class='scriptlogo' src='" + document.getElementById("scriptlogo").src + "' height:" + TitleHeightSlider.value + "px;" + ">";
+        html += "<img class='scriptlogo' src='" + document.getElementById("scriptlogo").src + "'>";
     }
     html += document.getElementById("scriptname").value + "</div><br><br>";
     html += "<div class='jinxcolumns'><div class='nightorderlist'>";
@@ -736,7 +736,7 @@ function generateNightOrder() {
     html += "<div class='scriptname' style=' font-size: " + TitleHeightSlider.value + "px;" + "'>";
     const srcLogo = document.getElementById("scriptlogo").getAttribute('src');
     if (srcLogo) {
-        html += "<img class='scriptlogo' src='" + document.getElementById("scriptlogo").src + "' height:" + TitleHeightSlider.value + "px;" + ">";
+        html += "<img class='scriptlogo' src='" + document.getElementById("scriptlogo").src + "'>";
     }
     html += document.getElementById("scriptname").value + "</div>";
     /*val.firstNight.forEach( function (role) {
@@ -787,7 +787,7 @@ function generateNightOrder() {
     html += "<div class='nightordercolumns'><div class='nightorderlist'>";
     html += "<div class='scriptname' style=' font-size: " + TitleHeightSlider.value + "px;" + "'>";
     if (srcLogo) { 
-        html += "<img class='scriptlogo' src='" + document.getElementById("scriptlogo").src + "' height:" + TitleHeightSlider.value + "px;" + ">";
+        html += "<img class='scriptlogo' src='" + document.getElementById("scriptlogo").src + "'>";
     }
     html += document.getElementById("scriptname").value + "</div>";
     /*val.firstNight.forEach( function (role) {
