@@ -841,7 +841,7 @@ document.getElementById('saveJinxPng').addEventListener('click', () => {
         scale: 2,
         allowTaint: true,
         useCORS: true,
-        windowWidth: 1024px
+        windowWidth: 1024
     }).then(canvas => {
         const link = document.createElement('a');
         link.download = 'jinx.png';
