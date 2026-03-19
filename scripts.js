@@ -573,51 +573,8 @@ function testSetup() {
 }  */
 
 function renderJinxTableWithImages(idObjects, jinxData, rolesData, tableId) {
-    /*const table = document.getElementById(tableId);
-    table.innerHTML = "";
-
-    // 🔹 převod [{id: "..."}] → ["..."]
-    const idList = idObjects.map(obj => obj.id);
-
-    // mapa rolí
-    const roleMap = {};
-    rolesData.forEach(role => {
-        roleMap[role.id] = role;
-    });
-
-    // hlavička
-    const header = document.createElement("tr");
-    header.innerHTML = `
-    <th>Role 1</th>
-    <th>Role 2</th>
-    <th>Jinx</th>
-  `;
-    table.appendChild(header);
-
-    // data
-    Object.values(jinxData).forEach(sheet => {
-        sheet.forEach(row => {
-            const first = row["JSON 1st"];
-            const second = row["JSON 2nd"];
-
-            if (idList.includes(first) && idList.includes(second)) {
-                const img1 = roleMap[first]?.image || "";
-                const img2 = roleMap[second]?.image || "";
-
-                const tr = document.createElement("tr");
-
-                tr.innerHTML = `
-          <td>${img1 ? `<img src="${img1}" alt="${first}" width="40">` : ""}</td>
-          <td>${img2 ? `<img src="${img2}" alt="${second}" width="40">` : ""}</td>
-          <td>${row["Jinx"] ?? ""}</td>
-        `;
-
-                table.appendChild(tr);
-            }
-        });
-    });*/
-    let html = '';
-    //json.forEach(function (val) {
+    
+    let html = ''
     html += "<div class='jinxlist'>";
     html += "<div class='scriptname' style=' font-size: " + TitleHeightSlider.value + "px;" + "'>";
     const srcLogo = document.getElementById("scriptlogo").getAttribute('src');
@@ -625,7 +582,7 @@ function renderJinxTableWithImages(idObjects, jinxData, rolesData, tableId) {
         html += "<img class='scriptlogo' src='" + document.getElementById("scriptlogo").src + "'>"
     }
     html += document.getElementById("scriptname").value + "</div><br><br>";
-    html += "<div class='nightordercolumns'><div class='jinxlist'>";
+    html += "<div class='jinxcolumns'><div class='nightorderlist'>";
 
     const idList = idObjects.map(obj => obj.id);
 
