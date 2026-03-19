@@ -706,7 +706,7 @@ function renderJinxTableWithImages(idObjects, jinxData, rolesData, tableId) {
     html += "</div>";
 
     html += "<div class='scriptname' style=' font-size: " + TitleHeightSlider.value + "px;" + "'>";
-    html += "další noci pořadí" + "</div><br><div class='smallorderlist'>"";
+    html += "další noci pořadí" + "</div><br><div class='smallorderlist'>";
     json.otherNight.forEach(function(val) {
 
         if (['DAWN', 'DUSK', 'DEMON', 'MINION'].includes(val)) {
