@@ -660,11 +660,11 @@ function renderJinxTableWithImages(idObjects, jinxData, rolesData, tableId) {
                         html += "style='color:red;'";
                     html += ">" + roleMap[second]?.name + "</span><br>";
                 html += "<span class='nightdetail'>" + row["Jinx"] + "</span></p>"
-                html += "</div></div>";
+                html += "</div>";
             }
         });
     });
-    html += "</div>";
+    html += "</div></div>";
     console.log(html);
 
     const scriptText = document.getElementById("translatedScriptCZ").value;
