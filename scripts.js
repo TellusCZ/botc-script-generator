@@ -686,7 +686,7 @@ function renderJinxTableWithImages(idObjects, jinxData, rolesData, tableId) {
             alert("Chyba pri nacítání roles.json: " + e.message);
           }*/
     html += "<div class='scriptname' style=' font-size: " + TitleHeightSlider.value + "px;" + "'>";
-    html += "První noc pořadí" + "</div><br>";
+    html += "První noc pořadí" + "</div><br><div class='smallorderlist'>";
     json.firstNight.forEach(function(val) {
 
         if (['DAWN', 'DUSK', 'DEMON', 'MINION'].includes(val)) {
@@ -703,9 +703,10 @@ function renderJinxTableWithImages(idObjects, jinxData, rolesData, tableId) {
             });
         }
     });
+    html += "</div>";
 
     html += "<div class='scriptname' style=' font-size: " + TitleHeightSlider.value + "px;" + "'>";
-    html += "další noci pořadí" + "</div><br>";
+    html += "další noci pořadí" + "</div><br><div class='smallorderlist'>"";
     json.otherNight.forEach(function(val) {
 
         if (['DAWN', 'DUSK', 'DEMON', 'MINION'].includes(val)) {
@@ -722,6 +723,7 @@ function renderJinxTableWithImages(idObjects, jinxData, rolesData, tableId) {
             });
         }
     });
+    html += "</div>";
     console.log(html);
     
     document.getElementsByClassName('jinxImage')[0].innerHTML = html;
