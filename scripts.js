@@ -625,7 +625,7 @@ function renderJinxTableWithImages(idObjects, jinxData, rolesData, tableId) {
         html += "<img class='scriptlogo' src='" + document.getElementById("scriptlogo").src + "'>"
     }
     html += document.getElementById("scriptname").value + "</div><br><br>";
-    html += "<div class='nightordercolumns'><div class='nightorderlist'>";
+    html += "<div class='nightordercolumns'><div class='jinxlist'>";
 
     const idList = idObjects.map(obj => obj.id);
 
