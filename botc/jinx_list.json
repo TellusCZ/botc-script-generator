@@ -22,7 +22,7 @@
       "New Jinx": null,
       "Instructions": "Keep",
       "": null,
-      "Jinx": "If the Alchemist has the Boffin ability, the Alchemist does not learn what ability the Demon has."
+      "Jinx": "Pokud má Alchymista schopnost Vědátora, tak se Alchymista nedozví jakou schopnost Démon má."
     },
     {
       "Character": "Alchemist",
@@ -130,7 +130,7 @@
       "New Jinx": "The Demon cannot have the Drunk ability.",
       "Instructions": "Update",
       "": null,
-      "Jinx": "The Demon cannot have the Drunk ability."
+      "Jinx": "Démon nemůže mít schopnost Opilce."
     },
     {
       "Character": "Boffin",
@@ -178,7 +178,7 @@
       "New Jinx": null,
       "Instructions": "Keep",
       "": null,
-      "Jinx": "If there is a spare token, the Boffin can give the Demon the Village Idiot ability."
+      "Jinx": "Pokud není dosažen maximalní počet Městkých pobudů ve hře, tak Vědátor může dát schopnost Městkého pobudy démonovi"
     },
     {
       "Character": "Bounty Hunter",
@@ -190,7 +190,7 @@
       "New Jinx": "If the Kazali turns the Bounty Hunter into a Minion, an evil Townsfolk is not created.",
       "Instructions": "Update",
       "": null,
-      "Jinx": "If the Kazali turns the Bounty Hunter into a Minion, an evil Townsfolk is not created."
+      "Jinx": "Pokud Kazali vybere Lovce odměn jako svého Přisluhovače, tak žádný měštan se nestane zlým."
     },
     {
       "Character": "Bounty Hunter",
