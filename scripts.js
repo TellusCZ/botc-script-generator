@@ -388,7 +388,7 @@ function generateScript() {
     html += "<div class='scriptname' style=' font-size: " + TitleHeightSlider.value + "px;" + "'>";
     const srcLogo = document.getElementById("scriptlogo").getAttribute('src');
     if (srcLogo) {
-        html += "<img class='scriptlogo' height='" + TitleHeightSlider.value + "px; + "' src='" + document.getElementById("scriptlogo").src + "'>";
+        html += "<img class='scriptlogo' height='" + TitleHeightSlider.value + "px;' src='" + document.getElementById("scriptlogo").src + "'>";
     }
     html += document.getElementById("scriptname").value;
     html += "<div class='scriptauthor' > &copy; ";
