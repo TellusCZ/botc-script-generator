@@ -1007,7 +1007,7 @@ function updateHeight() {
     document.documentElement.style.setProperty("--scriptpanel-demon-height", demonsHeight);
     document.documentElement.style.setProperty("--demon-height", demonsBodyHeight);
 
-    const offSetPanel = Number(heightSlider) + Number(40) + "px";
+    const offSetPanel = Number(TitleHeightSlider.value) + Number(40) + "px";
     document.documentElement.style.setProperty("--panel-marging-top", offSetPanel);
 }
 
