@@ -966,9 +966,9 @@ function updateHeight() {
 
 function updateTitleHeight() {
     heightSlider = TitleHeightSlider.value;
-    const offset = Number(heightSlider) + Number(20);
+    const offset = Number(heightSlider) + Number(10);
     const newHeight = offset + "px";
-    const offSetPanel = Number(heightSlider) + Number(15) + "px"; //15 je polovina velikosti separatoru
+    const offSetPanel = Number(heightSlider) + Number(30) + "px"; //15 je polovina velikosti separatoru + 15 margin u nadpisu
     const newFontSize = heightSlider + "px";
     TitleHeightValueText.textContent = newFontSize;
     document.documentElement.style.setProperty("--scriptname-height", newHeight);
