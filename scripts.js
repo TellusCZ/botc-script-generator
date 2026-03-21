@@ -390,7 +390,7 @@ function generateScript() {
     if (srcLogo) {
         html += "<img class='scriptlogo' height='" + TitleHeightSlider.value + "px;' src='" + document.getElementById("scriptlogo").src + "'>";
     }
-    html += "<div class='scriptnametext'>" + document.getElementById("scriptname").value + "</div>";
+    html += "<span class='scriptnametext'>" + document.getElementById("scriptname").value + "</span>";
     html += "<div class='scriptauthor' > &copy; ";
     html += document.getElementById("scriptauthor").value + "</div></div>";
     //html += countOfTownsfolk + "(" + Math.round(countOfTownsfolk / 2) + ")" + "-" + countOfOutsiders + "-" + countOfMinions + "-" + countOfDemons;
