@@ -966,11 +966,11 @@ function updateHeight() {
 
 function updateTitleHeight() {
     heightSlider = TitleHeightSlider.value;
-    const offset = Number(heightSlider) + Number(10);
+    const offset = Number(heightSlider) + Number(20);
     const newHeight = offset + "px";
     const offSetPanel = Number(heightSlider) + Number(15) + "px"; //15 je polovina velikosti separatoru
     const newFontSize = heightSlider + "px";
-    TitleHeightValueText.textContent = newHeight;
+    TitleHeightValueText.textContent = newFontSize;
     document.documentElement.style.setProperty("--scriptname-height", newHeight);
     document.documentElement.style.setProperty("--scriptname-font-size", newFontSize);
     var townsfolksHeight = Number(roleHeightslider.value * TownsfolkLines) + Number(TownsfolkOffsetSlider.value) + Number(117) + "px";
