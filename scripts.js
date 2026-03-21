@@ -947,9 +947,12 @@ function updateHeight() {
 
 function updateTitleHeight() {
     heightSlider = TitleHeightSlider.value;
-    const newHeight = heightSlider + "px";
+    const offset = heightSlider + 20;
+    const newHeight = offset + "px";
+    const newFontSize = heightSlider + "px";
     TitleHeightValueText.textContent = newHeight;
     document.documentElement.style.setProperty("--scriptname-height", newHeight);
+    document.documentElement.style.setProperty("--scriptname-font-size", newFontSize);
 }
 
 function updateTownsfolkSlider() {
