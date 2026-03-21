@@ -968,12 +968,12 @@ function updateTitleHeight() {
     heightSlider = TitleHeightSlider.value;
     const offset = Number(heightSlider) + Number(10);
     const newHeight = offset + "px";
-    const offSetPanel = Number(heightSlider) + Number(30) + "px"; //15 je polovina velikosti separatoru + 15 margin u nadpisu
+    const offSetPanel = Number(heightSlider) + Number(40) + "px"; //25 je polovina velikosti separatoru + 15 margin u nadpisu
     const newFontSize = heightSlider + "px";
     TitleHeightValueText.textContent = newFontSize;
     document.documentElement.style.setProperty("--scriptname-height", newHeight);
     document.documentElement.style.setProperty("--scriptname-font-size", newFontSize);
-    var townsfolksHeight = Number(roleHeightslider.value * TownsfolkLines) + Number(TownsfolkOffsetSlider.value) + Number(117) + "px";
+    var townsfolksHeight = Number(roleHeightslider.value * TownsfolkLines) + Number(TownsfolkOffsetSlider.value) +Number(50) + "px";
     document.documentElement.style.setProperty("--scriptpanel-townsfolk-height", townsfolksHeight);
 
     
