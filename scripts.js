@@ -385,6 +385,8 @@ function generateScript() {
 
 
     html += "<div id='script' class='script'>";
+    html += "<div class='scriptpanel'></div>"; <!-- todo -->
+    html += "<div class='scriptbody'>";
     html += "<div class='scriptname'>";
     const srcLogo = document.getElementById("scriptlogo").getAttribute('src');
     if (srcLogo) {
@@ -537,6 +539,7 @@ function generateScript() {
     });
     html += "</div>"; //end of column
     html += "</div>"; //end of demons
+    html += "</div>"; //end of scriptbody
     html += "</div>"; //end of script
     html = html.replaceAll("Each night", "<b>Each night</b>");
     html = html.replaceAll("Each night*", "<b>Each night-</b>");
