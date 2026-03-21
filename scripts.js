@@ -979,6 +979,8 @@ function updateTitleHeight() {
     TitleHeightValueText.textContent = newFontSize;
     document.documentElement.style.setProperty("--scriptname-height", newHeight);
     document.documentElement.style.setProperty("--scriptname-font-size", newFontSize);
+
+    document.documentElement.style.setProperty("--panel-marging-top", offSetPanel);
     
     var townsfolksHeight = Number(roleHeightslider.value * TownsfolkLines) + Number(TownsfolkOffsetSlider.value) + Number(50) + "px";
     var townsfolkBodyHeight = Number(roleHeightslider.value * TownsfolkLines) + Number(TownsfolkOffsetSlider.value) + "px";
