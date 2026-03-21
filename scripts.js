@@ -386,22 +386,22 @@ function generateScript() {
     //var demonsHeight = Number(roleHeightslider.value * DemonLines) + "px";
     //document.documentElement.style.setProperty("--scriptpanel-demon-height", demonsHeight);
 
-    var townsfolksHeight = Number(roleHeightslider.value * TownsfolkLines) + Number(TownsfolkOffsetSlider.value) + Number(TitleHeightSlider.value) + Number(70) + "px";
+    var townsfolksHeight = Number(roleHeightslider.value * TownsfolkLines) + Number(TownsfolkOffsetSlider.value) + Number(TitleHeightSlider.value) + Number(75) + "px";
     var townsfolkBodyHeight = Number(roleHeightslider.value * TownsfolkLines) + Number(TownsfolkOffsetSlider.value) + Number(TitleHeightSlider.value) + "px";
     document.documentElement.style.setProperty("--scriptpanel-townsfolk-height", townsfolksHeight);
     document.documentElement.style.setProperty("--townsfolk-height", townsfolkBodyHeight);
 
-    var outsiderssHeight = Number(roleHeightslider.value * OutsiderLines) + Number(MinionOffsetSlider.value) + Number(70) + "px";
+    var outsiderssHeight = Number(roleHeightslider.value * OutsiderLines) + Number(MinionOffsetSlider.value) + Number(75) + "px";
     var outsidersBodyHeight = Number(roleHeightslider.value * OutsiderLines) + Number(MinionOffsetSlider.value) + "px";
     document.documentElement.style.setProperty("--scriptpanel-outsider-height", outsiderssHeight);
     document.documentElement.style.setProperty("--outsider-height", outsidersBodyHeight);
 
-    var minionsHeight = Number(roleHeightslider.value * MinionLines) + Number(DemonOffsetSlider.value) + Number(70) + "px";
+    var minionsHeight = Number(roleHeightslider.value * MinionLines) + Number(DemonOffsetSlider.value) + Number(75) + "px";
     var minionsBodyHeight = Number(roleHeightslider.value * MinionLines) + Number(DemonOffsetSlider.value) + "px";
     document.documentElement.style.setProperty("--scriptpanel-minion-height", minionsHeight);
     document.documentElement.style.setProperty("--minion-height", minionsBodyHeight);
     
-    var demonsHeight = Number(roleHeightslider.value * DemonLines) + Number(70) + "px";
+    var demonsHeight = Number(roleHeightslider.value * DemonLines) + Number(75) + "px";
     var demonsBodyHeight = Number(roleHeightslider.value * DemonLines)  + "px";
     document.documentElement.style.setProperty("--scriptpanel-demon-height", demonsHeight);
     document.documentElement.style.setProperty("--demon-height", demonsBodyHeight);
@@ -990,22 +990,22 @@ function updateHeight() {
     // nastavíme CSS proměnnou na rootu
     document.documentElement.style.setProperty("--role-height", newHeight);
     //var townsfolksHeight = Number(roleHeightslider.value * TownsfolkLines) + Number(TownsfolkOffsetSlider.value) + Number(117) + "px";
-    var townsfolksHeight = Number(roleHeightslider.value * TownsfolkLines) + Number(TownsfolkOffsetSlider.value) + Number(TitleHeightSlider.value) + Number(70) + "px";
+    var townsfolksHeight = Number(roleHeightslider.value * TownsfolkLines) + Number(TownsfolkOffsetSlider.value) + Number(TitleHeightSlider.value) + Number(75) + "px";
     var townsfolkBodyHeight = Number(roleHeightslider.value * TownsfolkLines) + Number(TownsfolkOffsetSlider.value) + Number(TitleHeightSlider.value) + "px";
     document.documentElement.style.setProperty("--scriptpanel-townsfolk-height", townsfolksHeight);
     document.documentElement.style.setProperty("--townsfolk-height", townsfolkBodyHeight);
 
-    var outsiderssHeight = Number(roleHeightslider.value * OutsiderLines) + Number(MinionOffsetSlider.value) + Number(70) + "px";
+    var outsiderssHeight = Number(roleHeightslider.value * OutsiderLines) + Number(MinionOffsetSlider.value) + Number(75) + "px";
     var outsidersBodyHeight = Number(roleHeightslider.value * OutsiderLines) + Number(MinionOffsetSlider.value) + "px";
     document.documentElement.style.setProperty("--scriptpanel-outsider-height", outsiderssHeight);
     document.documentElement.style.setProperty("--outsider-height", outsidersBodyHeight);
 
-    var minionsHeight = Number(roleHeightslider.value * MinionLines) + Number(DemonOffsetSlider.value) + Number(70) + "px";
+    var minionsHeight = Number(roleHeightslider.value * MinionLines) + Number(DemonOffsetSlider.value) + Number(75) + "px";
     var minionsBodyHeight = Number(roleHeightslider.value * MinionLines) + Number(DemonOffsetSlider.value) + "px";
     document.documentElement.style.setProperty("--scriptpanel-minion-height", minionsHeight);
     document.documentElement.style.setProperty("--minion-height", minionsBodyHeight);
     
-    var demonsHeight = Number(roleHeightslider.value * DemonLines) + Number(70) + "px";
+    var demonsHeight = Number(roleHeightslider.value * DemonLines) + Number(75) + "px";
     var demonsBodyHeight = Number(roleHeightslider.value * DemonLines)  + "px";
     document.documentElement.style.setProperty("--scriptpanel-demon-height", demonsHeight);
     document.documentElement.style.setProperty("--demon-height", demonsBodyHeight);
@@ -1027,22 +1027,22 @@ function updateTitleHeight() {
 
     document.documentElement.style.setProperty("--panel-marging-top", offSetPanel);
     
-    var townsfolksHeight = Number(roleHeightslider.value * TownsfolkLines) + Number(TownsfolkOffsetSlider.value) + Number(TitleHeightSlider.value) + Number(70) + "px";
+    var townsfolksHeight = Number(roleHeightslider.value * TownsfolkLines) + Number(TownsfolkOffsetSlider.value) + Number(TitleHeightSlider.value) + Number(75) + "px";
     var townsfolkBodyHeight = Number(roleHeightslider.value * TownsfolkLines) + Number(TownsfolkOffsetSlider.value) + Number(TitleHeightSlider.value) + "px";
     document.documentElement.style.setProperty("--scriptpanel-townsfolk-height", townsfolksHeight);
     document.documentElement.style.setProperty("--townsfolk-height", townsfolkBodyHeight);
 
-    var outsiderssHeight = Number(roleHeightslider.value * OutsiderLines) + Number(MinionOffsetSlider.value) + Number(70) + "px";
+    var outsiderssHeight = Number(roleHeightslider.value * OutsiderLines) + Number(MinionOffsetSlider.value) + Number(75) + "px";
     var outsidersBodyHeight = Number(roleHeightslider.value * OutsiderLines) + Number(MinionOffsetSlider.value) + "px";
     document.documentElement.style.setProperty("--scriptpanel-outsider-height", outsiderssHeight);
     document.documentElement.style.setProperty("--outsider-height", outsidersBodyHeight);
 
-    var minionsHeight = Number(roleHeightslider.value * MinionLines) + Number(DemonOffsetSlider.value) + Number(70) + "px";
+    var minionsHeight = Number(roleHeightslider.value * MinionLines) + Number(DemonOffsetSlider.value) + Number(75) + "px";
     var minionsBodyHeight = Number(roleHeightslider.value * MinionLines) + Number(DemonOffsetSlider.value) + "px";
     document.documentElement.style.setProperty("--scriptpanel-minion-height", minionsHeight);
     document.documentElement.style.setProperty("--minion-height", minionsBodyHeight);
     
-    var demonsHeight = Number(roleHeightslider.value * DemonLines) + Number(70) + "px";
+    var demonsHeight = Number(roleHeightslider.value * DemonLines) + Number(75) + "px";
     var demonsBodyHeight = Number(roleHeightslider.value * DemonLines)  + "px";
     document.documentElement.style.setProperty("--scriptpanel-demon-height", demonsHeight);
     document.documentElement.style.setProperty("--demon-height", demonsBodyHeight);
