@@ -424,10 +424,10 @@ function generateScript() {
 
     html += "<div id='script' class='script'>";
     html += "<div class='scriptpanel'>"; <!-- todo -->
-    html += "<div class='scriptpanel-townsfolk'><span>Měšťan</span></div>";
-    html += "<div class='scriptpanel-outsider'><span>Podivín</span></div>";
-    html += "<div class='scriptpanel-minion'><span>Přisluhovač</span></div>";
-    html += "<div class='scriptpanel-demon'><span>Démon</span></div>";
+    html += "<div class='scriptpanel-townsfolk'><span class='scriptpanel-text'>Měšťan</span></div>";
+    html += "<div class='scriptpanel-outsider'><span class='scriptpanel-text'>Podivín</span></div>";
+    html += "<div class='scriptpanel-minion'><span class='scriptpanel-text'>Přisluhovač</span></div>";
+    html += "<div class='scriptpanel-demon'><span class='scriptpanel-text'>Démon</span></div>";
     html += "</div>";
     html += "<div class='scriptbody'>";
     html += "<div class='scriptname'>";
