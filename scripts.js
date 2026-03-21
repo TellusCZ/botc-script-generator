@@ -425,6 +425,9 @@ function generateScript() {
     html += "<div id='script' class='script'>";
     html += "<div class='scriptpanel'>"; <!-- todo -->
     html += "<div class='scriptpanel-townsfolk'>Měšťan</div>";
+    html += "<div class='scriptpanel-outsider'>Podivín</div>";
+    html += "<div class='scriptpanel-minion'>Přisluhovač</div>";
+    html += "<div class='scriptpanel-demon'>Démon</div>";
     html += "</div>";
     html += "<div class='scriptbody'>";
     html += "<div class='scriptname'>";
