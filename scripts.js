@@ -438,7 +438,7 @@ function generateScript() {
     //html += countOfTownsfolk + "(" + Math.round(countOfTownsfolk / 2) + ")" + "-" + countOfOutsiders + "-" + countOfMinions + "-" + countOfDemons;
     html += "<img class='separator' src='botc/separator-townsfolk.png'>"
     //var townsfolkHeight = Number(roleHeightslider.value * linesForTownsfolk) + Number(TownsfolkOffsetSlider.value);
-    html += "<div class='townsfolk'>";
+    html += "<dic class='townsfolkblock'><div class='townsfolk'>";
     html += "<div>";
     townsfolkArrayOne.forEach(function(val) {
         html += "<div class = 'role'>";
@@ -472,6 +472,7 @@ function generateScript() {
     });
     html += "</div>"; //end of column
     html += "</div>"; //end of townsfolk
+    html += "</div>"; //end of townsfolkblock
     html += "<img class='separator' src='botc/separator-outsider.png'>"
     //var outsiderHeight = Number(roleHeightslider.value * linesForOutsiders) + Number(MinionOffsetSlider.value) + Number(10);
     html += "<div class='outsider'>";
