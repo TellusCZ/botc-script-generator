@@ -947,7 +947,9 @@ function updateHeight() {
 
 function updateTitleHeight() {
     heightSlider = TitleHeightSlider.value;
-    TitleHeightValueText.textContent = heightSlider + "px";
+    const newHeight = heightSlider + "px";
+    TitleHeightValueText.textContent = newHeight;
+    document.documentElement.style.setProperty("--scriptname-height", newHeight);
 }
 
 function updateTownsfolkSlider() {
