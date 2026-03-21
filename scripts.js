@@ -509,8 +509,8 @@ function generateScript() {
     html += "</div>"; //end of column
     html += "</div>"; //end of outsider
     html += "<img class='separator' src='botc/separator-minions.png'>"
-    var minionHeight = Number(roleHeightslider.value * linesForMinions) + Number(DemonOffsetSlider.value) + Number(10);
-    html += "<div class='minion' style=' height: " + minionHeight + "px;" + "'>";
+    //var minionHeight = Number(roleHeightslider.value * linesForMinions) + Number(DemonOffsetSlider.value) + Number(10);
+    html += "<div class='minion'>";
     html += "<div>";
     minionsArrayOne.forEach(function(val) {
         html += "<div class = 'role'>";
@@ -545,7 +545,7 @@ function generateScript() {
     html += "</div>"; //end of column
     html += "</div>"; //end of minions
     html += "<img class='separator' src='botc/separator-demons.png'>"
-    html += "<div class='minion' height='" + 160 + "'>";
+    html += "<div class='demon'>";
     html += "<div>";
     demonsArrayOne.forEach(function(val) {
         html += "<div class = 'role'>";
