@@ -387,7 +387,7 @@ function generateScript() {
     //document.documentElement.style.setProperty("--scriptpanel-demon-height", demonsHeight);
 
     var townsfolksHeight = Number(roleHeightslider.value * TownsfolkLines) + Number(TownsfolkOffsetSlider.value) + Number(50) + "px";
-    var townsfolkBodyHeight = Number(roleHeightslider.value * TownsfolkLines) + Number(TownsfolkOffsetSlider.value) + "px";
+    var townsfolkBodyHeight = Number(roleHeightslider.value * TownsfolkLines) + Number(TownsfolkOffsetSlider.value) + Number(TitleHeightSlider.value) + "px";
     document.documentElement.style.setProperty("--scriptpanel-townsfolk-height", townsfolksHeight);
     document.documentElement.style.setProperty("--townsfolk-height", townsfolkBodyHeight);
 
@@ -1003,7 +1003,7 @@ function updateTitleHeight() {
     document.documentElement.style.setProperty("--panel-marging-top", offSetPanel);
     
     var townsfolksHeight = Number(roleHeightslider.value * TownsfolkLines) + Number(TownsfolkOffsetSlider.value) + Number(50) + "px";
-    var townsfolkBodyHeight = Number(roleHeightslider.value * TownsfolkLines) + Number(TownsfolkOffsetSlider.value) + "px";
+    var townsfolkBodyHeight = Number(roleHeightslider.value * TownsfolkLines) + Number(TownsfolkOffsetSlider.value) + Number(TitleHeightSlider.value) + "px";
     document.documentElement.style.setProperty("--scriptpanel-townsfolk-height", townsfolksHeight);
     document.documentElement.style.setProperty("--townsfolk-height", townsfolkBodyHeight);
 
