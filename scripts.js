@@ -419,7 +419,7 @@ function generateScript() {
     html += "</div>"; //end of column
     html += "<div>";
     townsfolkArrayTwo.forEach(function(val) {
-        html += "<div class = 'role' style=' height: " + roleHeightslider.value + "px;" + "'>";
+        html += "<div class = 'role'>";
         // Add your code below this line
         html += "<img class='roleikon' src = '" + val.image + "''>";
         html += "<p class='roledescription' ";
