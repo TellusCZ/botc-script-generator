@@ -947,7 +947,7 @@ function updateHeight() {
 
 function updateTitleHeight() {
     heightSlider = TitleHeightSlider.value;
-    const offset = heightSlider + 20;
+    const offset = heightSlider;
     const newHeight = offset + "px";
     const newFontSize = heightSlider + "px";
     TitleHeightValueText.textContent = newHeight;
