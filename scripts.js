@@ -370,7 +370,8 @@ function generateScript() {
 
     var linesForTownsfolk = Math.round(countOfTownsfolk / 2);
     TownsfolkLines = linesForTownsfolk;
-    document.documentElement.style.setProperty("--scriptpanel-townsfolk-height", Number(roleHeightslider.value * TownsfolkLines) + Number(TownsfolkOffsetSlider.value) + Number(117));
+    var townsfolksHeight = Number(roleHeightslider.value * TownsfolkLines) + Number(TownsfolkOffsetSlider.value) + Number(117) + "px";
+    document.documentElement.style.setProperty("--scriptpanel-townsfolk-height", townsfolksHeight);
     
     var linesForOutsiders = Math.round(countOfOutsiders / 2);
     OutsiderLines = linesForOutsiders;
