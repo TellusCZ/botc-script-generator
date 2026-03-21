@@ -385,10 +385,10 @@ function generateScript() {
 
 
     html += "<div id='script' class='script'>";
-    html += "<div class='scriptname' style=' font-size: " + TitleHeightSlider.value + "px;" + "'>";
+    html += "<div class='scriptname'>";
     const srcLogo = document.getElementById("scriptlogo").getAttribute('src');
     if (srcLogo) {
-        html += "<img class='scriptlogo' height='" + TitleHeightSlider.value + "px;' src='" + document.getElementById("scriptlogo").src + "'>";
+        html += "<img class='scriptlogo' src='" + document.getElementById("scriptlogo").src + "'>";
     }
     html += "<span class='scriptnametext'>" + document.getElementById("scriptname").value + "</span>";
     html += "<span class='scriptauthor' > &copy; ";
