@@ -959,6 +959,8 @@ function updateHeight() {
 
     // nastavíme CSS proměnnou na rootu
     document.documentElement.style.setProperty("--role-height", newHeight);
+    var townsfolksHeight = Number(roleHeightslider.value * TownsfolkLines) + Number(TownsfolkOffsetSlider.value) + Number(117) + "px";
+    document.documentElement.style.setProperty("--scriptpanel-townsfolk-height", townsfolksHeight);
 }
 
 
@@ -970,6 +972,8 @@ function updateTitleHeight() {
     TitleHeightValueText.textContent = newHeight;
     document.documentElement.style.setProperty("--scriptname-height", newHeight);
     document.documentElement.style.setProperty("--scriptname-font-size", newFontSize);
+    var townsfolksHeight = Number(roleHeightslider.value * TownsfolkLines) + Number(TownsfolkOffsetSlider.value) + Number(117) + "px";
+    document.documentElement.style.setProperty("--scriptpanel-townsfolk-height", townsfolksHeight);
 }
 
 function updateTownsfolkSlider() {
