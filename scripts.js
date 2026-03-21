@@ -401,7 +401,7 @@ function generateScript() {
     document.documentElement.style.setProperty("--scriptpanel-minion-height", minionsHeight);
     document.documentElement.style.setProperty("--minion-height", minionsBodyHeight);
     
-    var demonsHeight = Number(roleHeightslider.value * DemonLines) + Number(65) + "px";
+    var demonsHeight = Number(roleHeightslider.value * DemonLines) + Number(45) + "px";
     var demonsBodyHeight = Number(roleHeightslider.value * DemonLines)  + "px";
     document.documentElement.style.setProperty("--scriptpanel-demon-height", demonsHeight);
     document.documentElement.style.setProperty("--demon-height", demonsBodyHeight);
@@ -1005,7 +1005,7 @@ function updateHeight() {
     document.documentElement.style.setProperty("--scriptpanel-minion-height", minionsHeight);
     document.documentElement.style.setProperty("--minion-height", minionsBodyHeight);
     
-    var demonsHeight = Number(roleHeightslider.value * DemonLines) + Number(65) + "px";
+    var demonsHeight = Number(roleHeightslider.value * DemonLines) + Number(45) + "px";
     var demonsBodyHeight = Number(roleHeightslider.value * DemonLines)  + "px";
     document.documentElement.style.setProperty("--scriptpanel-demon-height", demonsHeight);
     document.documentElement.style.setProperty("--demon-height", demonsBodyHeight);
@@ -1042,7 +1042,7 @@ function updateTitleHeight() {
     document.documentElement.style.setProperty("--scriptpanel-minion-height", minionsHeight);
     document.documentElement.style.setProperty("--minion-height", minionsBodyHeight);
     
-    var demonsHeight = Number(roleHeightslider.value * DemonLines) + Number(65) + "px";
+    var demonsHeight = Number(roleHeightslider.value * DemonLines) + Number(45) + "px";
     var demonsBodyHeight = Number(roleHeightslider.value * DemonLines)  + "px";
     document.documentElement.style.setProperty("--scriptpanel-demon-height", demonsHeight);
     document.documentElement.style.setProperty("--demon-height", demonsBodyHeight);
