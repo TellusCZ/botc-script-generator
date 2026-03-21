@@ -385,6 +385,7 @@ function generateScript() {
 
 
     html += "<div id='script' class='script'>";
+    html += "<div class='header'>";
     html += "<div class='scriptname'>";
     const srcLogo = document.getElementById("scriptlogo").getAttribute('src');
     if (srcLogo) {
@@ -392,7 +393,7 @@ function generateScript() {
     }
     html += "<div class='scriptnametext'>" + document.getElementById("scriptname").value + "</div>";
     html += "<div class='scriptauthor' > &copy; ";
-    html += document.getElementById("scriptauthor").value + "</div></div>";
+    html += document.getElementById("scriptauthor").value + "</div></div></div>";
     //html += countOfTownsfolk + "(" + Math.round(countOfTownsfolk / 2) + ")" + "-" + countOfOutsiders + "-" + countOfMinions + "-" + countOfDemons;
     html += "<img class='separator' src='botc/separator-townsfolk.png'>"
     var townsfolkHeight = Number(roleHeightslider.value * linesForTownsfolk) + Number(TownsfolkOffsetSlider.value) + Number(117);
