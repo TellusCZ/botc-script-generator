@@ -23,6 +23,11 @@ let countOfDemons = 0;
 
 let townsfolkOffset = 0;
 
+let TownsfolkLines = 0;
+let OutsiderLines = 0;
+let MinionLines = 0;
+let DemonLines = 0;
+
 
 
 var rules = [];
@@ -364,9 +369,15 @@ function generateScript() {
     });
 
     var linesForTownsfolk = Math.round(countOfTownsfolk / 2);
+    TownsfolkLines = linesForTownsfolk;
+    document.documentElement.style.setProperty("--scriptpanel-townsfolk-height", Number(roleHeightslider.value * TownsfolkLines) + Number(TownsfolkOffsetSlider.value) + Number(117));
+    
     var linesForOutsiders = Math.round(countOfOutsiders / 2);
+    OutsiderLines = linesForOutsiders;
     var linesForMinions = Math.round(countOfMinions / 2);
+    MinionLines = linesForMinions;
     var linesForDemons = Math.round(countOfDemons / 2);
+    DemonLines = linesForDemons;
 
     var TotalLines = linesForTownsfolk + linesForOutsiders + linesForMinions + linesForDemons;
 
