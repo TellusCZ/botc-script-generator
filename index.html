@@ -385,13 +385,19 @@
     <section class="hero">
       <div class="hero-top">
         <div>
-          <div class="eyebrow">Viktoriánské rozhraní pro Blood on the Clocktower</div>
-          <h1>Krvavá hodina odbila</h1>
-          <p>
-            Stylizovaný generátor podkladů pro script, jinxy a noční pořadí. Vlož základní text,
-            uprav velikosti prvků a používej přehledné sbalitelné sekce, aby na stránce nepřekáželo nic navíc.
-          </p>
-        </div>
+          <div class="eyebrow">Generátor českých scriptů pro Krvavá hodina odbila</div>
+            <label for="scriptJson">1) Stáhni si script</label>
+            <ul>
+                <li><a href="https://script.bloodontheclocktower.com/" target="_blank">script.bloodontheclocktower.com</a> - nadefinuj si vlastní script a stáhni json </li>
+                <li><a href="https://botc-scripts.azurewebsites.net/" target="_blank">botc-scripts.azurewebsites.net</a> - uživatelsky definované scripty</li>
+                <li><a href="https://www.pngwing.com/" target="_blank">https://www.pngwing.com/</a> - Stáhní si vlastní logo ke scriptu - dobrá stránka na png obrázky </li>
+                <li>Položka "id":"_meta" automaticky vyplní název scriptu a autora</li>
+            </ul>
+            <label for="fileInput">Vyber logo</label>
+            <input type="file" id="fileInput" accept="image/*" disply>
+            Náhled loga:
+            <img id="scriptlogo" alt="Logo" height="80" width="80">   
+          </div>
         <div class="crest" aria-hidden="true">🕯</div>
       </div>
       <div class="ornament-line">❦ ✦ ❦</div>
@@ -402,12 +408,7 @@
       </div>
       <div class="status" id="statusLine">Připraveno k práci.</div>
     </section>
-<label for="scriptJson">1) Stáhni si script</label>
-<ul>
-    <li><a href="https://script.bloodontheclocktower.com/" target="_blank">script.bloodontheclocktower.com</a> - nadefinuj si vlastní script a stáhni json </li>
-    <li><a href="https://botc-scripts.azurewebsites.net/" target="_blank">botc-scripts.azurewebsites.net</a> - uživatelsky definované scripty</li>
-    <li>Položka "id":"_meta" s názvem scriptu je nutná pro správné vygenerování</li>
-</ul>
+ 
 <textarea id="scriptJson" placeholder='Takto vypadá např. Trouble Brewing: [{"id":"_meta","author":"Pandemonium Institute","name":"Trouble Brewing"}{"id":"washerwoman"},{"id":"librarian"},{"id":"investigator"},{"id":"chef"},{"id":"empath"},{"id":"fortune_teller"},{"id":"undertaker"},{"id":"monk"},{"id":"ravenkeeper"},{"id":"virgin"},{"id":"slayer"},{"id":"soldier"},{"id":"mayor"},{"id":"butler"},{"id":"drunk"},{"id":"recluse"},{"id":"saint"},{"id":"poisoner"},{"id":"spy"},{"id":"scarlet_woman"},{"id":"baron"},{"id":"imp"}]'></textarea>
 <!--<label for="rolesJson">2) Roles JSON</label>-->
 <button onclick="loadRoles()" hidden>Načíst defaultní anglické role</button>
@@ -422,10 +423,7 @@
     <li><a href="https://www.pngwing.com/" target="_blank">https://www.pngwing.com/</a> - dobrá stránka na png obrázky </li>
 </ul>
 
-<label for="fileInput">Vyber logo</label>
-<input type="file" id="fileInput" accept="image/*" disply>
-Náhled loga:
-<img id="scriptlogo" alt="Logo" height="80" width="80">
+
 
 <button onclick="TranslateScript()" hidden>Přeložit Script</button>
 <textarea hidden id="translatedScriptJson" placeholder="Výstup TranslateScript..." readonly></textarea>
