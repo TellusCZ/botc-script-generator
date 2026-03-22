@@ -422,10 +422,23 @@
           <div class="field">
             <label for="sourceText">Sem vlož stažený script</label>
 <textarea id="scriptJson" placeholder='Takto vypadá např. Trouble Brewing: [{"id":"_meta","author":"Pandemonium Institute","name":"Trouble Brewing"}{"id":"washerwoman"},{"id":"librarian"},{"id":"investigator"},{"id":"chef"},{"id":"empath"},{"id":"fortune_teller"},{"id":"undertaker"},{"id":"monk"},{"id":"ravenkeeper"},{"id":"virgin"},{"id":"slayer"},{"id":"soldier"},{"id":"mayor"},{"id":"butler"},{"id":"drunk"},{"id":"recluse"},{"id":"saint"},{"id":"poisoner"},{"id":"spy"},{"id":"scarlet_woman"},{"id":"baron"},{"id":"imp"}]'></textarea>            <!--<div class="footer-note">Tip: můžeš sem vložit i pracovní poznámky pro Storytellera nebo nevyvážené kombinace, které chceš ohlídat.</div>-->
-            <label for="fileInput">Vyber logo</label>
+            <!--<label for="fileInput">Vyber logo</label>
             <input type="file" id="fileInput" accept="image/*" disply>
             Náhled loga:
-            <img id="scriptlogo" alt="Logo" height="200">
+            <img id="scriptlogo" alt="Logo" height="200">-->
+            <div class="file-upload">
+              <input type="file" id="fileInput" />
+              <label for="fileInput" class="victorian-file-btn">
+                <span class="btn-icon">📂</span>
+                Vybrat soubor
+                <span class="btn-sub">nahrát podklady</span>
+              </label>
+            
+              <div class="file-name" id="fileName">
+                Nebyl vybrán žádný soubor
+              </div>
+              <img id="scriptlogo" alt="Logo" height="200">
+            </div>
           </div>
 
             
