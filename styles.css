@@ -455,6 +455,7 @@
       border-radius: 16px;
       overflow: hidden;
       min-height: 260px;
+      width: 1024px;
       display: flex;
       flex-direction: column;
     }
