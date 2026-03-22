@@ -393,10 +393,10 @@
                 <li><a href="https://www.pngwing.com/" target="_blank">https://www.pngwing.com/</a> - Stáhní si vlastní logo ke scriptu - dobrá stránka na png obrázky </li>
                 <li>Položka "id":"_meta" automaticky vyplní název scriptu a autora</li>
             </ul>
-            <label for="fileInput">Vyber logo</label>
+            <!--<label for="fileInput">Vyber logo</label>
             <input type="file" id="fileInput" accept="image/*" disply>
             Náhled loga:
-            <img id="scriptlogo" alt="Logo" height="80" width="80">   
+            <img id="scriptlogo" alt="Logo" height="80" width="80">--> 
           </div>
         <div class="crest" aria-hidden="true">🕯</div>
       </div>
@@ -406,8 +406,66 @@
         <button class="ghost-btn" id="closeAllBtn" type="button">Sbalit vše</button>
         <button class="ghost-btn" id="clearOutputsBtn" type="button">Vymazat výstupy</button>
       </div>
-      <div class="status" id="statusLine">Připraveno k práci.</div>
+      <!--<div class="status" id="statusLine">Připraveno k práci.</div>-->
     </section>
+
+    <details class="panel" open id="inputPanel">
+      <summary>
+        <div class="summary-main">
+          <div class="summary-badge">✒</div>
+          <div class="summary-title">Vstupní JSON a kontrola scriptu</div>
+        </div>
+        <div class="summary-hint"></div>
+      </summary>
+      <div class="panel-body">
+        <div class="grid grid-2">
+          <div class="field">
+            <label for="sourceText">Sem vlož stažený script</label>
+<textarea id="scriptJson" placeholder='Takto vypadá např. Trouble Brewing: [{"id":"_meta","author":"Pandemonium Institute","name":"Trouble Brewing"}{"id":"washerwoman"},{"id":"librarian"},{"id":"investigator"},{"id":"chef"},{"id":"empath"},{"id":"fortune_teller"},{"id":"undertaker"},{"id":"monk"},{"id":"ravenkeeper"},{"id":"virgin"},{"id":"slayer"},{"id":"soldier"},{"id":"mayor"},{"id":"butler"},{"id":"drunk"},{"id":"recluse"},{"id":"saint"},{"id":"poisoner"},{"id":"spy"},{"id":"scarlet_woman"},{"id":"baron"},{"id":"imp"}]'></textarea>            <!--<div class="footer-note">Tip: můžeš sem vložit i pracovní poznámky pro Storytellera nebo nevyvážené kombinace, které chceš ohlídat.</div>-->
+          </div>
+
+          <div class="grid">
+            <div class="subtle-box">
+              <div class="field">
+                <label for="scriptName">Název scriptu</label>
+                <input id="scriptname" type="text" placeholder="Např. Půlnoční salon" />
+                <label for="scriptAutor">Autor scriptu</label>
+                <input id="scriptauthor" type="text" />
+              </div>
+            </div>
+
+            <!--<div class="subtle-box">
+              <div class="field">
+                <label for="themeSelect">Tematické ladění</label>
+                <select id="themeSelect">
+                  <option value="Temná viktoriánská gotika">Temná viktoriánská gotika</option>
+                  <option value="Mysteriózní séance">Mysteriózní séance</option>
+                  <option value="Krvavý aristokratický večer">Krvavý aristokratický večer</option>
+                  <option value="Plynové lampy a tajemství">Plynové lampy a tajemství</option>
+                </select>
+              </div>
+            </div>-->
+
+            <div class="tabs-card">
+              <div class="tabs" role="tablist" aria-label="Kontrola Scriptu">
+                <button class="tab-btn active" type="button" data-tab="tips">Info ke scriptu</button>
+                <button class="tab-btn" type="button" data-tab="format">Varování</button>
+                <button class="tab-btn" type="button" data-tab="example">Možné chyby</button>
+              </div>
+
+              <div class="tab-panel active" id="tips">
+                <div class="preview-paper"></div>
+              <div class="tab-panel" id="format">
+                <div class="preview-paper"></div>
+              </div>
+              <div class="tab-panel" id="example">
+                <div class="preview-paper"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </details>
  
 <textarea id="scriptJson" placeholder='Takto vypadá např. Trouble Brewing: [{"id":"_meta","author":"Pandemonium Institute","name":"Trouble Brewing"}{"id":"washerwoman"},{"id":"librarian"},{"id":"investigator"},{"id":"chef"},{"id":"empath"},{"id":"fortune_teller"},{"id":"undertaker"},{"id":"monk"},{"id":"ravenkeeper"},{"id":"virgin"},{"id":"slayer"},{"id":"soldier"},{"id":"mayor"},{"id":"butler"},{"id":"drunk"},{"id":"recluse"},{"id":"saint"},{"id":"poisoner"},{"id":"spy"},{"id":"scarlet_woman"},{"id":"baron"},{"id":"imp"}]'></textarea>
 <!--<label for="rolesJson">2) Roles JSON</label>-->
