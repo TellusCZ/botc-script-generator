@@ -67,7 +67,7 @@
     }
 
     .app {
-      width: min(1280px, calc(100% - 30px));
+      width: min(2300px, calc(100% - 30px));
       margin: 22px auto 48px;
       position: relative;
       z-index: 1;
