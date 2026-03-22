@@ -576,10 +576,60 @@
 </table>
 <p>
     <button onclick="generateScript()">Vygeneruj script</button>
-<div class="message" id="captureScript"></div>
-<button id="saveScriptPng">Uložit Script jako PNG</button>
+    <button onclick="generateNightOrder()">Vygeneruj night order</button>
+<!--<div class="message" id="captureScript"></div>
+<button id="saveScriptPng">Uložit Script jako PNG</button>-->
 </p>
-<div class="jinxImage" id="captureJinxImage"></div>
+<details class="panel" open id="resultsPanel">
+      <summary>
+        <div class="summary-main">
+          <div class="summary-badge">☙</div>
+          <div class="summary-title">Výsledné části</div>
+        </div>
+        <div class="summary-hint"></div>
+      </summary>
+      <div class="panel-body">
+        <div class="results-grid">
+          <section class="result-panel">
+            <div class="result-header">
+              <div>Výsledný script</div>
+              <div class="result-tag">script</div>
+            </div>
+            <div class="message" id="captureScript"></div>
+            <button id="saveScriptPng">Uložit Script jako PNG</button>
+          </section>
+
+          <section class="result-panel">
+            <div class="result-header">
+              <div>Jinxy</div>
+              <div class="result-tag">jinxy</div>
+            </div>
+            <div class="jinxImage" id="captureJinxImage"></div>
+            <button id="saveJinxPng">Uložit Jinxy jako PNG</button>
+          </section>
+
+          <section class="result-panel">
+            <div class="result-header">
+              <div>Noční pořadí – první noc</div>
+              <div class="result-tag">night one</div>
+            </div>
+            <!--<div class="result-content" id="firstNightOutput">Zde se zobrazí pořadí pro první noc.</div>-->
+            <div class="FirstNightOrderImage" id="captureThisFirstNight"></div>
+            <button id="saveFirstPng">Uložit První noc jako PNG</button>
+          </section>
+
+          <section class="result-panel">
+            <div class="result-header">
+              <div>Noční pořadí – další noci</div>
+              <div class="result-tag">later nights</div>
+            </div>
+            <div class="OtherNightOrderImage" id="captureThisOtherNight"></div>
+             <button id="saveOtherPng">Uložit Další noc jako PNG</button>
+          </section>
+        </div>
+      </div>
+    </details>
+<!--<div class="jinxImage" id="captureJinxImage"></div>
 <button id="saveJinxPng">Uložit Jinxy jako PNG</button>
 <p>
     <button onclick="generateNightOrder()">Vygeneruj night order</button>
@@ -589,7 +639,7 @@
 <div class="OtherNightOrderImage" id="captureThisOtherNight"></div>
 
 <button id="saveOtherPng">Uložit Další noc jako PNG</button>
-</p>
+</p>-->
 <div class='creadit'>Fonts used from <a href="https://www.onlinewebfonts.com/fonts">fonts</a> is licensed by CC BY 4.0</div>
 
 <div id="container"></div>
