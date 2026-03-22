@@ -473,26 +473,15 @@
       </div>
     </details>
  
-<textarea id="scriptJson" placeholder='Takto vypadá např. Trouble Brewing: [{"id":"_meta","author":"Pandemonium Institute","name":"Trouble Brewing"}{"id":"washerwoman"},{"id":"librarian"},{"id":"investigator"},{"id":"chef"},{"id":"empath"},{"id":"fortune_teller"},{"id":"undertaker"},{"id":"monk"},{"id":"ravenkeeper"},{"id":"virgin"},{"id":"slayer"},{"id":"soldier"},{"id":"mayor"},{"id":"butler"},{"id":"drunk"},{"id":"recluse"},{"id":"saint"},{"id":"poisoner"},{"id":"spy"},{"id":"scarlet_woman"},{"id":"baron"},{"id":"imp"}]'></textarea>
-<!--<label for="rolesJson">2) Roles JSON</label>-->
+
 <button onclick="loadRoles()" hidden>Načíst defaultní anglické role</button>
 <button onclick="loadRolesCZ()" hidden>Načíst defaultní české role</button>
 <textarea id="rolesJson" placeholder="Sem vlož Roles JSON..." hidden></textarea>
 
-<div>Název scriptu: <input id="scriptname"></input></div>
-<div>Autor scriptu: <input id="scriptauthor"></input></div>
-
-<label for="scriptJson">2) Stáhní si vlastní logo ke scriptu</label>
-<ul>
-    <li><a href="https://www.pngwing.com/" target="_blank">https://www.pngwing.com/</a> - dobrá stránka na png obrázky </li>
-</ul>
-
-
-
 <button onclick="TranslateScript()" hidden>Přeložit Script</button>
 <textarea hidden id="translatedScriptJson" placeholder="Výstup TranslateScript..." readonly></textarea>
 
-<!--<label for="translatedScriptCZ" hidden>Přeložený script</label>-->
+<label for="translatedScriptCZ" hidden>Přeložený script</label>
 <textarea id="translatedScriptCZ" placeholder="Výstup pro www.bloodstar.xyz a pocketgrimoire.co.uk..." readonly hidden></textarea>
 <textarea id="nightOrderSheet" hidden></textarea>
 <textarea id="nightOrderTmp" hidden></textarea>
@@ -500,10 +489,71 @@
 
 <!-- Load external JavaScript -->
 <!--<script src="scripts.js"></script>-->
-<label for="scriptJson">3) Doladění výsledného scriptu:</label>
-<ul>
-    <li>Po úpravě je třeba znovu vygenerovat script</li>
-</ul>
+   <details class="panel" id="settingsPanel">
+      <summary>
+        <div class="summary-main">
+          <div class="summary-badge">⚙</div>
+          <div class="summary-title">Nastavení velikostí a vzhledu</div>
+        </div>
+        <div class="summary-hint"></div>
+      </summary>
+      <div class="panel-body">
+        <div class="grid grid-2">
+          <div class="size-card">
+            <div class="size-head">
+              <div class="size-name">Velikost názvu scriptu</div>
+              <div class="size-px"><span id="TitleHeightValue">70</span> px</div>
+            </div>
+            <div class="size-row">
+              <input type="range" id="TitleHeightSlider" min="40" max="100" value="70">
+            </div>
+          </div>
+
+          <div class="size-card">
+            <div class="size-head">
+              <div class="size-name">Velikost jedné role</div>
+              <div class="size-px"><span id="RoleHeightValue">75</span> px</div>
+            </div>
+            <div class="size-row">
+              <input type="range" id="RoleHeightSlider" min="50" max="80" value="75" />
+            </div>
+          </div>
+
+          <div class="size-card">
+            <div class="size-head">
+              <div class="size-name">Posunutí oddělovače mezi měštany a podivíny</div>
+              <div class="size-px"><span id="TownsfolkOffsetValue">0</span> px</div>
+            </div>
+            <div class="size-row">
+              <input type="range" id="TownsfolkOffsetSlider" min="-40" max="40" value="0" />
+            </div>
+          </div>
+
+          <div class="size-card">
+            <div class="size-head">
+              <div class="size-name">Posunutí oddělovače mezi podivíny a přisluhovači</div>
+              <div class="size-px"><span id="MinionOffsetValue">0</span> px</div>
+            </div>
+            <div class="size-row">
+              <input type="range" id="MinionOffsetSlider" min="-40" max="40" value="0" />
+            </div>
+          </div>
+
+          <div class="size-card">
+            <div class="size-head">
+              <div class="size-name">Posunutí oddělovače mezi přisluhovači a démony</div>
+              <div class="size-px"><span id="DemonOffsetValue">0</span> px</div>
+            </div>
+            <div class="size-row">
+              <input type="range" id="DemonOffsetSlider" min="-40" max="40" value="0" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </details>
+    
+<!--<label for="scriptJson">3) Doladění výsledného scriptu:</label>
+
 <label for="TitleHeightSlider">Velikost nadpisu: </label>
 <input type="range" id="TitleHeightSlider" min="40" max="100" value="70">
 <span id="TitleHeightValue">70px</span>
@@ -520,7 +570,7 @@
 <span id="MinionOffsetValue">0px</span>
 <label for="DemonOffsetSlider">Démoni oddělovač offset: </label>
 <input type="range" id="DemonOffsetSlider" min="-40" max="40" value="0">
-<span id="DemonOffsetValue">0px</span>
+<span id="DemonOffsetValue">0px</span>-->
 <ul id="returnList"></ul>
 <table id="jinxTable" border="1" style="margin-top:10px;">
 </table>
