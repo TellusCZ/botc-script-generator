@@ -21,7 +21,7 @@ const detailsPanels = document.querySelectorAll('details.panel');
 
 const img = document.getElementById("sourceImg");
     const canvas = document.getElementById("canvas");
-    const ctx = canvas.getContext("2d", { willReadFrequently: true });
+    const ctx = canvas.getContext("2d", { willReadFrequently: true, width: 1024, height: 1443 });
     const palette = document.getElementById("palette");
     const colorPicker = document.getElementById("colorPicker");
     const hexInput = document.getElementById("hexInput");
