@@ -460,18 +460,6 @@
               </div>
             </div>
 
-            <!--<div class="subtle-box">
-              <div class="field">
-                <label for="themeSelect">Tematické ladění</label>
-                <select id="themeSelect">
-                  <option value="Temná viktoriánská gotika">Temná viktoriánská gotika</option>
-                  <option value="Mysteriózní séance">Mysteriózní séance</option>
-                  <option value="Krvavý aristokratický večer">Krvavý aristokratický večer</option>
-                  <option value="Plynové lampy a tajemství">Plynové lampy a tajemství</option>
-                </select>
-              </div>
-            </div>-->
-
             <div class="tabs-card">
               <div class="tabs" role="tablist" aria-label="Kontrola Scriptu">
                 <button class="tab-btn active" type="button" data-tab="infoTab">Info ke scriptu</button>
@@ -573,6 +561,82 @@
             <div class="size-row">
               <input type="range" id="DemonOffsetSlider" min="-40" max="40" value="0" />
             </div>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <details class="panel" id="settingsPanel">
+      <summary>
+        <div class="summary-main">
+          <div class="summary-badge">⚙</div>
+          <div class="summary-title">Nastavení velikostí a vzhledu</div>
+        </div>
+        <div class="summary-hint"></div>
+      </summary>
+      <div class="panel-body">
+        <div class="grid grid-2">
+          <div class="field">
+             <h1>Přebarvení levého pruhu obrázku</h1>
+              <p class="lead">
+                Vyber barvu z palety nebo zadej vlastní HEX kód. Skript přebarví pouze levý pruh a zachová jeho texturu i zbytek podkladu.
+              </p>
+        
+              <div class="section">
+                <h2>Rychlá paleta</h2>
+                <div class="palette" id="palette"></div>
+              </div>
+        
+              <div class="section">
+                <h2>Vlastní barva</h2>
+                <div class="row">
+                  <div class="row-inline">
+                    <input type="color" id="colorPicker" value="#4b5da7" aria-label="Výběr barvy" />
+                    <input class="text-input" type="text" id="hexInput" value="#4B5DA7" maxlength="7" placeholder="#4B5DA7" />
+                  </div>
+                </div>
+              </div>
+        
+              <div class="section">
+                <h2>Šířka přebarvené oblasti</h2>
+                <div class="range-wrap">
+                  <input type="range" id="stripWidthRange" min="40" max="220" value="108" step="1" />
+                  <div class="range-labels">
+                    <span>40 px</span>
+                    <strong id="stripWidthValue">108 px</strong>
+                    <span>220 px</span>
+                  </div>
+                </div>
+              </div>
+        
+              <div class="button-row">
+                <button class="btn btn-primary" id="downloadBtn">Stáhnout PNG</button>
+                <button class="btn btn-secondary" id="resetBtn">Obnovit originál</button>
+              </div>
+        
+              <p class="fine-print">
+                Pro správné fungování je nejlepší mít HTML i obrázek na stejné doméně. Pokud obrázek načítáš odjinud, může prohlížeč blokovat čtení pixelů kvůli CORS.
+              </p>
+          </div>
+          <div class="grid">
+              <main class="preview card">
+              <div class="preview-top">
+                <h2>Náhled</h2>
+                <div class="status" id="statusText">Načítám obrázek…</div>
+              </div>
+        
+              <img
+                id="sourceImg"
+                class="hidden-img"
+                src="botc/puppetTheater.png"
+                alt="Pozadí"
+                crossorigin="anonymous"
+              />
+        
+              <div class="canvas-wrap">
+                <canvas id="canvas"></canvas>
+              </div>
+            </main>
           </div>
         </div>
       </div>
