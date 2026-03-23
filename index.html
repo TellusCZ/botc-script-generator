@@ -466,18 +466,24 @@
 
             <div class="tabs-card">
               <div class="tabs" role="tablist" aria-label="Kontrola Scriptu">
-                <button class="tab-btn active" type="button" data-tab="tips">Info ke scriptu</button>
-                <button class="tab-btn" type="button" data-tab="format">Varování</button>
-                <button class="tab-btn" type="button" data-tab="example">Možné chyby</button>
+                <button class="tab-btn active" type="button" data-tab="infoTab">Info ke scriptu</button>
+                <button class="tab-btn" type="button" data-tab=warningTab">Varování</button>
+                <button class="tab-btn" type="button" data-tab="errorTab">Možné chyby</button>
               </div>
 
-              <div class="tab-panel active" id="tips">
-                <div class="preview-paper"></div>
-              <div class="tab-panel" id="format">
-                <div class="preview-paper"></div>
+              <div class="tab-panel active" id="infoTab">
+                <div class="preview-paper">
+                    <ul id="returnListInfo"></ul>
+                </div>
+              <div class="tab-panel" id="warningTab">
+                <div class="preview-paper">
+                    <ul id="returnListWarning"></ul>
+                </div>
               </div>
-              <div class="tab-panel" id="example">
-                <div class="preview-paper"></div>
+              <div class="tab-panel" id="errorTab">
+                <div class="preview-paper">
+                    <ul id="returnListError"></ul>
+                </div>
               </div>
             </div>
           </div>
