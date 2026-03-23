@@ -144,12 +144,10 @@ function checkScript(scriptJson) {
                 msg.innerHTML = elt.note;
                 outputInfo.appendChild(msg);
             } else if (elt.warning) {
-                msg.style.color = 'yellow';
                 msg.innerHTML = elt.warning;
                 
                 outputWarning.appendChild(msg);
             } else if (elt.error) {
-                msg.style.color = 'red'
                 msg.innerHTML = elt.error;
                 outputError.appendChild(msg);
             }
