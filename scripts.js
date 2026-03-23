@@ -19,6 +19,34 @@ const outputError = document.getElementById("returnListError");
 
 const detailsPanels = document.querySelectorAll('details.panel');
 
+const img = document.getElementById("sourceImg");
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d", { willReadFrequently: true });
+    const palette = document.getElementById("palette");
+    const colorPicker = document.getElementById("colorPicker");
+    const hexInput = document.getElementById("hexInput");
+    const stripWidthRange = document.getElementById("stripWidthRange");
+    const stripWidthValue = document.getElementById("stripWidthValue");
+    const downloadBtn = document.getElementById("downloadBtn");
+    const resetBtn = document.getElementById("resetBtn");
+    const statusText = document.getElementById("statusText");
+
+    const presetColors = [
+      "#A5333B",
+      "#2F7D57",
+      "#4B5DA7",
+      "#C89B3C",
+      "#7A4BB1",
+      "#1D8C9B",
+      "#6A6A6A",
+      "#D8742A",
+      "#8BADE8",
+      "#5C295F"
+    ];
+
+    let originalImageData = null;
+    let activeColor = "#4B5DA7";
+
 
 let countOfTownsfolk = 0;
 let countOfOutsiders = 0;
@@ -1105,4 +1133,147 @@ document.querySelectorAll('.tab-btn').forEach((btn) => {
     document.getElementById('closeAllBtn').addEventListener('click', () => {
       detailsPanels.forEach(panel => panel.open = false);
       setStatus('Všechny sekce byly sbaleny.');
+    });
+
+
+
+    function normalizeHex(value) {
+      let v = value.trim().replace(/[^0-9a-fA-F#]/g, "");
+      if (!v.startsWith("#")) v = `#${v}`;
+      if (/^#[0-9a-fA-F]{3}$/.test(v)) {
+        v = `#${v[1]}${v[1]}${v[2]}${v[2]}${v[3]}${v[3]}`;
+      }
+      return /^#[0-9a-fA-F]{6}$/.test(v) ? v.toUpperCase() : null;
+    }
+
+    function hexToRgb(hex) {
+      const clean = hex.replace("#", "");
+      const value = parseInt(clean, 16);
+      return {
+        r: (value >> 16) & 255,
+        g: (value >> 8) & 255,
+        b: value & 255
+      };
+    }
+
+    function drawOriginal() {
+      canvas.width = img.naturalWidth;
+      canvas.height = img.naturalHeight;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(img, 0, 0);
+      originalImageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+      statusText.textContent = `Obrázek načten · ${img.naturalWidth} × ${img.naturalHeight}px`;
+    }
+
+    function updateActiveSwatch(hexColor) {
+      const buttons = palette.querySelectorAll('.swatch');
+      buttons.forEach((button) => {
+        button.classList.toggle('active', button.dataset.color === hexColor);
+      });
+    }
+
+    function recolorLeftStrip(hexColor) {
+      if (!originalImageData) return;
+
+      const imageData = new ImageData(
+        new Uint8ClampedArray(originalImageData.data),
+        originalImageData.width,
+        originalImageData.height
+      );
+
+      const data = imageData.data;
+      const { r: nr, g: ng, b: nb } = hexToRgb(hexColor);
+      const stripWidth = Math.min(Number(stripWidthRange.value), canvas.width);
+
+      for (let y = 0; y < canvas.height; y++) {
+        for (let x = 0; x < stripWidth; x++) {
+          const i = (y * canvas.width + x) * 4;
+
+          const or = data[i];
+          const og = data[i + 1];
+          const ob = data[i + 2];
+          const oa = data[i + 3];
+
+          const brightness = (or + og + ob) / 3 / 255;
+          const contrastBoost = 0.18;
+          const adjusted = Math.min(1, Math.max(0, brightness + contrastBoost * (brightness - 0.5)));
+
+          data[i] = Math.round(nr * adjusted);
+          data[i + 1] = Math.round(ng * adjusted);
+          data[i + 2] = Math.round(nb * adjusted);
+          data[i + 3] = oa;
+        }
+      }
+
+      ctx.putImageData(imageData, 0, 0);
+      activeColor = hexColor;
+      colorPicker.value = hexColor;
+      hexInput.value = hexColor;
+      updateActiveSwatch(hexColor);
+    }
+
+    function resetImage() {
+      if (!originalImageData) return;
+      ctx.putImageData(originalImageData, 0, 0);
+      updateActiveSwatch("");
+      statusText.textContent = `Originál obnoven · ${img.naturalWidth} × ${img.naturalHeight}px`;
+    }
+
+    function createPalette() {
+      presetColors.forEach((color) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "swatch";
+        btn.dataset.color = color;
+        btn.style.background = color;
+        btn.title = color;
+        btn.setAttribute("aria-label", `Použít barvu ${color}`);
+        btn.addEventListener("click", () => recolorLeftStrip(color));
+        palette.appendChild(btn);
+      });
+      updateActiveSwatch(activeColor);
+    }
+
+    function applyHexInput() {
+      const normalized = normalizeHex(hexInput.value);
+      if (!normalized) {
+        hexInput.value = activeColor;
+        return;
+      }
+      recolorLeftStrip(normalized);
+    }
+
+    colorPicker.addEventListener("input", (e) => {
+      const color = normalizeHex(e.target.value);
+      if (color) recolorLeftStrip(color);
+    });
+
+    hexInput.addEventListener("change", applyHexInput);
+    hexInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") applyHexInput();
+    });
+
+    stripWidthRange.addEventListener("input", () => {
+      stripWidthValue.textContent = `${stripWidthRange.value} px`;
+      recolorLeftStrip(activeColor);
+    });
+
+    resetBtn.addEventListener("click", resetImage);
+
+    downloadBtn.addEventListener("click", () => {
+      const link = document.createElement("a");
+      const safeColor = activeColor.replace("#", "").toLowerCase();
+      link.href = canvas.toDataURL("image/png");
+      link.download = `pozadi-pruh-${safeColor}.png`;
+      link.click();
+    });
+
+    img.addEventListener("load", () => {
+      drawOriginal();
+      createPalette();
+      recolorLeftStrip(activeColor);
+    });
+
+    img.addEventListener("error", () => {
+      statusText.textContent = "Nepodařilo se načíst obrázek. Zkontroluj cestu v src atributu.";
     });
