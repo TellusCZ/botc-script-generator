@@ -1256,6 +1256,7 @@ document.querySelectorAll('.tab-btn').forEach((btn) => {
     }
 
     function createPalette() {
+      palette.replaceChildren();
       presetColors.forEach((color) => {
         const btn = document.createElement("button");
         btn.type = "button";
