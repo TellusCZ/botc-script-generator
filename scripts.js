@@ -996,14 +996,14 @@ document.getElementById('saveScriptPng').addEventListener('click', () => {
   }
 });*/
 const fileInput = document.getElementById("fileInput");
-const img = document.querySelector("#scriptlogo");
+const imgLogo = document.querySelector("#scriptlogo");
 
 fileInput.addEventListener("change", function() {
     const file = this.files[0];
     if (file) {
         const reader = new FileReader();
         reader.onload = function(e) {
-            img.src = e.target.result; // nastavíme src na obsah vybraného souboru
+            imgLogo.src = e.target.result; // nastavíme src na obsah vybraného souboru
         };
         reader.readAsDataURL(file);
     }
