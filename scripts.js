@@ -17,6 +17,8 @@ const outputInfo = document.getElementById("returnListInfo");
 const outputWarning = document.getElementById("returnListWarning");
 const outputError = document.getElementById("returnListError");
 
+const detailsPanels = document.querySelectorAll('details.panel');
+
 
 let countOfTownsfolk = 0;
 let countOfOutsiders = 0;
