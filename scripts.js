@@ -774,7 +774,7 @@ function renderJinxTableWithImages(idObjects, jinxData, rolesData, tableId) {
     document.getElementsByClassName('jinxImage')[0].innerHTML = html;
 
     const element = document.getElementById("script");
-    element.style.backgroundImage = `url(${dataURL})`;
+    element.style.backgroundImage = url(dataURL);
 }
 
 
