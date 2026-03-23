@@ -13,7 +13,9 @@ const DemonOffsetValueText = document.getElementById("DemonOffsetValue");
 const TitleHeightSlider = document.getElementById("TitleHeightSlider");
 const TitleHeightValueText = document.getElementById("TitleHeightValue");
 
-const output = document.getElementById("returnList");
+const outputInfo = document.getElementById("returnListInfo");
+const outputWarning = document.getElementById("returnListWarning");
+const outputError = document.getElementById("returnListError");
 
 
 let countOfTownsfolk = 0;
@@ -107,7 +109,9 @@ function recursivePresence(char, script) {
 
 function checkScript(scriptJson) {
     // Transform filecontent according to your specifications
-    output.replaceChildren();
+    outputInfo.replaceChildren();
+    outputWarning.replaceChildren();
+    outputError.replaceChildren();
     scriptJson = scriptJson.map((item) => {
         if (item.id === '_meta') {
             return {
@@ -137,16 +141,20 @@ function checkScript(scriptJson) {
             const msg = document.createElement('li')
 
             if (elt.note) {
-                msg.innerHTML = elt.note
+                msg.innerHTML = elt.note;
+                outputInfo.appendChild(msg);
             } else if (elt.warning) {
-                msg.style.color = 'yellow'
-                msg.innerHTML = elt.warning
+                msg.style.color = 'yellow';
+                msg.innerHTML = elt.warning;
+                
+                outputWarning.appendChild(msg);
             } else if (elt.error) {
                 msg.style.color = 'red'
-                msg.innerHTML = elt.error
+                msg.innerHTML = elt.error;
+                outputError.appendChild(msg);
             }
 
-            output.appendChild(msg)
+            //output.appendChild(msg)
         }
     }
 }
