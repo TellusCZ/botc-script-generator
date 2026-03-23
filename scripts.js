@@ -1086,3 +1086,23 @@ TitleHeightSlider.addEventListener("input", updateTitleHeight);
 TownsfolkOffsetSlider.addEventListener("input", updateTownsfolkSlider);
 MinionOffsetSlider.addEventListener("input", updateMinionSlider);
 DemonOffsetSlider.addEventListener("input", updateDemonSlider);
+
+document.querySelectorAll('.tab-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const target = btn.dataset.tab;
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById(target).classList.add('active');
+      });
+    });
+
+    document.getElementById('openAllBtn').addEventListener('click', () => {
+      detailsPanels.forEach(panel => panel.open = true);
+      setStatus('Všechny sekce byly rozbaleny.');
+    });
+
+    document.getElementById('closeAllBtn').addEventListener('click', () => {
+      detailsPanels.forEach(panel => panel.open = false);
+      setStatus('Všechny sekce byly sbaleny.');
+    });
