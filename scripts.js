@@ -404,6 +404,11 @@ function generateScript() {
             countOfMinions += 1;
     });
 
+    const canvas = document.getElementById("canvas");
+
+    const dataURL = canvas.toDataURL(); // PNG base64
+
+
     var linesForTownsfolk = Math.round(countOfTownsfolk / 2);
     TownsfolkLines = linesForTownsfolk;
     //var townsfolksHeight = Number(roleHeightslider.value * TownsfolkLines) + Number(TownsfolkOffsetSlider.value) + "px";
@@ -767,6 +772,9 @@ function renderJinxTableWithImages(idObjects, jinxData, rolesData, tableId) {
     console.log(html);
     
     document.getElementsByClassName('jinxImage')[0].innerHTML = html;
+
+    const element = document.getElementById("script");
+    element.style.backgroundImage = `url(${dataURL})`;
 }
 
 
