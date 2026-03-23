@@ -1258,7 +1258,7 @@ document.querySelectorAll('.tab-btn').forEach((btn) => {
       recolorLeftStrip(activeColor);
     });
 
-    resetBtn.addEventListener("click", resetImage);
+    /*resetBtn.addEventListener("click", resetImage);
 
     downloadBtn.addEventListener("click", () => {
       const link = document.createElement("a");
@@ -1266,7 +1266,7 @@ document.querySelectorAll('.tab-btn').forEach((btn) => {
       link.href = canvas.toDataURL("image/png");
       link.download = `pozadi-pruh-${safeColor}.png`;
       link.click();
-    });
+    });*/
 
     img.addEventListener("load", () => {
       drawOriginal();
