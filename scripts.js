@@ -634,6 +634,9 @@ function generateScript() {
     html = html.replaceAll("Jednou za hru, v noci", "<b>Jednou za hru, v noci</b>");
     html = html.replaceAll("Začínáš s informací", "<b>Začínáš s informací</b>");
     document.getElementsByClassName('message')[0].innerHTML = html;
+
+    const element = document.getElementById("script");
+    element.style.backgroundImage = `url(${dataURL})`;
 }
 
 
@@ -772,9 +775,6 @@ function renderJinxTableWithImages(idObjects, jinxData, rolesData, tableId) {
     console.log(html);
     
     document.getElementsByClassName('jinxImage')[0].innerHTML = html;
-
-    const element = document.getElementById("script");
-    element.style.backgroundImage = url(dataURL);
 }
 
 
