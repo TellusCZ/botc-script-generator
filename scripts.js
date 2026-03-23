@@ -1022,6 +1022,32 @@ fileInput.addEventListener("change", function() {
     }
 });
 
+const backroundInput = document.getElementById("backroundInput");
+const imgBackground = document.querySelector("#sourceImg");
+
+backroundInput.addEventListener("change", function() {
+    const file = this.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            imgBackground.src = e.target.result; // nastavíme src na obsah vybraného souboru
+        };
+        reader.readAsDataURL(file);
+    }
+    if (fileInput.files.length > 0) {
+      backgroundName.textContent = fileInput.files[0].name;
+    } else {
+      backgroundName.textContent = "Nebyl vybrán žádný soubor";
+    }
+});
+
+const backroundReset = document.getElementById("backroundInput");
+
+function resetBackground() {
+    imgBackground.src = "botc/puppetTheater.png";
+    backgroundName.textContent = "Nebyl vybrán žádný soubor";
+}
+
 
 
 function updateHeight() {
