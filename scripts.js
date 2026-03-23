@@ -1157,8 +1157,10 @@ document.querySelectorAll('.tab-btn').forEach((btn) => {
     }
 
     function drawOriginal() {
-      canvas.width = img.naturalWidth;
-      canvas.height = img.naturalHeight;
+      //canvas.width = img.naturalWidth;
+      canvas.width = 1024;
+      //canvas.height = img.naturalHeight;
+      canvas.height = 1443;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.drawImage(img, 0, 0);
       originalImageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
