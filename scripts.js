@@ -1296,9 +1296,10 @@ document.querySelectorAll('.tab-btn').forEach((btn) => {
         const imageBackDiv = document.createElement("div");
         const imageBack = document.createElement("img");
         imageBack.className = "background-preview";
+          
         imageBackDiv.className = "background-preview";
         imageBack.src = backround;
-        imageBackDiv..appendChild(imageBack);
+        imageBackDiv.appendChild(imageBack);
         btn.appendChild(imageBackDiv);
         backgrounds.appendChild(btn);
       });
