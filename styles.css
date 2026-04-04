@@ -344,8 +344,8 @@
     }
 
     .background-preview {
-            height: 144px;
-            width: 102px;
+            height: 288px;
+            width: 204px;
             background-repeat: no-repeat;
             background-size: 100% 100%;
         }
