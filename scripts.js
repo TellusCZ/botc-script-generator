@@ -1340,6 +1340,7 @@ document.querySelectorAll('.tab-btn').forEach((btn) => {
     img.addEventListener("load", () => {
       drawOriginal();
       createPalette();
+      createPaletteBackgrounds();
       recolorLeftStrip(activeColor);
     });
 
