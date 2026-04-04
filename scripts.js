@@ -1293,6 +1293,9 @@ document.querySelectorAll('.tab-btn').forEach((btn) => {
         btn.className = "swatch-background";
         btn.style.background = backround;
         btn.addEventListener("click", () => recolorLeftStrip(activeColor, backround));
+        const imageBack = document.createElement("img");
+        imageBack.src = backround;
+        btn.appendChild(imageBack);
         backgrounds.appendChild(btn);
       });
       updateActiveSwatchBackground(activeColor);
