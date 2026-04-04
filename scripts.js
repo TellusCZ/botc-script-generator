@@ -1293,10 +1293,13 @@ document.querySelectorAll('.tab-btn').forEach((btn) => {
         btn.className = "swatch-background";
         btn.style.background = backround;
         btn.addEventListener("click", () => recolorLeftStrip(activeColor, backround));
-        const imageBack = document.createElement("div");
+        const imageBackDiv = document.createElement("div");
+        const imageBack = document.createElement("img");
         imageBack.className = "background-preview";
-        imageBack.backgroundImage = "url('"+ backround + "')";
-        btn.appendChild(imageBack);
+        imageBackDiv.className = "background-preview";
+        imageBack.src = backround;
+        imageBackDiv..appendChild(imageBack);
+        btn.appendChild(imageBackDiv);
         backgrounds.appendChild(btn);
       });
       updateActiveSwatchBackground(activeColor);
