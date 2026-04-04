@@ -23,6 +23,7 @@ const img = document.getElementById("sourceImg");
     const canvas = document.getElementById("canvas");
     const ctx = canvas.getContext("2d", { willReadFrequently: true });
     const palette = document.getElementById("palette");
+    const backgrounds = document.getElementById("backgrounds");
     const colorPicker = document.getElementById("colorPicker");
     const hexInput = document.getElementById("hexInput");
     const stripWidthRange = document.getElementById("stripWidthRange");
@@ -42,6 +43,12 @@ const img = document.getElementById("sourceImg");
       "#D8742A",
       "#8BADE8",
       "#5C295F"
+    ];
+
+    const presetBackgrounds = [
+      "botc/backgroundv7.png",
+      "botc/puppetTheater.png",
+      "botc/backgroundv3.png"
     ];
 
     let originalImageData = null;
@@ -1208,6 +1215,13 @@ document.querySelectorAll('.tab-btn').forEach((btn) => {
       });
     }
 
+    function updateActiveSwatchBackground(hexColor) {
+      const buttons = backgrounds.querySelectorAll('.swatch-background');
+      buttons.forEach((button) => {
+        button.classList.toggle('active', button.dataset.color === hexColor);
+      });
+    }
+
     function recolorLeftStrip(hexColor) {
       if (!originalImageData) return;
 
@@ -1269,6 +1283,24 @@ document.querySelectorAll('.tab-btn').forEach((btn) => {
         palette.appendChild(btn);
       });
       updateActiveSwatch(activeColor);
+    }
+
+    function createPaletteBackgrounds() {
+      backgrounds.replaceChildren();
+      presetBackgrounds.forEach((backround) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "swatch-background";
+        btn.style.background = backround;
+        btn.addEventListener("click", () => recolorLeftStrip(activeColor, backround));
+        backgrounds.appendChild(btn);
+      });
+      updateActiveSwatchBackground(activeColor);
+    }
+
+    function changeBackground(color, background) {
+        img.style.background = backround;
+        recolorLeftStrip(color);
     }
 
     function applyHexInput() {
