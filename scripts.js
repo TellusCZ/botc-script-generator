@@ -1306,7 +1306,7 @@ document.querySelectorAll('.tab-btn').forEach((btn) => {
     }
 
     function changeBackground(color, background) {
-        imgBackground.src = backround;
+        imgBackground.src = background;
         recolorLeftStrip(color);
     }
 
