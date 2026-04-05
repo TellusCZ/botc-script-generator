@@ -1306,8 +1306,7 @@ document.querySelectorAll('.tab-btn').forEach((btn) => {
     }
 
     function changeBackground(color, background) {
-        imgBackground.src = "botc/puppetTheater.png";
-        img.style.background = backround;
+        imgBackground.src = backround;
         recolorLeftStrip(color);
     }
 
