@@ -31,6 +31,8 @@ const img = document.getElementById("sourceImg");
     const downloadBtn = document.getElementById("downloadBtn");
     const resetBtn = document.getElementById("resetBtn");
     const statusText = document.getElementById("statusText");
+    const backroundInput = document.getElementById("backroundInput");
+    const imgBackground = document.querySelector("#sourceImg");
 
     const presetColors = [
       "#A5333B",
@@ -1029,9 +1031,6 @@ fileInput.addEventListener("change", function() {
     }
 });
 
-const backroundInput = document.getElementById("backroundInput");
-const imgBackground = document.querySelector("#sourceImg");
-
 backroundInput.addEventListener("change", function() {
     const file = this.files[0];
     if (file) {
@@ -1292,7 +1291,7 @@ document.querySelectorAll('.tab-btn').forEach((btn) => {
         btn.type = "button";
         btn.className = "swatch-background";
         btn.style.background = backround;
-        btn.addEventListener("click", () => recolorLeftStrip(activeColor, backround));
+        btn.addEventListener("click", () => changeBackground(activeColor, backround));
         const imageBackDiv = document.createElement("div");
         const imageBack = document.createElement("img");
         imageBack.className = "background-preview";
@@ -1307,6 +1306,7 @@ document.querySelectorAll('.tab-btn').forEach((btn) => {
     }
 
     function changeBackground(color, background) {
+        imgBackground.src = "botc/puppetTheater.png";
         img.style.background = backround;
         recolorLeftStrip(color);
     }
