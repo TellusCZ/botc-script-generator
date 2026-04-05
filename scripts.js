@@ -50,7 +50,7 @@ const img = document.getElementById("sourceImg");
     const presetBackgrounds = [
       "botc/backgroundv7.png",
       "botc/puppetTheater.png",
-      "botc/backgroundv3.png"
+      "botc/backgroud-tower.png"
     ];
 
     let originalImageData = null;
